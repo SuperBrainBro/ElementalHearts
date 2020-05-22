@@ -1,1 +1,21 @@
-Elemental Hearts is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Elemental Hearts is a mod which tons of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.). This mod is VERY BALANCED.
+
+As with all of my mods, I prefer quality of quantity. This mod is a great addition to any modded playthrough, which adds a use for all of your leftover/extra blocks and ores.
+
+This mod (so far) adds:
+	 
+
+Github Repo: https://github.com/SuperBrainBro/ElementalHearts
+
+Mod By:
+Vincent Jenei (Lite#4211)
+CAT(TheLuxure#5356)
+
+
+
+We also have a discord server, so I will make the invite as the "homepage". Hop on in, chat, and even contibute to the mod.
+
+Change-Log:
+
+1.1:
+	This is just the initial set-up of the mod, few of the sprites, a few of the items. Mostly just to initialize the mod browser etc.
