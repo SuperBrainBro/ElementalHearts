@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.DevStuff.CAT
+namespace ElementalHearts.Items.Dev.CAT
 {
 	[AutoloadEquip(EquipType.Body)]
 	public class RobeOfCAT : ModItem
@@ -17,7 +17,7 @@ namespace ElementalHearts.DevStuff.CAT
 		public override void SetDefaults() {
 			item.width = 18;
 			item.height = 18;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.vanity = true;
 		}
 
