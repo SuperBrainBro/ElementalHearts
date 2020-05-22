@@ -16,3 +16,9 @@ ItemName.LeadHeart=Свинцовое сердце
 ItemName.StoneHeart=Каменное сердце
 ItemName.TinHeart=Оловянное сердце
 ItemName.WoodHeart=Деревянное сердце
+
+Dev Stuff
+ItemName.MaskOfCAT=Маскоф
+ItemName.RobeOfCAT=Робаоф
+ItemTooltip.MaskOfCAT='Отлично подходит для подражания разработчикам!'
+ItemTooltip.RobeOfCAT='Отлично подходит для подражания разработчикам!'
