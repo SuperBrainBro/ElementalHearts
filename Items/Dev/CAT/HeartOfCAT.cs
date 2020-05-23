@@ -9,7 +9,8 @@ namespace ElementalHearts.Items.Consumables
 	internal class HeartOfCAT : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 1");
+			Tooltip.SetDefault("Permanently increases maximum life by 1"
+							+ "\n'Great for impersonating devs!'");
 			DisplayName.SetDefault("Heartof");
 		}
 
