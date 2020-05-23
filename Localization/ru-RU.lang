@@ -24,9 +24,13 @@ ItemName.TinHeart=Оловянное сердце
 ItemTooltip.TinHeart=Навсегда увеличивает жизнь на 3
 ItemName.WoodHeart=Деревянное сердце
 ItemTooltip.WoodHeart=Навсегда увеличивает жизнь на 2
+ItemName.IronHeart=Железное сердце
+ItemTooltip.IronHeart=Навсегда увеличивает жизнь на 4
 
 Dev Stuff
 ItemName.MaskOfCAT=Маскоф
 ItemTooltip.MaskOfCAT=Отлично подходит, чтобы впечатлить разработчиков!
 ItemName.RobeOfCAT=Робаоф
 ItemTooltip.RobeOfCAT=Отлично подходит, чтобы впечатлить разработчиков!
+ItemName.HeartOfCAT=Сердцеоф
+ItemTooltip.HearOfCAT=Навсегда увеличивает жизнь на 1	+\nОтлично подходит, чтобы впечатлить разработчиков!
