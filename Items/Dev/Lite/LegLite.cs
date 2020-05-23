@@ -3,14 +3,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.Items.Dev.CAT
+namespace ElementalHearts.Items.Dev.Lite
 {
-	[AutoloadEquip(EquipType.Body)]
-	public class MaskLite : ModItem
+	[AutoloadEquip(EquipType.Legs)]
+	public class LegLite : ModItem
 	{
 		public override void SetStaticDefaults() {
 			base.SetStaticDefaults();
-			DisplayName.SetDefault("Robeof");
+			DisplayName.SetDefault("Leg Lite");
 			Tooltip.SetDefault("'Great for impersonating devs!'");
 		}
 
