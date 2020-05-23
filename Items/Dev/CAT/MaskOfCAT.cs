@@ -30,13 +30,13 @@ namespace ElementalHearts.Items.Dev.CAT
 				player.buffImmune[39] = true;
 				player.statManaMax2 += 20;
 				player.maxMinions++;
-				player.magicDamage -= .5f;
+				player.allDamage += .5f;
 			}
 			if (player.name == "AstralCat") {
 				player.buffImmune[39] = true;
 				player.statManaMax2 += 20;
 				player.maxMinions++;
-				player.magicDamage += .5f;
+				player.allDamage += .5f;
 			}
 		}
 	}
