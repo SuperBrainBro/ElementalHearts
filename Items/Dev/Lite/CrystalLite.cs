@@ -20,9 +20,9 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.value = 0;
 		}
 
-		public override bool CanUseItem(Player player)
-		{
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite < 1;
+		public override bool CanUseItem(Player player) {
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite <
+				   ElementalHeartsPlayer.maxCrystalLite;
 		}
 
 		public override bool UseItem(Player player) {

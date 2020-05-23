@@ -19,9 +19,9 @@ namespace ElementalHearts.Items.Consumables
 			item.value = 0;
 		}
 
-		public override bool CanUseItem(Player player)
-		{
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().DemoniteLife < 1;
+		public override bool CanUseItem(Player player) {
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().DemoniteLife <
+				   ElementalHeartsPlayer.maxDemoniteLife;
 		}
 
 		public override bool UseItem(Player player) {
