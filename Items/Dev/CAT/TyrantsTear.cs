@@ -29,6 +29,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
 			item.shootSpeed = 999f;
+			item.useAmmo = 0;
 		}
 
 		public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat) {
