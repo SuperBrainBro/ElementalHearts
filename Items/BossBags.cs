@@ -13,6 +13,7 @@ namespace ElementalHearts.Items
 				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
+					player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 				}
 			}
