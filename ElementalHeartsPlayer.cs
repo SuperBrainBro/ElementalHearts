@@ -125,6 +125,8 @@ namespace ElementalHearts
 		public int CrystalLife;
 		public const int maxCogLife = 1;
 		public int CogLife;
+		public const int maxFleshLife = 1;
+		public int FleshLife;
 
 		//Expert Hearts
 		public const int maxBrainLife = 1;
@@ -162,9 +164,11 @@ namespace ElementalHearts
 			player.statLifeMax2 += SilverLife * 5;
 			player.statLifeMax2 += TungstenLife * 5;
 			player.statLifeMax2 += BubbleLife * 5;
+			player.statLifeMax2 += CogLife * 5;
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
+			player.statLifeMax2 += FleshLife * 6;
 
 			player.statLifeMax2 += DemoniteLife * 7;
 			player.statLifeMax2 += CrimtaneLife * 7;
@@ -267,6 +271,8 @@ namespace ElementalHearts
 			packet.Write(TitaniumLife);
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
+			packet.Write(CogLife);
+			packet.Write(FleshLife);
 
 			//Expert Hearts
 			packet.Write(BrainLife);
@@ -341,6 +347,8 @@ namespace ElementalHearts
 				{"TitaniumLife", TitaniumLife},
 				{"ChlorophyteLife", ChlorophyteLife},
 				{"LuminiteLife", LuminiteLife},
+				{"CogLife", CogLife},
+				{"FleshLife", FleshLife},
 
 				//Expert Hearts
 				{"BrainLife", BrainLife},
@@ -405,6 +413,8 @@ namespace ElementalHearts
 			TitaniumLife = tag.GetInt("TitaniumLife");
 			ChlorophyteLife = tag.GetInt("ChlorophyteLife");
 			LuminiteLife = tag.GetInt("LuminiteLife");
+			CogLife = tag.GetInt("CogLife");
+			FleshLife = tag.GetInt("FleshLife");
 
 			//Expert Hearts
 			BrainLeaf = tag.GetInt("BrainLife");			

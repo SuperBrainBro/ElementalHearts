@@ -6,38 +6,39 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class CobaltHeart : ModItem
+	internal class FleshHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 9");
-			DisplayName.SetDefault("Cobalt Heart");
+			Tooltip.SetDefault("Permanently increases maximum life by 6");
+			DisplayName.SetDefault("Flesh Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = ItemRarityID.Orange;
+			item.rare = ItemRarityID.White;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CobaltLife <
-				   ElementalHeartsPlayer.maxCobaltLife;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().FleshLife <
+				   ElementalHeartsPlayer.maxFleshLife;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 9;
-			player.statLife += 9;
+			player.statLifeMax2 += 6;
+			player.statLife += 6;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(9, true);
+				player.HealEffect(6, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().CobaltLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().CogLife += 1;
 			return true;
 		}
 
-		public override void AddRecipes() {
+		public override void AddRecipes()
+		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.CobaltOre, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.FleshBlock, 100); ;
+			recipe.AddTile(TileID.FleshCloningVat);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}
