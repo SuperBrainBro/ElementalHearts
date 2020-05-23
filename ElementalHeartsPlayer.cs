@@ -123,6 +123,8 @@ namespace ElementalHearts
 		public int CrystalLife;
 		public const int maxCogLife = 1;
 		public int CogLife;
+		public const int maxFleshLife = 1;
+		public int FleshLife;
 
 		//Dev Stuff/Hearts
 		public const int maxHeartOfCAT = 1;
@@ -159,6 +161,7 @@ namespace ElementalHearts
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
+			player.statLifeMax2 += FleshLife * 6;
 
 			player.statLifeMax2 += DemoniteLife * 7;
 			player.statLifeMax2 += CrimtaneLife * 7;
@@ -258,6 +261,8 @@ namespace ElementalHearts
 			packet.Write(TitaniumLife);
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
+			packet.Write(CogLife);
+			packet.Write(FleshLife);
 
 			//Dev Hearts
 			packet.Write(HeartOfCAT);
@@ -329,6 +334,8 @@ namespace ElementalHearts
 				{"TitaniumLife", TitaniumLife},
 				{"ChlorophyteLife", ChlorophyteLife},
 				{"LuminiteLife", LuminiteLife},
+				{"CogLife", CogLife},
+				{"FleshLife", FleshLife},
 
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
@@ -390,6 +397,8 @@ namespace ElementalHearts
 			TitaniumLife = tag.GetInt("TitaniumLife");
 			ChlorophyteLife = tag.GetInt("ChlorophyteLife");
 			LuminiteLife = tag.GetInt("LuminiteLife");
+			CogLife = tag.GetInt("CogLife");
+			FleshLife = tag.GetInt("FleshLife");
 
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
