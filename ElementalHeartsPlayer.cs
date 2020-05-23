@@ -57,6 +57,14 @@ namespace ElementalHearts
 		//Hardmode
 		public int PearlstoneLife;
 		public int RainbowLife;
+		public int CobaltLife;
+		public int PalladiumLife;
+		public int MythrilLife;
+		public int OrichalcumLife;
+		public int AdamantiteLife;
+		public int TitaniumLife;
+		public int ChlorophyteLife;
+		public int LuminiteLife;
 
 		//Dev Stuff/Hearts
 		public int HeartOfCAT;
@@ -68,9 +76,10 @@ namespace ElementalHearts
 		{
 			//Pre-Hardmode
 			player.statLifeMax2 += DirtLife;
+			player.statLifeMax2 += StoneLife;
+			player.statLifeMax2 += WoodLife;
+			player.statLifeMax2 += CactusLife;
 
-			player.statLifeMax2 += StoneLife * 2;
-			player.statLifeMax2 += WoodLife * 2;
 			player.statLifeMax2 += IceLife * 2;
 
 			player.statLifeMax2 += TinLife * 3;
@@ -95,7 +104,18 @@ namespace ElementalHearts
 			//Hardmode
 			player.statLifeMax2 += PearlstoneLife * 5;
 
+			player.statLifeMax2 += CobaltLife * 9;
+			player.statLifeMax2 += PalladiumLife * 9;
+
+			player.statLifeMax2 += MythrilLife * 10;
 			player.statLifeMax2 += RainbowLife * 10;
+			player.statLifeMax2 += OrichalcumLife * 10;
+
+			player.statLifeMax2 += AdamantiteLife * 11;
+			player.statLifeMax2 += TitaniumLife * 11;
+
+			player.statLifeMax2 += ChlorophyteLife * 11;
+			player.statLifeMax2 += LuminiteLife * 11;
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
@@ -152,6 +172,14 @@ namespace ElementalHearts
 			packet.Write((byte)player.whoAmI);
 			packet.Write(PearlstoneLife);
 			packet.Write(RainbowLife);
+			packet.Write(CobaltLife);
+			packet.Write(PalladiumLife);
+			packet.Write(MythrilLife);
+			packet.Write(OrichalcumLife);
+			packet.Write(AdamantiteLife);
+			packet.Write(TitaniumLife);
+			packet.Write(ChlorophyteLife);
+			packet.Write(LuminiteLife);
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 
@@ -218,6 +246,14 @@ namespace ElementalHearts
 				//Hardmode
 				{"PearlstoneLife", PearlstoneLife},
 				{"RainbowLife", RainbowLife},
+				{"CobaltLife", CobaltLife},
+				{"RainbowLife", PalladiumLife},
+				{"MythrilLife", MythrilLife},
+				{"OrichalcumLife", OrichalcumLife},
+				{"AdamantiteLife", AdamantiteLife},
+				{"TitaniumLife", TitaniumLife},
+				{"ChlorophyteLife", ChlorophyteLife},
+				{"LuminiteLife", LuminiteLife},
 
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
@@ -267,6 +303,14 @@ namespace ElementalHearts
 			//Hardmode
 			PearlstoneLife = tag.GetInt("PearlstoneLife");
 			RainbowLife = tag.GetInt("RainbowLife");
+			CobaltLife = tag.GetInt("CobaltLife");
+			PalladiumLife = tag.GetInt("PalladiumLife");
+			MythrilLife = tag.GetInt("MythrilLife");
+			OrichalcumLife = tag.GetInt("OrichalcumLife");
+			AdamantiteLife = tag.GetInt("AdamantiteLife");
+			TitaniumLife = tag.GetInt("TitaniumLife");
+			ChlorophyteLife = tag.GetInt("ChlorophyteLife");
+			LuminiteLife = tag.GetInt("LuminiteLife");
 
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
