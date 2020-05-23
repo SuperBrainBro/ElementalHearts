@@ -97,6 +97,7 @@ namespace ElementalHearts
 
 			player.statLifeMax2 += SilverLife * 5;
 			player.statLifeMax2 += TungstenLife * 5;
+			player.statLifeMax2 += BubbleLife * 5;
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
@@ -172,6 +173,7 @@ namespace ElementalHearts
 			packet.Write(DemoniteLife);
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
+			packet.Write(BubbleLife);
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 
@@ -249,6 +251,7 @@ namespace ElementalHearts
 				{"CrimtaneLife", CrimtaneLife},
 				{"ObsidianLife", ObsidianLife},
 				{"HellstoneLife", HellstoneLife},
+				{"BubbleLife", BubbleLife},
 
 				{"nonStopParty", nonStopParty},
 
@@ -307,6 +310,7 @@ namespace ElementalHearts
 			CrimtaneLife = tag.GetInt("CrimtaneLife");
 			ObsidianLife = tag.GetInt("ObsidianLife");
 			HellstoneLife = tag.GetInt("HellstoneLife");
+			BubbleLife = tag.GetInt("BubbleLife");
 
 			nonStopParty = tag.GetBool("nonStopParty");
 
