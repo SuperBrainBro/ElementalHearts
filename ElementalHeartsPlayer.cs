@@ -83,7 +83,7 @@ namespace ElementalHearts
 			player.statLifeMax2 += PlatinumLife * 6;
 
 			//Dev Hearts
-			player.statLifeMax2 += HeartOfCAT;
+			player.statLifeMax2 += HeartOfCAT * 20;
 		}
 
 		public override void clientClone(ModPlayer clientClone)
