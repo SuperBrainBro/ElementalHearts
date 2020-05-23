@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 namespace ElementalHearts.Items.Dev.CAT
 {
 	[AutoloadEquip(EquipType.Body)]
-	public class MaskLite : ModItem
+	public class RobeOfCAT : ModItem
 	{
 		public override void SetStaticDefaults() {
 			base.SetStaticDefaults();
