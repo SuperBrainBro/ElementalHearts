@@ -73,6 +73,7 @@ namespace ElementalHearts
 			player.statLifeMax2 += TinLife * 3;
 			player.statLifeMax2 += CopperLife * 3;
 
+			player.statLifeMax2 += IronLife * 4;
 			player.statLifeMax2 += LeadLife * 4;
 
 			player.statLifeMax2 += SilverLife * 5;
