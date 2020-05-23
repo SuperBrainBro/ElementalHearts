@@ -21,7 +21,7 @@ namespace ElementalHearts.Items
 						if (Main.rand.NextBool(4)) {
 							player.QuickSpawnItem(ItemType<CatastrophicEdge>(), Main.rand.Next(1, 1));
 						} else if (Main.rand.NextBool(4)) {
-							player.QuickSpawnItem(ItemType<CATsThrow>(), Main.rand.Next(1, 1));
+							player.QuickSpawnItem(ItemType<BowLite>(), Main.rand.Next(1, 1));
 						} else if (Main.rand.NextBool(4)) {
 							player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 						} else {
@@ -38,7 +38,7 @@ namespace ElementalHearts.Items
 						if (Main.rand.NextBool(4)) {
 							player.QuickSpawnItem(ItemType<CatastrophicEdge>(), Main.rand.Next(1, 1));
 						} else if (Main.rand.NextBool(4)) {
-							player.QuickSpawnItem(ItemType<CATsThrow>(), Main.rand.Next(1, 1));
+							player.QuickSpawnItem(ItemType<BowLite>(), Main.rand.Next(1, 1));
 						} else if (Main.rand.NextBool(4)) {
 							player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 						} else {
@@ -66,7 +66,7 @@ namespace ElementalHearts.Items
 					if (Main.rand.NextBool(4)) {
 						player.QuickSpawnItem(ItemType<CatastrophicEdge>(), Main.rand.Next(1, 1));
 					} else if (Main.rand.NextBool(4)) {
-						player.QuickSpawnItem(ItemType<CATsThrow>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<BowLite>(), Main.rand.Next(1, 1));
 					} else if (Main.rand.NextBool(4)) {
 						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 					} else {
