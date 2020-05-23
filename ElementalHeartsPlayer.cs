@@ -55,6 +55,7 @@ namespace ElementalHearts
 		public int HellstoneLife;
 
 		//Hardmode
+		public int PearlstoneLife;
 
 		//Dev Stuff/Hearts
 		public int HeartOfCAT;
@@ -64,6 +65,7 @@ namespace ElementalHearts
 
 		public override void ResetEffects() 
 		{
+			//Pre-Hardmode
 			player.statLifeMax2 += DirtLife;
 
 			player.statLifeMax2 += StoneLife * 2;
@@ -81,6 +83,9 @@ namespace ElementalHearts
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
+
+			//Hardmode
+			player.statLifeMax2 += PearlstoneLife * 5;
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
@@ -129,6 +134,13 @@ namespace ElementalHearts
 			packet.Write(DemoniteLife);
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
+			packet.Write(nonStopParty);
+			packet.Send(toWho, fromWho);
+
+			//Hardmode
+			packet = mod.GetPacket();
+			packet.Write((byte)player.whoAmI);
+			packet.Write(PearlstoneLife);
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 
@@ -192,6 +204,8 @@ namespace ElementalHearts
 
 				{"nonStopParty", nonStopParty},
 
+				//Hardmode
+				{"PearlstoneLife", PearlstoneLife}
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
 			};
@@ -236,6 +250,9 @@ namespace ElementalHearts
 			HellstoneLife = tag.GetInt("HellstoneLife");
 
 			nonStopParty = tag.GetBool("nonStopParty");
+
+			//Hardmode
+			PearlstoneLife = tag.GetInt("PearlstoneLife");
 
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
