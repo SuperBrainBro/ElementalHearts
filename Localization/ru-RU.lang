@@ -26,6 +26,14 @@ ItemName.WoodHeart=Деревянное сердце
 ItemTooltip.WoodHeart=Навсегда увеличивает жизнь на 2
 ItemName.IronHeart=Железное сердце
 ItemTooltip.IronHeart=Навсегда увеличивает жизнь на 4
+ItemName.SilverHeart=Серебряное сердце
+ItemTooltip.SilverHeart=Навсегда увеличивает жизнь на 5
+ItemName.TungstenHeart=Вольфрамовое сердце
+ItemTooltip.TungstenHeart=Навсегда увеличивает жизнь на 5
+ItemName.GoldHeart=Золотое сердце
+ItemTooltip.GoldHeart=Навсегда увеличивает жизнь на 6
+ItemName.PlatinumHeart=Платиновое сердце
+ItemTooltip.PlatinumHeart=Навсегда увеличивает жизнь на 6
 
 Dev Stuff
 ItemName.MaskOfCAT=Маскоф
