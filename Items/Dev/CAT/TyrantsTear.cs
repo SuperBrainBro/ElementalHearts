@@ -28,7 +28,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.rare = ItemRarityID.Cyan;
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
-			item.shootSpeed = 99f;
+			item.shootSpeed = 15f;
 			item.useAmmo = 0;
 		}
 
@@ -63,7 +63,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.rare = ItemRarityID.Cyan;
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
-			item.shootSpeed = 99f;
+			item.shootSpeed = 15f;
 			item.useAmmo = 40;
 		}
 
