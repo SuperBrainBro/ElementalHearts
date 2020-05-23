@@ -14,6 +14,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
+			projectile.damage = 35;
 		}
 
 		public override bool PreKill(int timeLeft) {
@@ -40,6 +41,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
 			projectile.scale = 2f;
+			projectile.damage = 53;
 		}
 
 		public override bool PreKill(int timeLeft) {
@@ -66,6 +68,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
 			projectile.scale = 3f;
+			projectile.damage = 70;
 		}
 
 		public override bool PreKill(int timeLeft) {
