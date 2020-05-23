@@ -73,6 +73,14 @@ ItemName.HeartOfCAT=Сердцеоф
 ItemTooltip.HeartOfCAT=Навсегда увеличивает жизнь на 20\nОтлично подходит, чтобы впечатлить разработчиков!
 ItemName.WingsOfCAT=Крыльяоф
 ItemTooltip.WingsOfCAT=Отлично подходит, чтобы впечатлить разработчиков!
+ItemName.CatastrophicEdge=Катастрофическая грань
+ItemTooltip.CatastrophicEdge=Отлично подходит, чтобы впечатлить разработчиков!
+ItemName.CATsThrow=Бросок CAT'а
+ItemTooltip.CATsThrow=Отлично подходит, чтобы впечатлить разработчиков!
+ProjectileName.CatastrophicBeam=Катастрофический луч
+BuffName.CATsCurse=Проклятье CAT'а
+BuffDescription.CATsCurse=Вы прокляты проклятьем CAT'а.
+
 ItemName.MaskLite=Маска Lite'а
 ItemTooltip.MaskLite=Отлично подходит, чтобы впечатлить разработчиков!
 ItemName.ChestLite=Нагрудник Lite'а
