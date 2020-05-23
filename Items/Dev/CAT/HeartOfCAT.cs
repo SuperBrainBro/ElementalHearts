@@ -29,9 +29,9 @@ namespace ElementalHearts.Items.Dev.CAT
 			player.statLifeMax2 += 20;
 			player.statLife += 20;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(1, true);
+				player.HealEffect(20, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT += 20;
+			player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT += 1;
 			return true;
 		}
 	}
