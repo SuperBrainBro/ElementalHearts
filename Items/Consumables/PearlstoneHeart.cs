@@ -10,7 +10,7 @@ namespace ElementalHearts.Items.Consumables
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 5");
-			DisplayName.SetDefault("Pearltone Heart");
+			DisplayName.SetDefault("Pearlstone Heart");
 		}
 
 		public override void SetDefaults() {
