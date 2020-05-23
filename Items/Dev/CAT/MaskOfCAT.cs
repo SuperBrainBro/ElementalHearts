@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 namespace ElementalHearts.Items.Dev.CAT
 {
 	[AutoloadEquip(EquipType.Head)]
-	public class ChestLite : ModItem
+	public class MaskOfCAT : ModItem
 	{
 		public override void SetStaticDefaults() {
 			base.SetStaticDefaults();
@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override bool IsArmorSet(Item head, Item body, Item legs) {
-			return body.type == ItemType<MaskLite>()/* && legs.type == ItemType<ExampleLeggings>()*/;
+			return body.type == ItemType<RobeOfCAT>()/* && legs.type == ItemType<ExampleLeggings>()*/;
 		}
 
 		public override void UpdateEquip(Player player) {
