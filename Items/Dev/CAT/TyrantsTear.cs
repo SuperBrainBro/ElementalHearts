@@ -19,8 +19,8 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
-			item.useTime = 1;
-			item.useAnimation = 1;
+			item.useTime = 10;
+			item.useAnimation = 10;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 0f;
@@ -54,8 +54,8 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
-			item.useTime = 1;
-			item.useAnimation = 1;
+			item.useTime = 10;
+			item.useAnimation = 10;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 0f;
