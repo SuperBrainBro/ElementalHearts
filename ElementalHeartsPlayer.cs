@@ -248,33 +248,29 @@ namespace ElementalHearts
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 			
-			ModPacket packet2 = mod.GetPacket();
-			packet2.Write((byte)player.whoAmI);
 			//Hardmode
-			packet2 = mod.GetPacket();
-			packet2.Write((byte)player.whoAmI);
-			packet2.Write(PearlstoneLife);
-			packet2.Write(RainbowLife);
-			packet2.Write(CobaltLife);
-			packet2.Write(PalladiumLife);
-			packet2.Write(MythrilLife);
-			packet2.Write(OrichalcumLife);
-			packet2.Write(AdamantiteLife);
-			packet2.Write(TitaniumLife);
-			packet2.Write(ChlorophyteLife);
-			packet2.Write(LuminiteLife);
-			packet2.Write(nonStopParty);
-			packet2.Send(toWho, fromWho);
+			packet = mod.GetPacket();
+			packet.Write((byte)player.whoAmI);
+			packet.Write(PearlstoneLife);
+			packet.Write(RainbowLife);
+			packet.Write(CobaltLife);
+			packet.Write(PalladiumLife);
+			packet.Write(MythrilLife);
+			packet.Write(OrichalcumLife);
+			packet.Write(AdamantiteLife);
+			packet.Write(TitaniumLife);
+			packet.Write(ChlorophyteLife);
+			packet.Write(LuminiteLife);
+			packet.Write(nonStopParty);
+			packet.Send(toWho, fromWho);
 
-			ModPacket packet3 = mod.GetPacket();
-			packet3.Write((byte)player.whoAmI);
 			//Dev Hearts
-			packet3 = mod.GetPacket();
-			packet3.Write((byte)player.whoAmI);
-			packet3.Write(HeartOfCAT);
-			packet3.Write(CrystalLite);
-			packet3.Write(nonStopParty);
-			packet3.Send(toWho, fromWho);
+			packet = mod.GetPacket();
+			packet.Write((byte)player.whoAmI);
+			packet.Write(HeartOfCAT);
+			packet.Write(CrystalLite);
+			packet.Write(nonStopParty);
+			packet.Send(toWho, fromWho);
 		}
 		public override void SendClientChanges(ModPlayer clientPlayer)
 		{
@@ -285,14 +281,6 @@ namespace ElementalHearts
 				packet.Write((byte)player.whoAmI);
 				packet.Write(nonStopParty);
 				packet.Send();
-				var packet2 = mod.GetPacket();
-				packet2.Write((byte)player.whoAmI);
-				packet2.Write(nonStopParty);
-				packet2.Send();
-				var packet3 = mod.GetPacket();
-				packet3.Write((byte)player.whoAmI);
-				packet3.Write(nonStopParty);
-				packet3.Send();
 			}
 		}
 
