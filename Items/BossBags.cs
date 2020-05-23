@@ -18,7 +18,13 @@ namespace ElementalHearts.Items
 						player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
-						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+						if (Main.rand.NextBool(3)) {
+							player.QuickSpawnItem(ItemType<CatastrophicEdge>(), Main.rand.Next(1, 1));
+						} else if (Main.rand.NextBool(3)) {
+							player.QuickSpawnItem(ItemType<CATsThrow>(), Main.rand.Next(1, 1));
+						} else {
+							player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+						}
 					}
 				}
 				if (player.name == "AstralCat") {
@@ -27,7 +33,13 @@ namespace ElementalHearts.Items
 						player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
-						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+						if (Main.rand.NextBool(3)) {
+							player.QuickSpawnItem(ItemType<CatastrophicEdge>(), Main.rand.Next(1, 1));
+						} else if (Main.rand.NextBool(3)) {
+							player.QuickSpawnItem(ItemType<CATsThrow>(), Main.rand.Next(1, 1));
+						} else {
+							player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+						}
 					}
 				}
 				if (player.name == "Lite")
@@ -47,7 +59,13 @@ namespace ElementalHearts.Items
 					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+					if (Main.rand.NextBool(3)) {
+						player.QuickSpawnItem(ItemType<CatastrophicEdge>(), Main.rand.Next(1, 1));
+					} else if (Main.rand.NextBool(3)) {
+						player.QuickSpawnItem(ItemType<CATsThrow>(), Main.rand.Next(1, 1));
+					} else {
+						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+					}
 				}
 				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));

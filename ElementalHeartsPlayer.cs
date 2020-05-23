@@ -17,6 +17,9 @@ namespace ElementalHearts
 
 	public class ElementalHeartsPlayer : ModPlayer
 	{
+		//Debuffs/Buffs
+		public bool curseCATsCurse;
+
 		//Life Crystals
 
 		//Pre-Hardmode
@@ -132,6 +135,9 @@ namespace ElementalHearts
 
 		public override void ResetEffects() 
 		{
+			//Debuffs/Buffs
+			curseCATsCurse = false;
+
 			//Pre-Hardmode
 			player.statLifeMax2 += DirtLife;
 			player.statLifeMax2 += StoneLife;
@@ -179,6 +185,20 @@ namespace ElementalHearts
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
 			player.statLifeMax2 += CrystalLite * 20;
+		}
+
+		public override void UpdateDead() {
+			curseCATsCurse = false;
+		}
+		public override void UpdateBadLifeRegen() {
+			if (curseCATsCurse) {
+				// These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
+				if (player.lifeRegen > 0) {
+					player.lifeRegen = 0;
+				}
+				player.lifeRegenTime = 0;
+				player.lifeRegen -= 128;
+			}
 		}
 
 		public override void clientClone(ModPlayer clientClone)
