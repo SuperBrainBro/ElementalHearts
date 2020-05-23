@@ -53,6 +53,10 @@ namespace ElementalHearts
 		public int CrimtaneLife;
 		public int ObsidianLife;
 		public int HellstoneLife;
+		public int BubbleLife;
+		public int CandyCaneLife;
+		public int CoralstoneLife;
+		public int DynastyLife;
 
 		//Hardmode
 		public int PearlstoneLife;
@@ -65,6 +69,8 @@ namespace ElementalHearts
 		public int TitaniumLife;
 		public int ChlorophyteLife;
 		public int LuminiteLife;
+		public int CrystalLife;
+		public int CogLife;
 
 		//Dev Stuff/Hearts
 		public int HeartOfCAT;
