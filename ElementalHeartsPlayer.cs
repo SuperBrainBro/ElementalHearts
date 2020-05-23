@@ -96,6 +96,9 @@ namespace ElementalHearts
 		public const int maxDynastyLife = 1;
 		public int DynastyLife;
 
+		public const int maxSlimeLife = 1;
+		public int SlimeLife;
+
 		//Hardmode
 		public const int maxPearlstoneLife = 1;
 		public int PearlstoneLife;
