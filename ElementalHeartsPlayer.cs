@@ -56,6 +56,8 @@ namespace ElementalHearts
 
 		//Hardmode
 
+		//Dev Stuff/Hearts
+		public int HeartOfCAT;
 
 		//Multiplayer Thing
 		public bool nonStopParty;
@@ -74,6 +76,9 @@ namespace ElementalHearts
 			player.statLifeMax2 += LeadLife * 4;
 
 			player.statLifeMax2 += SilverLife * 5;
+
+			//Dev Hearts
+			player.statLifeMax2 += HeartOfCAT;
 		}
 
 		public override void clientClone(ModPlayer clientClone)
@@ -119,6 +124,13 @@ namespace ElementalHearts
 			packet.Write(DemoniteLife);
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
+			packet.Write(nonStopParty);
+			packet.Send(toWho, fromWho);
+
+			//Dev Hearts
+			packet = mod.GetPacket();
+			packet.Write((byte)player.whoAmI);
+			packet.Write(HeartOfCAT);
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 		}
@@ -174,6 +186,9 @@ namespace ElementalHearts
 				{"HellstoneLife", HellstoneLife},
 
 				{"nonStopParty", nonStopParty},
+
+				//Dev Hearts
+				{"HeartOfCAT", HeartOfCAT},
 			};
 		}
 
@@ -216,6 +231,9 @@ namespace ElementalHearts
 			HellstoneLife = tag.GetInt("HellstoneLife");
 
 			nonStopParty = tag.GetBool("nonStopParty");
+
+			//Dev Hearts
+			HeartOfCAT = tag.GetInt("HeartOfCAT");
 		}
 
 		public override void LoadLegacy(BinaryReader reader)
