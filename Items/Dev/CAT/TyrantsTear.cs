@@ -15,7 +15,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.Tsunami);
-			item.damage = 20;
+			item.damage = 5;
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
@@ -50,7 +50,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.Tsunami);
-			item.damage = 20;
+			item.damage = 5;
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
