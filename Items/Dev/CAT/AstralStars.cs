@@ -33,10 +33,11 @@ namespace ElementalHearts.Items.Dev.CAT
 				type = ProjectileType<DreamerStarSmall>();
 			} else if (Main.rand.NextBool(4)) {
 				type = ProjectileType<DreamerStarMedium>();
-			} else {
+			} else if (Main.rand.NextBool(6)) {
 				type = ProjectileType<DreamerStarLarge>();
-			}
-			if (Main.rand.NextBool(100)) {
+			} else if (Main.rand.NextBool(8)) {
+				type = ProjectileType<DreamerStarMega2>();
+			} else if (Main.rand.NextBool(10)) {
 				type = ProjectileType<DreamerStarUltra>();
 			}
 			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
