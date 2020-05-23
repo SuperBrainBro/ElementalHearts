@@ -10,7 +10,7 @@ namespace ElementalHearts.Items
 	public class BossBags : GlobalItem
 	{
 		public override void OpenVanillaBag(string context, Player player, int arg) {
-			if (context == "bossBag" && Main.hardMode) {
+			if (context == "bossBag") {
 				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
@@ -20,8 +20,8 @@ namespace ElementalHearts.Items
 				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+					player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
+					player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
 				}
 			}
 		}
