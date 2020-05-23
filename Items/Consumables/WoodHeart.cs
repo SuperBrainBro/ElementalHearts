@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables
 	internal class WoodHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 2");
+			Tooltip.SetDefault("Permanently increases maximum life by 1");
 			DisplayName.SetDefault("Wood Heart");
 		}
 
@@ -25,10 +25,10 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 2;
-			player.statLife += 2;
+			player.statLifeMax2 += 1;
+			player.statLife += 1;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(2, true);
+				player.HealEffect(1, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().WoodLife += 1;
 			return true;
