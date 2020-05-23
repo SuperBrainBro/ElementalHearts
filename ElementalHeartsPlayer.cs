@@ -245,12 +245,8 @@ namespace ElementalHearts
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
 			packet.Write(BubbleLife);
-			//packet.Write(nonStopParty);
-			//packet.Send(toWho, fromWho);
 			
 			//Hardmode
-			packet = mod.GetPacket();
-			packet.Write((byte)player.whoAmI);
 			packet.Write(PearlstoneLife);
 			packet.Write(RainbowLife);
 			packet.Write(CobaltLife);
@@ -261,12 +257,8 @@ namespace ElementalHearts
 			packet.Write(TitaniumLife);
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
-			//packet.Write(nonStopParty);
-			//packet.Send(toWho, fromWho);
 
 			//Dev Hearts
-			packet = mod.GetPacket();
-			packet.Write((byte)player.whoAmI);
 			packet.Write(HeartOfCAT);
 			packet.Write(CrystalLite);
 
@@ -329,6 +321,7 @@ namespace ElementalHearts
 				{"PearlstoneLife", PearlstoneLife},
 				{"RainbowLife", RainbowLife},
 				{"CobaltLife", CobaltLife},
+				{"PalladiumLife", PalladiumLife},
 				{"MythrilLife", MythrilLife},
 				{"OrichalcumLife", OrichalcumLife},
 				{"AdamantiteLife", AdamantiteLife},
