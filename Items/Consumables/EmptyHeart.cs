@@ -29,6 +29,7 @@ namespace ElementalHearts.Items.Consumables
 			Main.NewText("Cleared Elemental Heart Stats!", Color.Orange);
 
 			//Pre-Hardmode
+			player.GetModPlayer<ElementalHeartsPlayer>().IceLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().AmethystLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().BubbleLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().CactusLife = 0;
