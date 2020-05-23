@@ -261,6 +261,8 @@ namespace ElementalHearts
 			//Dev Hearts
 			packet.Write(HeartOfCAT);
 			packet.Write(CrystalLite);
+
+			
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 		}
@@ -312,14 +314,14 @@ namespace ElementalHearts
 				{"DemoniteLife", DemoniteLife},
 				{"CrimtaneLife", CrimtaneLife},
 				{"ObsidianLife", ObsidianLife},
-				{"HellstoneLife", HellstoneLife},
-				{"BubbleLife", BubbleLife},
+				{"HellstoneLife", HellstoneLife},				
 
 				//Hardmode
+				{"BubbleLife", BubbleLife},
 				{"PearlstoneLife", PearlstoneLife},
 				{"RainbowLife", RainbowLife},
 				{"CobaltLife", CobaltLife},
-				{"RainbowLife", PalladiumLife},
+				{"PalladiumLife", PalladiumLife},
 				{"MythrilLife", MythrilLife},
 				{"OrichalcumLife", OrichalcumLife},
 				{"AdamantiteLife", AdamantiteLife},
@@ -331,6 +333,7 @@ namespace ElementalHearts
 				{"HeartOfCAT", HeartOfCAT},
 				{"CrystalLite", CrystalLite},
 
+				//Other
 				{"nonStopParty", nonStopParty},
 			};
 		}
@@ -370,12 +373,12 @@ namespace ElementalHearts
 			DemoniteLife = tag.GetInt("DemoniteLife");
 			CrimtaneLife = tag.GetInt("CrimtaneLife");
 			ObsidianLife = tag.GetInt("ObsidianLife");
-			HellstoneLife = tag.GetInt("HellstoneLife");
-			BubbleLife = tag.GetInt("BubbleLife");
+			HellstoneLife = tag.GetInt("HellstoneLife");			
 
 			nonStopParty = tag.GetBool("nonStopParty");
 
 			//Hardmode
+			BubbleLife = tag.GetInt("BubbleLife");
 			PearlstoneLife = tag.GetInt("PearlstoneLife");
 			RainbowLife = tag.GetInt("RainbowLife");
 			CobaltLife = tag.GetInt("CobaltLife");
