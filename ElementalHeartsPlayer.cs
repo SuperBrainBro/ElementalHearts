@@ -93,8 +93,6 @@ namespace ElementalHearts
 		public int CandyCaneLife;
 		public const int maxCoralstoneLife = 1;
 		public int CoralstoneLife;
-		public const int maxDynastyLife = 1;
-		public int DynastyLife;
 		public const int maxSlimeLife = 1;
 		public int SlimeLife;
 		public const int maxRichMahoganyLife = 1;
