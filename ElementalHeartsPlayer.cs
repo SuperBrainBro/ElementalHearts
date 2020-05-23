@@ -68,6 +68,7 @@ namespace ElementalHearts
 
 		//Dev Stuff/Hearts
 		public int HeartOfCAT;
+		public int CrystalLite;
 
 		//Multiplayer Thing
 		public bool nonStopParty;
@@ -119,6 +120,7 @@ namespace ElementalHearts
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
+			player.statLifeMax2 += CrystalLite * 20;
 		}
 
 		public override void clientClone(ModPlayer clientClone)
@@ -187,6 +189,7 @@ namespace ElementalHearts
 			packet = mod.GetPacket();
 			packet.Write((byte)player.whoAmI);
 			packet.Write(HeartOfCAT);
+			packet.Write(CrystalLite);
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 		}
@@ -257,6 +260,7 @@ namespace ElementalHearts
 
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
+				{"CrystalLite", CrystalLite},
 			};
 		}
 
@@ -314,6 +318,7 @@ namespace ElementalHearts
 
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
+			CrystalLite = tag.GetInt("CrystalLite");
 		}
 
 		public override void LoadLegacy(BinaryReader reader)
