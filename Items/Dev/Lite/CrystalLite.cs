@@ -4,14 +4,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.Items.Dev.CAT
+namespace ElementalHearts.Items.Dev.Lite
 {
-	internal class HeartOfCAT : ModItem
+	internal class CrystalLite : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 20"
 							+ "\n'Great for impersonating devs!'");
-			DisplayName.SetDefault("Heartof");
+			DisplayName.SetDefault("Crystal Lite");
 		}
 
 		public override void SetDefaults() {
@@ -22,16 +22,16 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override bool CanUseItem(Player player)
 		{
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT < 1;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite < 1;
 		}
 
 		public override bool UseItem(Player player) {
 			player.statLifeMax2 += 20;
 			player.statLife += 20;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(1, true);
+				player.HealEffect(20, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT += 20;
+			player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite += 1;
 			return true;
 		}
 	}
