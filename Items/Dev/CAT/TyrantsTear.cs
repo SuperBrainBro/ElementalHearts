@@ -53,7 +53,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.WoodenArrowFriendly;
+			projectile.type = ProjectileID.Starfury;
 			return true;
 		}
 	}
