@@ -85,6 +85,13 @@ namespace ElementalHearts
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
 
+			player.statLifeMax2 += DemoniteLife * 7;
+			player.statLifeMax2 += CrimtaneLife * 7;
+			player.statLifeMax2 += ObsidianLife * 7;
+
+			player.statLifeMax2 += HellstoneLife * 8;
+			player.statLifeMax2 += MeteoriteLife * 8;
+
 			//Hardmode
 			player.statLifeMax2 += PearlstoneLife * 5;
 
