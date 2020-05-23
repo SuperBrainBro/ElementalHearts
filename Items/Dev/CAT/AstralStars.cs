@@ -11,7 +11,7 @@ namespace ElementalHearts.Items.Dev.CAT
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Astral Stars");
-			Tooltip.SetDefault("Summons Stars from sky!");
+			Tooltip.SetDefault("Summons Stars from sky!"
 							+ "\n'Great for impersonating devs!'");
 		}
 

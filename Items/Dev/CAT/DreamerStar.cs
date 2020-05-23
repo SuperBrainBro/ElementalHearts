@@ -5,6 +5,23 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Dev.CAT
 {
+	public class DreamerStar : ModProjectile
+	{
+		public override void SetStaticDefaults() {
+			DisplayName.SetDefault("Dreamer Star");
+		}
+
+		public override void SetDefaults() {
+			projectile.CloneDefaults(ProjectileID.Starfury);
+			aiType = ProjectileID.Starfury;
+			projectile.damage = 23;
+		}
+
+		public override bool PreKill(int timeLeft) {
+			projectile.type = ProjectileID.Starfury;
+			return true;
+		}
+	}
 	public class DreamerStarSmall : ModProjectile
 	{
 		public override void SetStaticDefaults() {
@@ -24,7 +41,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override bool OnTileCollide(Vector2 oldVelocity) {
 			for (int i = 0; i < 5; i++) {
-				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, ProjectileID.Starfury, (int)(projectile.damage * .5f), 0, projectile.owner);
+				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, mod.ProjectileType<DreamerStar>(), (int)(projectile.damage * .5f), 0, projectile.owner);
 				Main.projectile[a].aiStyle = 1;
 				Main.projectile[a].tileCollide = true;
 			}
@@ -51,7 +68,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override bool OnTileCollide(Vector2 oldVelocity) {
 			for (int i = 0; i < 5; i++) {
-				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, ProjectileID.Starfury, (int)(projectile.damage * .5f), 0, projectile.owner);
+				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, mod.ProjectileType<DreamerStar>(), (int)(projectile.damage * .5f), 0, projectile.owner);
 				Main.projectile[a].aiStyle = 1;
 				Main.projectile[a].tileCollide = true;
 			}
@@ -78,7 +95,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override bool OnTileCollide(Vector2 oldVelocity) {
 			for (int i = 0; i < 5; i++) {
-				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, ProjectileID.Starfury, (int)(projectile.damage * .5f), 0, projectile.owner);
+				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, mod.ProjectileType<DreamerStar>(), (int)(projectile.damage * .5f), 0, projectile.owner);
 				Main.projectile[a].aiStyle = 1;
 				Main.projectile[a].tileCollide = true;
 			}
