@@ -37,8 +37,6 @@ namespace ElementalHearts
 		public int IceLife;
 		public const int maxGlassLife = 1;
 		public int GlassLife;
-		public const int maxSlimeLife = 1;
-		public int SlimeLife;
 		public const int maxFossilLife = 1;
 		public int FossilLife;
 		public const int maxMushroomLife = 1;
