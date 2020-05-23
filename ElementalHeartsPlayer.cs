@@ -329,7 +329,6 @@ namespace ElementalHearts
 				{"PearlstoneLife", PearlstoneLife},
 				{"RainbowLife", RainbowLife},
 				{"CobaltLife", CobaltLife},
-				{"RainbowLife", PalladiumLife},
 				{"MythrilLife", MythrilLife},
 				{"OrichalcumLife", OrichalcumLife},
 				{"AdamantiteLife", AdamantiteLife},
