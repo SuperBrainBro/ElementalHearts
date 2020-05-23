@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Dev.CAT
 {
-	public class CATsThrow : ModItem
+	public class BowLite : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("'Great for impersonating devs!'");
@@ -19,7 +19,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.width = 24;
 			item.height = 24;
 			item.useAnimation = 20;
@@ -27,7 +27,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.shootSpeed = 16f;
 			item.knockBack = 5.5f;
 			item.damage = 80;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 
 			item.melee = true;
 			item.channel = true;

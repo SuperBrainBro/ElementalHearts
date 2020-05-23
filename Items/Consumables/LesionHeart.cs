@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class FleshHeart : ModItem
+	internal class LesionHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 6");
