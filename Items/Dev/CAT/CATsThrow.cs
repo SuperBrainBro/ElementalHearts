@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Dev.CAT
 {
-	public class BowLite : ModItem
+	public class CATsThrow : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("'Great for impersonating devs!'");

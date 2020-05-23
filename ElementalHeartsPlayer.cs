@@ -97,8 +97,6 @@ namespace ElementalHearts
 		public int CoralstoneLife;
 		public const int maxDynastyLife = 1;
 		public int DynastyLife;
-		public const int maxSlimeLife = 1;
-		public int SlimeLife;
 
 		//Hardmode
 		public const int maxPearlstoneLife = 1;
@@ -424,10 +422,10 @@ namespace ElementalHearts
 			CogLife = tag.GetInt("CogLife");
 
 			FleshLife = tag.GetInt("FleshLife");
-			LesionLife = tag.GetInt("LesionLife");
+			LesionLife = tag.GetInt("LesionsLife");
 
 			//Expert Hearts
-			BrainLeaf = tag.GetInt("BrainLife");			
+			BrainLife = tag.GetInt("BrainLife");			
 			
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
