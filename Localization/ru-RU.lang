@@ -34,6 +34,21 @@ ItemName.GoldHeart=Золотое сердце
 ItemTooltip.GoldHeart=Навсегда увеличивает жизнь на 6
 ItemName.PlatinumHeart=Платиновое сердце
 ItemTooltip.PlatinumHeart=Навсегда увеличивает жизнь на 6
+ItemName.DemoniteHeart=Демонитовое сердце
+ItemTooltip.DemoniteHeart=Навсегда увеличивает жизнь на 7
+ItemName.CrimtaneHeart=Кримтановое сердце
+ItemTooltip.CrimtaneHeart=Навсегда увеличивает жизнь на 7
+ItemName.ObsidianHeart=Обсидиановое сердце
+ItemTooltip.ObsidianHeart=Навсегда увеличивает жизнь на 7
+ItemName.HellstoneHeart=Адско-каменное сердце
+ItemTooltip.HellstoneHeart=Навсегда увеличивает жизнь на 8
+ItemName.MeteoriteHeart=Метеоритовое сердце
+ItemTooltip.MeteoriteHeart=Навсегда увеличивает жизнь на 8
+
+ItemName.PearlstoneHeart=Жемчужно-каменное сердце
+ItemTooltip.PearlstoneHeart=Навсегда увеличивает жизнь на 5
+ItemName.RainbowHeart=Радужное сердце
+ItemTooltip.RainbowHeart=Навсегда увеличивает жизнь на 10
 
 Dev Stuff
 ItemName.MaskOfCAT=Маскоф
