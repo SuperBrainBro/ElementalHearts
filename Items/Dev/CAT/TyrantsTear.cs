@@ -15,7 +15,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.Tsunami);
-			item.damage = 5;
+			item.damage = 20;
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
@@ -28,7 +28,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.rare = ItemRarityID.Cyan;
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
-			item.shootSpeed = 999f;
+			item.shootSpeed = 99f;
 			item.useAmmo = 0;
 		}
 
@@ -50,7 +50,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.Tsunami);
-			item.damage = 5;
+			item.damage = 20;
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
@@ -63,7 +63,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.rare = ItemRarityID.Cyan;
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
-			item.shootSpeed = 999f;
+			item.shootSpeed = 99f;
 			item.useAmmo = 40;
 		}
 

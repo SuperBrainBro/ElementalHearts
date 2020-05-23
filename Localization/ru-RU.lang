@@ -87,6 +87,10 @@ ProjectileName.DreamerStarMedium=Звезда Мечтателя
 ProjectileName.DreamerStarLarge=Звезда Мечтателя
 ItemName.AstralStars=Астральные Звезды
 ItemTooltip.AstralStars=Призывает Звезды с небес!\nОтлично подходит, чтобы впечатлить разработчиков!
+ItemName.TyrantsTear=Слезы Тирана
+ItemTooltip.TyrantsTear=Отлично подходит, чтобы впечатлить разработчиков!
+ItemName.TyrantsTear2=Слезы Тирана
+ItemTooltip.TyrantsTear2=Отлично подходит, чтобы впечатлить разработчиков!
 
 ItemName.MaskLite=Маска Lite'а
 ItemTooltip.MaskLite=Отлично подходит, чтобы впечатлить разработчиков!
@@ -98,3 +102,4 @@ ItemName.CrystalLite=Кристальный Lite
 ItemTooltip.CrystalLite=Навсегда увеличивает жизнь на 20\nОтлично подходит, чтобы впечатлить разработчиков!
 ItemName.WingLite=Крылья Lite'а
 ItemTooltip.WingLite=Отлично подходит, чтобы впечатлить разработчиков!
+ItemName.BowLite=Лук Lite'а
