@@ -64,6 +64,8 @@ namespace ElementalHearts.Items.Consumables
 			player.GetModPlayer<ElementalHeartsPlayer>().TopazLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().TungstenLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().WoodLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().SlimeLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().FleshLife = 0;
 			//Hardmode
 			player.GetModPlayer<ElementalHeartsPlayer>().PearlstoneLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().RainbowLife = 0;
@@ -77,6 +79,8 @@ namespace ElementalHearts.Items.Consumables
 			player.GetModPlayer<ElementalHeartsPlayer>().LuminiteLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().CogLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().CrystalLife = 0;
+			//Expert Hearts
+			player.GetModPlayer<ElementalHeartsPlayer>().BrainLife = 0;
 			//Dev Hearts
 			player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite = 0;
