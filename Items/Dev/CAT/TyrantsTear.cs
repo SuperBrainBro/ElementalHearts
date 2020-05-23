@@ -40,6 +40,10 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override Vector2? HoldoutOffset() {
 			return Vector2.Zero;
 		}
+
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit) {
+            target.AddBuff(BuffType<CATsCurse>(), 3 * 60);
+		}
 	}
 	public class TyrantsTear2 : ModItem
 	{
@@ -75,6 +79,10 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override Vector2? HoldoutOffset() {
 			return Vector2.Zero;
 		}
+
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit) {
+            target.AddBuff(BuffType<CATsCurse>(), 3 * 60);
+		}
 	}
 	public class TyrantsTear_Arrow : ModProjectile
 	{
@@ -85,6 +93,32 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.WoodenArrowFriendly);
 			aiType = ProjectileID.WoodenArrowFriendly;
+		}
+
+		public override bool PreKill(int timeLeft) {
+			projectile.type = ProjectileID.Starfury;
+			return true;
+		}
+		public override bool OnTileCollide(Vector2 oldVelocity) {
+			for (int i = 0; i < 5; i++) {
+				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, mod.ProjectileType("TyrantsTear_Star"), (int)(projectile.damage * .5f), 0, projectile.owner);
+				Main.projectile[a].aiStyle = 1;
+				Main.projectile[a].tileCollide = true;
+			}
+			return true;
+		}
+	}
+	public class TyrantsTear_Star : ModProjectile
+	{
+		public override void SetStaticDefaults() {
+			DisplayName.SetDefault("Tyrant's Tear");
+		}
+
+		public override void SetDefaults() {
+			projectile.CloneDefaults(ProjectileID.Starfury);
+			aiType = ProjectileID.Starfury;
+			projectile.damage = 40;
+			projectile.scale = 1.25f;
 		}
 
 		public override bool PreKill(int timeLeft) {
