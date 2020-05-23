@@ -26,7 +26,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.useTime = 20;
 			item.shootSpeed = 16f;
 			item.knockBack = 5.5f;
-			item.damage = 60;
+			item.damage = 80;
 			item.rare = 9;
 
 			item.melee = true;

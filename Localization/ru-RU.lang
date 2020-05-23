@@ -47,6 +47,8 @@ ItemTooltip.MeteoriteHeart=Навсегда увеличивает жизнь н
 ItemName.CactusHeart=Кактусовое сердце
 ItemTooltip.CactusHeart=Навсегда увеличивает жизнь на 1
 
+ItemName.BubbleHeart=Пузырное сердце
+ItemTooltip.BubbleHeart=Навсегда увеличивает жизнь на 5
 ItemName.PearlstoneHeart=Жемчужно-каменное сердце
 ItemTooltip.PearlstoneHeart=Навсегда увеличивает жизнь на 5
 ItemName.CobaltHeart=Кобальтовое сердце
