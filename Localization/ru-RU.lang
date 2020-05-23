@@ -80,6 +80,11 @@ ItemTooltip.CATsThrow=Отлично подходит, чтобы впечатл
 ProjectileName.CatastrophicBeam=Катастрофический луч
 BuffName.CATsCurse=Проклятье CAT'а
 BuffDescription.CATsCurse=Вы прокляты проклятьем CAT'а.
+ProjectileName.DreamerStarSmall=Звезда Мечтателя
+ProjectileName.DreamerStarMedium=Звезда Мечтателя
+ProjectileName.DreamerStarLarge=Звезда Мечтателя
+ItemName.AstralStars=Астральные Звезды
+ItemTooltip.AstralStars=Призывает Звезды с небес!\nОтлично подходит, чтобы впечатлить разработчиков!
 
 ItemName.MaskLite=Маска Lite'а
 ItemTooltip.MaskLite=Отлично подходит, чтобы впечатлить разработчиков!

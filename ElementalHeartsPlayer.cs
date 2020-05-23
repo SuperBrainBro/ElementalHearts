@@ -17,6 +17,8 @@ namespace ElementalHearts
 
 	public class ElementalHeartsPlayer : ModPlayer
 	{
+		public int score;
+
 		//Debuffs/Buffs
 		public bool curseCATsCurse;
 
@@ -287,7 +289,7 @@ namespace ElementalHearts
 		public override TagCompound Save()
 		{	
 			return new TagCompound {
-
+				{"score", score},
 				//Pre-Hardmode
 				{"DirtLife", DirtLife},
 				{"StoneLife", StoneLife},
@@ -324,8 +326,6 @@ namespace ElementalHearts
 				{"HellstoneLife", HellstoneLife},
 				{"BubbleLife", BubbleLife},
 
-				{"nonStopParty", nonStopParty},
-
 				//Hardmode
 				{"PearlstoneLife", PearlstoneLife},
 				{"RainbowLife", RainbowLife},
@@ -341,11 +341,14 @@ namespace ElementalHearts
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
 				{"CrystalLite", CrystalLite},
+
+				{"nonStopParty", nonStopParty},
 			};
 		}
 
 		public override void Load(TagCompound tag)
 		{
+			score = tag.GetInt("score");
 
 			//Pre-Hardmode
 			DirtLife = tag.GetInt("DirtLife");
@@ -405,6 +408,7 @@ namespace ElementalHearts
 		public override void LoadLegacy(BinaryReader reader)
 		{
 			int loadVersion = reader.ReadInt32();
+			score = reader.ReadInt32();
 		}
 	}
 }
