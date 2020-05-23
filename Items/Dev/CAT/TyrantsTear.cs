@@ -18,8 +18,8 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
-			item.useTime = 25;
-			item.useAnimation = 25;
+			item.useTime = 7;
+			item.useAnimation = 7;
 			item.useStyle = 5;
 			item.noMelee = true;
 			item.knockBack = 0f;
