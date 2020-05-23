@@ -21,6 +21,10 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.summon = true;
 			item.damage = 45;
 			item.autoReuse = true;
+			item.melee = false;
+			item.ranged = false;
+			item.magic = false;
+			item.thrown = false;
 			item.noMelee = true;
 		}
 
