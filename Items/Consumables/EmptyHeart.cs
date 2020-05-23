@@ -63,6 +63,20 @@ namespace ElementalHearts.Items.Consumables
 			player.GetModPlayer<ElementalHeartsPlayer>().ObsidianLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().HellstoneLife = 0;
 
+			player.GetModPlayer<ElementalHeartsPlayer>().PearlstoneLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().RainbowLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().CobaltLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().PalladiumLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().MythrilLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().OrichalcumLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().AdamantiteLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().TitaniumLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().ChlorophyteLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().LuminiteLife = 0;
+
+			player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite = 0;
+
 			player.statLifeMax2 = 0;
 
 
