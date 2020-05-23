@@ -32,13 +32,13 @@ namespace ElementalHearts
 		public override void SetupShop(int type, Chest shop, ref int nextSlot) {
 			if (type == NPCID.PartyGirl) {
 				shop.item[nextSlot].SetDefaults(ItemType<BubbleHeart>());
-				shop.item[nextSlot].shopCustomPrice = 200;
+				shop.item[nextSlot].shopCustomPrice = 200000;
 				nextSlot++;
 			}
 			if (type == NPCID.Merchant)
 			{
 				shop.item[nextSlot].SetDefaults(ItemType<EmptyHeart>());
-				shop.item[nextSlot].shopCustomPrice = 100;
+				shop.item[nextSlot].shopCustomPrice = 100000;
 				nextSlot++;
 			}
 		}
