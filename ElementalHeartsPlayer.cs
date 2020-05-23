@@ -155,6 +155,7 @@ namespace ElementalHearts
 			player.statLifeMax2 += SilverLife * 5;
 			player.statLifeMax2 += TungstenLife * 5;
 			player.statLifeMax2 += BubbleLife * 5;
+			player.statLifeMax2 += CogLife * 5;
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
