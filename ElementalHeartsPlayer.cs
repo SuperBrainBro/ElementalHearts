@@ -56,6 +56,7 @@ namespace ElementalHearts
 
 		//Hardmode
 		public int PearlstoneLife;
+		public int RainbowLife;
 
 		//Dev Stuff/Hearts
 		public int HeartOfCAT;
@@ -86,6 +87,8 @@ namespace ElementalHearts
 
 			//Hardmode
 			player.statLifeMax2 += PearlstoneLife * 5;
+
+			player.statLifeMax2 += RainbowLife * 10;
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
@@ -141,6 +144,7 @@ namespace ElementalHearts
 			packet = mod.GetPacket();
 			packet.Write((byte)player.whoAmI);
 			packet.Write(PearlstoneLife);
+			packet.Write(RainbowLife);
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 
@@ -205,7 +209,9 @@ namespace ElementalHearts
 				{"nonStopParty", nonStopParty},
 
 				//Hardmode
-				{"PearlstoneLife", PearlstoneLife}
+				{"PearlstoneLife", PearlstoneLife},
+				{"RainbowLife", RainbowLife},
+
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
 			};
@@ -253,6 +259,7 @@ namespace ElementalHearts
 
 			//Hardmode
 			PearlstoneLife = tag.GetInt("PearlstoneLife");
+			RainbowLife = tag.GetInt("RainbowLife");
 
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
