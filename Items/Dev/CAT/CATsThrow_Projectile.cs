@@ -38,12 +38,6 @@ namespace ElementalHearts.Items.Dev.CAT
 		// ai[0] being negative makes the yoyo move back towards the player
 		// Any AI method can be used for dust, spawning projectiles, etc specific to your yoyo.
 
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit) {
-			if (Main.rand.NextBool(22.5f)) {
-            	target.AddBuff(BuffType<CATsCurse>(), 7.5f * 60);
-			}
-		}
-
 		public override void PostAI() {
 			if (Main.rand.NextBool()) {
 				Dust dust = Dust.NewDustDirect(projectile.position, projectile.width, projectile.height, 16);

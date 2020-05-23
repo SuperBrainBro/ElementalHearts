@@ -37,5 +37,11 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.UseSound = SoundID.Item1;
 			item.shoot = ProjectileType<CATsThrow_Projectile>();
 		}
+
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit) {
+			if (Main.rand.NextBool(23)) {
+            	target.AddBuff(BuffType<CATsCurse>(), 8 * 60);
+			}
+		}
 	}
 }
