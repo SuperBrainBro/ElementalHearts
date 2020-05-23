@@ -11,34 +11,45 @@ namespace ElementalHearts.Items
 	{
 		public override void OpenVanillaBag(string context, Player player, int arg) {
 			//Reroll for devs
-			if (player.name == "CAT"){
-				if (Main.rand.NextBool(25))
-				{
-					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+			if (context == "bossBag") {
+				if (player.name == "CAT") {
+					if (Main.rand.NextBool(10))
+					{
+						player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+					}
 				}
-			}
-			if (player.name == "Lite")
-			{
-				if (Main.rand.NextBool(25))
+				if (player.name == "AstralCat") {
+					if (Main.rand.NextBool(10))
+					{
+						player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
+					}
+				}
+				if (player.name == "Lite")
 				{
-					player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
-					player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
+					if (Main.rand.NextBool(10))
+					{
+						player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
+					}
 				}
 			}
 			//Normal roll for normies
 			if (context == "bossBag") {
-				if (Main.rand.NextBool(25)) {
+				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 				}
-				if (Main.rand.NextBool(25)) {
+				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
