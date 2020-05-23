@@ -14,15 +14,17 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			item.damage = 5;
+			item.CloneDefaults(ItemID.Tsunami);
+			item.damage = 20;
 			item.ranged = true;
 			item.width = 30;
 			item.height = 70;
-			item.useTime = 7;
-			item.useAnimation = 7;
+			item.useTime = 1;
+			item.useAnimation = 1;
 			item.useStyle = 5;
 			item.noMelee = true;
 			item.knockBack = 0f;
+			item.crit = 0;
 			item.rare = 9;
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
@@ -54,13 +56,40 @@ namespace ElementalHearts.Items.Dev.CAT
 			return true;
 		}
 
-		/*public override bool OnTileCollide(Vector2 oldVelocity) {
+		public override bool OnTileCollide(Vector2 oldVelocity) {
 			for (int i = 0; i < 5; i++) {
-				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, mod.ProjectileType("DreamerStar"), (int)(projectile.damage * .5f), 0, projectile.owner);
+				int a = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 16f, Main.rand.Next(-10, 11) * .25f, Main.rand.Next(-10, -5) * .25f, mod.ProjectileType("TyrantsTear_SparkOfDeath"), (int)(projectile.damage * .5f), 0, projectile.owner);
 				Main.projectile[a].aiStyle = 1;
 				Main.projectile[a].tileCollide = true;
 			}
 			return true;
-		}*/
+		}
+	}
+	public class TyrantsTear_SparkOfDeath : ModProjectile
+	{
+		public override void SetStaticDefaults() {
+			DisplayName.SetDefault("Spark of Death");
+		}
+
+		public override void OnSpawn(Dust dust) {
+			dust.noGravity = true;
+			dust.noLight = false;
+			dust.scale = 2f;
+			dust.alpha = 128;
+		}
+
+		public override bool Update(Dust dust) {
+			dust.position += dust.velocity;
+			dust.rotation += dust.velocity.X;
+			dust.scale -= 0.1f;
+			if (dust.scale < 0.5f) {
+				dust.active = false;
+			}
+			else {
+				float strength = dust.scale / 2f;
+				Lighting.AddLight((int)(dust.position.X / 16f), (int)(dust.position.Y / 16f), dust.color.R / 255f * 0.5f * strength, dust.color.G / 255f * 0.5f * strength, dust.color.B / 255f * 0.5f * strength);
+			}
+			return false;
+		}
 	}
 }
