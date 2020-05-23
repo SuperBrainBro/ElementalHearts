@@ -33,5 +33,4 @@ ItemTooltip.MaskOfCAT=Отлично подходит, чтобы впечатл
 ItemName.RobeOfCAT=Робаоф
 ItemTooltip.RobeOfCAT=Отлично подходит, чтобы впечатлить разработчиков!
 ItemName.HeartOfCAT=Сердцеоф
-ItemTooltip.HeartOfCAT=Навсегда увеличивает жизнь на 1
-		+\nОтлично подходит, чтобы впечатлить разработчиков!
+ItemTooltip.HeartOfCAT=Навсегда увеличивает жизнь на 1\nОтлично подходит, чтобы впечатлить разработчиков!
