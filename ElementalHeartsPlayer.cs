@@ -95,9 +95,20 @@ namespace ElementalHearts
 		public int CoralstoneLife;
 		public const int maxDynastyLife = 1;
 		public int DynastyLife;
-
 		public const int maxSlimeLife = 1;
 		public int SlimeLife;
+		public const int maxRichMahoganyLife = 1;
+		public int RichMahoganyLife;
+		public const int maxEbonwoodLife = 1;
+		public int EbonwoodLife;
+		public const int maxShadewoodLife = 1;
+		public int ShadewoodLife;
+		public const int maxBorealWoodLife = 1;
+		public int BorealWoodLife;
+		public const int maxPalmWoodLife = 1;
+		public int PalmWoodLife;
+		public const int maxDynastyLife = 1;
+		public int DynastyLife;
 
 		//Hardmode
 		public const int maxPearlstoneLife = 1;
@@ -124,11 +135,14 @@ namespace ElementalHearts
 		public int CrystalLife;
 		public const int maxCogLife = 1;
 		public int CogLife;
-
 		public const int maxFleshLife = 1;
 		public int FleshLife;
 		public const int maxLesionLife = 1;
 		public int LesionLife;
+		public const int maxSpookyLife = 1;
+		public int SpookyLife;
+		public const int maxPearlwoodLife = 1;
+		public int PearlwoodLife;
 
 		//Expert Hearts
 		public const int maxBrainLife = 1;
@@ -153,8 +167,14 @@ namespace ElementalHearts
 			player.statLifeMax2 += StoneLife;
 			player.statLifeMax2 += WoodLife;
 			player.statLifeMax2 += CactusLife;
+			player.statLifeMax2 += RichMahoganyLife;
+			player.statLifeMax2 += EbonwoodLife;
+			player.statLifeMax2 += ShadewoodLife;
+			player.statLifeMax2 += BorealWoodLife;
+			player.statLifeMax2 += PalmWoodLife;
 
 			player.statLifeMax2 += IceLife * 2;
+			player.statLifeMax2 += DynastyLife * 2;
 
 			player.statLifeMax2 += TinLife * 3;
 			player.statLifeMax2 += CopperLife * 3;
@@ -170,8 +190,6 @@ namespace ElementalHearts
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
-			player.statLifeMax2 += FleshLife * 6;
-			player.statLifeMax2 += LesionLife * 6;
 
 			player.statLifeMax2 += DemoniteLife * 7;
 			player.statLifeMax2 += CrimtaneLife * 7;
@@ -181,7 +199,14 @@ namespace ElementalHearts
 			player.statLifeMax2 += MeteoriteLife * 8;
 
 			//Hardmode
+			player.statLifeMax2 += PearlwoodLife * 2;
+
 			player.statLifeMax2 += PearlstoneLife * 5;
+			
+			player.statLifeMax2 += FleshLife * 6;
+			player.statLifeMax2 += LesionLife * 6;
+
+			player.statLifeMax2 += SpookyLife * 7;
 
 			player.statLifeMax2 += CobaltLife * 9;
 			player.statLifeMax2 += PalladiumLife * 9;
@@ -262,6 +287,12 @@ namespace ElementalHearts
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
 			packet.Write(BubbleLife);
+			packet.Write(RichMahoganyLife);
+			packet.Write(EbonwoodLife);
+			packet.Write(ShadewoodLife);
+			packet.Write(BorealWoodLife);
+			packet.Write(PalmWoodLife);
+			packet.Write(DynastyLife);
 			
 			//Hardmode
 			packet.Write(PearlstoneLife);
@@ -275,9 +306,10 @@ namespace ElementalHearts
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
 			packet.Write(CogLife);
-
 			packet.Write(FleshLife);
 			packet.Write(LesionLife);
+			packet.Write(PearlwoodLife);
+			packet.Write(SpookyLife);
 
 			//Expert Hearts
 			packet.Write(BrainLife);
@@ -338,7 +370,13 @@ namespace ElementalHearts
 				{"DemoniteLife", DemoniteLife},
 				{"CrimtaneLife", CrimtaneLife},
 				{"ObsidianLife", ObsidianLife},
-				{"HellstoneLife", HellstoneLife},				
+				{"HellstoneLife", HellstoneLife},
+				{"RichMahoganyLife", RichMahoganyLife},
+				{"EbonwoodLife", EbonwoodLife},
+				{"ShadewoodLife", ShadewoodLife},
+				{"BorealWoodLife", BorealWoodLife},
+				{"PalmWoodLife", PalmWoodLife},
+				{"DynastyLife", DynastyLife},			
 
 				//Hardmode
 				{"BubbleLife", BubbleLife},
@@ -353,9 +391,10 @@ namespace ElementalHearts
 				{"ChlorophyteLife", ChlorophyteLife},
 				{"LuminiteLife", LuminiteLife},
 				{"CogLife", CogLife},
-
 				{"FleshLife", FleshLife},
 				{"LesionLife", LesionLife},
+				{"PearlwoodLife", PearlwoodLife},
+				{"SpookyLife", SpookyLife},
 
 				//Expert Hearts
 				{"BrainLife", BrainLife},
@@ -404,7 +443,13 @@ namespace ElementalHearts
 			DemoniteLife = tag.GetInt("DemoniteLife");
 			CrimtaneLife = tag.GetInt("CrimtaneLife");
 			ObsidianLife = tag.GetInt("ObsidianLife");
-			HellstoneLife = tag.GetInt("HellstoneLife");			
+			HellstoneLife = tag.GetInt("HellstoneLife");
+			RichMahoganyLife = tag.GetInt("RichMahoganyLife");
+			EbonwoodLife = tag.GetInt("EbonwoodLife");
+			ShadewoodLife = tag.GetInt("ShadewoodLife");
+			BorealWoodLife = tag.GetInt("BorealWoodLife");
+			PalmWoodLife = tag.GetInt("PalmWoodLife");
+			DynastyLife = tag.GetInt("DynastyLife");		
 
 			nonStopParty = tag.GetBool("nonStopParty");
 
@@ -421,9 +466,10 @@ namespace ElementalHearts
 			ChlorophyteLife = tag.GetInt("ChlorophyteLife");
 			LuminiteLife = tag.GetInt("LuminiteLife");
 			CogLife = tag.GetInt("CogLife");
-
 			FleshLife = tag.GetInt("FleshLife");
-			LesionLife = tag.GetInt("LesionsLife");
+			LesionLife = tag.GetInt("LesionLife");
+			PearlwoodLife = tag.GetInt("PearlwoodLife");
+			SpookyLife = tag.GetInt("SpookyLife");
 
 			//Expert Hearts
 			BrainLife = tag.GetInt("BrainLife");			

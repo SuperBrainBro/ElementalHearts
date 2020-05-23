@@ -6,11 +6,11 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class WoodHeart : ModItem
+	internal class DynastyHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 1");
-			DisplayName.SetDefault("Wood Heart");
+			Tooltip.SetDefault("Permanently increases maximum life by 2");
+			DisplayName.SetDefault("Dynasty Heart");
 		}
 
 		public override void SetDefaults() {
@@ -20,23 +20,23 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().WoodLife <
-				   ElementalHeartsPlayer.maxWoodLife;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().DynastyLife <
+				   ElementalHeartsPlayer.maxDynastyLife;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 1;
-			player.statLife += 1;
+			player.statLifeMax2 += 2;
+			player.statLife += 2;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(1, true);
+				player.HealEffect(2, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().WoodLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().DynastyLife += 1;
 			return true;
 		}
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Wood, 100);
+			recipe.AddIngredient(2260, 100);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

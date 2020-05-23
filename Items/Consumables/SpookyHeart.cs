@@ -6,11 +6,11 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class WoodHeart : ModItem
+	internal class SpookyHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 1");
-			DisplayName.SetDefault("Wood Heart");
+			Tooltip.SetDefault("Permanently increases maximum life by 7");
+			DisplayName.SetDefault("Spooky Heart");
 		}
 
 		public override void SetDefaults() {
@@ -20,23 +20,23 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().WoodLife <
-				   ElementalHeartsPlayer.maxWoodLife;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().SpookyLife <
+				   ElementalHeartsPlayer.maxSpookyLife;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 1;
-			player.statLife += 1;
+			player.statLifeMax2 += 7;
+			player.statLife += 7;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(1, true);
+				player.HealEffect(7, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().WoodLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().SpookyLife += 1;
 			return true;
 		}
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Wood, 100);
+			recipe.AddIngredient(1729, 500);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

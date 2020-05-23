@@ -10,7 +10,7 @@ namespace ElementalHearts.Items.Consumables
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 6");
-			DisplayName.SetDefault("Flesh Heart");
+			DisplayName.SetDefault("Lesion Heart");
 		}
 
 		public override void SetDefaults() {
@@ -20,8 +20,8 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().FleshLife <
-				   ElementalHeartsPlayer.maxFleshLife;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().LesionLife <
+				   ElementalHeartsPlayer.maxLesionLife;
 		}
 
 		public override bool UseItem(Player player) {
@@ -30,17 +30,18 @@ namespace ElementalHearts.Items.Consumables
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(6, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().FleshLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().LesionLife += 1;
 			return true;
 		}
 
+		/*I remove recipe because 1.4 still not out (on tModLoader) :P
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.FleshBlock, 100); ;
-			recipe.AddTile(TileID.FleshCloningVat);
+			recipe.AddIngredient(ItemID.LesionBlock, 100); ;
+			recipe.AddTile(TileID.LesionCloningVat);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
-		}
+		}*/
 	}
 }
