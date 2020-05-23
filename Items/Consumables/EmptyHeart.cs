@@ -9,13 +9,13 @@ namespace ElementalHearts.Items.Consumables
 	internal class EmptyHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently Resets All Pre-Hardmode Elemental Heart Stats");
+			Tooltip.SetDefault("Permanently Resets All Elemental Heart Stats");
 			DisplayName.SetDefault("Heart Emptier");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.White;
 			item.value = 0;
 		}
 
@@ -87,12 +87,6 @@ namespace ElementalHearts.Items.Consumables
 			return true;
 		}
 
-		public override void AddRecipes() {
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Wood, 100);;
-			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this, 1);
-			recipe.AddRecipe();
-		}
+		//There is no recipe because the merchent sells this.
 	}
 }
