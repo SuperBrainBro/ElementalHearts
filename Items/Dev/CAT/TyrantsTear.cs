@@ -21,11 +21,11 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.height = 70;
 			item.useTime = 1;
 			item.useAnimation = 1;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 0f;
 			item.crit = 0;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.autoReuse = true;
 			item.shoot = ProjectileType<TyrantsTear_Arrow>();
 			item.shootSpeed = 999f;
