@@ -285,8 +285,11 @@ namespace ElementalHearts
 			packet.Write((byte)player.whoAmI);
 
 			//Pre-Hardmode
+
+			//Basic Elements
 			packet.Write(DirtLife);
 			packet.Write(StoneLife);
+
 			packet.Write(WoodLife);
 			packet.Write(GraniteLife);
 			packet.Write(MarbleLife);
