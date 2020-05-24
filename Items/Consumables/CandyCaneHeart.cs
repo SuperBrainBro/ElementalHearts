@@ -30,7 +30,7 @@ namespace ElementalHearts.Items.Consumables
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(3, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().CandyCaneLife += 3;
+			player.GetModPlayer<ElementalHeartsPlayer>().CandyCaneLife += 1;
 			return true;
 		}
 
