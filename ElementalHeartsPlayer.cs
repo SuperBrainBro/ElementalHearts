@@ -306,6 +306,7 @@ namespace ElementalHearts
 			packet.Write(SlimeLife);
 			packet.Write(FossilLife);
 			packet.Write(BubbleLife);
+			packet.Write(CoralstoneLife);
 
 			//Grown
 			packet.Write(HayLife);
@@ -349,7 +350,7 @@ namespace ElementalHearts
 
 
 
-			packet.Write(CoralstoneLife);
+
 			packet.Write(CandyCaneLife);
 
 			
