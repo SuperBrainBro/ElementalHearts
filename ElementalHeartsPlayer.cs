@@ -107,6 +107,8 @@ namespace ElementalHearts
 		public int PalmWoodLife;
 		public const int maxDynastyLife = 1;
 		public int DynastyLife;
+		public const int maxAmberLife = 1;
+		public int AmberLife;
 
 		//Hardmode
 		public const int maxPearlstoneLife = 1;
@@ -170,24 +172,30 @@ namespace ElementalHearts
 			player.statLifeMax2 += ShadewoodLife;
 			player.statLifeMax2 += BorealWoodLife;
 			player.statLifeMax2 += PalmWoodLife;
+			player.statLifeMax2 += AmethystLife;
 
 			player.statLifeMax2 += IceLife * 2;
 			player.statLifeMax2 += DynastyLife * 2;
+			player.statLifeMax2 += TopazLife * 2;
 
 			player.statLifeMax2 += TinLife * 3;
 			player.statLifeMax2 += CopperLife * 3;
 			player.statLifeMax2 += SlimeLife * 3;
+			player.statLifeMax2 += SapphireLife * 3;
 
 			player.statLifeMax2 += IronLife * 4;
 			player.statLifeMax2 += LeadLife * 4;
+			player.statLifeMax2 += EmeraldLife * 4;
 
 			player.statLifeMax2 += SilverLife * 5;
 			player.statLifeMax2 += TungstenLife * 5;
 			player.statLifeMax2 += BubbleLife * 5;
-			player.statLifeMax2 += CogLife * 5;
+			player.statLifeMax2 += RubyLife * 5;
 
 			player.statLifeMax2 += GoldLife * 6;
 			player.statLifeMax2 += PlatinumLife * 6;
+			player.statLifeMax2 += DiamondLife * 6;
+			player.statLifeMax2 += AmberLife * 6;
 
 			player.statLifeMax2 += DemoniteLife * 7;
 			player.statLifeMax2 += CrimtaneLife * 7;
@@ -199,6 +207,7 @@ namespace ElementalHearts
 			//Hardmode
 			player.statLifeMax2 += PearlwoodLife * 2;
 
+			player.statLifeMax2 += CogLife * 5;
 			player.statLifeMax2 += PearlstoneLife * 5;
 			
 			player.statLifeMax2 += FleshLife * 6;
@@ -291,6 +300,7 @@ namespace ElementalHearts
 			packet.Write(BorealWoodLife);
 			packet.Write(PalmWoodLife);
 			packet.Write(DynastyLife);
+			packet.Write(AmberLife);
 			
 			//Hardmode
 			packet.Write(PearlstoneLife);
@@ -374,7 +384,8 @@ namespace ElementalHearts
 				{"ShadewoodLife", ShadewoodLife},
 				{"BorealWoodLife", BorealWoodLife},
 				{"PalmWoodLife", PalmWoodLife},
-				{"DynastyLife", DynastyLife},			
+				{"DynastyLife", DynastyLife},
+				{"AmberLife", AmberLife},	
 
 				//Hardmode
 				{"BubbleLife", BubbleLife},
@@ -447,7 +458,8 @@ namespace ElementalHearts
 			ShadewoodLife = tag.GetInt("ShadewoodLife");
 			BorealWoodLife = tag.GetInt("BorealWoodLife");
 			PalmWoodLife = tag.GetInt("PalmWoodLife");
-			DynastyLife = tag.GetInt("DynastyLife");		
+			DynastyLife = tag.GetInt("DynastyLife");
+			AmberLife = tag.GetInt("AmberLife");
 
 			nonStopParty = tag.GetBool("nonStopParty");
 
