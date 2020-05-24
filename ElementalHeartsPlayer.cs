@@ -177,7 +177,9 @@ namespace ElementalHearts
 			player.statLifeMax2 += IceLife * 2;
 			player.statLifeMax2 += DynastyLife * 2;
 			player.statLifeMax2 += TopazLife * 2;
+			player.statLifeMax2 += GraniteLife * 2;
 			player.statLifeMax2 += FossilLife * 2;
+			player.statLifeMax2 += HayLife * 2;
 
 			player.statLifeMax2 += TinLife * 3;
 			player.statLifeMax2 += CopperLife * 3;
@@ -209,8 +211,8 @@ namespace ElementalHearts
 			player.statLifeMax2 += MeteoriteLife * 8;
 
 			//Hardmode
-			player.statLifeMax2 += PearlwoodLife * 2;
-
+			
+			player.statLifeMax2 += PearlwoodLife * 5;
 			player.statLifeMax2 += CogLife * 5;
 			player.statLifeMax2 += PearlstoneLife * 5;
 			

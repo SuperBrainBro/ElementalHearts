@@ -88,6 +88,7 @@ namespace ElementalHearts.Items.Consumables
 			player.GetModPlayer<ElementalHeartsPlayer>().CrystalLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().FleshLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().LesionLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().SpookyLife = 0;
 			//Expert Hearts
 			player.GetModPlayer<ElementalHeartsPlayer>().BrainLife = 0;
 			//Dev Hearts
