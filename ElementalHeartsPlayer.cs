@@ -177,11 +177,15 @@ namespace ElementalHearts
 			player.statLifeMax2 += IceLife * 2;
 			player.statLifeMax2 += DynastyLife * 2;
 			player.statLifeMax2 += TopazLife * 2;
+			player.statLifeMax2 += FossilLife * 2;
 
 			player.statLifeMax2 += TinLife * 3;
 			player.statLifeMax2 += CopperLife * 3;
 			player.statLifeMax2 += SlimeLife * 3;
 			player.statLifeMax2 += SapphireLife * 3;
+			player.statLifeMax2 += HoneyLife * 3;
+			player.statLifeMax2 += CoralstoneLife * 3;
+			player.statLifeMax2 += CandyCaneLife * 3;
 
 			player.statLifeMax2 += IronLife * 4;
 			player.statLifeMax2 += LeadLife * 4;
@@ -217,6 +221,7 @@ namespace ElementalHearts
 
 			player.statLifeMax2 += CobaltLife * 9;
 			player.statLifeMax2 += PalladiumLife * 9;
+			player.statLifeMax2 += CrystalLife * 9;
 
 			player.statLifeMax2 += MythrilLife * 10;
 			player.statLifeMax2 += RainbowLife * 10;
@@ -225,8 +230,9 @@ namespace ElementalHearts
 			player.statLifeMax2 += AdamantiteLife * 11;
 			player.statLifeMax2 += TitaniumLife * 11;
 
-			player.statLifeMax2 += ChlorophyteLife * 11;
-			player.statLifeMax2 += LuminiteLife * 11;
+			player.statLifeMax2 += ChlorophyteLife * 12;
+
+			player.statLifeMax2 += LuminiteLife * 20;
 
 			//Expert Hearts
 			player.statLifeMax2 += BrainLife * 5;
@@ -301,6 +307,8 @@ namespace ElementalHearts
 			packet.Write(PalmWoodLife);
 			packet.Write(DynastyLife);
 			packet.Write(AmberLife);
+			packet.Write(CoralstoneLife);
+			packet.Write(CandyCaneLife);
 			
 			//Hardmode
 			packet.Write(PearlstoneLife);
@@ -318,6 +326,7 @@ namespace ElementalHearts
 			packet.Write(LesionLife);
 			packet.Write(PearlwoodLife);
 			packet.Write(SpookyLife);
+			packet.Write(CrystalLife);
 
 			//Expert Hearts
 			packet.Write(BrainLife);
@@ -385,7 +394,9 @@ namespace ElementalHearts
 				{"BorealWoodLife", BorealWoodLife},
 				{"PalmWoodLife", PalmWoodLife},
 				{"DynastyLife", DynastyLife},
-				{"AmberLife", AmberLife},	
+				{"AmberLife", AmberLife},
+				{"CoralstoneLife", CoralstoneLife},
+				{"CandyCaneLife", CandyCaneLife},
 
 				//Hardmode
 				{"BubbleLife", BubbleLife},
@@ -404,6 +415,7 @@ namespace ElementalHearts
 				{"LesionLife", LesionLife},
 				{"PearlwoodLife", PearlwoodLife},
 				{"SpookyLife", SpookyLife},
+				{"CrystalLife", CrystalLife},
 
 				//Expert Hearts
 				{"BrainLife", BrainLife},
@@ -460,6 +472,8 @@ namespace ElementalHearts
 			PalmWoodLife = tag.GetInt("PalmWoodLife");
 			DynastyLife = tag.GetInt("DynastyLife");
 			AmberLife = tag.GetInt("AmberLife");
+			CoralstoneLife = tag.GetInt("CoralstoneLife");
+			CandyCaneLife = tag.GetInt("CandyCaneLife");
 
 			nonStopParty = tag.GetBool("nonStopParty");
 
@@ -480,6 +494,7 @@ namespace ElementalHearts
 			LesionLife = tag.GetInt("LesionLife");
 			PearlwoodLife = tag.GetInt("PearlwoodLife");
 			SpookyLife = tag.GetInt("SpookyLife");
+			CrystalLife = tag.GetInt("CrystalLife");
 
 			//Expert Hearts
 			BrainLife = tag.GetInt("BrainLife");			

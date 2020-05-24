@@ -72,6 +72,14 @@ ItemName.DiamondHeart=Алмазное сердце
 ItemTooltip.DiamondHeart=Навсегда увеличивает жизнь на 6
 ItemName.AmberHeart=Янтарное сердце
 ItemTooltip.AmberHeart=Навсегда увеличивает жизнь на 6
+ItemName.CandyCaneHeart=Конфетное сердце
+ItemTooltip.CandyCaneHeart=Навсегда увеличивает жизнь на 3
+ItemName.CoralstoneHeart=Коралловое каменное сердце
+ItemTooltip.CoralstoneHeart=Навсегда увеличивает жизнь на 3
+ItemName.FossilHeart=Пустынное окаменелое сердце
+ItemTooltip.FossilHeart=Навсегда увеличивает жизнь на 2
+ItemName.HoneyHeart=Медовое сердце
+ItemTooltip.HoneyHeart=Навсегда увеличивает жизнь на 3
 
 ItemName.PearlwoodHeart=Жемчужно-деревянное сердце
 ItemTooltip.PearlwoodHeart=Навсегда увеличивает жизнь на 2
@@ -85,6 +93,8 @@ ItemName.LesionHeart=Сердце из поражения
 ItemTooltip.LesionHeart=Навсегда увеличивает жизнь на 6
 ItemName.SpookyHeart=Жуткое сердце
 ItemTooltip.SpookyHeart=Навсегда увеличивает жизнь на 7
+ItemName.CrystalHeart=Кристальное сердце
+ItemTooltip.CrystalHeart=Навсегда увеличивает жизнь на 9
 ItemName.CobaltHeart=Кобальтовое сердце
 ItemTooltip.CobaltHeart=Навсегда увеличивает жизнь на 9
 ItemName.PalladiumHeart=Палладиумое сердце
@@ -99,6 +109,10 @@ ItemName.AdamantiteHeart=Адамантитовое сердце
 ItemTooltip.AdamantiteHeart=Навсегда увеличивает жизнь на 11
 ItemName.TitaniumHeart=Титановое сердце
 ItemTooltip.TitaniumHeart=Навсегда увеличивает жизнь на 11
+ItemName.ChlorophyteHeart=Хлорофитовое сердце
+ItemTooltip.ChlorophyteHeart=Навсегда увеличивает жизнь на 12
+ItemName.LuminiteHeart=Люминитовое сердце
+ItemTooltip.LuminiteHeart=Навсегда увеличивает жизнь на 20
 
 Dev Stuff
 ItemName.MaskOfCAT=Маскоф
