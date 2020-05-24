@@ -13,7 +13,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact. \nHas a chance to deploy rockets from the player upon impact.");
+			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact. \nHas a chance to deploy rockets from the player upon impact. \nHas a small chance to deploy fireworks upon impact.");
 			DisplayName.SetDefault("Bow Lite");
 		}
 		public override void SetDefaults()
@@ -39,12 +39,24 @@ namespace ElementalHearts.Items.Dev.Lite
 		{
 			if (Main.rand.NextBool(4))
 			{
-				int GrenProjLite1 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
-				int GrenProjLite2 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
+				int GrenProjLite1 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
+				int GrenProjLite2 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
 				if (Main.rand.NextBool(8))
 				{
-					int GrenProjLite3 = Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
-					int GrenProjLite4 = Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
+					int GrenProjLite3 = Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketFireworkRed, 20 / 2, 0f, player.whoAmI);
+
+					if (Main.rand.NextBool(8))
+					{
+						int GrenProjLite4 = Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketFireworkGreen, 25 / 2, 0f, player.whoAmI);
+						if (Main.rand.NextBool(8))
+						{
+							int GrenProjLite5 = Projectile.NewProjectile(player.position, new Vector2(0, 10), ProjectileID.RocketFireworkBlue, 30 / 2, 0f, player.whoAmI);
+							if (Main.rand.NextBool(8))
+							{
+								int GrenProjLite6 = Projectile.NewProjectile(player.position, new Vector2(0, -10), ProjectileID.RocketFireworkYellow, 35 / 2, 0f, player.whoAmI);
+							}
+						}
+					}
 				}
 			}
 			base.OnConsumeAmmo(player);
