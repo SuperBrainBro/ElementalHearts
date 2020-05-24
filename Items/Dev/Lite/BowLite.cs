@@ -13,7 +13,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact.");
+			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact. \nHas a chance to deploy rockets from the player upon impact.");
 			DisplayName.SetDefault("Bow Lite");
 		}
 		public override void SetDefaults()
@@ -39,35 +39,35 @@ namespace ElementalHearts.Items.Dev.Lite
 		{
 			if (Main.rand.NextBool(4))
 			{
-				int GrenProjLite1 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
-				int GrenProjLite2 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
+				int GrenProjLite1 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
+				int GrenProjLite2 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
 				if (Main.rand.NextBool(8))
 				{
-					int GrenProjLite3 = Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
-					int GrenProjLite4 = Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
+					int GrenProjLite3 = Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
+					int GrenProjLite4 = Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketII, 15 / 2, 0f, player.whoAmI);
 				}
 			}
 			base.OnConsumeAmmo(player);
 		}
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int cProjLite1 = Projectile.NewProjectile(player.position, new Vector2(speedX + 5, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
-			int cProjLite2 = Projectile.NewProjectile(player.position, new Vector2(speedX - 5, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
-			int cProjLite3 = Projectile.NewProjectile(player.position, new Vector2(speedX + 10, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
-			int cProjLite4 = Projectile.NewProjectile(player.position, new Vector2(speedX - 10, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
+			int cProjLite1 = Projectile.NewProjectile(player.position, new Vector2(speedX + 5, speedY), ProjectileID.ChlorophyteBullet, 15 / 2, 1.5f, player.whoAmI);
+			int cProjLite2 = Projectile.NewProjectile(player.position, new Vector2(speedX - 5, speedY), ProjectileID.ChlorophyteBullet, 15 / 2, 1.5f, player.whoAmI);
+			int cProjLite3 = Projectile.NewProjectile(player.position, new Vector2(speedX + 10, speedY), ProjectileID.ChlorophyteBullet, 15 / 2, 1.5f, player.whoAmI);
+			int cProjLite4 = Projectile.NewProjectile(player.position, new Vector2(speedX - 10, speedY), ProjectileID.ChlorophyteBullet, 15 / 2, 1.5f, player.whoAmI);
 
 			if (Main.rand.NextBool(2))
 			{
-				int ichorProjLite5 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 20, 2f, player.whoAmI);
+				int ichorProjLite5 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 10 / 2, 2f, player.whoAmI);
 				if (Main.rand.NextBool(4))
 				{
-					int ichorProjLite6 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 25, 2f, player.whoAmI);
+					int ichorProjLite6 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 15 / 2, 2f, player.whoAmI);
 					if (Main.rand.NextBool(6))
 					{
-						int ichorProjLite7 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 30, 2f, player.whoAmI);
+						int ichorProjLite7 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 20 / 2, 2f, player.whoAmI);
 						if (Main.rand.NextBool(8))
 						{
-							int ichorProjLite8 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 40, 2f, player.whoAmI);
+							int ichorProjLite8 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 25 / 2, 2f, player.whoAmI);
 						}
 					}
 				}
