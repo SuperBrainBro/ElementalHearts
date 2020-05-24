@@ -6,11 +6,11 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class GraniteHeart : ModItem
+	internal class MarbleHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 1");
-			DisplayName.SetDefault("Granite Heart");
+			DisplayName.SetDefault("Marble Heart");
 		}
 
 		public override void SetDefaults() {
@@ -20,8 +20,8 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().GraniteLife <
-				   ElementalHeartsPlayer.maxGraniteLife;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().MarbleLife <
+				   ElementalHeartsPlayer.maxMarbleLife;
 		}
 
 		public override bool UseItem(Player player) {
@@ -30,13 +30,13 @@ namespace ElementalHearts.Items.Consumables
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(1, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().GraniteLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().MarbleLife += 1;
 			return true;
 		}
-
-		public override void AddRecipes() {
+		public override void AddRecipes()
+		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Granite, 100);;
+			recipe.AddIngredient(ItemID.Marble, 100);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
