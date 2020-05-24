@@ -294,6 +294,7 @@ namespace ElementalHearts
 			packet.Write(StoneLife);
 			packet.Write(GraniteLife);
 			packet.Write(MarbleLife);
+			packet.Write(IceLife);
 
 			//Wood
 			packet.Write(WoodLife);
@@ -304,8 +305,6 @@ namespace ElementalHearts
 			packet.Write(PalmWoodLife);
 			packet.Write(DynastyLife);
 
-
-			packet.Write(IceLife);
 			packet.Write(GlassLife);
 			packet.Write(SlimeLife);
 			packet.Write(FossilLife);
