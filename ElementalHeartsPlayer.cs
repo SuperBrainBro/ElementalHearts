@@ -115,6 +115,10 @@ namespace ElementalHearts
 		public int EbonsandLife;
 		public const int maxCrimsandLife = 1;
 		public int CrimsandLife;
+		public const int maxEbonstoneLife = 1;
+		public int EbonstoneLife;
+		public const int maxCrimstoneLife = 1;
+		public int CrimstoneLife;
 
 		//Hardmode
 		public const int maxPearlsandLife = 1;
