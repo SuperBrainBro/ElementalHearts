@@ -353,12 +353,20 @@ namespace ElementalHearts
 			//Basic
 			packet.Write(PearlstoneLife);
 
-			//Wood
-			packet.Write(PearlwoodLife);
-
 			packet.Write(PearlsandLife);
 
+			//Wood
+			packet.Write(PearlwoodLife);
+			packet.Write(SpookyLife);
+
+			//Other
 			packet.Write(RainbowLife);
+			packet.Write(CogLife);
+			packet.Write(FleshLife);
+			packet.Write(LesionLife);
+			packet.Write(CrystalLife);
+
+			//Basic Ores
 			packet.Write(CobaltLife);
 			packet.Write(PalladiumLife);
 			packet.Write(MythrilLife);
@@ -367,12 +375,6 @@ namespace ElementalHearts
 			packet.Write(TitaniumLife);
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
-			packet.Write(CogLife);
-			packet.Write(FleshLife);
-			packet.Write(LesionLife);
-
-			packet.Write(SpookyLife);
-			packet.Write(CrystalLife);
 
 			//Expert Hearts
 			packet.Write(BrainLife);
