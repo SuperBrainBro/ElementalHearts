@@ -255,7 +255,8 @@ namespace ElementalHearts
 			//Expert Hearts
 			player.statLifeMax2 += BrainLife * 5;
 			player.statLifeMax2 += WormLife * 5;
-			player.statLifeMax2 += DemonHeartMK2Life * 5;
+			
+			player.statLifeMax2 += DemonHeartMK2Life * 6;
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
