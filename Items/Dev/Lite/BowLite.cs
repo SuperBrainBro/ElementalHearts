@@ -4,18 +4,59 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
+using System;
+using ElementalHearts.Projectiles;
 
 namespace ElementalHearts.Items.Dev.Lite
 {
 	public class BowLite : ModItem
 	{
+		public override void SetStaticDefaults()
+		{
+			Tooltip.SetDefault("'Great for impersonating devs!'\nShoots 4 homing projectiles when shot. \nHas a chance to spawn an array of homing projectiles on impact.");
+			DisplayName.SetDefault("Bow Lite");
+		}
 		public override void SetDefaults()
 		{
-			item.CloneDefaults(ItemID.Tsunami);
+			item.useStyle = ItemUseStyleID.HoldingOut;
+			item.autoReuse = true;
+			item.useAnimation = 24;
+			item.useTime = 24;
+			item.width = 50;
+			item.height = 18;
+			item.shoot = ProjectileID.WoodenArrowFriendly;
+			item.useAmmo = AmmoID.Arrow;
+			item.UseSound = SoundID.Item5;
+			item.shootSpeed = 10f;
+			item.noMelee = true;
+			item.ranged = true;
 			item.damage = 20;
 			item.crit = 3;
 			item.knockBack = 1.5f;
 			item.rare = ItemRarityID.Cyan;
+		}
+		public override void OnConsumeAmmo(Player player)
+		{
+			if (Main.rand.NextBool(4))
+			{
+				int GrenProjLite1 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
+				int GrenProjLite2 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
+				if (Main.rand.NextBool(8))
+				{
+					int GrenProjLite3 = Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
+					int GrenProjLite4 = Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.BouncyGrenade, 20 / 2, 0f, player.whoAmI);
+				}
+			}
+			base.OnConsumeAmmo(player);
+		}
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			int eProjLite1 = Projectile.NewProjectile(player.position, new Vector2(speedX + 5, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
+			int eProjLite2 = Projectile.NewProjectile(player.position, new Vector2(speedX - 5, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
+			int eProjLite3 = Projectile.NewProjectile(player.position, new Vector2(speedX + 10, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
+			int eProjLite4 = Projectile.NewProjectile(player.position, new Vector2(speedX - 10, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
+
+			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
 		}
 	}
 }
