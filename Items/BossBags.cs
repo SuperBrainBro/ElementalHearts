@@ -95,6 +95,7 @@ namespace ElementalHearts.Items
 					player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
+					player.QuickSpawnItem(ItemType<BowLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
 				}
 			}
