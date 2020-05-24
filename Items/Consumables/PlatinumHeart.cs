@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables
 	internal class PlatinumHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 6");
+			Tooltip.SetDefault("Permanently increases maximum life by 5");
 			DisplayName.SetDefault("Platinum Heart");
 		}
 
@@ -25,10 +25,10 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 6;
-			player.statLife += 6;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(6, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().PlatinumLife += 1;
 			return true;
