@@ -72,7 +72,11 @@ namespace ElementalHearts.Items.Consumables
 			player.GetModPlayer<ElementalHeartsPlayer>().ShadewoodLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().EbonwoodLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().AmberLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().SandLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().EbonsandLife = 0;
+			player.GetModPlayer<ElementalHeartsPlayer>().CrimsandLife = 0;
 			//Hardmode
+			player.GetModPlayer<ElementalHeartsPlayer>().PearlsandLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().PearlwoodLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().PearlstoneLife = 0;
 			player.GetModPlayer<ElementalHeartsPlayer>().RainbowLife = 0;
