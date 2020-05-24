@@ -379,7 +379,15 @@ namespace ElementalHearts
 				//Pre-Hardmode
 				{"DirtLife", DirtLife},
 				{"StoneLife", StoneLife},
+
 				{"WoodLife", WoodLife},
+				{"RichMahoganyLife", RichMahoganyLife},
+				{"EbonwoodLife", EbonwoodLife},
+				{"ShadewoodLife", ShadewoodLife},
+				{"BorealWoodLife", BorealWoodLife},
+				{"PalmWoodLife", PalmWoodLife},
+				{"DynastyLife", DynastyLife},
+
 				{"GraniteLife", GraniteLife},
 				{"MarbleLife", MarbleLife},
 				{"IceLife", IceLife},
@@ -410,12 +418,7 @@ namespace ElementalHearts
 				{"CrimtaneLife", CrimtaneLife},
 				{"ObsidianLife", ObsidianLife},
 				{"HellstoneLife", HellstoneLife},
-				{"RichMahoganyLife", RichMahoganyLife},
-				{"EbonwoodLife", EbonwoodLife},
-				{"ShadewoodLife", ShadewoodLife},
-				{"BorealWoodLife", BorealWoodLife},
-				{"PalmWoodLife", PalmWoodLife},
-				{"DynastyLife", DynastyLife},
+
 				{"AmberLife", AmberLife},
 				{"CoralstoneLife", CoralstoneLife},
 				{"CandyCaneLife", CandyCaneLife},
