@@ -1,0 +1,99 @@
+//Pre-Hardmode//
+
+			//Basic
+			DirtLife
+			StoneLife
+			GraniteLife
+			MarbleLife
+			IceLife
+			
+			SandLife
+			EbonsandLife
+			CrimsandLife
+			GlassLife
+
+			//Other
+			HoneyLife
+			SlimeLife
+			FossilLife
+			BubbleLife
+			CoralstoneLife
+			CandyCaneLife;
+			
+			//Grown
+			HayLife
+			CactusLife
+			PumpkinLife
+
+			//Wood
+			WoodLife
+			RichMahoganyLife
+			EbonwoodLife
+			ShadewoodLife
+			BorealWoodLife
+			PalmWoodLife
+			DynastyLife)
+			
+			//Gems
+			AmberLife
+			AmethystLife
+			TopazLife
+			SapphireLife
+			EmeraldLife
+			RubyLife
+			DiamondLife
+
+			//Basic Ores
+			CopperLife
+			TinLife
+			IronLife
+			LeadLife
+			SilverLife
+			TungstenLife
+			GoldLife
+			PlatinumLife
+			
+			//Other Ores
+			MeteoriteLife
+			DemoniteLife
+			CrimtaneLife
+			HellstoneLife
+			
+			//Expert Hearts
+			BrainLife
+			WormLife
+
+			//Hardmode//
+
+			//Basic
+			PearlstoneLife
+
+			PearlsandLife
+
+			//Wood
+			PearlwoodLife
+			SpookyLife
+			
+			//Other
+			RainbowLife
+			CogLife
+			FleshLife
+			LesionLife
+			CrystalLife
+
+			//Basic Ores
+			CobaltLife
+			PalladiumLife
+			MythrilLife
+			OrichalcumLife
+			AdamantiteLife
+			TitaniumLife
+			ChlorophyteLife
+			LuminiteLife
+						
+			//Expert Hearts
+			Mechanical Heart
+			
+			//Dev Hearts
+			HeartOfCAT
+			CrystalLite
