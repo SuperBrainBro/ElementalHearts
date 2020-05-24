@@ -286,27 +286,52 @@ namespace ElementalHearts
 			ModPacket packet = mod.GetPacket();
 			packet.Write((byte)player.whoAmI);
 
-			//Pre-Hardmode
+			//Pre-Hardmode//
+
+			//Basic
 			packet.Write(DirtLife);
 			packet.Write(StoneLife);
-			packet.Write(WoodLife);
 			packet.Write(GraniteLife);
 			packet.Write(MarbleLife);
 			packet.Write(IceLife);
+			
+			packet.Write(SandLife);
+			packet.Write(EbonsandLife);
+			packet.Write(CrimsandLife);
 			packet.Write(GlassLife);
+
+			//Other
+			packet.Write(HoneyLife);
 			packet.Write(SlimeLife);
 			packet.Write(FossilLife);
-			packet.Write(MushroomLife);
+			packet.Write(BubbleLife);
+			packet.Write(CoralstoneLife);
+			packet.Write(CandyCaneLife);
+
+			//Grown
 			packet.Write(HayLife);
 			packet.Write(CactusLife);
 			packet.Write(PumpkinLife);
-			packet.Write(HoneyLife);
+
+			//Wood
+			packet.Write(WoodLife);
+			packet.Write(RichMahoganyLife);
+			packet.Write(EbonwoodLife);
+			packet.Write(ShadewoodLife);
+			packet.Write(BorealWoodLife);
+			packet.Write(PalmWoodLife);
+			packet.Write(DynastyLife);
+
+			//Gems
+			packet.Write(AmberLife);
 			packet.Write(AmethystLife);
 			packet.Write(TopazLife);
 			packet.Write(SapphireLife);
 			packet.Write(EmeraldLife);
 			packet.Write(RubyLife);
 			packet.Write(DiamondLife);
+
+			//Basic Ores
 			packet.Write(CopperLife);
 			packet.Write(TinLife);
 			packet.Write(IronLife);
@@ -315,28 +340,32 @@ namespace ElementalHearts
 			packet.Write(TungstenLife);
 			packet.Write(GoldLife);
 			packet.Write(PlatinumLife);
+
+			//Other Ores
 			packet.Write(MeteoriteLife);
 			packet.Write(DemoniteLife);
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
-			packet.Write(BubbleLife);
-			packet.Write(RichMahoganyLife);
-			packet.Write(EbonwoodLife);
-			packet.Write(ShadewoodLife);
-			packet.Write(BorealWoodLife);
-			packet.Write(PalmWoodLife);
-			packet.Write(DynastyLife);
-			packet.Write(AmberLife);
-			packet.Write(CoralstoneLife);
-			packet.Write(CandyCaneLife);
-			packet.Write(SandLife);
-			packet.Write(EbonsandLife);
-			packet.Write(CrimsandLife);
-			
-			//Hardmode
-			packet.Write(PearlsandLife);
+
+			//Hardmode//
+
+			//Basic
 			packet.Write(PearlstoneLife);
+
+			packet.Write(PearlsandLife);
+
+			//Wood
+			packet.Write(PearlwoodLife);
+			packet.Write(SpookyLife);
+
+			//Other
 			packet.Write(RainbowLife);
+			packet.Write(CogLife);
+			packet.Write(FleshLife);
+			packet.Write(LesionLife);
+			packet.Write(CrystalLife);
+
+			//Basic Ores
 			packet.Write(CobaltLife);
 			packet.Write(PalladiumLife);
 			packet.Write(MythrilLife);
@@ -345,12 +374,6 @@ namespace ElementalHearts
 			packet.Write(TitaniumLife);
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
-			packet.Write(CogLife);
-			packet.Write(FleshLife);
-			packet.Write(LesionLife);
-			packet.Write(PearlwoodLife);
-			packet.Write(SpookyLife);
-			packet.Write(CrystalLife);
 
 			//Expert Hearts
 			packet.Write(BrainLife);
@@ -383,7 +406,15 @@ namespace ElementalHearts
 				//Pre-Hardmode
 				{"DirtLife", DirtLife},
 				{"StoneLife", StoneLife},
+
 				{"WoodLife", WoodLife},
+				{"RichMahoganyLife", RichMahoganyLife},
+				{"EbonwoodLife", EbonwoodLife},
+				{"ShadewoodLife", ShadewoodLife},
+				{"BorealWoodLife", BorealWoodLife},
+				{"PalmWoodLife", PalmWoodLife},
+				{"DynastyLife", DynastyLife},
+
 				{"GraniteLife", GraniteLife},
 				{"MarbleLife", MarbleLife},
 				{"IceLife", IceLife},
@@ -414,12 +445,7 @@ namespace ElementalHearts
 				{"CrimtaneLife", CrimtaneLife},
 				{"ObsidianLife", ObsidianLife},
 				{"HellstoneLife", HellstoneLife},
-				{"RichMahoganyLife", RichMahoganyLife},
-				{"EbonwoodLife", EbonwoodLife},
-				{"ShadewoodLife", ShadewoodLife},
-				{"BorealWoodLife", BorealWoodLife},
-				{"PalmWoodLife", PalmWoodLife},
-				{"DynastyLife", DynastyLife},
+
 				{"AmberLife", AmberLife},
 				{"CoralstoneLife", CoralstoneLife},
 				{"CandyCaneLife", CandyCaneLife},
