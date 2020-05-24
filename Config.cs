@@ -13,12 +13,12 @@ namespace ElementalHearts
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
-        //[Header("Elemental Hearts Setting")]
+        /*[Header("Elemental Hearts Setting")]
 
         [Header("Vanilla Settings")]
         [DefaultValue(false)]
         [ReloadRequired]
         [Label("Retexture of Curse's")]
-        public bool VanillaDebuffCurseRetexture;
+        public bool VanillaDebuffCurseRetexture;*/
     }
 }
