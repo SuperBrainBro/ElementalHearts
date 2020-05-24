@@ -6,38 +6,39 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class HellstoneHeart : ModItem
+	internal class FossilHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 8");
-			DisplayName.SetDefault("Hellstone Heart");
+			Tooltip.SetDefault("Permanently increases maximum life by 2");
+			DisplayName.SetDefault("Fossil Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = ItemRarityID.Green;
+			item.rare = ItemRarityID.White;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().HellstoneLife <
-				   ElementalHeartsPlayer.maxHellstoneLife;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().FossilLife <
+				   ElementalHeartsPlayer.maxFossilLife;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 8;
-			player.statLife += 8;
+			player.statLifeMax2 += 2;
+			player.statLife += 2;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(8, true);
+				player.HealEffect(2, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().HellstoneLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().FossilLife += 1;
 			return true;
 		}
 
-		public override void AddRecipes() {
+		public override void AddRecipes()
+		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Hellstone, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.DesertFossil, 100); ;
+			recipe.AddTile(TileID.Extractinator);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}
