@@ -159,6 +159,8 @@ namespace ElementalHearts
 		//Expert Hearts
 		public const int maxBrainLife = 1;
 		public int BrainLife;
+		public const int maxWormLife = 1;
+		public int WormLife;
 
 		//Dev Stuff/Hearts
 		public const int maxHeartOfCAT = 1;
@@ -254,6 +256,7 @@ namespace ElementalHearts
 
 			//Expert Hearts
 			player.statLifeMax2 += BrainLife * 5;
+			player.statLifeMax2 += WormLife * 5;
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
@@ -355,6 +358,7 @@ namespace ElementalHearts
 
 			//Expert Hearts
 			packet.Write(BrainLife);
+			packet.Write(WormLife);
 
 			//Dev Hearts
 			packet.Write(HeartOfCAT);
@@ -451,6 +455,7 @@ namespace ElementalHearts
 
 				//Expert Hearts
 				{"BrainLife", BrainLife},
+				{"WormLife", WormLife},
 				
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
@@ -533,7 +538,8 @@ namespace ElementalHearts
 			CrystalLife = tag.GetInt("CrystalLife");
 
 			//Expert Hearts
-			BrainLife = tag.GetInt("BrainLife");			
+			BrainLife = tag.GetInt("BrainLife");
+			WormLife = tag.GetInt("WormLife");
 			
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
