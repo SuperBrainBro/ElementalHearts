@@ -5,7 +5,6 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
-using ElementalHearts.Projectiles;
 
 namespace ElementalHearts.Items.Dev.Lite
 {
