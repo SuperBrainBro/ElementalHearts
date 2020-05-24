@@ -41,17 +41,17 @@ namespace ElementalHearts.Items.Dev.Lite
 			{
 				int GrenProjLite1 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
 				int GrenProjLite2 = Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
-				if (Main.rand.NextBool(8))
+				if (Main.rand.NextBool(5))
 				{
 					int GrenProjLite3 = Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketFireworkRed, 20 / 2, 0f, player.whoAmI);
 
-					if (Main.rand.NextBool(8))
+					if (Main.rand.NextBool(4))
 					{
 						int GrenProjLite4 = Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketFireworkGreen, 25 / 2, 0f, player.whoAmI);
-						if (Main.rand.NextBool(8))
+						if (Main.rand.NextBool(3))
 						{
 							int GrenProjLite5 = Projectile.NewProjectile(player.position, new Vector2(0, 10), ProjectileID.RocketFireworkBlue, 30 / 2, 0f, player.whoAmI);
-							if (Main.rand.NextBool(8))
+							if (Main.rand.NextBool(2))
 							{
 								int GrenProjLite6 = Projectile.NewProjectile(player.position, new Vector2(0, -10), ProjectileID.RocketFireworkYellow, 35 / 2, 0f, player.whoAmI);
 							}
