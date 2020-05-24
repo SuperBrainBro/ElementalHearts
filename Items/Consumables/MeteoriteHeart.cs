@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables
 	internal class MeteoriteHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 8");
+			Tooltip.SetDefault("Permanently increases maximum life by 5");
 			DisplayName.SetDefault("Meteorite Heart");
 		}
 
@@ -25,10 +25,10 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 8;
-			player.statLife += 8;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(8, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().MeteoriteLife += 1;
 			return true;
