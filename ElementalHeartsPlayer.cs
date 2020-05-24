@@ -109,8 +109,16 @@ namespace ElementalHearts
 		public int DynastyLife;
 		public const int maxAmberLife = 1;
 		public int AmberLife;
+		public const int maxSandLife = 1;
+		public int SandLife;
+		public const int maxEbonsandLife = 1;
+		public int EbonsandLife;
+		public const int maxCrimsandLife = 1;
+		public int CrimsandLife;
 
 		//Hardmode
+		public const int maxPearlsandLife = 1;
+		public int PearlsandLife;
 		public const int maxPearlstoneLife = 1;
 		public int PearlstoneLife;
 		public const int maxRainbowLife = 1;
@@ -173,6 +181,9 @@ namespace ElementalHearts
 			player.statLifeMax2 += BorealWoodLife;
 			player.statLifeMax2 += PalmWoodLife;
 			player.statLifeMax2 += AmethystLife;
+			player.statLifeMax2 += SandLife;
+			player.statLifeMax2 += EbonsandLife;
+			player.statLifeMax2 += CrimsandLife;
 
 			player.statLifeMax2 += IceLife * 2;
 			player.statLifeMax2 += DynastyLife * 2;
@@ -211,7 +222,8 @@ namespace ElementalHearts
 			player.statLifeMax2 += MeteoriteLife * 8;
 
 			//Hardmode
-			
+			player.statLifeMax2 += PearlsandLife * 2;
+
 			player.statLifeMax2 += PearlwoodLife * 5;
 			player.statLifeMax2 += CogLife * 5;
 			player.statLifeMax2 += PearlstoneLife * 5;
@@ -311,8 +323,12 @@ namespace ElementalHearts
 			packet.Write(AmberLife);
 			packet.Write(CoralstoneLife);
 			packet.Write(CandyCaneLife);
+			packet.Write(SandLife);
+			packet.Write(EbonsandLife);
+			packet.Write(CrimsandLife);
 			
 			//Hardmode
+			packet.Write(PearlsandLife);
 			packet.Write(PearlstoneLife);
 			packet.Write(RainbowLife);
 			packet.Write(CobaltLife);
@@ -399,8 +415,12 @@ namespace ElementalHearts
 				{"AmberLife", AmberLife},
 				{"CoralstoneLife", CoralstoneLife},
 				{"CandyCaneLife", CandyCaneLife},
+				{"SandLife", SandLife},
+				{"EbonsandLife", EbonsandLife},
+				{"CrimsandLife", CrimsandLife},
 
 				//Hardmode
+				{"PearlsandLife", PearlsandLife},
 				{"BubbleLife", BubbleLife},
 				{"PearlstoneLife", PearlstoneLife},
 				{"RainbowLife", RainbowLife},
@@ -476,10 +496,14 @@ namespace ElementalHearts
 			AmberLife = tag.GetInt("AmberLife");
 			CoralstoneLife = tag.GetInt("CoralstoneLife");
 			CandyCaneLife = tag.GetInt("CandyCaneLife");
+			SandLife = tag.GetInt("SandLife");
+			CrimsandLife = tag.GetInt("CrimsandLife");
+			EbonsandLife = tag.GetInt("EbonsandLife");
 
 			nonStopParty = tag.GetBool("nonStopParty");
 
 			//Hardmode
+			PearlsandLife = tag.GetInt("PearlsandLife");
 			BubbleLife = tag.GetInt("BubbleLife");
 			PearlstoneLife = tag.GetInt("PearlstoneLife");
 			RainbowLife = tag.GetInt("RainbowLife");
