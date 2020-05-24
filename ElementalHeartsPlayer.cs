@@ -289,11 +289,19 @@ namespace ElementalHearts
 
 			//Pre-Hardmode
 
-			//Basic Elements
+			//Basic
 			packet.Write(DirtLife);
 			packet.Write(StoneLife);
 
+			//Wood
 			packet.Write(WoodLife);
+			packet.Write(RichMahoganyLife);
+			packet.Write(EbonwoodLife);
+			packet.Write(ShadewoodLife);
+			packet.Write(BorealWoodLife);
+			packet.Write(PalmWoodLife);
+			packet.Write(DynastyLife);
+
 			packet.Write(GraniteLife);
 			packet.Write(MarbleLife);
 			packet.Write(IceLife);
@@ -324,12 +332,7 @@ namespace ElementalHearts
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
 			packet.Write(BubbleLife);
-			packet.Write(RichMahoganyLife);
-			packet.Write(EbonwoodLife);
-			packet.Write(ShadewoodLife);
-			packet.Write(BorealWoodLife);
-			packet.Write(PalmWoodLife);
-			packet.Write(DynastyLife);
+
 			packet.Write(AmberLife);
 			packet.Write(CoralstoneLife);
 			packet.Write(CandyCaneLife);
