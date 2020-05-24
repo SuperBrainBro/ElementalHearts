@@ -348,15 +348,16 @@ namespace ElementalHearts
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
 
+			//Hardmode//
 
-
-
-
-
-			
-			//Hardmode
-			packet.Write(PearlsandLife);
+			//Basic
 			packet.Write(PearlstoneLife);
+
+			//Wood
+			packet.Write(PearlwoodLife);
+
+			packet.Write(PearlsandLife);
+
 			packet.Write(RainbowLife);
 			packet.Write(CobaltLife);
 			packet.Write(PalladiumLife);
@@ -369,7 +370,7 @@ namespace ElementalHearts
 			packet.Write(CogLife);
 			packet.Write(FleshLife);
 			packet.Write(LesionLife);
-			packet.Write(PearlwoodLife);
+
 			packet.Write(SpookyLife);
 			packet.Write(CrystalLife);
 
