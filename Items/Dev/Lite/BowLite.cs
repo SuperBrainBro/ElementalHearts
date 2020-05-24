@@ -13,7 +13,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("'Great for impersonating devs!'\nShoots 4 homing projectiles when shot. \nHas a chance to spawn an array of homing projectiles on impact.");
+			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact.");
 			DisplayName.SetDefault("Bow Lite");
 		}
 		public override void SetDefaults()
@@ -30,7 +30,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.shootSpeed = 10f;
 			item.noMelee = true;
 			item.ranged = true;
-			item.damage = 20;
+			item.damage = 60;
 			item.crit = 3;
 			item.knockBack = 1.5f;
 			item.rare = ItemRarityID.Cyan;
@@ -51,11 +51,27 @@ namespace ElementalHearts.Items.Dev.Lite
 		}
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int eProjLite1 = Projectile.NewProjectile(player.position, new Vector2(speedX + 5, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
-			int eProjLite2 = Projectile.NewProjectile(player.position, new Vector2(speedX - 5, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
-			int eProjLite3 = Projectile.NewProjectile(player.position, new Vector2(speedX + 10, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
-			int eProjLite4 = Projectile.NewProjectile(player.position, new Vector2(speedX - 10, speedY), ProjectileType<BulletLite>(), 20, 1.5f, player.whoAmI);
+			int cProjLite1 = Projectile.NewProjectile(player.position, new Vector2(speedX + 5, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
+			int cProjLite2 = Projectile.NewProjectile(player.position, new Vector2(speedX - 5, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
+			int cProjLite3 = Projectile.NewProjectile(player.position, new Vector2(speedX + 10, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
+			int cProjLite4 = Projectile.NewProjectile(player.position, new Vector2(speedX - 10, speedY), ProjectileID.ChlorophyteBullet, 20, 1.5f, player.whoAmI);
 
+			if (Main.rand.NextBool(2))
+			{
+				int ichorProjLite5 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 20, 2f, player.whoAmI);
+				if (Main.rand.NextBool(4))
+				{
+					int ichorProjLite6 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 25, 2f, player.whoAmI);
+					if (Main.rand.NextBool(6))
+					{
+						int ichorProjLite7 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 30, 2f, player.whoAmI);
+						if (Main.rand.NextBool(8))
+						{
+							int ichorProjLite8 = Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 40, 2f, player.whoAmI);
+						}
+					}
+				}
+			}
 			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
 		}
 	}
