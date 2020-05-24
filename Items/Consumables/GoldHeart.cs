@@ -15,7 +15,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.White;
 			item.value = 0;
 		}
 
