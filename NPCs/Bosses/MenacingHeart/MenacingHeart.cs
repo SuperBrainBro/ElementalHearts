@@ -13,6 +13,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
     public class MenacingHeart : ModNPC
     {
         public float bossPhaseHealth;
+
+        public float P1;
+        public float P2;
+        public float P3;
+        public float P4;
         public override void SetDefaults()
         {
             npc.width = 128;
@@ -66,55 +71,55 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             //npc.ai[0] is the current phase. So the below code, checks for if it is phase 1. If it is in phase 1, then npc.ai[1] goes up (which is the timer for phase 10
             if (npc.ai[0] == 1)
             {
-                npc.ai[1]++;
+                P1++;
             }
             else if (npc.ai[0] == 2)
             {
-                npc.ai[2]++;
+                P2++;
             }
             else if (npc.ai[0] == 3)
             {
-                npc.ai[3]++;
+                P3++;
             }
             else if (npc.ai[0] == 4)
             {
-                npc.ai[4]++;
+                P4++;
             }
 
             //This is the phase code, the one below, is the phase 1 code.
-            if (npc.ai[1] >= 300)
+            if (P1 >= 300)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[1] = 0;
+                P1 = 0;
             }
-
+            else
             //Phase 2.
-            if (npc.ai[2] >= 250)
+            if (P2 >= 250)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[2] = 0;
+                P2 = 0;
             }
-
+            else
             //Phase 3.
-            if (npc.ai[3] >= 200)
+            if (P3 >= 200)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[3] = 0;
+                P3 = 0;
             }
-
+            else
             //Phase 4.
-            if (npc.ai[4] >= 150)
+            if (P4 >= 150)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[4] = 0;
+                P4 = 0;
             }
             base.AI();
         }
