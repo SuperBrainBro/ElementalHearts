@@ -15,6 +15,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
+			item.CloneDefaults(ItemID.TerraBlade);
 			item.damage = 70;
 			item.magic = true;
 			item.width = 44;            //Weapon's texture's width
