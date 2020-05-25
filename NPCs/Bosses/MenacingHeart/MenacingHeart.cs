@@ -29,11 +29,18 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.noTileCollide = true;
             npc.npcSlots = 20f;
             npc.boss = true;
+            npc.netAlways = true;
             base.SetDefaults();
         }
         public override void AI()
         {
+            if (npc.ai[1] <= 0)
+            {
+                npc.TargetClosest(true);
 
+                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                npc.ai[1] = 20;
+            }
             base.AI();
         }
 
