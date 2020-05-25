@@ -12,6 +12,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
     [AutoloadBossHead]
     public class MenacingHeart : ModNPC
     {
+        public float bossPhaseHealth;
         public override void SetDefaults()
         {
             npc.width = 128;
@@ -32,12 +33,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.netAlways = true;
             base.SetDefaults();
         }
-        public override void AI()
-        {
-            //This float, bossPhaseHealth, is the amount of health divided by 4. Since there are 4 phases, there are 4 equal amounts. (See below code for example)
-            float bossPhaseHealth;
+        public override bool PreAI()
+        {            
+            //This float, bossPhaseHealth, is the amount of health divided by 4. Since there are 4 phases, there are 4 equal amounts. (See below code for example)          
             bossPhaseHealth = npc.lifeMax / 4;
 
+            return base.PreAI();
+        }
+        public override void AI()
+        {
             if (npc.life > bossPhaseHealth * 3)
             {
                 //Set phase to 1.
