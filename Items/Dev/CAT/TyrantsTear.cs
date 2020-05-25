@@ -45,45 +45,6 @@ namespace ElementalHearts.Items.Dev.CAT
             target.AddBuff(BuffType<CATsCurse>(), 3 * 60);
 		}
 	}
-	public class TyrantsTear2 : ModItem
-	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Tyrant's Tear");
-			Tooltip.SetDefault("'Great for impersonating devs!'");
-		}
-
-		public override void SetDefaults() {
-			item.CloneDefaults(ItemID.Tsunami);
-			item.damage = 20;
-			item.ranged = true;
-			item.width = 30;
-			item.height = 70;
-			item.useTime = 10;
-			item.useAnimation = 10;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.noMelee = true;
-			item.knockBack = 0f;
-			item.crit = 0;
-			item.rare = ItemRarityID.Cyan;
-			item.autoReuse = true;
-			item.shoot = ProjectileType<TyrantsTear_Arrow>();
-			item.shootSpeed = 15f;
-			item.useAmmo = 40;
-		}
-
-		public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat) {
-			// Here we use the multiplicative damage modifier because Terraria does this approach for Ammo damage bonuses. 
-			mult *= player.arrowDamage;
-		}
-
-		public override Vector2? HoldoutOffset() {
-			return Vector2.Zero;
-		}
-
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit) {
-            target.AddBuff(BuffType<CATsCurse>(), 3 * 60);
-		}
-	}
 	public class TyrantsTear_Arrow : ModProjectile
 	{
 		public override void SetStaticDefaults() {

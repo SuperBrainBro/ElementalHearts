@@ -20,6 +20,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.shootSpeed *= 0.75f;
 			item.summon = true;
 			item.damage = 45;
+			item.rare = 9;
 			item.autoReuse = true;
 			item.melee = false;
 			item.ranged = false;
@@ -31,14 +32,39 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) {
 			if (Main.rand.NextBool(2)) {
 				type = ProjectileType<DreamerStarSmall>();
+				if (player.statManaMax >= 1) {
+					player.statManaMax -= 2;
+				} else {
+					player.statLifeMax -= 2;
+				}
 			} else if (Main.rand.NextBool(4)) {
 				type = ProjectileType<DreamerStarMedium>();
+				if (player.statManaMax >= 3) {
+					player.statManaMax -= 4;
+				} else {
+					player.statLifeMax -= 4;
+				}
 			} else if (Main.rand.NextBool(6)) {
 				type = ProjectileType<DreamerStarLarge>();
+				if (player.statManaMax >= 7) {
+					player.statManaMax -= 8;
+				} else {
+					player.statLifeMax -= 8;
+				}
 			} else if (Main.rand.NextBool(8)) {
 				type = ProjectileType<DreamerStarMega2>();
+				if (player.statManaMax >= 15) {
+					player.statManaMax -= 16;
+				} else {
+					player.statLifeMax -= 16;
+				}
 			} else if (Main.rand.NextBool(10)) {
 				type = ProjectileType<DreamerStarUltra>();
+				if (player.statManaMax >= 31) {
+					player.statManaMax -= 32;
+				} else {
+					player.statLifeMax -= 32;
+				}
 			}
 			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
 		}

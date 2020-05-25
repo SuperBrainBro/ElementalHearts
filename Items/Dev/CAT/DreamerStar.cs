@@ -30,13 +30,13 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.damage = 35;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -56,14 +56,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 2f;
 			projectile.damage = 53;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -83,14 +83,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 3f;
 			projectile.damage = 70;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -110,14 +110,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 4f;
 			projectile.damage = 70;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -138,14 +138,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 5f;
 			projectile.damage = 70;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -165,13 +165,13 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.damage = 35;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -191,14 +191,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 2f;
 			projectile.damage = 53;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -218,14 +218,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 3f;
 			projectile.damage = 70;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
@@ -245,14 +245,14 @@ namespace ElementalHearts.Items.Dev.CAT
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.Starfury);
-			aiType = ProjectileID.Starfury;
+			projectile.CloneDefaults(ProjectileID.StarWrath);
+			aiType = ProjectileID.StarWrath;
 			projectile.scale = 4f;
 			projectile.damage = 70;
 		}
 
 		public override bool PreKill(int timeLeft) {
-			projectile.type = ProjectileID.Starfury;
+			projectile.type = ProjectileID.StarWrath;
 			return true;
 		}
 
