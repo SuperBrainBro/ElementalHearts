@@ -17,7 +17,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.width = 128;
             npc.height = 128;
             npc.aiStyle = 0;
-
+            npc.damage = 200;
+            npc.defense = 24;
+            npc.lifeMax = 16000;
+            npc.HitSound = SoundID.Item35;
+            npc.DeathSound = SoundID.Item25;
+            npc.value = 100000;
             base.SetDefaults();
         }
         public override void AI()
