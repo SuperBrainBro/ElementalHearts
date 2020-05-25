@@ -23,6 +23,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             npc.value = 100000;
+            npc.buffImmune[BuffID.Confused] = true;
+            npc.knockBackResist = 0f;
+            npc.noGravity = true;
+            npc.noTileCollide = true;
+            npc.npcSlots = 20f;
+            npc.boss = true;
             base.SetDefaults();
         }
         public override void AI()
