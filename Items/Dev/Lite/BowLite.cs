@@ -46,7 +46,7 @@ namespace ElementalHearts.Items.Dev.Lite
 				if (Main.rand.NextBool(4))
 				{
 					Projectile.NewProjectile(player.position, player.velocity + new Vector2(10, 0), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
-					Projectile.NewProjectile(player.position, player.velocity + new Vector2(-10, 0), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, player.velocity + new Vector2(-10, 0), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
 				}
 			} else {
 				if (Main.rand.NextBool(4))
