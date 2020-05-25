@@ -20,6 +20,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public bool BP2;
         public bool BP3;
         public bool BP4;
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("MenacingHeart");
+            Main.npcFrameCount[npc.type] = 14; // make sure to set this for your modnpcs.
+        }
         public override void SetDefaults()
         {
             npc.width = 128;
@@ -53,22 +59,37 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 //Set phase to 1.
                 npc.ai[0] = 1;
-                
+                BP1 = true;
+                BP2 = false;
+                BP3 = false;
+                BP4 = false;
             }
             else if (npc.life > bossPhaseHealth * 2)
             {
                 //Set phase to 2.
                 npc.ai[0] = 2;
+                BP1 = false;
+                BP2 = true;
+                BP3 = false;
+                BP4 = false;
             }
             else if (npc.life > bossPhaseHealth * 1)
             {
                 //Set phase to 3.
                 npc.ai[0] = 3;
+                BP1 = false;
+                BP2 = false;
+                BP3 = true;
+                BP4 = false;
             }
             else if (npc.life > bossPhaseHealth * 0)
             {
                 //Set phase to 4.
                 npc.ai[0] = 4;
+                BP1 = false;
+                BP2 = false;
+                BP3 = false;
+                BP4 = true;
             }
 
             //npc.ai[0] is the current phase. So the below code, checks for if it is phase 1. If it is in phase 1, then npc.ai[1] goes up (which is the timer for phase 10
@@ -256,15 +277,47 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 npc.frameCounter++;
                 if (npc.frameCounter < 10)
                 {
-                    npc.frame.Y = Frame_Flutter_1 * frameHeight;
+                    npc.frame.Y = Frame_P4_1 * frameHeight;
                 }
                 else if (npc.frameCounter < 20)
                 {
-                    npc.frame.Y = Frame_Flutter_2 * frameHeight;
+                    npc.frame.Y = Frame_P4_2 * frameHeight;
                 }
                 else if (npc.frameCounter < 30)
                 {
-                    npc.frame.Y = Frame_Flutter_3 * frameHeight;
+                    npc.frame.Y = Frame_P4_3 * frameHeight;
+                }
+                else if (npc.frameCounter < 40)
+                {
+                    npc.frame.Y = Frame_P4_4 * frameHeight;
+                }
+                else if (npc.frameCounter < 50)
+                {
+                    npc.frame.Y = Frame_P4_5 * frameHeight;
+                }
+                else if (npc.frameCounter < 60)
+                {
+                    npc.frame.Y = Frame_P4_6 * frameHeight;
+                }
+                else if (npc.frameCounter < 70)
+                {
+                    npc.frame.Y = Frame_P4_7 * frameHeight;
+                }
+                else if (npc.frameCounter < 80)
+                {
+                    npc.frame.Y = Frame_P4_8 * frameHeight;
+                }
+                else if (npc.frameCounter < 90)
+                {
+                    npc.frame.Y = Frame_P4_9 * frameHeight;
+                }
+                else if (npc.frameCounter < 100)
+                {
+                    npc.frame.Y = Frame_P4_10 * frameHeight;
+                }
+                else if (npc.frameCounter < 110)
+                {
+                    npc.frame.Y = Frame_P4_11 * frameHeight;
                 }
                 else
                 {
