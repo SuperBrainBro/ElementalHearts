@@ -1,9 +1,10 @@
-using System;
-using Microsoft.Xna.Framework;
+using ElementalHearts.Items.Dev.CAT;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using Microsoft.Xna.Framework;
+using System;
 
 namespace ElementalHearts.Items.Dev.Lite
 {
@@ -33,12 +34,12 @@ namespace ElementalHearts.Items.Dev.Lite
 			{
 				if (Main.rand.NextBool(2))
 				{
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
@@ -46,19 +47,19 @@ namespace ElementalHearts.Items.Dev.Lite
 				}
 				else
 				{
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 125, 4f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 150, 4f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 175, 4f, projectile.whoAmI);
 					}
@@ -66,12 +67,12 @@ namespace ElementalHearts.Items.Dev.Lite
 
 				if (Main.rand.NextBool(2))
 				{
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
@@ -79,24 +80,24 @@ namespace ElementalHearts.Items.Dev.Lite
 				}
 				else
 				{
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 225, 1f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 250, 1f, projectile.whoAmI);
 					}
-					if (Main.rand.NextBool(4))
+					if (Main.rand.NextBool(2))
 					{
 						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275, 1f, projectile.whoAmI);
 					}
 				}
-				bulletTime = 10f;
+				bulletTime = 5f;
 			} else
 			{
 				bulletTime -= .1f;

@@ -13,7 +13,7 @@ namespace ElementalHearts.Items.Dev.Lite
 		}
 
 		public override void SetDefaults() {
-			item.damage = 200;
+			item.damage = 600;
 			item.magic = true;
 			item.mana = 100;
 			item.width = 26;
@@ -28,7 +28,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.rare = ItemRarityID.Cyan;
 			item.UseSound = SoundID.Item9;
 			item.shoot = ProjectileType<MissileLiteProj>();
-			item.shootSpeed = 100f;
+			item.shootSpeed = .01f;
 		}
 	}
 }
