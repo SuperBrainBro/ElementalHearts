@@ -34,7 +34,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.knockBack = 1.5f;
 			item.rare = ItemRarityID.Cyan;
 		}
-		//TestT
+		//Test
 		public override void OnConsumeAmmo(Player player)
 		{
 			if (Main.rand.NextBool(2))
