@@ -22,10 +22,10 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.height = 58;
 			projectile.width = 48;
-			projectile.CloneDefaults(ProjectileID.NightBeam);
+			projectile.CloneDefaults(ProjectileID.TerraBeam);
 			projectile.scale = 1.15f;
 			projectile.alpha = 255;
-			aiType = ProjectileID.NightBeam;
+			aiType = ProjectileID.TerraBeam;
 		}
 		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {

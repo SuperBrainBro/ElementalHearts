@@ -25,11 +25,7 @@ namespace ElementalHearts.Items
 						} else if (Main.rand.NextBool(5)) {
 							player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 						} else if (Main.rand.NextBool(5)) {
-							if (Main.rand.NextBool(2)) {
-								player.QuickSpawnItem(ItemType<TyrantsTear>(), Main.rand.Next(1, 1));
-							} else {
-								player.QuickSpawnItem(ItemType<TyrantsTear2>(), Main.rand.Next(1, 1));
-							}
+							player.QuickSpawnItem(ItemType<TyrantsTear>(), Main.rand.Next(1, 1));
 						} else {
 							player.QuickSpawnItem(ItemType<AstralStars>(), Main.rand.Next(1, 1));
 						}
@@ -48,11 +44,7 @@ namespace ElementalHearts.Items
 						} else if (Main.rand.NextBool(5)) {
 							player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 						} else if (Main.rand.NextBool(5)) {
-							if (Main.rand.NextBool(2)) {
-								player.QuickSpawnItem(ItemType<TyrantsTear>(), Main.rand.Next(1, 1));
-							} else {
-								player.QuickSpawnItem(ItemType<TyrantsTear2>(), Main.rand.Next(1, 1));
-							}
+							player.QuickSpawnItem(ItemType<TyrantsTear>(), Main.rand.Next(1, 1));
 						} else {
 							player.QuickSpawnItem(ItemType<AstralStars>(), Main.rand.Next(1, 1));
 						}
@@ -82,11 +74,7 @@ namespace ElementalHearts.Items
 					} else if (Main.rand.NextBool(5)) {
 						player.QuickSpawnItem(ItemType<HeartOfCAT>(), Main.rand.Next(1, 1));
 					} else if (Main.rand.NextBool(5)) {
-						if (Main.rand.NextBool(2)) {
 							player.QuickSpawnItem(ItemType<TyrantsTear>(), Main.rand.Next(1, 1));
-						} else {
-							player.QuickSpawnItem(ItemType<TyrantsTear2>(), Main.rand.Next(1, 1));
-						}
 					} else {
 						player.QuickSpawnItem(ItemType<AstralStars>(), Main.rand.Next(1, 1));
 					}
