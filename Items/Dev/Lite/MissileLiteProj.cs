@@ -33,66 +33,68 @@ namespace ElementalHearts.Items.Dev.Lite
 				{
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite1 = Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
-						int GrenProjLite2 = Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite3 = Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
-						int GrenProjLite4 = Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 					}
 				}
 				else
 				{
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite3 = Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite4 = Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 125, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 125, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite5 = Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 150, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 150, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite6 = Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 175, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 175, 4f, projectile.whoAmI);
 					}
 				}
+				
 				if (Main.rand.NextBool(2))
 				{
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite1 = Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
-						int GrenProjLite2 = Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite3 = Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
-						int GrenProjLite4 = Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 					}
 				}
 				else
 				{
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite3 = Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite4 = Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 225, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 225, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite5 = Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 250, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 250, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(4))
 					{
-						int GrenProjLite6 = Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275, 1f, projectile.whoAmI);
 					}
 				}
+				
 			}
 
 			Vector2 dustPosition = projectile.Center + new Vector2(Main.rand.Next(-4, 5), Main.rand.Next(-4, 5));
@@ -176,7 +178,7 @@ namespace ElementalHearts.Items.Dev.Lite
 				projectile.penetrate = -1;
 
 				int explosionArea = 200;
-				Vector2 oldSize = projectile.Size;
+				//Vector2 oldSize = projectile.Size;
 				// Resize the projectile hitbox to be bigger.
 				projectile.position = projectile.Center;
 				projectile.Size += new Vector2(explosionArea);
