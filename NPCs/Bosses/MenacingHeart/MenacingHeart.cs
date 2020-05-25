@@ -51,7 +51,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             else if (npc.life > bossPhaseHealth * 1)
             {
                 //Set phase to 3.
-                npc.ai[0] = 2;
+                npc.ai[0] = 3;
             }
             else if (npc.life > bossPhaseHealth * 0)
             {
@@ -64,21 +64,48 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.ai[1]++;
             }
-            else if (npc.ai[0] == 1)
+            else if (npc.ai[0] == 2)
             {
-                npc.ai[1]++;
+                npc.ai[2]++;
             }
-            else if (npc.ai[0] == 1)
+            else if (npc.ai[0] == 3)
             {
-                npc.ai[1]++;
+                npc.ai[3]++;
             }
-            else if (npc.ai[0] == 1)
+            else if (npc.ai[0] == 4)
             {
-                npc.ai[1]++;
+                npc.ai[4]++;
             }
 
             //This is the phase code, the one below, is the phase 1 code.
             if (npc.ai[1] >= 20)
+            {
+                npc.TargetClosest(true);
+
+                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                npc.ai[1] = 0;
+            }
+
+            //Phase 2.
+            if (npc.ai[1] >= 15)
+            {
+                npc.TargetClosest(true);
+
+                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                npc.ai[1] = 0;
+            }
+
+            //Phase 3.
+            if (npc.ai[1] >= 10)
+            {
+                npc.TargetClosest(true);
+
+                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                npc.ai[1] = 0;
+            }
+
+            //Phase 4.
+            if (npc.ai[1] >= 5)
             {
                 npc.TargetClosest(true);
 
