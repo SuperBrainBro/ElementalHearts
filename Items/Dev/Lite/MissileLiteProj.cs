@@ -36,35 +36,34 @@ namespace ElementalHearts.Items.Dev.Lite
 				{
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
-						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 100 / 2, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 100 / 2, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
-						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100 / 2, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 100 / 2, 4f, projectile.whoAmI);
 					}
 				}
-				else
+				else if (Main.rand.NextBool(2))
 				{
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100 / 2, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 125, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 125 / 2, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 150, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 150 / 2, 4f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 175, 4f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 175 / 2, 4f, projectile.whoAmI);
 					}
 				}
-
 				if (Main.rand.NextBool(2))
 				{
 					if (Main.rand.NextBool(2))
@@ -78,23 +77,23 @@ namespace ElementalHearts.Items.Dev.Lite
 						Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
 					}
 				}
-				else
+				else if (Main.rand.NextBool(2))
 				{
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200 / 2, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 225, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 225 / 2, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 250, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 250 / 2, 1f, projectile.whoAmI);
 					}
 					if (Main.rand.NextBool(2))
 					{
-						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275, 1f, projectile.whoAmI);
+						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275 / 2, 1f, projectile.whoAmI);
 					}
 				}
 				bulletTime = 1f;
