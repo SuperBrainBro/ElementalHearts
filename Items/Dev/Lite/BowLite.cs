@@ -40,30 +40,30 @@ namespace ElementalHearts.Items.Dev.Lite
 			{
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
-					Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
 				}
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(player.position, player.velocity + new Vector2(10, 0), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
-					Projectile.NewProjectile(player.position, player.velocity + new Vector2(-10, 0), ProjectileID.RocketIII, 15 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, player.velocity + new Vector2(10, 0), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, player.velocity + new Vector2(-10, 0), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
 				}
 			} else {
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketFireworkRed, 20 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketFireworkRed, 100 / 2, 0f, player.whoAmI);
 				}
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketFireworkGreen, 25 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketFireworkGreen, 125 / 2, 0f, player.whoAmI);
 				}
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(player.position, new Vector2(0, 10), ProjectileID.RocketFireworkBlue, 30 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, new Vector2(0, 10), ProjectileID.RocketFireworkBlue, 150 / 2, 0f, player.whoAmI);
 				}
 				if (Main.rand.NextBool(4))
 				{
-					Projectile.NewProjectile(player.position, new Vector2(0, -10), ProjectileID.RocketFireworkYellow, 35 / 2, 0f, player.whoAmI);
+					Projectile.NewProjectile(player.position, new Vector2(0, -10), ProjectileID.RocketFireworkYellow, 200 / 2, 0f, player.whoAmI);
 				}
 			}			
 			base.OnConsumeAmmo(player);
