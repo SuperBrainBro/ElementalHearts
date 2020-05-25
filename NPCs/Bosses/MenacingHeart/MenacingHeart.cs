@@ -35,9 +35,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public override void AI()
         {
             //This float, bossPhaseHealth, is the amount of health divided by 4. Since there are 4 phases, there are 4 equal amounts. (See below code for example)
-             float bossPhaseHealth;
+            float bossPhaseHealth;
             bossPhaseHealth = npc.lifeMax / 4;
-            
+
             if (npc.life > bossPhaseHealth * 3)
             {
                 //Set phase to 1.
