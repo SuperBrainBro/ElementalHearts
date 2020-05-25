@@ -18,8 +18,8 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.mana = 100;
 			item.width = 26;
 			item.height = 26;
-			item.useTime = 30;
-			item.useAnimation = 30;
+			item.useTime = 500;
+			item.useAnimation = 500;
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.channel = true; //Channel so that you can held the weapon [Important]
@@ -28,7 +28,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.rare = ItemRarityID.Cyan;
 			item.UseSound = SoundID.Item9;
 			item.shoot = ProjectileType<MissileLiteProj>();
-			item.shootSpeed = 500f;
+			item.shootSpeed = 1f;
 		}
 	}
 }

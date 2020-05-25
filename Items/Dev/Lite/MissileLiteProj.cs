@@ -20,7 +20,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			projectile.light = 2f;
 			projectile.magic = true;
 			drawOriginOffsetY = -6;
-			//projectile.timeLeft = 200;
+			projectile.timeLeft = 500;
 		}
 
 		public override Color? GetAlpha(Color lightColor) => new Color(255, 255, 255, 0);
@@ -97,7 +97,7 @@ namespace ElementalHearts.Items.Dev.Lite
 						Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275, 1f, projectile.whoAmI);
 					}
 				}
-				bulletTime = 5f;
+				bulletTime = 1f;
 			} else
 			{
 				bulletTime -= .1f;
@@ -124,7 +124,7 @@ namespace ElementalHearts.Items.Dev.Lite
 				Player player = Main.player[projectile.owner];
 				// If the player channels the weapon, do something. This check only works if item.channel is true for the weapon.
 				if (player.channel) {
-					float maxDistance = 12f; // This also sets the maximun speed the projectile can reach while following the cursor.
+					float maxDistance = 20f; // This also sets the maximun speed the projectile can reach while following the cursor.
 					Vector2 vectorToCursor = Main.MouseWorld - projectile.Center;
 					float distanceToCursor = vectorToCursor.Length();
 
