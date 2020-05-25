@@ -97,6 +97,73 @@ namespace ElementalHearts.Items.Dev.Lite
 				
 			}
 
+			//Do the cool thing AGAIN LOL
+			if (Main.rand.NextBool(20))
+			{
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+					Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+					Projectile.NewProjectile(projectile.position, projectile.velocity + new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+				}
+			}
+			else if (Main.rand.NextBool(20))
+			{
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 100, 4f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 125, 4f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 150, 4f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 175, 4f, projectile.whoAmI);
+				}
+			}
+
+			if (Main.rand.NextBool(2))
+			{
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+					Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+					Projectile.NewProjectile(projectile.position, projectile.velocity - new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+				}
+			}
+			else
+			{
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(-10, 0), ProjectileID.ChlorophyteBullet, 200, 1f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(10, 0), ProjectileID.ChlorophyteBullet, 225, 1f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(0, -10), ProjectileID.ChlorophyteBullet, 250, 1f, projectile.whoAmI);
+				}
+				if (Main.rand.NextBool(4))
+				{
+					Projectile.NewProjectile(projectile.position, new Vector2(0, 10), ProjectileID.ChlorophyteBullet, 275, 1f, projectile.whoAmI);
+				}
+			}
+
 			Vector2 dustPosition = projectile.Center + new Vector2(Main.rand.Next(-4, 5), Main.rand.Next(-4, 5));
 			Dust dust1 = Dust.NewDustPerfect(dustPosition, 1, null, 255, Color.White, 1);
 			Dust dust2 = Dust.NewDustPerfect(dustPosition, 1, null, 255, Color.Black, 1);
