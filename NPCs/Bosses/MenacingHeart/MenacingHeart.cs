@@ -91,21 +91,24 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.TargetClosest(true);
 
-                float tpPosRand;
-                tpPosRand = Main.rand.NextFloat(8);
-                if (tpPosRand > 6)
+                //This generates a random tp position.
+                float tpPosRand1;
+                tpPosRand1 = Main.rand.NextFloat(8);
+
+                if (tpPosRand1 > 6)
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                } else if (tpPosRand > 4)
+                } else if (tpPosRand1 > 4)
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(0, 100);
-                } else if (tpPosRand > 2)
+                } else if (tpPosRand1 > 2)
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
-                } else if (tpPosRand > 0)
+                } else if (tpPosRand1 > 0)
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
                 }
+                shootProjectile(1);
                 P1 = 0;
             }
             else
@@ -114,7 +117,27 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.TargetClosest(true);
 
-                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                //This generates a random tp position.
+                float tpPosRand2;
+                tpPosRand2 = Main.rand.NextFloat(8);
+
+                if (tpPosRand2 > 6)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                }
+                else if (tpPosRand2 > 4)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                }
+                else if (tpPosRand2 > 2)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
+                else if (tpPosRand2 > 0)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
+                shootProjectile(2);
                 P2 = 0;
             }
             else
@@ -123,7 +146,27 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.TargetClosest(true);
 
-                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                //This generates a random tp position.
+                float tpPosRand3;
+                tpPosRand3 = Main.rand.NextFloat(8);
+
+                if (tpPosRand3 > 6)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                }
+                else if (tpPosRand3 > 4)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                }
+                else if (tpPosRand3 > 2)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
+                else if (tpPosRand3 > 0)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
+                shootProjectile(3);
                 P3 = 0;
             }
             else
@@ -132,10 +175,35 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.TargetClosest(true);
 
-                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                //This generates a random tp position.
+                float tpPosRand4;
+                tpPosRand4 = Main.rand.NextFloat(8);
+
+                if (tpPosRand4 > 6)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                }
+                else if (tpPosRand4 > 4)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                }
+                else if (tpPosRand4 > 2)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
+                else if (tpPosRand4 > 0)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
                 P4 = 0;
             }
+            shootProjectile(4);
             base.AI();
+        }
+
+        public void shootProjectile(int phase)
+        {
+
         }
 
         public override void HitEffect(int hitDirection, double damage)
