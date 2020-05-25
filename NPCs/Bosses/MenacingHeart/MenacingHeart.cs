@@ -87,16 +87,30 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
 
             //This is the phase code, the one below, is the phase 1 code.
-            if (P1 >= 300)
+            if (P1 >= 200)
             {
                 npc.TargetClosest(true);
 
-                npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                float tpPosRand;
+                tpPosRand = Main.rand.NextFloat(8);
+                if (tpPosRand > 6)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                } else if (tpPosRand > 4)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                } else if (tpPosRand > 2)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                } else if (tpPosRand > 0)
+                {
+                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                }
                 P1 = 0;
             }
             else
             //Phase 2.
-            if (P2 >= 250)
+            if (P2 >= 150)
             {
                 npc.TargetClosest(true);
 
@@ -105,7 +119,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             //Phase 3.
-            if (P3 >= 200)
+            if (P3 >= 100)
             {
                 npc.TargetClosest(true);
 
@@ -114,7 +128,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             //Phase 4.
-            if (P4 >= 150)
+            if (P4 >= 50)
             {
                 npc.TargetClosest(true);
 
