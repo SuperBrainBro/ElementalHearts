@@ -97,18 +97,18 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand1 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
                 } else if (tpPosRand1 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
                 } else if (tpPosRand1 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 } else if (tpPosRand1 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
-                shootProjectile(1);
+                ShootProjectile(1);
                 P1 = 0;
             }
             else
@@ -123,21 +123,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand2 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
                 }
                 else if (tpPosRand2 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
                 }
                 else if (tpPosRand2 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
                 else if (tpPosRand2 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
-                shootProjectile(2);
+                ShootProjectile(2);
                 P2 = 0;
             }
             else
@@ -152,21 +152,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand3 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
                 }
                 else if (tpPosRand3 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
                 }
                 else if (tpPosRand3 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
                 else if (tpPosRand3 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
-                shootProjectile(3);
+                ShootProjectile(3);
                 P3 = 0;
             }
             else
@@ -181,29 +181,29 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand4 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
                 }
                 else if (tpPosRand4 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 100);
+                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
                 }
                 else if (tpPosRand4 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
                 else if (tpPosRand4 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-100, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
                 P4 = 0;
             }
-            shootProjectile(4);
+            ShootProjectile(4);
             base.AI();
         }
 
-        public void shootProjectile(int phase)
+        public void ShootProjectile(int phase)
         {
-
+            //In here, I want to shoot mini life crystals at the player. They will be shooting multiple times, maybe in groups of 3?
         }
 
         public override void HitEffect(int hitDirection, double damage)
