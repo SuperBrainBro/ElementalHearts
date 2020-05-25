@@ -28,7 +28,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.rare = ItemRarityID.Cyan;
 			item.UseSound = SoundID.Item9;
 			item.shoot = ProjectileType<MissileLiteProj>();
-			item.shootSpeed = .01f;
+			item.shootSpeed = 500f;
 		}
 	}
 }
