@@ -161,8 +161,6 @@ namespace ElementalHearts
 		public int BrainLife;
 		public const int maxWormLife = 1;
 		public int WormLife;
-		public const int maxDemonHeartMK2Life = 1;
-		public int DemonHeartMK2Life;
 
 		//Dev Stuff/Hearts
 		public const int maxHeartOfCAT = 1;
@@ -216,18 +214,22 @@ namespace ElementalHearts
 			player.statLifeMax2 += TungstenLife * 5;
 			player.statLifeMax2 += BubbleLife * 5;
 			player.statLifeMax2 += RubyLife * 5;
-			player.statLifeMax2 += GoldLife * 5;
-			player.statLifeMax2 += PlatinumLife * 5;
-			player.statLifeMax2 += DiamondLife * 5;
-			player.statLifeMax2 += AmberLife * 5;
-			player.statLifeMax2 += DemoniteLife * 5;
-			player.statLifeMax2 += CrimtaneLife * 5;
-			player.statLifeMax2 += ObsidianLife * 5;
-			player.statLifeMax2 += HellstoneLife * 5;
-			player.statLifeMax2 += MeteoriteLife * 5;
+
+			player.statLifeMax2 += GoldLife * 6;
+			player.statLifeMax2 += PlatinumLife * 6;
+			player.statLifeMax2 += DiamondLife * 6;
+			player.statLifeMax2 += AmberLife * 6;
+
+			player.statLifeMax2 += DemoniteLife * 7;
+			player.statLifeMax2 += CrimtaneLife * 7;
+			player.statLifeMax2 += ObsidianLife * 7;
+
+			player.statLifeMax2 += HellstoneLife * 8;
+			player.statLifeMax2 += MeteoriteLife * 8;
 
 			//Hardmode
-			player.statLifeMax2 += PearlsandLife * 5;
+			player.statLifeMax2 += PearlsandLife * 2;
+
 			player.statLifeMax2 += PearlwoodLife * 5;
 			player.statLifeMax2 += CogLife * 5;
 			player.statLifeMax2 += PearlstoneLife * 5;
@@ -255,8 +257,6 @@ namespace ElementalHearts
 			//Expert Hearts
 			player.statLifeMax2 += BrainLife * 5;
 			player.statLifeMax2 += WormLife * 5;
-			
-			player.statLifeMax2 += DemonHeartMK2Life * 6;
 
 			//Dev Hearts
 			player.statLifeMax2 += HeartOfCAT * 20;
@@ -348,6 +348,10 @@ namespace ElementalHearts
 			packet.Write(CrimtaneLife);
 			packet.Write(HellstoneLife);
 
+			//Expert Hearts
+			packet.Write(BrainLife);
+			packet.Write(WormLife);
+
 			//Hardmode//
 
 			//Basic
@@ -376,16 +380,10 @@ namespace ElementalHearts
 			packet.Write(ChlorophyteLife);
 			packet.Write(LuminiteLife);
 
-			//Expert Hearts
-			packet.Write(BrainLife);
-			packet.Write(WormLife);
-			packet.Write(DemonHeartMK2Life);
-
 			//Dev Hearts
 			packet.Write(HeartOfCAT);
 			packet.Write(CrystalLite);
-
-			
+		
 			packet.Write(nonStopParty);
 			packet.Send(toWho, fromWho);
 		}
@@ -477,7 +475,6 @@ namespace ElementalHearts
 				//Expert Hearts
 				{"BrainLife", BrainLife},
 				{"WormLife", WormLife},
-				{"DemonHeartMK2Life", DemonHeartMK2Life},
 				
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
@@ -562,7 +559,6 @@ namespace ElementalHearts
 			//Expert Hearts
 			BrainLife = tag.GetInt("BrainLife");
 			WormLife = tag.GetInt("WormLife");
-			DemonHeartMK2Life = tag.GetInt("DemonHeartMK2Life");
 			
 			//Dev Hearts
 			HeartOfCAT = tag.GetInt("HeartOfCAT");
