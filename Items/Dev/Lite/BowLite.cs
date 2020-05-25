@@ -21,8 +21,8 @@ namespace ElementalHearts.Items.Dev.Lite
 			item.autoReuse = true;
 			item.useAnimation = 24;
 			item.useTime = 24;
-			item.width = 50;
-			item.height = 18;
+			item.width = 25;
+			item.height = 9;
 			item.shoot = ProjectileID.WoodenArrowFriendly;
 			item.useAmmo = AmmoID.Arrow;
 			item.UseSound = SoundID.Item5;
