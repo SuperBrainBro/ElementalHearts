@@ -14,6 +14,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
+			projectile.magic = true;
 			projectile.damage = 23;
 			projectile.scale = .5f;
 		}
@@ -32,6 +33,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.StarWrath);
 			aiType = ProjectileID.StarWrath;
+			projectile.magic = true;
 			projectile.damage = 35;
 		}
 
@@ -58,6 +60,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.StarWrath);
 			aiType = ProjectileID.StarWrath;
+			projectile.magic = true;
 			projectile.scale = 2f;
 			projectile.damage = 53;
 		}
@@ -85,6 +88,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.StarWrath);
 			aiType = ProjectileID.StarWrath;
+			projectile.magic = true;
 			projectile.scale = 3f;
 			projectile.damage = 70;
 		}
@@ -112,6 +116,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.StarWrath);
 			aiType = ProjectileID.StarWrath;
+			projectile.magic = true;
 			projectile.scale = 4f;
 			projectile.damage = 70;
 		}
@@ -140,6 +145,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.StarWrath);
 			aiType = ProjectileID.StarWrath;
+			projectile.magic = true;
 			projectile.scale = 5f;
 			projectile.damage = 70;
 		}
@@ -167,6 +173,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
+			projectile.magic = true;
 			projectile.damage = 35;
 		}
 
@@ -193,6 +200,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
+			projectile.magic = true;
 			projectile.scale = 2f;
 			projectile.damage = 53;
 		}
@@ -220,6 +228,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
+			projectile.magic = true;
 			projectile.scale = 3f;
 			projectile.damage = 70;
 		}
@@ -247,6 +256,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			projectile.CloneDefaults(ProjectileID.Starfury);
 			aiType = ProjectileID.Starfury;
+			projectile.magic = true;
 			projectile.scale = 4f;
 			projectile.damage = 70;
 		}
