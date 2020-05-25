@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	public class MissileLite : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("'Great for impersonating devs!' \nCasts a controllable missile \nHas a chance to shoot chlorophyte bullets in all directions which do high amounts of damage.");
+			Tooltip.SetDefault("'Great for impersonating devs!' \nCasts a controllable missile \nShoots chlorophyte bullets in all directions which do high amounts of damage.");
 		}
 
 		public override void SetDefaults() {

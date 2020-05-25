@@ -38,30 +38,30 @@ namespace ElementalHearts.Items.Dev.Lite
 		{
 			if (Main.rand.NextBool(2))
 			{
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(8))
 				{
 					Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, 10), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
 					Projectile.NewProjectile(player.position, player.velocity + new Vector2(0, -10), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
 				}
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(8))
 				{
 					Projectile.NewProjectile(player.position, player.velocity + new Vector2(10, 0), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
 					Projectile.NewProjectile(player.position, player.velocity + new Vector2(-10, 0), ProjectileID.RocketIII, 150 / 2, 0f, player.whoAmI);
 				}
 			} else {
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(12))
 				{
 					Projectile.NewProjectile(player.position, new Vector2(10, 0), ProjectileID.RocketFireworkRed, 100 / 2, 0f, player.whoAmI);
 				}
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(12))
 				{
 					Projectile.NewProjectile(player.position, new Vector2(-10, 0), ProjectileID.RocketFireworkGreen, 125 / 2, 0f, player.whoAmI);
 				}
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(12))
 				{
 					Projectile.NewProjectile(player.position, new Vector2(0, 10), ProjectileID.RocketFireworkBlue, 150 / 2, 0f, player.whoAmI);
 				}
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(12))
 				{
 					Projectile.NewProjectile(player.position, new Vector2(0, -10), ProjectileID.RocketFireworkYellow, 200 / 2, 0f, player.whoAmI);
 				}
@@ -75,16 +75,16 @@ namespace ElementalHearts.Items.Dev.Lite
 			Projectile.NewProjectile(player.position, new Vector2(speedX + 10, speedY), ProjectileID.ChlorophyteBullet, 15 / 2, 1.5f, player.whoAmI);
 			Projectile.NewProjectile(player.position, new Vector2(speedX - 10, speedY), ProjectileID.ChlorophyteBullet, 15 / 2, 1.5f, player.whoAmI);
 
-			if (Main.rand.NextBool(2))
+			if (Main.rand.NextBool(3))
 			{
 				Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 10 / 2, 2f, player.whoAmI);
-				if (Main.rand.NextBool(4))
+				if (Main.rand.NextBool(5))
 				{
 					Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 15 / 2, 2f, player.whoAmI);
-					if (Main.rand.NextBool(6))
+					if (Main.rand.NextBool(7))
 					{
 						Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 20 / 2, 2f, player.whoAmI);
-						if (Main.rand.NextBool(8))
+						if (Main.rand.NextBool(9))
 						{
 							Projectile.NewProjectile(player.position, new Vector2(speedX, speedY), ProjectileID.IchorDart, 25 / 2, 2f, player.whoAmI);
 						}
