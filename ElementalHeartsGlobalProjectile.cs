@@ -10,6 +10,24 @@ namespace ElementalHearts
 {
 	public class ElementalHeartsGlobalProjectile : GlobalProjectile
 	{
+		public override void Kill(Projectile projectile, int timeLeft)
+		{
+			if (Main.player[projectile.owner].HeldItem.type == ItemType<BowLite>())
+			{
+				if (Main.rand.NextBool(2))
+				{
+					Projectile.NewProjectile(projectile.position, Main.player[projectile.owner].velocity, ProjectileID.GiantBee, 50, 0, Main.player[projectile.owner].whoAmI);
+				}
+			}
+			if (Main.player[projectile.owner].HeldItem.type == ItemType<MissileLite>())
+			{
+				if (Main.rand.NextBool(2))
+				{
+					Projectile.NewProjectile(projectile.position, Main.player[projectile.owner].velocity, ProjectileID.GiantBee, 50, 0, Main.player[projectile.owner].whoAmI);
+				}
+			}
+			base.Kill(projectile, timeLeft);
+		}
 		public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
 		{
 			if (Main.player[projectile.owner].HeldItem.type == ItemType<BowLite>())

@@ -12,7 +12,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact. \nHas a chance to deploy rockets from the player upon impact. \nHas a small chance to deploy fireworks upon impact. \nHas a chance to inflict Midas on enemies. \nHas a chance to inflict Shadowflame on enemies.");
+			Tooltip.SetDefault("'Great for impersonating devs!' \nShoots 4 homing chlorophyte bullets when shot. \nHas a chance to shoot ichor darts in the direction of fire. \nHas a chance to spawn an array of homing chlorophyte bullets on impact. \nHas a chance to deploy rockets from the player upon impact. \nHas a small chance to deploy fireworks upon impact. \nHas a chance to inflict Midas on enemies. \nHas a chance to inflict Shadowflame on enemies. \nKills have a chance to spawn killer bees.");
 			DisplayName.SetDefault("Bow Lite");
 		}
 		public override void SetDefaults()
