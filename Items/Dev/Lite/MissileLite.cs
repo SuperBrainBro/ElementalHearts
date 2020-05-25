@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	public class MissileLite : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("'Great for impersonating devs!' \nCasts a controllable missile \nShoots chlorophyte bullets in all directions which do high amounts of damage.");
+			Tooltip.SetDefault("'Great for impersonating devs!' \nCasts a controllable missile \nShoots chlorophyte bullets in all directions which do high amounts of damage. \nHas a chance to spawn an array of extra homing chlorophyte bullets on impact. \nHas a chance to inflict Midas on enemies. \nHas a chance to inflict Shadowflame on enemies.");
 		}
 
 		public override void SetDefaults() {
