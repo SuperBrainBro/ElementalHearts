@@ -1,8 +1,5 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using System;
-
-using System.IO;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -18,6 +15,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public float P2;
         public float P3;
         public float P4;
+
+        public bool BP1;
+        public bool BP2;
+        public bool BP3;
+        public bool BP4;
         public override void SetDefaults()
         {
             npc.width = 128;
@@ -51,6 +53,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 //Set phase to 1.
                 npc.ai[0] = 1;
+                
             }
             else if (npc.life > bossPhaseHealth * 2)
             {
@@ -200,7 +203,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             ShootProjectile(4);
             base.AI();
         }
-
         public void ShootProjectile(int phase)
         {
             //In here, I want to shoot mini life crystals at the player. They will be shooting multiple times, maybe in groups of 3?
@@ -211,9 +213,64 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
             base.HitEffect(hitDirection, damage);
         }
+
+        // Our texture is 32x32 with 2 pixels of padding vertically, so 34 is the vertical spacing.  These are for my benefit and the numbers could easily be used directly in the code below, but this is how I keep code organized.
+        private const int Frame_P1 = 0;
+        private const int Frame_P2 = 1;
+        private const int Frame_P3 = 2;
+
+        // Phase 4 has 11 frames
+        private const int Frame_P4_1 = 3;
+        private const int Frame_P4_2 = 4;
+        private const int Frame_P4_3 = 5;
+        private const int Frame_P4_4 = 6;
+        private const int Frame_P4_5 = 7;
+        private const int Frame_P4_6 = 8;
+        private const int Frame_P4_7 = 9;
+        private const int Frame_P4_8 = 10;
+        private const int Frame_P4_9 = 11;
+        private const int Frame_P4_10 = 12;
+        private const int Frame_P4_11 = 13;
         public override void FindFrame(int frameHeight)
         {
+            // This makes the sprite flip horizontally in conjunction with the npc.direction.
+            //npc.spriteDirection = npc.direction;
 
+            // For the most part, our animation matches up with our states.
+            if (BP1 == true)
+            {
+                // npc.frame.Y is the goto way of changing animation frames. npc.frame starts from the top left corner in pixel coordinates, so keep that in mind.
+                npc.frame.Y = Frame_P1 * frameHeight;
+            }
+            else if (BP2 == true)
+            {
+                npc.frame.Y = Frame_P2 * frameHeight;
+            }
+            else if (BP3 == true)
+            {
+                npc.frame.Y = Frame_P3 * frameHeight;
+            }
+            else if (BP4 == true)
+            {
+                // Here we have 3 frames that we want to cycle through.
+                npc.frameCounter++;
+                if (npc.frameCounter < 10)
+                {
+                    npc.frame.Y = Frame_Flutter_1 * frameHeight;
+                }
+                else if (npc.frameCounter < 20)
+                {
+                    npc.frame.Y = Frame_Flutter_2 * frameHeight;
+                }
+                else if (npc.frameCounter < 30)
+                {
+                    npc.frame.Y = Frame_Flutter_3 * frameHeight;
+                }
+                else
+                {
+                    npc.frameCounter = 0;
+                }
+            }  
             base.FindFrame(frameHeight);
         }
         public override void BossLoot(ref string name, ref int potionType)
