@@ -14,14 +14,14 @@ namespace ElementalHearts
 		{
 			if (Main.player[projectile.owner].HeldItem.type == ItemType<BowLite>())
 			{
-				if (Main.rand.NextBool(2))
+				if (Main.rand.NextBool(20))
 				{
 					Projectile.NewProjectile(projectile.position, Main.player[projectile.owner].velocity, ProjectileID.GiantBee, 50, 0, Main.player[projectile.owner].whoAmI);
 				}
 			}
 			if (Main.player[projectile.owner].HeldItem.type == ItemType<MissileLite>())
 			{
-				if (Main.rand.NextBool(2))
+				if (Main.rand.NextBool(20))
 				{
 					Projectile.NewProjectile(projectile.position, Main.player[projectile.owner].velocity, ProjectileID.GiantBee, 50, 0, Main.player[projectile.owner].whoAmI);
 				}
