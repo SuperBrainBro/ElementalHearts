@@ -18,7 +18,7 @@ namespace ElementalHearts.Items.Dev.Lite
 			projectile.light = 2f;
 			projectile.magic = true;
 			drawOriginOffsetY = -6;
-			projectile.timeLeft = 20;
+			projectile.timeLeft = 200;
 		}
 
 		public override Color? GetAlpha(Color lightColor) => new Color(255, 255, 255, 0);
