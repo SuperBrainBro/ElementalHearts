@@ -87,30 +87,30 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
 
             //Phase 2.
-            if (npc.ai[1] >= 150)
+            if (npc.ai[2] >= 150)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[1] = 0;
+                npc.ai[2] = 0;
             }
 
             //Phase 3.
-            if (npc.ai[1] >= 100)
+            if (npc.ai[3] >= 100)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[1] = 0;
+                npc.ai[3] = 0;
             }
 
             //Phase 4.
-            if (npc.ai[1] >= 50)
+            if (npc.ai[4] >= 50)
             {
                 npc.TargetClosest(true);
 
                 npc.position = Main.player[npc.target].position + new Vector2(100, 0);
-                npc.ai[1] = 0;
+                npc.ai[4] = 0;
             }
             base.AI();
         }
