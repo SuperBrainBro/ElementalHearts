@@ -29,8 +29,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override void SetDefaults()
         {
-            npc.width = 128;
-            npc.height = 128;
+            //npc.width = 128;
+            //npc.height = 128;
             npc.aiStyle = 0;
             npc.damage = 200;
             npc.defense = 24;
@@ -118,19 +118,19 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.TargetClosest(true);
 
-                //This generates a random tp position.
+                //This generates a random tp Center.
                 float tpPosRand1;
                 tpPosRand1 = Main.rand.NextFloat(8);
 
                 if (tpPosRand1 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
                 } else if (tpPosRand1 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
+                    npc.position = Main.player[npc.target].Center + new Vector2(0, 200);
                 } else if (tpPosRand1 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.position = Main.player[npc.target].Center + new Vector2(-200, 0);
                 } else if (tpPosRand1 > 0)
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
@@ -179,19 +179,19 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand3 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
                 }
                 else if (tpPosRand3 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
                 }
                 else if (tpPosRand3 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
                 else if (tpPosRand3 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
                 ShootProjectile(3);
                 P3 = 0;
@@ -202,25 +202,25 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 npc.TargetClosest(true);
 
-                //This generates a random tp position.
+                //This generates a random tp Center.
                 float tpPosRand4;
                 tpPosRand4 = Main.rand.NextFloat(8);
 
                 if (tpPosRand4 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
                 }
                 else if (tpPosRand4 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
                 }
                 else if (tpPosRand4 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
                 else if (tpPosRand4 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
                 P4 = 0;
             }
@@ -233,24 +233,24 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             switch (phase)
             {
                 case 1:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
                     return;
                 case 2:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
                     return;
                 case 3:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
                     return;
                 case 4:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
                     return;
             }
 
