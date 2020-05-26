@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Dev.Lite
 	internal class CrystalLite : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 20"
+			Tooltip.SetDefault("Permanently increases maximum life by 5"
 							+ "\n'Great for impersonating devs!'");
 			DisplayName.SetDefault("Crystal Lite");
 		}
@@ -26,10 +26,10 @@ namespace ElementalHearts.Items.Dev.Lite
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 20;
-			player.statLife += 20;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(20, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite += 1;
 			return true;

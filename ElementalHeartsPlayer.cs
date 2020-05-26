@@ -163,6 +163,8 @@ namespace ElementalHearts
 		public int WormLife;
 		public const int maxDemonHeartMK2Life = 1;
 		public int DemonHeartMK2Life;
+		public const int maxMechanicalLife = 1;
+		public int MechanicalLife;
 
 		//Dev Stuff/Hearts
 		public const int maxHeartOfCAT = 1;
@@ -257,10 +259,11 @@ namespace ElementalHearts
 			player.statLifeMax2 += WormLife * 5;
 			
 			player.statLifeMax2 += DemonHeartMK2Life * 6;
+			player.statLifeMax2 += MechanicalLife * 10;
 
 			//Dev Hearts
-			player.statLifeMax2 += HeartOfCAT * 20;
-			player.statLifeMax2 += CrystalLite * 20;
+			player.statLifeMax2 += HeartOfCAT * 5;
+			player.statLifeMax2 += CrystalLite * 5;
 		}
 
 		public override void UpdateDead() {
