@@ -96,10 +96,6 @@ ItemName.MushroomHeart=Грибное сердце
 ItemTooltip.MushroomHeart=Навсегда увеличивает жизнь на 3
 ItemName.PumkinHeart=Тыквенное сердце
 ItemTooltip.PumpkinHeart=Навсегда увеличивает жизнь на 3
-ItemName.WormHeart=Червивое сердце
-ItemTooltip.WormHeart=Навсегда увеличивает жизнь на 5
-ItemName.BrainHeart=Мозговое сердце
-ItemTooltip.BrainHeart=Навсегда увеличивает жизнь на 5
 ItemName.DemonHeartMK2=Демоническое сердце МК2
 ItemTooltip.DemonHeartMK2=Навсегда увеличивает жизнь на 6
 ItemName.CrimstoneHeart=Багряное каменное сердце
@@ -148,6 +144,14 @@ ItemTooltip.ChlorophyteHeart=Навсегда увеличивает жизнь 
 ItemName.LuminiteHeart=Люминитовое сердце
 ItemTooltip.LuminiteHeart=Навсегда увеличивает жизнь на 20
 
+ItemName.WormHeart=Червивое сердце
+ItemTooltip.WormHeart=Навсегда увеличивает жизнь на 5
+ItemName.BrainHeart=Мозговое сердце
+ItemTooltip.BrainHeart=Навсегда увеличивает жизнь на 5
+ItemName.MechanicalCrystalPiece1=Кусок механического кристалла
+ItemName.MechanicalCrystalPiece2=Кусок механического кристалла
+ItemName.MechanicalCrystalPiece3=Кусок механического кристалла
+
 Dev Stuff
 ItemName.MaskOfCAT=Маскоф
 ItemTooltip.MaskOfCAT=Отлично подходит, чтобы впечатлить разработчиков!
@@ -183,6 +187,10 @@ ItemTooltip.CrystalLite=Навсегда увеличивает жизнь на 
 ItemName.WingLite=Крылья Lite'а
 ItemTooltip.WingLite=Отлично подходит, чтобы впечатлить разработчиков!
 ItemName.BowLite=Лук Lite'а
-ItemTooltip.BowLite=Отлично подходит, чтобы впечатлить разработчиков!\nСтреляет 4 самонаводящихся хлорофитовые пули при выстреле.\nЕсть шанс стрелять ихоровыми дротиками в направлении огня.\nИмеет шанс порождать множество самонаводящихся хлорофитовых пуль
+ItemTooltip.BowLite=Отлично подходит, чтобы впечатлить разработчиков!\nСтреляет 4 хлорофитовых пули при выстреле\nИмеет шанс выстрельнуть ихоровыми дротиками в сторону огня\nИмеет шанс порождать множество самонаводящихся хлорофитовых пуль при ударе.\nИмеет шанс развернуть ракеты у игрока при ударе.\nИмеет небольшой шанс развернуть фейерверк при ударе.\nИмеет шанс наложить 'Мидас' на врагов\nИмеет шанс наложить 'Теневое пламя' на врагов\nУбийтсво имеет шанс вызвать пчёл-убийц
 ItemName.MissileLite=Ракета Lite'а
 ItemTooltip.MissileLite=Отлично подходит, чтобы впечатлить разработчиков!\nПризывает контролируюмую ракету\nЕсть шанс стрелять хлорофитовыми пулями во все стороны что наносит большое количество урона
+
+NPCs
+NPCName.MenacingHeart=Угрожающее сердце
+ProjectileName.MenacingProjectile=Угрожающее сердце
