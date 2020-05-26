@@ -1,3 +1,4 @@
+using IL.Terraria.GameContent.Events;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -23,7 +24,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("MenacingHeart");
+            DisplayName.SetDefault("Menacing Heart");
             Main.npcFrameCount[npc.type] = 14; // make sure to set this for your modnpcs.
         }
         public override void SetDefaults()
@@ -37,6 +38,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
+            
             npc.value = 100000;
             npc.buffImmune[BuffID.Confused] = true;
             npc.knockBackResist = 0f;
@@ -231,24 +233,24 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             switch (phase)
             {
                 case 1:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 1f, npc.whoAmI);
                     return;
                 case 2:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 2f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 2f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 2f, npc.whoAmI);
                     return;
                 case 3:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 3f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 3f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 3f, npc.whoAmI);
                     return;
                 case 4:
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 4f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 4f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 4f, npc.whoAmI);
                     return;
             }
 
