@@ -135,7 +135,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
-                ShootProjectile(1);
+                ShootProjectile(1, npc);
                 P1 = 0;
             }
             else
@@ -164,7 +164,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
                 }
-                ShootProjectile(2);
+                ShootProjectile(2, npc);
                 P2 = 0;
             }
             else
@@ -193,7 +193,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
-                ShootProjectile(3);
+                ShootProjectile(3, npc);
                 P3 = 0;
             }
             else
@@ -224,38 +224,38 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 P4 = 0;
             }
-            ShootProjectile(4);
+            ShootProjectile(4, npc);
             base.AI();
         }
         
-        public void ShootProjectile(int phase)
+        public void ShootProjectile(int phase, NPC npcW)
         {
-            /*
+            
             //In here, I want to shoot mini life crystals at the player. They will be shooting multiple times, maybe in groups of 3?
             switch (phase)
             {
                 case 1:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 1f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 1f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 1f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 1f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 1f, npcW.whoAmI);
                     return;
                 case 2:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 2f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 2f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 2f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 2f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 2f, npcW.whoAmI);
                     return;
                 case 3:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 3f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 3f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 3f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 3f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 3f, npcW.whoAmI);
                     return;
                 case 4:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 4f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 4f, npc.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 4f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 4f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 4f, npcW.whoAmI);
                     return;
             }
-            */
+            
         }
         
         public override void HitEffect(int hitDirection, double damage)
@@ -357,12 +357,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override void BossLoot(ref string name, ref int potionType)
         {
-
+            potionType = ItemID.GreaterHealingPotion;
             base.BossLoot(ref name, ref potionType);
         }
         public override void ScaleExpertStats (int numPlayers, float bossLifeScale) {
-            npc.lifeMax = (int)(npc.lifeMax * 0.5f * bossLifeScale);
-			npc.damage = (int)(npc.damage * 0.5f);
+            npc.lifeMax = (int)(npc.lifeMax * 1.5f * bossLifeScale);
+			npc.damage = (int)(npc.damage * 1.5f);
         }
     }
 }
