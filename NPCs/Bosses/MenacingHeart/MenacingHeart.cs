@@ -38,7 +38,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
-            
+            musicPriority = MusicPriority.BossMedium;
             npc.value = 100000;
             npc.buffImmune[BuffID.Confused] = true;
             npc.knockBackResist = 0f;
@@ -358,7 +358,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
             base.BossLoot(ref name, ref potionType);
         }
-        public virtual void ScaleExpertStats (int numPlayers, float bossLifeScale) {
+        public override void ScaleExpertStats (int numPlayers, float bossLifeScale) {
             npc.lifeMax = (int)(npc.lifeMax * 0.5f * bossLifeScale);
 			npc.damage = (int)(npc.damage * 0.5f);
         }
