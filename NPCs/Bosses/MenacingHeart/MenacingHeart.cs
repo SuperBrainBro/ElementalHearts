@@ -29,8 +29,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override void SetDefaults()
         {
-            //npc.width = 128;
-            //npc.height = 128;
+            npc.width = 128;
+            npc.height = 128;
             npc.aiStyle = 0;
             npc.damage = 200;
             npc.defense = 24;
