@@ -87,6 +87,18 @@ namespace ElementalHearts.Items
 					player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
 				}
 			}
+			//Expert Drop
+			if (Main.expertMode) {
+				if (context == "bossBag" && arg == 3326) {
+					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece1>(), Main.rand.Next(1, 1));
+				}
+				if (context == "bossBag" && arg == 3325) {
+					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece2>(), Main.rand.Next(1, 1));
+				}
+				if (context == "bossBag" && arg == 3327) {
+					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece3>(), Main.rand.Next(1, 1));
+				}
+			}
 		}
 	}
 }

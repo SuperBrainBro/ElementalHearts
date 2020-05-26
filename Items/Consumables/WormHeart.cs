@@ -17,6 +17,7 @@ namespace ElementalHearts.Items.Consumables
 			item.CloneDefaults(ItemID.LifeFruit);
 			item.rare = -12;
 			item.value = 20000;
+			item.expert = true;
 		}
 
 		public override bool CanUseItem(Player player) {
