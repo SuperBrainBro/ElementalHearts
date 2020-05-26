@@ -1,5 +1,6 @@
 using ElementalHearts.Items.Dev.CAT;
 using ElementalHearts.Items.Dev.Lite;
+using ElementalHearts.Items.Consumables;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -85,6 +86,18 @@ namespace ElementalHearts.Items
 					player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<BowLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
+				}
+			}
+			//Expert Drop
+			if (Main.expertMode) {
+				if (context == "bossBag" && arg == 3326) {
+					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece1>(), Main.rand.Next(1, 1));
+				}
+				if (context == "bossBag" && arg == 3325) {
+					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece2>(), Main.rand.Next(1, 1));
+				}
+				if (context == "bossBag" && arg == 3327) {
+					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece3>(), Main.rand.Next(1, 1));
 				}
 			}
 		}
