@@ -58,6 +58,7 @@ namespace ElementalHearts.Items
 						player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
+						player.QuickSpawnItem(ItemType<BowLite>(), Main.rand.Next(1, 1));
 						player.QuickSpawnItem(ItemType<CrystalLite>(), Main.rand.Next(1, 1));
 					}
 				}
@@ -89,6 +90,7 @@ namespace ElementalHearts.Items
 				}
 			}
 			//Expert Drop
+			/*
 			if (Main.expertMode) {
 				if (context == "bossBag" && arg == 3326) {
 					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece1>(), Main.rand.Next(1, 1));
@@ -100,6 +102,7 @@ namespace ElementalHearts.Items
 					player.QuickSpawnItem(ItemType<MechanicalCrystalPiece3>(), Main.rand.Next(1, 1));
 				}
 			}
+			*/
 		}
 	}
 }
