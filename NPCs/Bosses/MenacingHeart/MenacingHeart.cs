@@ -36,6 +36,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.lifeMax = 16000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
             npc.value = 100000;
             npc.buffImmune[BuffID.Confused] = true;
             npc.knockBackResist = 0f;
