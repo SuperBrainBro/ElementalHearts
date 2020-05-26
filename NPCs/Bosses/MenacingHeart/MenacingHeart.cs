@@ -227,8 +227,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             ShootProjectile(4);
             base.AI();
         }
+        
         public void ShootProjectile(int phase)
         {
+            /*
             //In here, I want to shoot mini life crystals at the player. They will be shooting multiple times, maybe in groups of 3?
             switch (phase)
             {
@@ -253,9 +255,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 4f, npc.whoAmI);
                     return;
             }
-
+            */
         }
-
+        
         public override void HitEffect(int hitDirection, double damage)
         {
 
