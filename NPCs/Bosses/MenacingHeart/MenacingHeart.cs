@@ -227,6 +227,30 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public void ShootProjectile(int phase)
         {
             //In here, I want to shoot mini life crystals at the player. They will be shooting multiple times, maybe in groups of 3?
+            switch (phase)
+            {
+                case 1:
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                    return;
+                case 2:
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 2f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 2f, npc.whoAmI);
+                    return;
+                case 3:
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 3f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 3f, npc.whoAmI);
+                    return;
+                case 4:
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 4f, npc.whoAmI);
+                    Projectile.NewProjectile(npc.position + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 4f, npc.whoAmI);
+                    return;
+            }
+
         }
 
         public override void HitEffect(int hitDirection, double damage)
@@ -275,47 +299,47 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 // Here we have 3 frames that we want to cycle through.
                 npc.frameCounter++;
-                if (npc.frameCounter < 10)
+                if (npc.frameCounter < 5)
                 {
                     npc.frame.Y = Frame_P4_1 * frameHeight;
                 }
-                else if (npc.frameCounter < 20)
+                else if (npc.frameCounter < 10)
                 {
                     npc.frame.Y = Frame_P4_2 * frameHeight;
                 }
-                else if (npc.frameCounter < 30)
+                else if (npc.frameCounter < 15)
                 {
                     npc.frame.Y = Frame_P4_3 * frameHeight;
                 }
-                else if (npc.frameCounter < 40)
+                else if (npc.frameCounter < 20)
                 {
                     npc.frame.Y = Frame_P4_4 * frameHeight;
                 }
-                else if (npc.frameCounter < 50)
+                else if (npc.frameCounter < 25)
                 {
                     npc.frame.Y = Frame_P4_5 * frameHeight;
                 }
-                else if (npc.frameCounter < 60)
+                else if (npc.frameCounter < 30)
                 {
                     npc.frame.Y = Frame_P4_6 * frameHeight;
                 }
-                else if (npc.frameCounter < 70)
+                else if (npc.frameCounter < 35)
                 {
                     npc.frame.Y = Frame_P4_7 * frameHeight;
                 }
-                else if (npc.frameCounter < 80)
+                else if (npc.frameCounter < 40)
                 {
                     npc.frame.Y = Frame_P4_8 * frameHeight;
                 }
-                else if (npc.frameCounter < 90)
+                else if (npc.frameCounter < 45)
                 {
                     npc.frame.Y = Frame_P4_9 * frameHeight;
                 }
-                else if (npc.frameCounter < 100)
+                else if (npc.frameCounter < 50)
                 {
                     npc.frame.Y = Frame_P4_10 * frameHeight;
                 }
-                else if (npc.frameCounter < 110)
+                else if (npc.frameCounter < 55)
                 {
                     npc.frame.Y = Frame_P4_11 * frameHeight;
                 }
