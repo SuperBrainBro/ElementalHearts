@@ -15,7 +15,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.value = 0;
 		}
 
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(662, 100);;
+			recipe.AddIngredient(ItemID.RainbowBrick, 100);;
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
