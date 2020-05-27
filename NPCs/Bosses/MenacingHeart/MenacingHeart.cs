@@ -235,24 +235,24 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             switch (phase)
             {
                 case 1:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 1f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 1f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 1f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 1f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 1f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 1f, npcW.whoAmI);
                     return;
                 case 2:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 2f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 2f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 2f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 2f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 2f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 2f, npcW.whoAmI);
                     return;
                 case 3:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 3f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 3f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 3f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 3f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 3f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 3f, npcW.whoAmI);
                     return;
                 case 4:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.CultistBossFireBall, 100, 4f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.CultistBossFireBall, 100, 4f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.CultistBossFireBall, 100, 4f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileID.DemonSickle, 100, 4f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileID.DemonSickle, 100, 4f, npcW.whoAmI);
+                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileID.DemonSickle, 100, 4f, npcW.whoAmI);
                     return;
             }
             
