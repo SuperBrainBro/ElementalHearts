@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class AdamantiteHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 11");
+			Tooltip.SetDefault("Permanently increases maximum life by 7");
 			DisplayName.SetDefault("Adamantite Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = ItemRarityID.Orange;
+			item.rare = ItemRarityID.LightPurple;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().AdamantiteLife <
-				   ElementalHeartsPlayer.maxAdamantiteLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 11;
-			player.statLife += 11;
+			player.statLifeMax2 += 7;
+			player.statLife += 7;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(11, true);
+				player.HealEffect(7, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().AdamantiteLife += 1;
 			return true;
@@ -37,7 +37,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.AdamantiteOre, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.AdamantiteForge);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

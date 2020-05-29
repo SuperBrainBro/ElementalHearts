@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class PearlsandHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 2");
+			Tooltip.SetDefault("Permanently increases maximum life by 5");
 			DisplayName.SetDefault("Pearlsand Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.LightRed;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().PearlsandLife <
-				   ElementalHeartsPlayer.maxPearlsandLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 2;
-			player.statLife += 2;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(2, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().PearlsandLife += 1;
 			return true;
@@ -36,7 +36,8 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(408, 100);;
+			recipe.AddIngredient(ItemID.PearlsandBlock, 100);
+			recipe.AddTile(TileID.Hellforge);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

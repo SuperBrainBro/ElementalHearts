@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().HeartOfCAT <
-				   ElementalHeartsPlayer.maxHeartOfCAT;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {

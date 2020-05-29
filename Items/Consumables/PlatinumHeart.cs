@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class PlatinumHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 5");
+			Tooltip.SetDefault("Permanently increases maximum life by 3");
 			DisplayName.SetDefault("Platinum Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.Green;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().PlatinumLife <
-				   ElementalHeartsPlayer.maxPlatinumLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 5;
-			player.statLife += 5;
+			player.statLifeMax2 += 3;
+			player.statLife += 3;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(5, true);
+				player.HealEffect(3, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().PlatinumLife += 1;
 			return true;
@@ -37,7 +37,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.PlatinumOre, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

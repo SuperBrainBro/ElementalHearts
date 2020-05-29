@@ -215,17 +215,17 @@ namespace ElementalHearts
             CogLife *= 5;
             FleshLife *= 5;
             LesionLife *= 5;
-            CrystalLife *= 5;
+            CrystalLife *= 7;
 
             //Basic Ores
             CobaltLife *= 5;
             PalladiumLife *= 5;
-            MythrilLife *= 5;
-            OrichalcumLife *= 5;
-            AdamantiteLife *= 6;
-            TitaniumLife *= 6;
-            ChlorophyteLife *= 7;
-            LuminiteLife *= 8;
+            MythrilLife *= 6;
+            OrichalcumLife *= 6;
+            AdamantiteLife *= 7;
+            TitaniumLife *= 7;
+            ChlorophyteLife *= 8;
+            LuminiteLife *= 9;
 
             //Expert Hearts
             BrainLife *= 5;

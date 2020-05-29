@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class PalladiumHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 9");
+			Tooltip.SetDefault("Permanently increases maximum life by 5");
 			DisplayName.SetDefault("Palladium Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 3;
+			item.rare = ItemRarityID.LightRed;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().PalladiumLife <
-				   ElementalHeartsPlayer.maxPalladiumLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 9;
-			player.statLife += 9;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(9, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().PalladiumLife += 1;
 			return true;
@@ -36,8 +36,8 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(1104, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.PalladiumOre, 100);;
+			recipe.AddTile(TileID.Hellforge);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

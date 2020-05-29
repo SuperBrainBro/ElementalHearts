@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables
 	internal class LuminiteHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 20");
+			Tooltip.SetDefault("Permanently increases maximum life by 9");
 			DisplayName.SetDefault("Luminite Heart");
 		}
 
@@ -21,14 +21,14 @@ namespace ElementalHearts.Items.Consumables
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().LuminiteLife <
-				   ElementalHeartsPlayer.maxLuminiteLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 20;
-			player.statLife += 20;
+			player.statLifeMax2 += 9;
+			player.statLife += 9;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(20, true);
+				player.HealEffect(9, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().LuminiteLife += 1;
 			return true;

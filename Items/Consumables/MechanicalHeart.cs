@@ -15,13 +15,14 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = ItemRarityID.Expert;
+			item.rare = -12;
 			item.value = 0;
+			item.expert = true;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().MechanicalLife <
-				   ElementalHeartsPlayer.maxMechanicalLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
@@ -39,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
 			recipe.AddIngredient(ItemType<MechanicalCrystalPiece1>());
 			recipe.AddIngredient(ItemType<MechanicalCrystalPiece2>());
 			recipe.AddIngredient(ItemType<MechanicalCrystalPiece3>());
-			recipe.AddTile(TileID.AdamantiteForge);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class CobaltHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 9");
+			Tooltip.SetDefault("Permanently increases maximum life by 5");
 			DisplayName.SetDefault("Cobalt Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = ItemRarityID.Orange;
+			item.rare = ItemRarityID.LightRed;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CobaltLife <
-				   ElementalHeartsPlayer.maxCobaltLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 9;
-			player.statLife += 9;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(9, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().CobaltLife += 1;
 			return true;
@@ -37,7 +37,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.CobaltOre, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.Hellforge);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class CrimtaneHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 5");
+			Tooltip.SetDefault("Permanently increases maximum life by 4");
 			DisplayName.SetDefault("Crimtane Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 1;
+			item.rare = ItemRarityID.Orange;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CrimtaneLife <
-				   ElementalHeartsPlayer.maxCrimtaneLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 5;
-			player.statLife += 5;
+			player.statLifeMax2 += 4;
+			player.statLife += 4;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(5, true);
+				player.HealEffect(4, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().CrimtaneLife += 1;
 			return true;
@@ -36,8 +36,8 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(880, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.CrimtaneOre, 100);;
+			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

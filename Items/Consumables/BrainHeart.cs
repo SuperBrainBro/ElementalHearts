@@ -16,13 +16,12 @@ namespace ElementalHearts.Items.Consumables
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
 			item.rare = -12;
-			item.value = 20000;
 			item.expert = true;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().BrainLife <
-				   ElementalHeartsPlayer.maxBrainLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {

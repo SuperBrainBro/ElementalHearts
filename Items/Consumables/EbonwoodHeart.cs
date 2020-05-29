@@ -36,7 +36,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(It	emID.Ebonwood, 100);
+			recipe.AddIngredient(ItemID.Ebonwood, 100);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables
 	internal class ChlorophyteHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 12");
+			Tooltip.SetDefault("Permanently increases maximum life by 8");
 			DisplayName.SetDefault("Chlorophyte Heart");
 		}
 
@@ -21,14 +21,14 @@ namespace ElementalHearts.Items.Consumables
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().ChlorophyteLife <
-				   ElementalHeartsPlayer.maxChlorophyteLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 12;
-			player.statLife += 12;
+			player.statLifeMax2 += 8;
+			player.statLife += 8;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(12, true);
+				player.HealEffect(8, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().ChlorophyteLife += 1;
 			return true;

@@ -25,10 +25,10 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 4;
-			player.statLife += 4;
+			player.statLifeMax2 += 2;
+			player.statLife += 2;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(4, true);
+				player.HealEffect(2, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().LeadLife += 1;
 			return true;
@@ -37,7 +37,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LeadOre, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

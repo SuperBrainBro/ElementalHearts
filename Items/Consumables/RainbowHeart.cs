@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class RainbowHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 10");
+			Tooltip.SetDefault("Permanently increases maximum life by 5");
 			DisplayName.SetDefault("Rainbow Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = ItemRarityID.Blue;
+			item.rare = ItemRarityID.Pink;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().RainbowLife <
-				   ElementalHeartsPlayer.maxRainbowLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 10;
-			player.statLife += 10;
+			player.statLifeMax2 += 5;
+			player.statLife += 5;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(10, true);
+				player.HealEffect(5, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().RainbowLife += 1;
 			return true;
@@ -41,7 +41,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.RainbowBrick, 100);;
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.HeavyWorkBench);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}
