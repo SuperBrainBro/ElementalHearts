@@ -392,110 +392,110 @@ namespace ElementalHearts
         {
             return new TagCompound {
 
-        //Pre-Hardmode//
+                //Pre-Hardmode//
 
-//Basic
-{"DirtLife", DirtLife},
-{"StoneLife", StoneLife},
-{"CrimstoneLife", CrimstoneLife},
-{"EbonstoneLife", EbonstoneLife},
-{"GraniteLife", GraniteLife},
-{"MarbleLife", MarbleLife},
-{"IceLife", IceLife},
-{"ObsidianLife", ObsidianLife},
-{"SandLife", SandLife},
-{"EbonsandLife", EbonsandLife},
-{"CrimsandLife", CrimsandLife},
-{"GlassLife", GlassLife},
+                //Basic
+                {"DirtLife", DirtLife},
+                {"StoneLife", StoneLife},
+                {"CrimstoneLife", CrimstoneLife},
+                {"EbonstoneLife", EbonstoneLife},
+                {"GraniteLife", GraniteLife},
+                {"MarbleLife", MarbleLife},
+                {"IceLife", IceLife},
+                {"ObsidianLife", ObsidianLife},
+                {"SandLife", SandLife},
+                {"EbonsandLife", EbonsandLife},
+                {"CrimsandLife", CrimsandLife},
+                {"GlassLife", GlassLife},
 
-//Other
-{"HoneyLife", HoneyLife},
-{"SlimeLife", SlimeLife},
-{"FossilLife", FossilLife},
-{"BubbleLife", BubbleLife},
-{"CoralstoneLife", CoralstoneLife},
-{"CandyCaneLife", CandyCaneLife},
-{"MushroomLife", MushroomLife},
+                //Other
+                {"HoneyLife", HoneyLife},
+                {"SlimeLife", SlimeLife},
+                {"FossilLife", FossilLife},
+                {"BubbleLife", BubbleLife},
+                {"CoralstoneLife", CoralstoneLife},
+                {"CandyCaneLife", CandyCaneLife},
+                {"MushroomLife", MushroomLife},
 
-//Grown
-{"HayLife", HayLife},
-{"CactusLife", CactusLife},
-{"PumpkinLife", PumpkinLife},
+                //Grown
+                {"HayLife", HayLife},
+                {"CactusLife", CactusLife},
+                {"PumpkinLife", PumpkinLife},
 
-//Wood
-{"WoodLife", WoodLife},
-{"RichMahoganyLife", RichMahoganyLife},
-{"EbonwoodLife", EbonwoodLife},
-{"ShadewoodLife", ShadewoodLife},
-{"BorealWoodLife", BorealWoodLife},
-{"PalmWoodLife", PalmWoodLife},
-{"DynastyLife", DynastyLife},
+                //Wood
+                {"WoodLife", WoodLife},
+                {"RichMahoganyLife", RichMahoganyLife},
+                {"EbonwoodLife", EbonwoodLife},
+                {"ShadewoodLife", ShadewoodLife},
+                {"BorealWoodLife", BorealWoodLife},
+                {"PalmWoodLife", PalmWoodLife},
+                {"DynastyLife", DynastyLife},
 
-//Gems
-{"AmberLife", AmberLife},
-{"AmethystLife", AmethystLife},
-{"TopazLife", TopazLife},
-{"SapphireLife", SapphireLife},
-{"EmeraldLife", EmeraldLife},
-{"RubyLife", RubyLife},
-{"DiamondLife", DiamondLife},
+                //Gems
+                {"AmberLife", AmberLife},
+                {"AmethystLife", AmethystLife},
+                {"TopazLife", TopazLife},
+                {"SapphireLife", SapphireLife},
+                {"EmeraldLife", EmeraldLife},
+                {"RubyLife", RubyLife},
+                {"DiamondLife", DiamondLife},
 
-//Basic Ores
-{"CopperLife", CopperLife},
-{"TinLife", TinLife},
-{"IronLife", IronLife},
-{"LeadLife", LeadLife},
-{"SilverLife", SilverLife},
-{"TungstenLife", TungstenLife},
-{"GoldLife", GoldLife},
-{"PlatinumLife", PlatinumLife},
+                //Basic Ores
+                {"CopperLife", CopperLife},
+                {"TinLife", TinLife},
+                {"IronLife", IronLife},
+                {"LeadLife", LeadLife},
+                {"SilverLife", SilverLife},
+                {"TungstenLife", TungstenLife},
+                {"GoldLife", GoldLife},
+                {"PlatinumLife", PlatinumLife},
 
-//Other Ores
-{"MeteoriteLife", MeteoriteLife},
-{"DemoniteLife", DemoniteLife},
-{"CrimtaneLife", CrimtaneLife},
-{"HellstoneLife", HellstoneLife},
+                //Other Ores
+                {"MeteoriteLife", MeteoriteLife},
+                {"DemoniteLife", DemoniteLife},
+                {"CrimtaneLife", CrimtaneLife},
+                {"HellstoneLife", HellstoneLife},
 
-//Hardmode//
+                //Hardmode//
 
-//Basic
-{"PearlstoneLife", PearlstoneLife},
-{"PearlsandLife", PearlsandLife},
+                //Basic
+                {"PearlstoneLife", PearlstoneLife},
+                {"PearlsandLife", PearlsandLife},
 
-//Wood
-{"PearlwoodLife", PearlwoodLife},
-{"SpookyLife", SpookyLife},
+                //Wood
+                {"PearlwoodLife", PearlwoodLife},
+                {"SpookyLife", SpookyLife},
 
-//Other
-{"RainbowLife", RainbowLife},
-{"CogLife", CogLife},
-{"FleshLife", FleshLife},
-{"LesionLife", LesionLife},
-{"CrystalLife", CrystalLife},
+                //Other
+                {"RainbowLife", RainbowLife},
+                {"CogLife", CogLife},
+                {"FleshLife", FleshLife},
+                {"LesionLife", LesionLife},
+                {"CrystalLife", CrystalLife},
 
-//Basic Ores
-{"CobaltLife", CobaltLife},
-{"PalladiumLife", PalladiumLife},
-{"MythrilLife", MythrilLife},
-{"OrichalcumLife", OrichalcumLife},
-{"AdamantiteLife", AdamantiteLife},
-{"TitaniumLife", TitaniumLife},
-{"ChlorophyteLife", ChlorophyteLife},
-{ "LuminiteLife", LuminiteLife},
+                //Basic Ores
+                {"CobaltLife", CobaltLife},
+                {"PalladiumLife", PalladiumLife},
+                {"MythrilLife", MythrilLife},
+                {"OrichalcumLife", OrichalcumLife},
+                {"AdamantiteLife", AdamantiteLife},
+                {"TitaniumLife", TitaniumLife},
+                {"ChlorophyteLife", ChlorophyteLife},
+                { "LuminiteLife", LuminiteLife},
 
-//Expert Hearts
-{ "BrainLife", BrainLife},
-{ "WormLife", WormLife},
-{ "DemonHeartMK2Life", DemonHeartMK2Life},
-{ "MechanicalLife", MechanicalLife},
+                //Expert Hearts
+                { "BrainLife", BrainLife},
+                { "WormLife", WormLife},
+                { "DemonHeartMK2Life", DemonHeartMK2Life},
+                { "MechanicalLife", MechanicalLife},
 
-//Dev Hearts
-{ "HeartOfCAT", HeartOfCAT},
-{ "CrystalLite", CrystalLite},
+                //Dev Hearts
+                { "HeartOfCAT", HeartOfCAT},
+                { "CrystalLite", CrystalLite},
 
-//Other
-{"nonStopParty", nonStopParty},
-};
+                //Other
+                {"nonStopParty", nonStopParty},
+                };
         }
 
         public override void Load(TagCompound tag)
