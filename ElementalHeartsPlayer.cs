@@ -20,9 +20,9 @@ namespace ElementalHearts
         //Debuffs/Buffs
         public bool curseCATsCurse;
 
-        ////Life Crystals////
+        public int ElementalHeartMax = 1;
 
-        public int ElementalHeartMax;
+        ////Life Crystals////
 
         //Pre-Hardmode//
 
@@ -129,117 +129,115 @@ namespace ElementalHearts
         //Multiplayer Thing
         public bool nonStopParty;
 
-        public void SetMaxHearts(int max)
-        {
-            ElementalHeartMax = max;
-        }
-
         public override void ResetEffects()
         {
+            ElementalHeartsConfig config = new ElementalHeartsConfig();
+            ElementalHeartMax = config.MaxElementalHeartConfig;
+
             //Debuffs/Buffs
             curseCATsCurse = false;
 
             //Pre-Hardmode//
 
             //Basic
-            DirtLife *= 1;
-            StoneLife *= 1;
-            CrimstoneLife *= 1;
-            EbonstoneLife *= 1;
-            GraniteLife *= 1;
-            MarbleLife *= 1;
-            IceLife *= 1;
-            ObsidianLife *= 3;
+            player.statLifeMax2 += DirtLife * 1;
+            player.statLifeMax2 += StoneLife * 1;
+            player.statLifeMax2 += CrimstoneLife * 1;
+            player.statLifeMax2 += EbonstoneLife * 1;
+            player.statLifeMax2 += GraniteLife * 1;
+            player.statLifeMax2 += MarbleLife * 1;
+            player.statLifeMax2 += IceLife * 1;
+            player.statLifeMax2 += ObsidianLife * 3;
 
-            SandLife *= 1;
-            EbonsandLife *= 1;
-            CrimsandLife *= 1;
-            GlassLife *= 1;
+            player.statLifeMax2 += SandLife * 1;
+            player.statLifeMax2 += EbonsandLife * 1;
+            player.statLifeMax2 += CrimsandLife * 1;
+            player.statLifeMax2 += GlassLife * 1;
 
             //Other
-            HoneyLife *= 2;
-            SlimeLife *= 2;
-            FossilLife *= 2;
-            BubbleLife *= 2;
-            CoralstoneLife *= 2;
-            CandyCaneLife *= 2;
-            MushroomLife *= 2;
+            player.statLifeMax2 += HoneyLife * 2;
+            player.statLifeMax2 += SlimeLife * 2;
+            player.statLifeMax2 += FossilLife * 2;
+            player.statLifeMax2 += BubbleLife * 2;
+            player.statLifeMax2 += CoralstoneLife * 2;
+            player.statLifeMax2 += CandyCaneLife * 2;
+            player.statLifeMax2 += MushroomLife * 2;
 
             //Grown
-            HayLife *= 1;
-            CactusLife *= 1;
-            PumpkinLife *= 1;
+            player.statLifeMax2 += HayLife * 1;
+            player.statLifeMax2 += CactusLife * 1;
+            player.statLifeMax2 += PumpkinLife * 1;
 
             //Wood
-            WoodLife *= 1;
-            RichMahoganyLife *= 1;
-            EbonwoodLife *= 1;
-            ShadewoodLife *= 1;
-            BorealWoodLife *= 1;
-            PalmWoodLife *= 1;
-            DynastyLife *= 1;
+            player.statLifeMax2 += WoodLife *= 1;
+            player.statLifeMax2 += RichMahoganyLife * 1;
+            player.statLifeMax2 += EbonwoodLife * 1;
+            player.statLifeMax2 += ShadewoodLife * 1;
+            player.statLifeMax2 += BorealWoodLife * 1;
+            player.statLifeMax2 += PalmWoodLife * 1;
+            player.statLifeMax2 += DynastyLife * 1;
 
             //Gems
-            AmberLife *= 5;
-            AmethystLife *= 2;
-            TopazLife *= 3;
-            SapphireLife *= 3;
-            EmeraldLife *= 4;
-            RubyLife *= 4;
-            DiamondLife *= 5;
+            player.statLifeMax2 += AmberLife * 5;
+            player.statLifeMax2 += AmethystLife * 2;
+            player.statLifeMax2 += TopazLife * 3;
+            player.statLifeMax2 += SapphireLife * 3;
+            player.statLifeMax2 += EmeraldLife * 4;
+            player.statLifeMax2 += RubyLife * 4;
+            player.statLifeMax2 += DiamondLife * 5;
 
             //Basic Ores
-            CopperLife *= 2;
-            TinLife *= 2;
-            IronLife *= 2;
-            LeadLife *= 2;
-            SilverLife *= 3;
-            TungstenLife *= 3;
-            GoldLife *= 3;
-            PlatinumLife *= 3;
+            player.statLifeMax2 += CopperLife * 2;
+            player.statLifeMax2 += TinLife * 2;
+            player.statLifeMax2 += IronLife * 2;
+            player.statLifeMax2 += LeadLife * 2;
+            player.statLifeMax2 += SilverLife * 3;
+            player.statLifeMax2 += TungstenLife * 3;
+            player.statLifeMax2 += GoldLife * 3;
+            player.statLifeMax2 += PlatinumLife * 3;
 
             //Other Ores
-            MeteoriteLife *= 4;
-            DemoniteLife *= 4;
-            CrimtaneLife *= 4;
-            HellstoneLife *= 5;
+            player.statLifeMax2 += MeteoriteLife * 4;
+            player.statLifeMax2 += DemoniteLife * 4;
+            player.statLifeMax2 += CrimtaneLife * 4;
+            player.statLifeMax2 += HellstoneLife * 5;
 
             //Hardmode//
 
             //Basic
-            PearlstoneLife *= 5;
-            PearlsandLife *= 5;
+            player.statLifeMax2 += PearlstoneLife * 5;
+            player.statLifeMax2 += PearlsandLife * 5;
 
             //Wood
-            PearlwoodLife *= 5;
-            SpookyLife *= 7;
+            player.statLifeMax2 += PearlwoodLife * 5;
+            player.statLifeMax2 += SpookyLife * 7;
 
             //Other
-            RainbowLife *= 5;
-            CogLife *= 5;
-            FleshLife *= 5;
-            LesionLife *= 5;
-            CrystalLife *= 7;
+            player.statLifeMax2 += RainbowLife * 5;
+            player.statLifeMax2 += CogLife * 5;
+            player.statLifeMax2 += FleshLife * 5;
+            player.statLifeMax2 += LesionLife * 5;
+            player.statLifeMax2 += CrystalLife * 7;
 
             //Basic Ores
-            CobaltLife *= 5;
-            PalladiumLife *= 5;
-            MythrilLife *= 6;
-            OrichalcumLife *= 6;
-            AdamantiteLife *= 7;
-            TitaniumLife *= 7;
-            ChlorophyteLife *= 8;
-            LuminiteLife *= 9;
+            player.statLifeMax2 += CobaltLife * 5;
+            player.statLifeMax2 += PalladiumLife * 5;
+            player.statLifeMax2 += MythrilLife * 6;
+            player.statLifeMax2 += OrichalcumLife * 6;
+            player.statLifeMax2 += AdamantiteLife * 7;
+            player.statLifeMax2 += TitaniumLife * 7;
+            player.statLifeMax2 += ChlorophyteLife * 8;
+            player.statLifeMax2 += LuminiteLife * 9;
 
             //Expert Hearts
-            BrainLife *= 5;
-            WormLife *= 5;
-            DemonHeartMK2Life *= 10;
-            MechanicalLife *= 10;
+            player.statLifeMax2 += BrainLife * 5;
+            player.statLifeMax2 += WormLife * 5;
+            player.statLifeMax2 += DemonHeartMK2Life * 10;
+            player.statLifeMax2 += MechanicalLife * 10;
 
             //Dev Hearts
-            HeartOfCAT *= 5;
-            CrystalLite *= 5;
+            player.statLifeMax2 += HeartOfCAT * 5;
+            player.statLifeMax2 += CrystalLite * 5;
         }
         public override void UpdateDead()
         {
@@ -500,27 +498,58 @@ namespace ElementalHearts
 
         public override void Load(TagCompound tag)
         {
-            //Pre-Hardmode
+            ////Life Crystals////
+
+            //Pre-Hardmode//
+
+            //Basic
             DirtLife = tag.GetInt("DirtLife");
             StoneLife = tag.GetInt("StoneLife");
-            WoodLife = tag.GetInt("WoodLife");
+            CrimstoneLife = tag.GetInt("CrimstoneLife");
+            EbonstoneLife = tag.GetInt("EbonstoneLife");
             GraniteLife = tag.GetInt("GraniteLife");
             MarbleLife = tag.GetInt("MarbleLife");
             IceLife = tag.GetInt("IceLife");
+            ObsidianLife = tag.GetInt("ObsidianLife");
+
+            SandLife = tag.GetInt("SandLife");
+            EbonsandLife = tag.GetInt("EbonsandLife");
+            CrimsandLife = tag.GetInt("CrimsandLife");
             GlassLife = tag.GetInt("GlassLife");
+
+            //Other
+            HoneyLife = tag.GetInt("HoneyLife");
             SlimeLife = tag.GetInt("SlimeLife");
             FossilLife = tag.GetInt("FossilLife");
+            BubbleLife = tag.GetInt("BubbleLife");
+            CoralstoneLife = tag.GetInt("CoralstoneLife");
+            CandyCaneLife = tag.GetInt("CandyCaneLife");
             MushroomLife = tag.GetInt("MushroomLife");
+
+            //Grown
             HayLife = tag.GetInt("HayLife");
             CactusLife = tag.GetInt("CactusLife");
             PumpkinLife = tag.GetInt("PumpkinLife");
-            HoneyLife = tag.GetInt("HoneyLife");
+
+            //Wood
+            WoodLife = tag.GetInt("WoodLife");
+            RichMahoganyLife = tag.GetInt("RichMahoganyLife");
+            EbonwoodLife = tag.GetInt("EbonwoodLife");
+            ShadewoodLife = tag.GetInt("ShadewoodLife");
+            BorealWoodLife = tag.GetInt("BorealWoodLife");
+            PalmWoodLife = tag.GetInt("PalmWoodLife");
+            DynastyLife = tag.GetInt("DynastyLife");
+
+            //Gems
+            AmberLife = tag.GetInt("AmberLife");
             AmethystLife = tag.GetInt("AmethystLife");
             TopazLife = tag.GetInt("TopazLife");
             SapphireLife = tag.GetInt("SapphireLife");
             EmeraldLife = tag.GetInt("EmeraldLife");
             RubyLife = tag.GetInt("RubyLife");
             DiamondLife = tag.GetInt("DiamondLife");
+
+            //Basic Ores
             CopperLife = tag.GetInt("CopperLife");
             TinLife = tag.GetInt("TinLife");
             IronLife = tag.GetInt("IronLife");
@@ -529,31 +558,31 @@ namespace ElementalHearts
             TungstenLife = tag.GetInt("TungstenLife");
             GoldLife = tag.GetInt("GoldLife");
             PlatinumLife = tag.GetInt("PlatinumLife");
+
+            //Other Ores
             MeteoriteLife = tag.GetInt("MeteoriteLife");
             DemoniteLife = tag.GetInt("DemoniteLife");
             CrimtaneLife = tag.GetInt("CrimtaneLife");
-            ObsidianLife = tag.GetInt("ObsidianLife");
             HellstoneLife = tag.GetInt("HellstoneLife");
-            RichMahoganyLife = tag.GetInt("RichMahoganyLife");
-            EbonwoodLife = tag.GetInt("EbonwoodLife");
-            ShadewoodLife = tag.GetInt("ShadewoodLife");
-            BorealWoodLife = tag.GetInt("BorealWoodLife");
-            PalmWoodLife = tag.GetInt("PalmWoodLife");
-            DynastyLife = tag.GetInt("DynastyLife");
-            AmberLife = tag.GetInt("AmberLife");
-            CoralstoneLife = tag.GetInt("CoralstoneLife");
-            CandyCaneLife = tag.GetInt("CandyCaneLife");
-            SandLife = tag.GetInt("SandLife");
-            CrimsandLife = tag.GetInt("CrimsandLife");
-            EbonsandLife = tag.GetInt("EbonsandLife");
 
-            nonStopParty = tag.GetBool("nonStopParty");
+            //Hardmode//
 
-            //Hardmode
-            PearlsandLife = tag.GetInt("PearlsandLife");
-            BubbleLife = tag.GetInt("BubbleLife");
+            //Basic
             PearlstoneLife = tag.GetInt("PearlstoneLife");
+            PearlsandLife = tag.GetInt("PearlsandLife");
+
+            //Wood
+            PearlwoodLife = tag.GetInt("PearlwoodLife");
+            SpookyLife = tag.GetInt("SpookyLife");
+
+            //Other
             RainbowLife = tag.GetInt("RainbowLife");
+            CogLife = tag.GetInt("CogLife");
+            FleshLife = tag.GetInt("FleshLife");
+            LesionLife = tag.GetInt("LesionLife");
+            CrystalLife = tag.GetInt("CrystalLife");
+
+            //Basic Ores
             CobaltLife = tag.GetInt("CobaltLife");
             PalladiumLife = tag.GetInt("PalladiumLife");
             MythrilLife = tag.GetInt("MythrilLife");
@@ -562,21 +591,18 @@ namespace ElementalHearts
             TitaniumLife = tag.GetInt("TitaniumLife");
             ChlorophyteLife = tag.GetInt("ChlorophyteLife");
             LuminiteLife = tag.GetInt("LuminiteLife");
-            CogLife = tag.GetInt("CogLife");
-            FleshLife = tag.GetInt("FleshLife");
-            LesionLife = tag.GetInt("LesionLife");
-            PearlwoodLife = tag.GetInt("PearlwoodLife");
-            SpookyLife = tag.GetInt("SpookyLife");
-            CrystalLife = tag.GetInt("CrystalLife");
 
             //Expert Hearts
             BrainLife = tag.GetInt("BrainLife");
             WormLife = tag.GetInt("WormLife");
             DemonHeartMK2Life = tag.GetInt("DemonHeartMK2Life");
+            MechanicalLife = tag.GetInt("MechanicalLife");
 
             //Dev Hearts
             HeartOfCAT = tag.GetInt("HeartOfCAT");
             CrystalLite = tag.GetInt("CrystalLite");
+
+            nonStopParty = tag.GetBool("nonStopParty");
         }
 
         public override void LoadLegacy(BinaryReader reader)

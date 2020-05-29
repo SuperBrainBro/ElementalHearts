@@ -20,17 +20,5 @@ namespace ElementalHearts
         [ReloadRequired]
         [Label("Max Heart Consumption")]
         public int MaxElementalHeartConfig;
-        public override void OnLoaded()
-        {
-            ElementalHeartsPlayer player = new ElementalHeartsPlayer();
-            player.SetMaxHearts(MaxElementalHeartConfig);
-            base.OnLoaded();
-        }
-        public override void OnChanged()
-        {
-            ElementalHeartsPlayer player = new ElementalHeartsPlayer();
-            player.SetMaxHearts(MaxElementalHeartConfig);
-            base.OnChanged();
-        }
     }
 }
