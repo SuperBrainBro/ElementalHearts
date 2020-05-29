@@ -498,111 +498,111 @@ namespace ElementalHearts
 
         public override void Load(TagCompound tag)
         {
-        ////Life Crystals////
+            ////Life Crystals////
 
             //Pre-Hardmode//
 
             //Basic
-          DirtLife = tag.GetInt("DirtLife");
-          StoneLife = tag.GetInt("StoneLife");
-          CrimstoneLife = tag.GetInt("CrimstoneLife");
-          EbonstoneLife = tag.GetInt("EbonstoneLife");
-          GraniteLife = tag.GetInt("GraniteLife");
-          MarbleLife = tag.GetInt("MarbleLife");
-          IceLife = tag.GetInt("IceLife");
-          ObsidianLife = tag.GetInt("ObsidianLife");
+            DirtLife = tag.GetInt("DirtLife");
+            StoneLife = tag.GetInt("StoneLife");
+            CrimstoneLife = tag.GetInt("CrimstoneLife");
+            EbonstoneLife = tag.GetInt("EbonstoneLife");
+            GraniteLife = tag.GetInt("GraniteLife");
+            MarbleLife = tag.GetInt("MarbleLife");
+            IceLife = tag.GetInt("IceLife");
+            ObsidianLife = tag.GetInt("ObsidianLife");
 
-          SandLife = tag.GetInt("SandLife");
-          EbonsandLife = tag.GetInt("EbonsandLife");
-          CrimsandLife = tag.GetInt("CrimsandLife");
-          GlassLife = tag.GetInt("GlassLife");
+            SandLife = tag.GetInt("SandLife");
+            EbonsandLife = tag.GetInt("EbonsandLife");
+            CrimsandLife = tag.GetInt("CrimsandLife");
+            GlassLife = tag.GetInt("GlassLife");
 
-        //Other
-          HoneyLife = tag.GetInt("HoneyLife");
-          SlimeLife = tag.GetInt("SlimeLife");
-          FossilLife = tag.GetInt("FossilLife");
-          BubbleLife = tag.GetInt("BubbleLife");
-          CoralstoneLife = tag.GetInt("CoralstoneLife");
-          CandyCaneLife = tag.GetInt("CandyCaneLife");
-          MushroomLife = tag.GetInt("MushroomLife");
+            //Other
+            HoneyLife = tag.GetInt("HoneyLife");
+            SlimeLife = tag.GetInt("SlimeLife");
+            FossilLife = tag.GetInt("FossilLife");
+            BubbleLife = tag.GetInt("BubbleLife");
+            CoralstoneLife = tag.GetInt("CoralstoneLife");
+            CandyCaneLife = tag.GetInt("CandyCaneLife");
+            MushroomLife = tag.GetInt("MushroomLife");
 
-        //Grown
-          HayLife = tag.GetInt("HayLife");
-          CactusLife = tag.GetInt("CactusLife");
-          PumpkinLife = tag.GetInt("PumpkinLife");
+            //Grown
+            HayLife = tag.GetInt("HayLife");
+            CactusLife = tag.GetInt("CactusLife");
+            PumpkinLife = tag.GetInt("PumpkinLife");
 
-        //Wood
-          WoodLife = tag.GetInt("WoodLife");
-          RichMahoganyLife = tag.GetInt("RichMahoganyLife");
-          EbonwoodLife = tag.GetInt("EbonwoodLife");
-          ShadewoodLife = tag.GetInt("ShadewoodLife");
-          BorealWoodLife = tag.GetInt("BorealWoodLife");
-          PalmWoodLife = tag.GetInt("PalmWoodLife");
-          DynastyLife = tag.GetInt("DynastyLife");
+            //Wood
+            WoodLife = tag.GetInt("WoodLife");
+            RichMahoganyLife = tag.GetInt("RichMahoganyLife");
+            EbonwoodLife = tag.GetInt("EbonwoodLife");
+            ShadewoodLife = tag.GetInt("ShadewoodLife");
+            BorealWoodLife = tag.GetInt("BorealWoodLife");
+            PalmWoodLife = tag.GetInt("PalmWoodLife");
+            DynastyLife = tag.GetInt("DynastyLife");
 
-        //Gems
-          AmberLife = tag.GetInt("AmberLife");
-          AmethystLife = tag.GetInt("AmethystLife");
-          TopazLife = tag.GetInt("TopazLife");
-          SapphireLife = tag.GetInt("SapphireLife");
-          EmeraldLife = tag.GetInt("EmeraldLife");
-          RubyLife = tag.GetInt("RubyLife");
-          DiamondLife = tag.GetInt("DiamondLife");
+            //Gems
+            AmberLife = tag.GetInt("AmberLife");
+            AmethystLife = tag.GetInt("AmethystLife");
+            TopazLife = tag.GetInt("TopazLife");
+            SapphireLife = tag.GetInt("SapphireLife");
+            EmeraldLife = tag.GetInt("EmeraldLife");
+            RubyLife = tag.GetInt("RubyLife");
+            DiamondLife = tag.GetInt("DiamondLife");
 
-        //Basic Ores
-          CopperLife = tag.GetInt("CopperLife");
-          TinLife = tag.GetInt("TinLife");
-          IronLife = tag.GetInt("IronLife");
-          LeadLife = tag.GetInt("LeadLife");
-          SilverLife = tag.GetInt("SilverLife");
-          TungstenLife = tag.GetInt("TungstenLife");
-          GoldLife = tag.GetInt("GoldLife");
-          PlatinumLife = tag.GetInt("PlatinumLife");
+            //Basic Ores
+            CopperLife = tag.GetInt("CopperLife");
+            TinLife = tag.GetInt("TinLife");
+            IronLife = tag.GetInt("IronLife");
+            LeadLife = tag.GetInt("LeadLife");
+            SilverLife = tag.GetInt("SilverLife");
+            TungstenLife = tag.GetInt("TungstenLife");
+            GoldLife = tag.GetInt("GoldLife");
+            PlatinumLife = tag.GetInt("PlatinumLife");
 
-        //Other Ores
-          MeteoriteLife = tag.GetInt("MeteoriteLife");
-          DemoniteLife = tag.GetInt("DemoniteLife");
-          CrimtaneLife = tag.GetInt("CrimtaneLife");
-          HellstoneLife = tag.GetInt("HellstoneLife");
+            //Other Ores
+            MeteoriteLife = tag.GetInt("MeteoriteLife");
+            DemoniteLife = tag.GetInt("DemoniteLife");
+            CrimtaneLife = tag.GetInt("CrimtaneLife");
+            HellstoneLife = tag.GetInt("HellstoneLife");
 
-        //Hardmode//
+            //Hardmode//
 
-        //Basic
-          PearlstoneLife = tag.GetInt("PearlstoneLife");
-          PearlsandLife = tag.GetInt("PearlsandLife");
+            //Basic
+            PearlstoneLife = tag.GetInt("PearlstoneLife");
+            PearlsandLife = tag.GetInt("PearlsandLife");
 
-        //Wood
-          PearlwoodLife = tag.GetInt("PearlwoodLife");
-          SpookyLife = tag.GetInt("SpookyLife");
+            //Wood
+            PearlwoodLife = tag.GetInt("PearlwoodLife");
+            SpookyLife = tag.GetInt("SpookyLife");
 
-        //Other
-          RainbowLife = tag.GetInt("RainbowLife");
-          CogLife = tag.GetInt("CogLife");
-          FleshLife = tag.GetInt("FleshLife");
-          LesionLife = tag.GetInt("LesionLife");
-          CrystalLife = tag.GetInt("CrystalLife");
+            //Other
+            RainbowLife = tag.GetInt("RainbowLife");
+            CogLife = tag.GetInt("CogLife");
+            FleshLife = tag.GetInt("FleshLife");
+            LesionLife = tag.GetInt("LesionLife");
+            CrystalLife = tag.GetInt("CrystalLife");
 
-        //Basic Ores
-          CobaltLife = tag.GetInt("CobaltLife");
-          PalladiumLife = tag.GetInt("PalladiumLife");
-          MythrilLife = tag.GetInt("MythrilLife");
-          OrichalcumLife = tag.GetInt("OrichalcumLife");
-          AdamantiteLife = tag.GetInt("AdamantiteLife");
-          TitaniumLife = tag.GetInt("TitaniumLife");
-          ChlorophyteLife = tag.GetInt("ChlorophyteLife");
-          LuminiteLife = tag.GetInt("LuminiteLife");
+            //Basic Ores
+            CobaltLife = tag.GetInt("CobaltLife");
+            PalladiumLife = tag.GetInt("PalladiumLife");
+            MythrilLife = tag.GetInt("MythrilLife");
+            OrichalcumLife = tag.GetInt("OrichalcumLife");
+            AdamantiteLife = tag.GetInt("AdamantiteLife");
+            TitaniumLife = tag.GetInt("TitaniumLife");
+            ChlorophyteLife = tag.GetInt("ChlorophyteLife");
+            LuminiteLife = tag.GetInt("LuminiteLife");
 
-        //Expert Hearts
-          BrainLife = tag.GetInt("BrainLife");
-          WormLife = tag.GetInt("WormLife");
-          DemonHeartMK2Life = tag.GetInt("DemonHeartMK2Life");
-          MechanicalLife = tag.GetInt("MechanicalLife");
+            //Expert Hearts
+            BrainLife = tag.GetInt("BrainLife");
+            WormLife = tag.GetInt("WormLife");
+            DemonHeartMK2Life = tag.GetInt("DemonHeartMK2Life");
+            MechanicalLife = tag.GetInt("MechanicalLife");
 
-        //Dev Hearts
-          HeartOfCAT = tag.GetInt("HeartOfCAT");
-          CrystalLite = tag.GetInt("CrystalLite");
+            //Dev Hearts
+            HeartOfCAT = tag.GetInt("HeartOfCAT");
+            CrystalLite = tag.GetInt("CrystalLite");
 
-        nonStopParty = tag.GetBool("nonStopParty");
+            nonStopParty = tag.GetBool("nonStopParty");
         }
 
         public override void LoadLegacy(BinaryReader reader)
