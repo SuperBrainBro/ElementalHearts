@@ -20,156 +20,108 @@ namespace ElementalHearts
 		//Debuffs/Buffs
 		public bool curseCATsCurse;
 
-		//Life Crystals
+		////Life Crystals////
 
-		//Pre-Hardmode
-		public const int maxDirtLife = 1;
+		public const int ElementalHeartMax = 1;
+
+		//Pre-Hardmode//
+
+		//Basic
 		public int DirtLife;
-		public const int maxStoneLife = 1;
 		public int StoneLife;
-		public const int maxWoodLife = 1;
-		public int WoodLife;
-		public const int maxGraniteLife = 1;
 		public int GraniteLife;
-		public const int maxMarbleLife = 1;
 		public int MarbleLife;
-		public const int maxIceLife = 1;
 		public int IceLife;
-		public const int maxGlassLife = 1;
-		public int GlassLife;
-		public const int maxFossilLife = 1;
-		public int FossilLife;
-		public const int maxMushroomLife = 1;
-		public int MushroomLife;
-		public const int maxHayLife = 1;
-		public int HayLife;
-		public const int maxCactusLife = 1;
-		public int CactusLife;
-		public const int maxPumpkinLife = 1;
-		public int PumpkinLife;
-		public const int maxHoneyLife = 1;
-		public int HoneyLife;
-		public const int maxAmethystLife = 1;
-		public int AmethystLife;
-		public const int maxTopazLife = 1;
-		public int TopazLife;
-		public const int maxSapphireLife = 1;
-		public int SapphireLife;
-		public const int maxEmeraldLife = 1;
-		public int EmeraldLife;
-		public const int maxRubyLife = 1;
-		public int RubyLife;
-		public const int maxDiamondLife = 1;
-		public int DiamondLife;
-		public const int maxCopperLife = 1;
-		public int CopperLife;
-		public const int maxTinLife = 1;
-		public int TinLife;
-		public const int maxIronLife = 1;
-		public int IronLife;
-		public const int maxLeadLife = 1;
-		public int LeadLife;
-		public const int maxSilverLife = 1;
-		public int SilverLife;
-		public const int maxTungstenLife = 1;
-		public int TungstenLife;
-		public const int maxGoldLife = 1;
-		public int GoldLife;
-		public const int maxPlatinumLife = 1;
-		public int PlatinumLife;
-		public const int maxMeteoriteLife = 1;
-		public int MeteoriteLife;
-		public const int maxDemoniteLife = 1;
-		public int DemoniteLife;
-		public const int maxCrimtaneLife = 1;
-		public int CrimtaneLife;
-		public const int maxObsidianLife = 1;
 		public int ObsidianLife;
-		public const int maxHellstoneLife = 1;
-		public int HellstoneLife;
-		public const int maxBubbleLife = 1;
-		public int BubbleLife;
-		public const int maxCandyCaneLife = 1;
-		public int CandyCaneLife;
-		public const int maxCoralstoneLife = 1;
-		public int CoralstoneLife;
-		public const int maxSlimeLife = 1;
-		public int SlimeLife;
-		public const int maxRichMahoganyLife = 1;
-		public int RichMahoganyLife;
-		public const int maxEbonwoodLife = 1;
-		public int EbonwoodLife;
-		public const int maxShadewoodLife = 1;
-		public int ShadewoodLife;
-		public const int maxBorealWoodLife = 1;
-		public int BorealWoodLife;
-		public const int maxPalmWoodLife = 1;
-		public int PalmWoodLife;
-		public const int maxDynastyLife = 1;
-		public int DynastyLife;
-		public const int maxAmberLife = 1;
-		public int AmberLife;
-		public const int maxSandLife = 1;
+			
 		public int SandLife;
-		public const int maxEbonsandLife = 1;
 		public int EbonsandLife;
-		public const int maxCrimsandLife = 1;
 		public int CrimsandLife;
-		public const int maxEbonstoneLife = 1;
-		public int EbonstoneLife;
-		public const int maxCrimstoneLife = 1;
-		public int CrimstoneLife;
+		public int GlassLife;
 
-		//Hardmode
-		public const int maxPearlsandLife = 1;
-		public int PearlsandLife;
-		public const int maxPearlstoneLife = 1;
+		//Other
+		public int HoneyLife;
+		public int SlimeLife;
+		public int FossilLife;
+		public int BubbleLife;
+		public int CoralstoneLife;
+		public int CandyCaneLife;
+		public int MushroomLife;
+
+		//Grown
+		public int HayLife;
+		public int CactusLife;
+		public int PumpkinLife;
+
+		//Wood
+		public int WoodLife;
+		public int RichMahoganyLife;
+		public int EbonwoodLife;
+		public int ShadewoodLife;
+		public int BorealWoodLife;
+		public int PalmWoodLife;
+		public int DynastyLife;
+
+		//Gems
+		public int AmberLife;
+		public int AmethystLife;
+		public int TopazLife;
+		public int SapphireLife;
+		public int EmeraldLife;
+		public int RubyLife;
+		public int DiamondLife;
+
+		//Basic Ores
+		public int CopperLife;
+		public int TinLife;
+		public int IronLife;
+		public int LeadLife;
+		public int SilverLife;
+		public int TungstenLife;
+		public int GoldLife;
+		public int PlatinumLife;
+
+		//Other Ores
+		public int MeteoriteLife;
+		public int DemoniteLife;
+		public int CrimtaneLife;
+		public int HellstoneLife;
+
+		//Hardmode//
+
+		//Basic
 		public int PearlstoneLife;
-		public const int maxRainbowLife = 1;
-		public int RainbowLife;
-		public const int maxCobaltLife = 1;
-		public int CobaltLife;
-		public const int maxPalladiumLife = 1;
-		public int PalladiumLife;
-		public const int maxMythrilLife = 1;
-		public int MythrilLife;
-		public const int maxOrichalcumLife = 1;
-		public int OrichalcumLife;
-		public const int maxAdamantiteLife = 1;
-		public int AdamantiteLife;
-		public const int maxTitaniumLife = 1;
-		public int TitaniumLife;
-		public const int maxChlorophyteLife = 1;
-		public int ChlorophyteLife;
-		public const int maxLuminiteLife = 1;
-		public int LuminiteLife;
-		public const int maxCrystalLife = 1;
-		public int CrystalLife;
-		public const int maxCogLife = 1;
-		public int CogLife;
-		public const int maxFleshLife = 1;
-		public int FleshLife;
-		public const int maxLesionLife = 1;
-		public int LesionLife;
-		public const int maxSpookyLife = 1;
-		public int SpookyLife;
-		public const int maxPearlwoodLife = 1;
+		public int PearlsandLife;
+
+		//Wood
 		public int PearlwoodLife;
+		public int SpookyLife;
+
+		//Other
+		public int RainbowLife;
+		public int CogLife;
+		public int FleshLife;
+		public int LesionLife;
+		public int CrystalLife;
+
+		//Basic Ores
+		public int CobaltLife;
+		public int PalladiumLife;
+		public int MythrilLife;
+		public int OrichalcumLife;
+		public int AdamantiteLife;
+		public int TitaniumLife;
+		public int ChlorophyteLife;
+		public int LuminiteLife;
 
 		//Expert Hearts
-		public const int maxBrainLife = 1;
 		public int BrainLife;
-		public const int maxWormLife = 1;
 		public int WormLife;
-		public const int maxDemonHeartMK2Life = 1;
 		public int DemonHeartMK2Life;
-		public const int maxMechanicalLife = 1;
 		public int MechanicalLife;
 
-		//Dev Stuff/Hearts
-		public const int maxHeartOfCAT = 1;
+		//Dev Hearts
 		public int HeartOfCAT;
-		public const int maxCrystalLite = 1;
 		public int CrystalLite;
 
 		//Multiplayer Thing
@@ -180,95 +132,111 @@ namespace ElementalHearts
 			//Debuffs/Buffs
 			curseCATsCurse = false;
 
-			//Pre-Hardmode
-			player.statLifeMax2 += DirtLife;
-			player.statLifeMax2 += StoneLife;
-			player.statLifeMax2 += WoodLife;
-			player.statLifeMax2 += CactusLife;
-			player.statLifeMax2 += RichMahoganyLife;
-			player.statLifeMax2 += EbonwoodLife;
-			player.statLifeMax2 += ShadewoodLife;
-			player.statLifeMax2 += BorealWoodLife;
-			player.statLifeMax2 += PalmWoodLife;
-			player.statLifeMax2 += AmethystLife;
-			player.statLifeMax2 += SandLife;
-			player.statLifeMax2 += EbonsandLife;
-			player.statLifeMax2 += CrimsandLife;
 
-			player.statLifeMax2 += IceLife * 2;
-			player.statLifeMax2 += DynastyLife * 2;
-			player.statLifeMax2 += TopazLife * 2;
-			player.statLifeMax2 += GraniteLife * 2;
-			player.statLifeMax2 += FossilLife * 2;
-			player.statLifeMax2 += HayLife * 2;
+		//Pre-Hardmode//
 
-			player.statLifeMax2 += TinLife * 3;
-			player.statLifeMax2 += CopperLife * 3;
-			player.statLifeMax2 += SlimeLife * 3;
-			player.statLifeMax2 += SapphireLife * 3;
-			player.statLifeMax2 += HoneyLife * 3;
-			player.statLifeMax2 += CoralstoneLife * 3;
-			player.statLifeMax2 += CandyCaneLife * 3;
+		//Basic
+		 DirtLife *= 1;
+		 StoneLife *= 1;
+		 GraniteLife *= 1;
+		 MarbleLife *= 1;
+		 IceLife *= 1;
+		 ObsidianLife *= 3;
 
-			player.statLifeMax2 += IronLife * 4;
-			player.statLifeMax2 += LeadLife * 4;
-			player.statLifeMax2 += EmeraldLife * 4;
+		 SandLife *= 1;
+		 EbonsandLife *= 1;
+		 CrimsandLife *= 1;
+		 GlassLife *= 1;
 
-			player.statLifeMax2 += SilverLife * 5;
-			player.statLifeMax2 += TungstenLife * 5;
-			player.statLifeMax2 += BubbleLife * 5;
-			player.statLifeMax2 += RubyLife * 5;
-			player.statLifeMax2 += GoldLife * 5;
-			player.statLifeMax2 += PlatinumLife * 5;
-			player.statLifeMax2 += DiamondLife * 5;
-			player.statLifeMax2 += AmberLife * 5;
-			player.statLifeMax2 += DemoniteLife * 5;
-			player.statLifeMax2 += CrimtaneLife * 5;
-			player.statLifeMax2 += ObsidianLife * 5;
-			player.statLifeMax2 += HellstoneLife * 5;
-			player.statLifeMax2 += MeteoriteLife * 5;
+		//Other
+		 HoneyLife *= 2;
+		 SlimeLife *= 2;
+		 FossilLife *= 2;
+		 BubbleLife *= 2;
+		 CoralstoneLife *= 2;
+		 CandyCaneLife *= 2;
+		 MushroomLife *= 2;
 
-			//Hardmode
-			player.statLifeMax2 += PearlsandLife * 5;
-			player.statLifeMax2 += PearlwoodLife * 5;
-			player.statLifeMax2 += CogLife * 5;
-			player.statLifeMax2 += PearlstoneLife * 5;
-			
-			player.statLifeMax2 += FleshLife * 6;
-			player.statLifeMax2 += LesionLife * 6;
+		//Grown
+		 HayLife *= 1;
+		 CactusLife *= 1;
+		 PumpkinLife *= 1;
 
-			player.statLifeMax2 += SpookyLife * 7;
+		//Wood
+		 WoodLife *= 1;
+		 RichMahoganyLife *= 1;
+		 EbonwoodLife *= 1;
+		 ShadewoodLife *= 1;
+		 BorealWoodLife *= 1;
+		 PalmWoodLife *= 1;
+		 DynastyLife *= 1;
 
-			player.statLifeMax2 += CobaltLife * 9;
-			player.statLifeMax2 += PalladiumLife * 9;
-			player.statLifeMax2 += CrystalLife * 9;
+		//Gems
+		 AmberLife *= 5;
+		 AmethystLife *= 2;
+		 TopazLife *= 3;
+		 SapphireLife *= 3;
+		 EmeraldLife *= 4;
+		 RubyLife *= 4;
+		 DiamondLife *= 5;
 
-			player.statLifeMax2 += MythrilLife * 10;
-			player.statLifeMax2 += RainbowLife * 10;
-			player.statLifeMax2 += OrichalcumLife * 10;
+		//Basic Ores
+		 CopperLife *= 2;
+		 TinLife *= 2;
+		 IronLife *= 2;
+		 LeadLife *= 2;
+		 SilverLife *= 3;
+		 TungstenLife *= 3;
+		 GoldLife *= 3;
+		 PlatinumLife *= 3;
 
-			player.statLifeMax2 += AdamantiteLife * 11;
-			player.statLifeMax2 += TitaniumLife * 11;
+		//Other Ores
+		 MeteoriteLife *= 4;
+		 DemoniteLife *= 4;
+		 CrimtaneLife *= 4;
+		 HellstoneLife *= 5;
 
-			player.statLifeMax2 += ChlorophyteLife * 12;
+		//Hardmode//
 
-			player.statLifeMax2 += LuminiteLife * 20;
+		//Basic
+		 PearlstoneLife *= 5;
+		 PearlsandLife *= 5;
 
-			//Expert Hearts
-			player.statLifeMax2 += BrainLife * 5;
-			player.statLifeMax2 += WormLife * 5;
-			
-			player.statLifeMax2 += DemonHeartMK2Life * 6;
-			player.statLifeMax2 += MechanicalLife * 10;
+		//Wood
+		 PearlwoodLife *= 5;
+		 SpookyLife *= 7;
 
-			//Dev Hearts
-			player.statLifeMax2 += HeartOfCAT * 5;
-			player.statLifeMax2 += CrystalLite * 5;
-		}
+		//Other
+		 RainbowLife *= 5;
+		 CogLife *= 5;
+		 FleshLife *= 5;
+		 LesionLife *= 5;
+		 CrystalLife *= 5;
 
+		//Basic Ores
+		 CobaltLife *= 5;
+		 PalladiumLife *= 5;
+		 MythrilLife *= 5;
+		 OrichalcumLife *= 5;
+		 AdamantiteLife *= 6;
+		 TitaniumLife *= 6;
+		 ChlorophyteLife *= 7;
+		 LuminiteLife *= 8;
+
+		//Expert Hearts
+		 BrainLife *= 5;
+		 WormLife *= 5;
+		 DemonHeartMK2Life *= 10;
+		 MechanicalLife *= 10;
+
+		//Dev Hearts
+		 HeartOfCAT *= 5;
+		 CrystalLite *= 5;
+	}
 		public override void UpdateDead() {
 			curseCATsCurse = false;
 		}
+
 		public override void UpdateBadLifeRegen() {
 			if (curseCATsCurse) {
 				// These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
@@ -298,7 +266,8 @@ namespace ElementalHearts
 			packet.Write(GraniteLife);
 			packet.Write(MarbleLife);
 			packet.Write(IceLife);
-			
+			packet.Write(ObsidianLife);
+
 			packet.Write(SandLife);
 			packet.Write(EbonsandLife);
 			packet.Write(CrimsandLife);
@@ -311,6 +280,7 @@ namespace ElementalHearts
 			packet.Write(BubbleLife);
 			packet.Write(CoralstoneLife);
 			packet.Write(CandyCaneLife);
+			packet.Write(MushroomLife);
 
 			//Grown
 			packet.Write(HayLife);
@@ -355,7 +325,6 @@ namespace ElementalHearts
 
 			//Basic
 			packet.Write(PearlstoneLife);
-
 			packet.Write(PearlsandLife);
 
 			//Wood
@@ -383,6 +352,7 @@ namespace ElementalHearts
 			packet.Write(BrainLife);
 			packet.Write(WormLife);
 			packet.Write(DemonHeartMK2Life);
+			packet.Write(MechanicalLife);
 
 			//Dev Hearts
 			packet.Write(HeartOfCAT);
@@ -574,7 +544,7 @@ namespace ElementalHearts
 
 		public override void LoadLegacy(BinaryReader reader)
 		{
-			int loadVersion = reader.ReadInt32();
+			reader.ReadInt32();
 		}
 	}
 }
