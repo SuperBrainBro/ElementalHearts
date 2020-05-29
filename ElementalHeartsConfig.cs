@@ -18,7 +18,7 @@ namespace ElementalHearts
         [Header("Elemental Hearts Setting")]
         [DefaultValue(1)]      
         [ReloadRequired]
-        [Label("Max Heart Consumption")]
+        [Label("Max Heart Consumption (Disabled Because I Can't Find A Way To Make This Work!)")]
         public int MaxElementalHeartConfig;
     }
 }

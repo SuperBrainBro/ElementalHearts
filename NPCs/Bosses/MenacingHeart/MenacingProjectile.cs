@@ -10,10 +10,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 	//ported from my tAPI mod because I'm lazy
 	public class MenacingProjectile : ModProjectile
 	{
-		public override void SetStaticDefaults()
-		{
-			ProjectileID.Sets.Homing[projectile.type] = true;
-		}
+		//public override void SetStaticDefaults()
+		//{
+			//ProjectileID.Sets.Homing[projectile.type] = true;
+		//}
 
 		public override void SetDefaults()
 		{
