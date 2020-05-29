@@ -21,7 +21,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().EbonstoneLife <
-				   ElementalHeartsPlayer.maxEbonstoneLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
@@ -37,7 +37,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.EbonstoneBlock, 100);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}
