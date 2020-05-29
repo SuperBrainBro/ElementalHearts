@@ -9,7 +9,7 @@ using Terraria.ModLoader.Config;
 namespace ElementalHearts
 {
     [Label("Settings")]
-    public class Config : ModConfig
+    public class ElementalHeartsConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
