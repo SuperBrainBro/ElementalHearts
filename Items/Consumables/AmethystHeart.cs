@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class AmethystHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 1");
+			Tooltip.SetDefault("Permanently increases maximum life by 2");
 			DisplayName.SetDefault("Amethyst Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.Blue;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().AmethystLife <
-				   ElementalHeartsPlayer.maxAmethystLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 1;
-			player.statLife += 1;
+			player.statLifeMax2 += 2;
+			player.statLife += 2;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(1, true);
+				player.HealEffect(2, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().AmethystLife += 1;
 			return true;
@@ -36,8 +36,9 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(181, 100);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddIngredient(ItemID.Amethyst, 25);
+			recipe.AddIngredient(ItemID.StoneBlock, 75);
+			recipe.AddTile(TileID.Extractinator);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

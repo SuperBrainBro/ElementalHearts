@@ -9,19 +9,19 @@ namespace ElementalHearts.Items.Consumables
 	internal class LeadHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 4");
+			Tooltip.SetDefault("Permanently increases maximum life by 2");
 			DisplayName.SetDefault("Lead Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.Blue;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().LeadLife <
-				   ElementalHeartsPlayer.maxLeadLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {

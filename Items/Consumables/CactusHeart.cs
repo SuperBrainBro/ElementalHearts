@@ -21,7 +21,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CactusLife <
-				   ElementalHeartsPlayer.maxCactusLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {

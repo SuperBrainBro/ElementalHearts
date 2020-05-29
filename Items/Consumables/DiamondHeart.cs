@@ -15,13 +15,13 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.LightRed;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().DiamondLife <
-				   ElementalHeartsPlayer.maxDiamondLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
@@ -36,8 +36,9 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(182, 100);
-			recipe.AddTile(TileID.WorkBenches);
+			recipe.AddIngredient(ItemID.Diamond, 25);
+			recipe.AddIngredient(ItemID.StoneBlock, 75);
+			recipe.AddTile(TileID.Extractinator);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

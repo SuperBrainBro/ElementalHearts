@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables
 	internal class HayHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 2");
+			Tooltip.SetDefault("Permanently increases maximum life by 1");
 			DisplayName.SetDefault("Hay Heart");
 		}
 
@@ -21,14 +21,14 @@ namespace ElementalHearts.Items.Consumables
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().HayLife <
-				   ElementalHeartsPlayer.maxHayLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 2;
-			player.statLife += 2;
+			player.statLifeMax2 += 1;
+			player.statLife += 1;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(2, true);
+				player.HealEffect(1, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().HayLife += 1;
 			return true;

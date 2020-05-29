@@ -9,26 +9,26 @@ namespace ElementalHearts.Items.Consumables
 	internal class SlimeHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 3");
+			Tooltip.SetDefault("Permanently increases maximum life by 2");
 			DisplayName.SetDefault("Slime Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.Blue;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().SlimeLife <
-				   ElementalHeartsPlayer.maxSlimeLife;
+					player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 3;
-			player.statLife += 3;
+			player.statLifeMax2 += 2;
+			player.statLife += 2;
 			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(3, true);
+				player.HealEffect(2, true);
 			}
 			player.GetModPlayer<ElementalHeartsPlayer>().SlimeLife += 1;
 			return true;
@@ -36,7 +36,7 @@ namespace ElementalHearts.Items.Consumables
 
 		public override void AddRecipes() {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(762, 100);;
+			recipe.AddIngredient(ItemID.Gel, 100);;
 			recipe.AddTile(TileID.Solidifier);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

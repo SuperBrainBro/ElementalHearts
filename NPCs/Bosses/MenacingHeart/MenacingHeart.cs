@@ -44,7 +44,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.knockBackResist = 0f;
             npc.noGravity = true;
             npc.noTileCollide = true;
-            npc.npcSlots = 20f;
+            npc.npcSlots = 5f;
             npc.boss = true;
             npc.netAlways = true;
             base.SetDefaults();
