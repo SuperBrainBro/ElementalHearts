@@ -391,85 +391,178 @@ namespace ElementalHearts
         public override TagCompound Save()
         {
             return new TagCompound {
-				//Pre-Hardmode
-				{"DirtLife", DirtLife},
-                {"StoneLife", StoneLife},
 
-                {"WoodLife", WoodLife},
-                {"RichMahoganyLife", RichMahoganyLife},
-                {"EbonwoodLife", EbonwoodLife},
-                {"ShadewoodLife", ShadewoodLife},
-                {"BorealWoodLife", BorealWoodLife},
-                {"PalmWoodLife", PalmWoodLife},
-                {"DynastyLife", DynastyLife},
+        //Pre-Hardmode//
 
-                {"GraniteLife", GraniteLife},
-                {"MarbleLife", MarbleLife},
-                {"IceLife", IceLife},
-                {"GlassLife", GlassLife},
-                {"SlimeLife", SlimeLife},
-                {"FossilLife", FossilLife},
-                {"MushroomLife", MushroomLife},
-                {"HayLife", HayLife},
-                {"CactusLife", CactusLife},
-                {"PumpkinLife", PumpkinLife},
-                {"HoneyLife", HoneyLife},
-                {"AmethystLife", AmethystLife},
-                {"TopazLife", TopazLife},
-                {"SapphireLife", SapphireLife},
-                {"EmeraldLife", EmeraldLife},
-                {"RubyLife", RubyLife},
-                {"DiamondLife", DiamondLife},
-                {"CopperLife", CopperLife},
-                {"TinLife", TinLife},
-                {"IronLife", IronLife},
-                {"LeadLife", LeadLife},
-                {"SilverLife", SilverLife},
-                {"TungstenLife", TungstenLife},
-                {"GoldLife", GoldLife},
-                {"PlatinumLife", PlatinumLife},
-                {"MeteoriteLife", MeteoriteLife},
-                {"DemoniteLife", DemoniteLife},
-                {"CrimtaneLife", CrimtaneLife},
-                {"ObsidianLife", ObsidianLife},
-                {"HellstoneLife", HellstoneLife},
+                //Basic
+       {"nonStopParty",  DirtLife},
+            {
+                "nonStopParty", StoneLife},
+            {
+                "nonStopParty", CrimstoneLife},
+            {
+                "nonStopParty", EbonstoneLife},
+            {
+                "nonStopParty", GraniteLife},
+            {
+                "nonStopParty", MarbleLife},
+            {
+                "nonStopParty", IceLife},
+            {
+                "nonStopParty",  ObsidianLife},
 
-                {"AmberLife", AmberLife},
-                {"CoralstoneLife", CoralstoneLife},
-                {"CandyCaneLife", CandyCaneLife},
-                {"SandLife", SandLife},
-                {"EbonsandLife", EbonsandLife},
-                {"CrimsandLife", CrimsandLife},
+            {
+                "nonStopParty",  SandLife},
+            {
+                "nonStopParty", EbonsandLife},
+            {
+                "nonStopParty", CrimsandLife},
+            {
+                "nonStopParty", GlassLife},
 
-				//Hardmode
-				{"PearlsandLife", PearlsandLife},
-                {"BubbleLife", BubbleLife},
-                {"PearlstoneLife", PearlstoneLife},
-                {"RainbowLife", RainbowLife},
-                {"CobaltLife", CobaltLife},
-                {"PalladiumLife", PalladiumLife},
-                {"MythrilLife", MythrilLife},
-                {"OrichalcumLife", OrichalcumLife},
-                {"AdamantiteLife", AdamantiteLife},
-                {"TitaniumLife", TitaniumLife},
-                {"ChlorophyteLife", ChlorophyteLife},
-                {"LuminiteLife", LuminiteLife},
-                {"CogLife", CogLife},
-                {"FleshLife", FleshLife},
-                {"LesionLife", LesionLife},
-                {"PearlwoodLife", PearlwoodLife},
-                {"SpookyLife", SpookyLife},
-                {"CrystalLife", CrystalLife},
+            //Other
+            {
+                "nonStopParty",  HoneyLife},
+            {
+                "nonStopParty", SlimeLife},
+            {
+                "nonStopParty", FossilLife},
+            {
+                "nonStopParty", BubbleLife},
+            {
+                "nonStopParty", CoralstoneLife},
+            {
+                "nonStopParty", CandyCaneLife},
+            {
+                "nonStopParty", MushroomLife},
 
-				//Expert Hearts
-				{"BrainLife", BrainLife},
-                {"WormLife", WormLife},
-                {"DemonHeartMK2Life", DemonHeartMK2Life},
-                {"MechanicalLife", MechanicalLife},
+            //Grown
+            {
+                "nonStopParty", HayLife},
+            {
+                "nonStopParty", CactusLife},
+            {
+                "nonStopParty",PumpkinLife},
 
-				//Dev Hearts
-				{"HeartOfCAT", HeartOfCAT},
-                {"CrystalLite", CrystalLite},
+            //Wood
+            {
+                "nonStopParty",  WoodLife},
+            {
+                "nonStopParty",  RichMahoganyLife},
+            {
+                "nonStopParty", EbonwoodLife},
+            {
+                "nonStopParty", ShadewoodLife},
+            {
+                "nonStopParty", BorealWoodLife},
+            {
+                "nonStopParty", PalmWoodLife},
+            {
+                "nonStopParty",DynastyLife},
+
+            //Gems
+            {
+                "nonStopParty", AmberLife},
+            {
+                "nonStopParty", AmethystLife},
+            {
+                "nonStopParty",TopazLife},
+            {
+                "nonStopParty",SapphireLife},
+            {
+                "nonStopParty",EmeraldLife},
+            {
+                "nonStopParty",RubyLife},
+            {
+                "nonStopParty",DiamondLife},
+
+            //Basic Ores
+            {
+                "nonStopParty",CopperLife},
+            {
+                "nonStopParty", TinLife},
+            {
+                "nonStopParty",IronLife},
+            {
+                "nonStopParty",LeadLife},
+            {
+                "nonStopParty",SilverLife},
+            {
+                "nonStopParty",TungstenLife},
+            {
+                "nonStopParty",GoldLife},
+            {
+                "nonStopParty",PlatinumLife},
+
+            //Other Ores
+            {
+                "nonStopParty", MeteoriteLife},
+            {
+                "nonStopParty", DemoniteLife},
+            {
+                "nonStopParty",CrimtaneLife},
+            {
+                "nonStopParty", HellstoneLife},
+
+            //Hardmode//
+
+            //Basic
+            {
+                "nonStopParty",PearlstoneLife},
+            {
+                "nonStopParty", PearlsandLife},
+
+            //Wood
+            {
+                "nonStopParty", PearlwoodLife},
+            {
+                "nonStopParty", SpookyLife},
+
+            //Other
+            {
+                "nonStopParty", RainbowLife},
+            {
+                "nonStopParty",CogLife},
+            {
+                "nonStopParty",FleshLife},
+            {
+                "nonStopParty",LesionLife},
+            {
+                "nonStopParty",CrystalLife},
+
+            //Basic Ores
+            {
+                "nonStopParty", CobaltLife},
+            {
+                "nonStopParty",PalladiumLife},
+            {
+                "nonStopParty",MythrilLife},
+            {
+                "nonStopParty",OrichalcumLife},
+            {
+                "nonStopParty",AdamantiteLife},
+            {
+                "nonStopParty",TitaniumLife},
+            {
+                "nonStopParty",ChlorophyteLife},
+            {
+                "nonStopParty",LuminiteLife},
+
+            //Expert Hearts
+            {
+                "nonStopParty",BrainLife},
+            {
+                "nonStopParty",WormLife},
+            {
+                "nonStopParty",DemonHeartMK2Life},
+            {
+                "nonStopParty", MechanicalLife},
+
+            //Dev Hearts
+            {
+                "nonStopParty",HeartOfCAT},
+            {
+                "nonStopParty",CrystalLite},
 
 				//Other
 				{"nonStopParty", nonStopParty},
