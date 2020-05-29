@@ -22,7 +22,7 @@ namespace ElementalHearts
 
         ////Life Crystals////
 
-        public const int ElementalHeartMax = 1;
+        public int ElementalHeartMax;
 
         //Pre-Hardmode//
 
@@ -127,11 +127,15 @@ namespace ElementalHearts
         //Multiplayer Thing
         public bool nonStopParty;
 
+        public void SetMaxHearts(int max)
+        {
+            ElementalHeartMax = max;
+        }
+   
         public override void ResetEffects()
         {
             //Debuffs/Buffs
             curseCATsCurse = false;
-
 
             //Pre-Hardmode//
 
@@ -455,7 +459,8 @@ namespace ElementalHearts
 				{"BrainLife", BrainLife},
                 {"WormLife", WormLife},
                 {"DemonHeartMK2Life", DemonHeartMK2Life},
-				
+                {"MechanicalLife", MechanicalLife},
+
 				//Dev Hearts
 				{"HeartOfCAT", HeartOfCAT},
                 {"CrystalLite", CrystalLite},

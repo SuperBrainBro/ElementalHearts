@@ -9,19 +9,19 @@ namespace ElementalHearts.Items.Consumables
 	internal class StoneHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 2");
+			Tooltip.SetDefault("Permanently increases maximum life by 1");
 			DisplayName.SetDefault("Stone Heart");
 		}
 
 		public override void SetDefaults() {
 			item.CloneDefaults(ItemID.LifeFruit);
-			item.rare = 0;
+			item.rare = ItemRarityID.White;
 			item.value = 0;
 		}
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().StoneLife <
-				   ElementalHeartsPlayer.maxStoneLife;
+				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {

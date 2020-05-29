@@ -6,11 +6,11 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-	internal class IceHeart : ModItem
+	internal class GlassHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 1");
-			DisplayName.SetDefault("Ice Heart");
+			DisplayName.SetDefault("Glass Heart");
 		}
 
 		public override void SetDefaults() {
@@ -20,8 +20,8 @@ namespace ElementalHearts.Items.Consumables
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().IceLife <
-				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().FossilLife <
+					player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
 		}
 
 		public override bool UseItem(Player player) {
@@ -30,14 +30,15 @@ namespace ElementalHearts.Items.Consumables
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(1, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().IceLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().FossilLife += 1;
 			return true;
 		}
 
-		public override void AddRecipes() {
+		public override void AddRecipes()
+		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.IceBlock, 100);;
-			recipe.AddTile(TileID.IceMachine);
+			recipe.AddIngredient(ItemID.Glass, 100); ;
+			recipe.AddTile(TileID.GlassKiln);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}
