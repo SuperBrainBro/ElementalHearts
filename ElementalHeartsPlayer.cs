@@ -29,6 +29,8 @@ namespace ElementalHearts
         //Basic
         public int DirtLife;
         public int StoneLife;
+        public int CrimstoneLife;
+        public int EbonstoneLife;
         public int GraniteLife;
         public int MarbleLife;
         public int IceLife;
@@ -131,7 +133,7 @@ namespace ElementalHearts
         {
             ElementalHeartMax = max;
         }
-   
+
         public override void ResetEffects()
         {
             //Debuffs/Buffs
@@ -142,6 +144,8 @@ namespace ElementalHearts
             //Basic
             DirtLife *= 1;
             StoneLife *= 1;
+            CrimstoneLife *= 1;
+            EbonstoneLife *= 1;
             GraniteLife *= 1;
             MarbleLife *= 1;
             IceLife *= 1;
@@ -271,6 +275,8 @@ namespace ElementalHearts
             //Basic
             packet.Write(DirtLife);
             packet.Write(StoneLife);
+            packet.Write(CrimstoneLife);
+            packet.Write(EbonstoneLife);
             packet.Write(GraniteLife);
             packet.Write(MarbleLife);
             packet.Write(IceLife);
