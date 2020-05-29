@@ -22,7 +22,7 @@ namespace ElementalHearts
 
         ////Life Crystals////
 
-        public int ElementalHeartMax;
+        public int ElementalHeartMax = 1;
 
         //Pre-Hardmode//
 
@@ -129,117 +129,115 @@ namespace ElementalHearts
         //Multiplayer Thing
         public bool nonStopParty;
 
-        public void SetMaxHearts(int max)
-        {
-            ElementalHeartMax = max;
-        }
-
         public override void ResetEffects()
         {
+            ElementalHeartsConfig config = new ElementalHeartsConfig();
+            ElementalHeartMax = config.MaxElementalHeartConfig;
+
             //Debuffs/Buffs
             curseCATsCurse = false;
 
             //Pre-Hardmode//
 
             //Basic
-            DirtLife *= 1;
-            StoneLife *= 1;
-            CrimstoneLife *= 1;
-            EbonstoneLife *= 1;
-            GraniteLife *= 1;
-            MarbleLife *= 1;
-            IceLife *= 1;
-            ObsidianLife *= 3;
+            player.statLifeMax2 += DirtLife * 1;
+            player.statLifeMax2 += StoneLife * 1;
+            player.statLifeMax2 += CrimstoneLife * 1;
+            player.statLifeMax2 += EbonstoneLife * 1;
+            player.statLifeMax2 += GraniteLife * 1;
+            player.statLifeMax2 += MarbleLife * 1;
+            player.statLifeMax2 += IceLife * 1;
+            player.statLifeMax2 += ObsidianLife * 3;
 
-            SandLife *= 1;
-            EbonsandLife *= 1;
-            CrimsandLife *= 1;
-            GlassLife *= 1;
+            player.statLifeMax2 += SandLife * 1;
+            player.statLifeMax2 += EbonsandLife * 1;
+            player.statLifeMax2 += CrimsandLife * 1;
+            player.statLifeMax2 += GlassLife * 1;
 
             //Other
-            HoneyLife *= 2;
-            SlimeLife *= 2;
-            FossilLife *= 2;
-            BubbleLife *= 2;
-            CoralstoneLife *= 2;
-            CandyCaneLife *= 2;
-            MushroomLife *= 2;
+            player.statLifeMax2 += HoneyLife * 2;
+            player.statLifeMax2 += SlimeLife * 2;
+            player.statLifeMax2 += FossilLife * 2;
+            player.statLifeMax2 += BubbleLife * 2;
+            player.statLifeMax2 += CoralstoneLife * 2;
+            player.statLifeMax2 += CandyCaneLife * 2;
+            player.statLifeMax2 += MushroomLife * 2;
 
             //Grown
-            HayLife *= 1;
-            CactusLife *= 1;
-            PumpkinLife *= 1;
+            player.statLifeMax2 += HayLife * 1;
+            player.statLifeMax2 += CactusLife * 1;
+            player.statLifeMax2 += PumpkinLife * 1;
 
             //Wood
-            WoodLife *= 1;
-            RichMahoganyLife *= 1;
-            EbonwoodLife *= 1;
-            ShadewoodLife *= 1;
-            BorealWoodLife *= 1;
-            PalmWoodLife *= 1;
-            DynastyLife *= 1;
+            player.statLifeMax2 += WoodLife *= 1;
+            player.statLifeMax2 += RichMahoganyLife * 1;
+            player.statLifeMax2 += EbonwoodLife * 1;
+            player.statLifeMax2 += ShadewoodLife * 1;
+            player.statLifeMax2 += BorealWoodLife * 1;
+            player.statLifeMax2 += PalmWoodLife * 1;
+            player.statLifeMax2 += DynastyLife * 1;
 
             //Gems
-            AmberLife *= 5;
-            AmethystLife *= 2;
-            TopazLife *= 3;
-            SapphireLife *= 3;
-            EmeraldLife *= 4;
-            RubyLife *= 4;
-            DiamondLife *= 5;
+            player.statLifeMax2 += AmberLife * 5;
+            player.statLifeMax2 += AmethystLife * 2;
+            player.statLifeMax2 += TopazLife * 3;
+            player.statLifeMax2 += SapphireLife * 3;
+            player.statLifeMax2 += EmeraldLife * 4;
+            player.statLifeMax2 += RubyLife * 4;
+            player.statLifeMax2 += DiamondLife * 5;
 
             //Basic Ores
-            CopperLife *= 2;
-            TinLife *= 2;
-            IronLife *= 2;
-            LeadLife *= 2;
-            SilverLife *= 3;
-            TungstenLife *= 3;
-            GoldLife *= 3;
-            PlatinumLife *= 3;
+            player.statLifeMax2 += CopperLife * 2;
+            player.statLifeMax2 += TinLife * 2;
+            player.statLifeMax2 += IronLife * 2;
+            player.statLifeMax2 += LeadLife * 2;
+            player.statLifeMax2 += SilverLife * 3;
+            player.statLifeMax2 += TungstenLife * 3;
+            player.statLifeMax2 += GoldLife * 3;
+            player.statLifeMax2 += PlatinumLife * 3;
 
             //Other Ores
-            MeteoriteLife *= 4;
-            DemoniteLife *= 4;
-            CrimtaneLife *= 4;
-            HellstoneLife *= 5;
+            player.statLifeMax2 += MeteoriteLife * 4;
+            player.statLifeMax2 += DemoniteLife * 4;
+            player.statLifeMax2 += CrimtaneLife * 4;
+            player.statLifeMax2 += HellstoneLife * 5;
 
             //Hardmode//
 
             //Basic
-            PearlstoneLife *= 5;
-            PearlsandLife *= 5;
+            player.statLifeMax2 += PearlstoneLife * 5;
+            player.statLifeMax2 += PearlsandLife * 5;
 
             //Wood
-            PearlwoodLife *= 5;
-            SpookyLife *= 7;
+            player.statLifeMax2 += PearlwoodLife * 5;
+            player.statLifeMax2 += SpookyLife * 7;
 
             //Other
-            RainbowLife *= 5;
-            CogLife *= 5;
-            FleshLife *= 5;
-            LesionLife *= 5;
-            CrystalLife *= 7;
+            player.statLifeMax2 += RainbowLife * 5;
+            player.statLifeMax2 += CogLife * 5;
+            player.statLifeMax2 += FleshLife * 5;
+            player.statLifeMax2 += LesionLife * 5;
+            player.statLifeMax2 += CrystalLife * 7;
 
             //Basic Ores
-            CobaltLife *= 5;
-            PalladiumLife *= 5;
-            MythrilLife *= 6;
-            OrichalcumLife *= 6;
-            AdamantiteLife *= 7;
-            TitaniumLife *= 7;
-            ChlorophyteLife *= 8;
-            LuminiteLife *= 9;
+            player.statLifeMax2 += CobaltLife * 5;
+            player.statLifeMax2 += PalladiumLife * 5;
+            player.statLifeMax2 += MythrilLife * 6;
+            player.statLifeMax2 += OrichalcumLife * 6;
+            player.statLifeMax2 += AdamantiteLife * 7;
+            player.statLifeMax2 += TitaniumLife * 7;
+            player.statLifeMax2 += ChlorophyteLife * 8;
+            player.statLifeMax2 += LuminiteLife * 9;
 
             //Expert Hearts
-            BrainLife *= 5;
-            WormLife *= 5;
-            DemonHeartMK2Life *= 10;
-            MechanicalLife *= 10;
+            player.statLifeMax2 += BrainLife * 5;
+            player.statLifeMax2 += WormLife * 5;
+            player.statLifeMax2 += DemonHeartMK2Life * 10;
+            player.statLifeMax2 += MechanicalLife * 10;
 
             //Dev Hearts
-            HeartOfCAT *= 5;
-            CrystalLite *= 5;
+            player.statLifeMax2 += HeartOfCAT * 5;
+            player.statLifeMax2 += CrystalLite * 5;
         }
         public override void UpdateDead()
         {

@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Dev.Lite
 
 		public override bool CanUseItem(Player player) {
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CrystalLite <
-				   player.GetModPlayer<ElementalHeartsPlayer>().ElementalHeartMax;
+				   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
 		}
 
 		public override bool UseItem(Player player) {
