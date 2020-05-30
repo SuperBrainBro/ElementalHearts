@@ -18,6 +18,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 		public override void SetDefaults()
 		{
 			//projectile.aiStyle = 24;
+			projectile.penetrate = -1;
 			projectile.width = 44;
 			projectile.height = 44;
 			projectile.alpha =  0;
