@@ -2,7 +2,7 @@ Elemental Hearts is a mod which adds a ton of new consumable items which increas
 
 As with all of my mods, I prefer quality of quantity. This mod is a great addition to any modded playthrough, which adds a use for all of your leftover/extra blocks and ores.
 This mod spreads with progression, so that you can never become too powerful.
-In the future, we will also add suport for mods like Calamity and Thorium.
+In the future, we will also add support for mods like Calamity and Thorium.
 
 This mod (currently) adds:
 	 87 consumable items.
