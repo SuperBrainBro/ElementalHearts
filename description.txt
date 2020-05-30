@@ -20,7 +20,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
-
+0.1.0.1
+	 Added Github Authorization for an icon and music.
 0.1:
 	 This is the first release of the mod. Added in 87 different heart containers. This mod has been in development for over a few months before this release, because first impressions matter.
 	 In the past 2 days, (as Im writing this) I have been going through each and every item to check and make sure everything works.

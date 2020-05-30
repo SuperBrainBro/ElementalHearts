@@ -1,4 +1,4 @@
 displayName = Lite's Elemental Hearts
-author = Vincent Jenei (Lite)
-version = 0.1
+author = Vincent Jenei (Lite#4211)
+version = 0.1.0.1
 homepage = https://discord.gg/TD8EMB8
