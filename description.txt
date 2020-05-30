@@ -23,4 +23,5 @@ Change-Log:
 
 0.1:
 	 This is the first release of the mod. Added in 87 different heart containers. This mod has been in development for over a few months before this release, because first impressions matter.
+	 In the past 2 days, (as Im writing this) I have been going through each and every item to check and make sure everything works.
 	 The pre-hardmode boss's (Menacing Heart) AI has not been finished, and therefore is unspawnable without cheats. I intend the boss to be available in the next update.

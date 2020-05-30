@@ -133,7 +133,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.position = Main.player[npc.target].Center + new Vector2(-200, 0);
                 } else if (tpPosRand1 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(0, -200);
                 }
                 ShootProjectile(1, npc);
                 P1 = 0;
@@ -162,7 +162,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else if (tpPosRand2 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.position = Main.player[npc.target].position + new Vector2(0, -200);
                 }
                 ShootProjectile(2, npc);
                 P2 = 0;
@@ -191,7 +191,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else if (tpPosRand3 > 0)
                 {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
                 ShootProjectile(3, npc);
                 P3 = 0;
@@ -220,7 +220,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else if (tpPosRand4 > 0)
                 {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
                 P4 = 0;
             }
@@ -359,10 +359,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             potionType = ItemID.GreaterHealingPotion;
             base.BossLoot(ref name, ref potionType);
-        }
-        public override void ScaleExpertStats (int numPlayers, float bossLifeScale) {
-            npc.lifeMax = (int)(npc.lifeMax * 1.5f * bossLifeScale);
-			npc.damage = (int)(npc.damage * 1.5f);
         }
     }
 }
