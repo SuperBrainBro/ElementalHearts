@@ -1,4 +1,3 @@
-using IL.Terraria.GameContent.Events;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -31,6 +30,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override void SetDefaults()
         {
+            
             npc.width = 128;
             npc.height = 128;
             npc.aiStyle = 0;
@@ -133,9 +133,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
 
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, -1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
 
                 P1 = 0;
             }
@@ -166,9 +166,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
 
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, -1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
 
                 P2 = 0;
             }
@@ -199,10 +199,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
 
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, -1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
 
+                P3 = 0;
             }
             else
             //Phase 4.
@@ -231,9 +232,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
 
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
-                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(1, -1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
 
                 P4 = 0;
             }
@@ -242,7 +243,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
              
         public override void HitEffect(int hitDirection, double damage)
         {
-            Dust.NewDust(npc.Center, npc.width, npc.height, DustID.Blood, npc.velocity.X, npc.velocity.Y, 0, Color.DarkRed, 2);
+            Dust.NewDust(npc.position, npc.width, npc.height, DustID.Blood, npc.velocity.X, npc.velocity.Y, 0, Color.DarkRed, 2);
             base.HitEffect(hitDirection, damage);
         }
 
