@@ -19,24 +19,20 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 			projectile.hostile = true;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
-			projectile.timeLeft = 10;
 		}
 		public override void AI()
 		{
 			projectile.velocity *= 1.01f;
-			if (projectile.alpha == 0)
-			{
-				int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Red, 1);
-				int dust2 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Black, 1);
-				int dust3 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.White, 1);
-				Main.dust[dust1].velocity /= 2f;
-				Main.dust[dust2].velocity /= 2f;
-				Main.dust[dust3].velocity /= 2f;
-			}
+			int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Red, 1);
+			int dust2 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Black, 1);
+			int dust3 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.White, 1);
+			Main.dust[dust1].velocity /= 2f;
+			Main.dust[dust2].velocity /= 2f;
+			Main.dust[dust3].velocity /= 2f;
 		}
-		//public override Color? GetAlpha(Color lightColor)
-		//{
-			//return Main.DiscoColor;
-		//}
+		public override Color? GetAlpha(Color lightColor)
+		{
+			return Main.DiscoColor;
+		}
 	}
 }
