@@ -5,9 +5,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.NPCs.Bosses.MenacingHeart
+namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 {
-	//ported from my tAPI mod because I'm lazy
 	public class MenacingProjectile : ModProjectile
 	{
 		//public override void SetStaticDefaults()
@@ -21,18 +20,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 			projectile.penetrate = -1;
 			projectile.width = 44;
 			projectile.height = 44;
-			projectile.alpha =  0;
+			projectile.alpha =  150;
 			projectile.friendly = false;
 			projectile.hostile = true;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
-			
-			//projectile.ranged = true;
 		}
 		public override void AI()
 		{
-			projectile.position += projectile.velocity;
-			projectile.velocity *= 1.15f;
+			projectile.velocity *= 1.15f / 60f;
 			base.AI();
 		}
 		public override void PostAI()

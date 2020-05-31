@@ -5,6 +5,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using ElementalHearts.Projectiles.Bosses.MenacingHeart;
+
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
     [AutoloadBossHead]
@@ -32,8 +34,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.width = 128;
             npc.height = 128;
             npc.aiStyle = 0;
-            npc.damage = 200;
-            npc.defense = 24;
+            npc.damage = 50;
+            npc.defense = 16;
             npc.lifeMax = 16000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
@@ -133,7 +135,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.position = Main.player[npc.target].Center + new Vector2(-200, 0);
                 } else if (tpPosRand1 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, -200);
+                    npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
                 ShootProjectile(1, npc);
                 P1 = 0;
@@ -150,19 +152,19 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand2 > 6)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(200, 0);
+                    npc.position = Main.player[npc.target].Center + new Vector2(200, 0);
                 }
                 else if (tpPosRand2 > 4)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, 200);
+                    npc.position = Main.player[npc.target].Center + new Vector2(0, 200);
                 }
                 else if (tpPosRand2 > 2)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(-200, 0);
+                    npc.position = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
                 else if (tpPosRand2 > 0)
                 {
-                    npc.position = Main.player[npc.target].position + new Vector2(0, -200);
+                    npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
                 ShootProjectile(2, npc);
                 P2 = 0;
