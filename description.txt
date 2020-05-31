@@ -20,6 +20,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.1.1
+	 Added a few bits of optimization to the boss's code, but no big differences to the boss's AI.
 0.1.0.1
 	 Added Github Authorization for an icon and music.
 0.1:
