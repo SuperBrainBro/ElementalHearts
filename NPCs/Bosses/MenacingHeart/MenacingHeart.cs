@@ -132,7 +132,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
-                ShootProjectile(1, npc);
+
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+
                 P1 = 0;
             }
             else
@@ -161,7 +165,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
-                ShootProjectile(2, npc);
+
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+
                 P2 = 0;
             }
             else
@@ -190,8 +198,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
-                ShootProjectile(3, npc);
-                P3 = 0;
+
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+
             }
             else
             //Phase 4.
@@ -219,45 +230,19 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
+
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+                Projectile.NewProjectile(npc.Center, new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
+
                 P4 = 0;
             }
-            ShootProjectile(4, npc);
             base.AI();
         }
-        
-        public void ShootProjectile(int phase, NPC npcW)
-        {
-            
-            //In here, I want to shoot mini life crystals at the player. They will be shooting multiple times, maybe in groups of 3?
-            switch (phase)
-            {
-                case 1:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 1f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 1f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 1f, npcW.whoAmI);
-                    return;
-                case 2:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 2f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 2f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 2f, npcW.whoAmI);
-                    return;
-                case 3:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 3f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 3f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 3f, npcW.whoAmI);
-                    return;
-                case 4:
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 10), new Vector2(10, 10), ProjectileType<MenacingProjectile>(), 100, 4f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, 0), new Vector2(10, 0), ProjectileType<MenacingProjectile>(), 100, 4f, npcW.whoAmI);
-                    Projectile.NewProjectile(npc.Center + new Vector2(0, -10), new Vector2(10, -10), ProjectileType<MenacingProjectile>(), 100, 4f, npcW.whoAmI);
-                    return;
-            }
-            
-        }
-        
+             
         public override void HitEffect(int hitDirection, double damage)
         {
-            Dust.NewDust(npc.position, npc.width, npc.height, DustID.Blood, +npc.velocity.X, npc.velocity.Y, 0, Color.DarkRed, 2);
+            Dust.NewDust(npc.Center, npc.width, npc.height, DustID.Blood, npc.velocity.X, npc.velocity.Y, 0, Color.DarkRed, 2);
             base.HitEffect(hitDirection, damage);
         }
 
