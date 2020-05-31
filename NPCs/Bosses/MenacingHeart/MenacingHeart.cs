@@ -49,14 +49,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.npcSlots = 5f;
             npc.boss = true;
             npc.netAlways = true;
-            base.SetDefaults();
-        }
-        public override bool PreAI()
-        {            
-            //This float, bossPhaseHealth, is the amount of health divided by 4. Since there are 4 phases, there are 4 equal amounts. (See below code for example)          
-            bossPhaseHealth = npc.lifeMax / 4;
 
-            return base.PreAI();
+            bossPhaseHealth = npc.lifeMax / 4;
+            base.SetDefaults();
         }
         public override void AI()
         {
@@ -262,7 +257,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         
         public override void HitEffect(int hitDirection, double damage)
         {
-
+            Dust.NewDust(npc.position, npc.width, npc.height, DustID.Blood, +npc.velocity.X, npc.velocity.Y, 0, Color.DarkRed, 2);
             base.HitEffect(hitDirection, damage);
         }
 
@@ -357,6 +352,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }  
             base.FindFrame(frameHeight);
         }
+        
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
