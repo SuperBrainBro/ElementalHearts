@@ -33,12 +33,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.noGravity = true;
             npc.noTileCollide = true;
 
-            cloneTimeLeft = 100;
+            cloneTimeLeft = 255;
             base.SetDefaults();
         }
 
         public override void AI()
         {
+            npc.alpha = cloneTimeLeft;
             if (cloneTimeLeft < 0)
             {
                 npc.active = false;
