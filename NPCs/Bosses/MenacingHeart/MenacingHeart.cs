@@ -294,6 +294,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         {
                             GravityProjectiles(2);
                         }
+
+                        //Clone 1
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(-175, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, 175) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, -175) * 1.5f;
                     }
                     else if (tpPosRand1 > 4)
                     {
@@ -305,6 +315,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
+
+                        //Clone 2
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, -175) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(175, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(-175, 0) * 1.5f;
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -324,6 +344,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         {
                             GravityProjectiles(2);
                         }
+
+                        //Clone 3
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(175, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, -175) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, 175) * 1.5f;
                     }
 
                     else if (tpPosRand1 > 0)
@@ -344,6 +374,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         {
                             GravityProjectiles(2);
                         }
+
+                        //Clone 4
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, 175) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(-175, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(175, -0) * 1.5f;
                     }
 
                     SpawnHealHearts(4);
@@ -371,6 +411,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         //Gravity Projectiles
                         GravityProjectiles(2);
+
+                        //Clone 1
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(-200, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, 200) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, -200) * 1.5f;
                     }
                     else if (tpPosRand2 > 4)
                     {
@@ -382,6 +432,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
+
+                        //Clone 2
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, -200) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(200, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(-200, 0) * 1.5f;
                     }
                     else if (tpPosRand2 > 2)
                     {
@@ -394,6 +454,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         //Gravity Projectiles
                         GravityProjectiles(2);
+
+                        //Clone 3
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(200, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, -200) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, 200) * 1.5f;
                     }
                     else if (tpPosRand2 > 0)
                     {
@@ -406,6 +476,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         //Gravity Projectiles
                         GravityProjectiles(2);
+
+                        //Clone 4
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, 200) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(-200, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(200, 0) * 1.5f;
                     }
 
                     SpawnHealHearts(4);
@@ -439,6 +519,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         {
                             GravityProjectiles(3);
                         }
+
+                        //Clone 1
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(-225, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, 225) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, -225) * 1.5f;
                     }
                     else if (tpPosRand3 > 4)
                     {
@@ -450,6 +540,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
+
+                        //Clone 2
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, -225) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(225, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(-225, 0) * 1.5f;
                     }
                     else if (tpPosRand3 > 2)
                     {
@@ -469,6 +569,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         {
                             GravityProjectiles(3);
                         }
+
+                        //Clone 3
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(225, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, -225) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, 225) * 1.5f;
                     }
                     else if (tpPosRand3 > 0)
                     {
@@ -488,6 +598,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         {
                             GravityProjectiles(3);
                         }
+
+                        //Clone 4
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, 225) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(-225, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(225, 0) * 1.5f;
                     }
 
                     SpawnHealHearts(3);
@@ -514,6 +634,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         //Gravity Projectiles
                         GravityProjectiles(3);
+
+                        //Clone 1
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(-250, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, 250) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, -250) * 1.5f;
                     }
                     else if (tpPosRand4 > 4)
                     {
@@ -525,6 +655,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
+
+                        //Clone 2
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, -250) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(250, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(-250, 0) * 1.5f;
                     }
                     else if (tpPosRand4 > 2)
                     {
@@ -537,6 +677,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         //Gravity Projectiles
                         GravityProjectiles(3);
+
+                        //Clone 3
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(250, 0) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(0, -250) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(0, 250) * 1.5f;
                     }
                     else if (tpPosRand4 > 0)
                     {
@@ -549,6 +699,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         //Gravity Projectiles
                         GravityProjectiles(3);
+
+                        //Clone 4
+                        MenacingHeartClone clone1 = new MenacingHeartClone();
+                        clone1.npc.position = new Vector2(0, 250) * 1.5f;
+
+                        MenacingHeartClone clone2 = new MenacingHeartClone();
+                        clone2.npc.position = new Vector2(-250, 0) * 1.5f;
+
+                        MenacingHeartClone clone3 = new MenacingHeartClone();
+                        clone3.npc.position = new Vector2(250, 0) * 1.5f;
                     }
 
                     SpawnHealHearts(3);
