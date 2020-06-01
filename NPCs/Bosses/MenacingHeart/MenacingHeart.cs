@@ -99,17 +99,17 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (P1P == false)
                 {
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
 
-                P1P = true;
+                    P1P = true;
+                }
             }
-        }
             else if (npc.life > bossPhaseHealth * 1)
             {
                 //Set phase to 3.
@@ -124,17 +124,17 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (P1P == false)
                 {
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-            
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+
                     P1P = true;
                 }
-}
+            }
             else if (npc.life > bossPhaseHealth * 0)
             {
                 //Set phase to 4.
@@ -149,14 +149,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (P1P == false)
                 {
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-                Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
-    
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 100, 1f, Main.myPlayer);
+
                     P1P = true;
                 }
             }
@@ -191,13 +191,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (tpPosRand1 > 6)
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
-                } else if (tpPosRand1 > 4)
+                }
+                else if (tpPosRand1 > 4)
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
-                } else if (tpPosRand1 > 2)
+                }
+                else if (tpPosRand1 > 2)
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
-                } else if (tpPosRand1 > 0)
+                }
+                else if (tpPosRand1 > 0)
                 {
                     npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
@@ -309,7 +312,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             base.AI();
         }
-             
+
         public override void HitEffect(int hitDirection, double damage)
         {
             Dust.NewDust(npc.position, npc.width, npc.height, DustID.Blood, npc.velocity.X, npc.velocity.Y, 0, Color.DarkRed, 2);
@@ -404,10 +407,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.frameCounter = 0;
                 }
-            }  
+            }
             base.FindFrame(frameHeight);
         }
-        
+
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
