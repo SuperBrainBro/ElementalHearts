@@ -47,7 +47,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
-            musicPriority = MusicPriority.BossHigh;
+            musicPriority = MusicPriority.BossLow;
             npc.value = 100000;
             npc.buffImmune[BuffID.Confused] = true;
             npc.knockBackResist = 0f;

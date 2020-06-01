@@ -28,6 +28,10 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
         {
             projectile.velocity.Y += Main.expertMode ? 0.015f : 0.01f;
 
+            //Face Toward Velocity
+            projectile.rotation = projectile.velocity.ToRotation();
+            //^Not Not Enabled Because It Does Not Work
+
             int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Main.DiscoColor, 1);
             int dust2 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Black, 1);
             int dust3 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.White, 1);
