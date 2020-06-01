@@ -6,7 +6,7 @@ In the future, we will also add support for mods like Calamity and Thorium.
 
 This mod (currently) adds:
 	 87 consumable items.
-	 1 boss.
+	 1 (Bullet Hell :)) boss.
 	 Multiple translations for many different languages such as Russian, German, Italian, French, Spanish, Simplified Chinese, Brazilian Portuguese and Polish.
 
 Github Repo: https://github.com/SuperBrainBro/ElementalHearts
@@ -22,6 +22,7 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 Change-Log:
 0.1.2
 	 Changed boss music type to mp3, hopefully fixes an error.
+	 MAJOR boss AI progress, boss is almost ready to go in next update!
 0.1.1
 	 Added a few bits of optimization to the boss's code, but no big differences to the boss's AI.
 0.1.0.1

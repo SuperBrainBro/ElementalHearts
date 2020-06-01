@@ -17,8 +17,8 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 		{
 			//projectile.aiStyle = 0;
 			projectile.penetrate = -1;
-			projectile.width = 11;
-			projectile.height = 11;
+			projectile.width = 22;
+			projectile.height = 22;
 			projectile.alpha =  0;
 			projectile.friendly = false;
 			projectile.hostile = true;
@@ -28,10 +28,11 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 		public override void AI()
 		{
 			//Face Toward Velocity
-			projectile.rotation = projectile.velocity.ToRotation();
+			//projectile.rotation = projectile.velocity.ToRotation();
+			//^Not Enabled Because It Does Not Work
 
 			//Acceleration Effect
-			projectile.velocity *= 1.01f;
+			projectile.velocity *= 1.02f;
 
 			//Dust
 			int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Main.DiscoColor, 1);
