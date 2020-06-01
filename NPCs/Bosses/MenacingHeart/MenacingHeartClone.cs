@@ -39,7 +39,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void AI()
         {
-            npc.alpha = (int)(255 - cloneTimeLeft);
+            npc.alpha = (int)(255 - (cloneTimeLeft + 25));
             if (cloneTimeLeft < 0)
             {
                 npc.active = false;
