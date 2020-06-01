@@ -69,22 +69,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             if (BP1)
             {
-                npc.lifeRegen = 50 / 2;
+                npc.lifeRegen = 50 / 3;
 
             }
             else if (BP2)
             {
-                npc.lifeRegen = 125 / 2;
+                npc.lifeRegen = 125 / 4;
 
             }
             else if (BP3)
             {
-                npc.lifeRegen = 250 / 2;
+                npc.lifeRegen = 250 / 5;
 
             }
             else if (BP4)
             {
-                npc.lifeRegen = 500 / 2;
+                npc.lifeRegen = 500 / 6;
 
             }
             base.UpdateLifeRegen(ref damage);
@@ -322,6 +322,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             GravityProjectiles(2);
                         }
                     }
+
                     else if (tpPosRand1 > 0)
                     {
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
@@ -342,9 +343,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
                     }
 
+                    SpawnHealHearts(4);
                     P1 = 0;
                 }
                 else
+
                 //Phase 2.
                 if (Main.netMode != NetmodeID.MultiplayerClient && P2 >= 175)
                 {
@@ -402,6 +405,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         GravityProjectiles(2);
                     }
 
+                    SpawnHealHearts(4);
                     P2 = 0;
                 }
                 else
@@ -483,6 +487,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
                     }
 
+                    SpawnHealHearts(3);
                     P3 = 0;
                 }
                 else
@@ -543,6 +548,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         GravityProjectiles(3);
                     }
 
+                    SpawnHealHearts(3);
                     P4 = 0;
                 }
             }
@@ -676,6 +682,34 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
                     }
 
+                }
+            }
+        }
+
+        public void SpawnHealHearts(int chance)
+        {
+            if (Main.rand.NextBool(chance))
+            {
+                Item.NewItem(npc.position, ItemID.Heart);
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.position, ItemID.Heart);
+                    if (Main.rand.NextBool(chance))
+                    {
+                        Item.NewItem(npc.position, ItemID.Heart);
+                    }
+                }
+            }
+            else if (Main.rand.NextBool(chance))
+            {
+                Item.NewItem(npc.position, ItemID.Heart);
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.position, ItemID.Heart);
+                    if (Main.rand.NextBool(chance))
+                    {
+                        Item.NewItem(npc.position, ItemID.Heart);
+                    }
                 }
             }
         }
