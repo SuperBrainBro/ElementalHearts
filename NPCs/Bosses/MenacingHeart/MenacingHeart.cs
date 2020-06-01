@@ -297,7 +297,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
 
                         //Clone 1
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + -175, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
@@ -343,7 +343,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
 
                         //Clone 3
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 175, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
@@ -370,7 +370,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
 
                         //Clone 4
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(4))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + -175, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
@@ -423,7 +423,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //No Gravity Projectiles
 
                         //Clone 2
-                        if (Main.rand.NextBool(3))
+                        if (Main.rand.NextBool(2))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + -200, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 200, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
@@ -463,7 +463,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         GravityProjectiles(2);
 
                         //Clone 4
-                        if (Main.rand.NextBool(3))
+                        if (Main.rand.NextBool(4))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + 200, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + -200, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
@@ -522,7 +522,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //No Gravity Projectiles
 
                         //Clone 2
-                        if (Main.rand.NextBool(3))
+                        if (Main.rand.NextBool(2))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + -225, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 225, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
@@ -576,7 +576,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
 
                         //Clone 4
-                        if (Main.rand.NextBool(3))
+                        if (Main.rand.NextBool(4))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + 225, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + -225, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
@@ -628,7 +628,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //No Gravity Projectiles
 
                         //Clone 2
-                        if (Main.rand.NextBool(4))
+                        if (Main.rand.NextBool(3))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + -225, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 225, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
@@ -668,7 +668,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         GravityProjectiles(3);
 
                         //Clone 4
-                        if (Main.rand.NextBool(4))
+                        if (Main.rand.NextBool(5))
                         {
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + 0, (int)Main.player[npc.target].Center.Y + 250, NPCType<MenacingHeartClone>());
                             NPC.NewNPC((int)Main.player[npc.target].Center.X + -250, (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
