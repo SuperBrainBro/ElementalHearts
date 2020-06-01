@@ -605,7 +605,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        
+
                         //Gravity Projectiles
                         GravityProjectiles(3);
 
@@ -777,7 +777,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     if (Main.expertMode)
                     {
                         amount += 4;
-                    } else
+                    }
+                    else
                     {
                         amount += 2;
                     }
@@ -932,8 +933,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
         }
 
-        public override void NPCLoot() {
-			/*int choice = Main.rand.Next(10);
+        public override void NPCLoot()
+        {
+            /*int choice = Main.rand.Next(10);
 			if (choice == 0) {
 				Item.NewItem(npc.getRect(), ItemType<Trophy>());
 			}
@@ -947,12 +949,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 				}
                 Item.NewItem(npc.getRect(), ItemType<Item>());
 			}*/
-	    	if (!ElementalHeartsWorld.downedMenacingHeart) {
-		    	ElementalHeartsWorld.downedMenacingHeart = true;
-		    	if (Main.netMode == NetmodeID.Server) {
-			    	NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
-				}
-			}
-		}
+            if (!ElementalHeartsWorld.downedMenacingHeart)
+            {
+                ElementalHeartsWorld.downedMenacingHeart = true;
+                if (Main.netMode == NetmodeID.Server)
+                {
+                    NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
+                }
+            }
+        }
     }
 }
