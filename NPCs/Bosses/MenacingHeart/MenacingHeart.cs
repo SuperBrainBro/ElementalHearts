@@ -48,7 +48,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.noTileCollide = true;
             npc.npcSlots = 5f;
             npc.boss = true;
-            npc.netAlways = true;
+            //npc.netAlways = true;
 
             bossPhaseHealth = npc.lifeMax / 4;
             base.SetDefaults();
