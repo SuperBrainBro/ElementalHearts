@@ -665,7 +665,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         amount += 2;
                     }
 
-                    float degrees = 10f;
+                    float degrees = 34.15f;
                     Vector2 direction = -Vector2.UnitY;
 
                     float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
