@@ -42,7 +42,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.height = 128;
             npc.aiStyle = 0;
             npc.damage = 50;
-            npc.defense = 12;
+            npc.defense = 8;
             npc.lifeMax = 18000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
