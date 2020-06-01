@@ -249,7 +249,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Gravity Projectiles
                     GravityProjectiles(6);
                 }
-                
+
                 P1 = 0;
             }
             else
@@ -309,7 +309,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Gravity Projectiles
                     GravityProjectiles(6);
                 }
-                
+
                 P2 = 0;
             }
             else
@@ -538,7 +538,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 if (Main.netMode != NetmodeID.MultiplayerClient)
                 {
-                    int amount = Math.Min((int)(2f * (npc.lifeMax/2) / npc.life), 10);
+                    int amount = Math.Min((int)(2f * (npc.lifeMax / 2) / npc.life), 10);
 
                     if (Main.expertMode)
                     {
