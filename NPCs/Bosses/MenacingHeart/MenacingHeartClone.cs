@@ -33,7 +33,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.noGravity = true;
             npc.noTileCollide = true;
 
-            cloneTimeLeft = 1000;
+            cloneTimeLeft = 100;
             base.SetDefaults();
         }
 
