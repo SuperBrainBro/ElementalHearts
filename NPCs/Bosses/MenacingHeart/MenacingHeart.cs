@@ -1017,5 +1017,28 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 return false;
             }
         }
+
+        public override void NPCLoot() {
+			/*int choice = Main.rand.Next(10);
+			if (choice == 0) {
+				Item.NewItem(npc.getRect(), ItemType<Trophy>());
+			}
+			if (Main.expertMode) {
+				Item.NewItem(npc.getRect(), ItemType<TreasureBag>());
+			}
+			else {
+				choice = Main.rand.Next(7);
+				if (choice == 0) {
+					Item.NewItem(npc.getRect(), ItemType<Mask>());
+				}
+                Item.NewItem(npc.getRect(), ItemType<Item>());
+			}*/
+	    	if (!ElementalHeartsWorld.downedMenacingHeart) {
+		    	ElementalHeartsWorld.downedMenacingHeart = true;
+		    	if (Main.netMode == NetmodeID.Server) {
+			    	NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
+				}
+			}
+		}
     }
 }
