@@ -42,8 +42,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.height = 128;
             npc.aiStyle = 0;
             npc.damage = 50;
-            npc.defense = 8;
-            npc.lifeMax = 18000;
+            npc.defense = 9;
+            npc.lifeMax = 13000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
@@ -112,13 +112,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             //Check If Player Is Dead
             if (!AnyPlayerAlive)
             {
-                npc.color = Color.LightGray;
+                npc.color = Color.DarkSlateGray;
 
                 if (bossLeaveBool == false)
                 {
                     npc.velocity = new Vector2(0, -0.5f);
                     bossLeaveBool = true;
-                    npc.timeLeft = 10;
+                    npc.timeLeft = 6;
                 }
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Main.DiscoColor, 2);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.Red, 1);
@@ -137,7 +137,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     BP2 = false;
                     BP3 = false;
                     BP4 = false;
+
+                    //Scale
                     npc.scale = 0.8f;
+                    npc.width = 103;
+                    npc.height = 103;
 
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P1P == false)
@@ -162,7 +166,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     BP2 = true;
                     BP3 = false;
                     BP4 = false;
+
+                    //Scale
                     npc.scale = 1f;
+                    npc.width = 128;
+                    npc.height = 128;
 
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P2P == false)
@@ -187,7 +195,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     BP2 = false;
                     BP3 = true;
                     BP4 = false;
+
+                    //Scale
                     npc.scale = 1.2f;
+                    npc.width = 154;
+                    npc.height = 154;
 
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P3P == false)
@@ -212,7 +224,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     BP2 = false;
                     BP3 = false;
                     BP4 = true;
+
+                    //Scale
                     npc.scale = 1.4f;
+                    npc.width = 180;
+                    npc.height = 180;
 
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P4P == false)
@@ -259,7 +275,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand1 > 6)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(175, 0);
 
                         //Facing Left Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -278,7 +294,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand1 > 4)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 175);
 
                         //Facing Up Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -289,7 +305,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand1 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-175, 0);
 
                         //Facing Right Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -308,7 +324,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand1 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
 
                         //Facing Down Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -400,7 +416,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand3 > 6)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(225, 0);
 
                         //Facing Left Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -419,7 +435,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand3 > 4)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 225);
 
                         //Facing Up Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -430,7 +446,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand3 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-225, 0);
 
                         //Facing Right Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -449,7 +465,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand3 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -225);
 
                         //Facing Down Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -481,7 +497,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand4 > 6)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(250, 0);
 
                         //Facing Left Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -493,7 +509,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand4 > 4)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 250);
 
                         //Facing Up Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -504,7 +520,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand4 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-250, 0);
 
                         //Facing Right Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -516,7 +532,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand4 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -250);
 
                         //Facing Down Projectiles
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
