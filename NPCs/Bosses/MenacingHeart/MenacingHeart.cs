@@ -580,14 +580,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 if (Main.netMode != NetmodeID.MultiplayerClient)
                 {
-                    int amount = Math.Min((int)(2f * npc.lifeMax * 2 / npc.life), 10);
+                    int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
 
                     if (Main.expertMode)
                     {
                         amount += 2;
                     }
 
-                    float degrees = 5f;
+                    float degrees = 10f;
                     Vector2 direction = -Vector2.UnitY;
 
                     float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;

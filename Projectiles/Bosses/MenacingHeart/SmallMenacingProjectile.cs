@@ -19,7 +19,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
             projectile.CloneDefaults(ProjectileID.Fireball);
             projectile.width = 14;
             projectile.height = 14;
-            projectile.scale = 2;
+            projectile.scale = 1.5f;
             projectile.timeLeft = 200;
             projectile.penetrate = -1;
         }
