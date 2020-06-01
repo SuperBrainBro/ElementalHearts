@@ -17,8 +17,8 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 		{
 			//projectile.aiStyle = 0;
 			projectile.penetrate = -1;
-			projectile.width = 44;
-			projectile.height = 44;
+			projectile.width = 11;
+			projectile.height = 11;
 			projectile.alpha =  0;
 			projectile.friendly = false;
 			projectile.hostile = true;
