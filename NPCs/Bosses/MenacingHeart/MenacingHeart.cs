@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -58,8 +57,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             bossPhaseHealth = npc.lifeMax / 4;
             base.SetDefaults();
         }
+        public override bool CheckDead()
+        {
+            Main.NewText("You have weakened me. Dont worry though, I will always come back!", Color.Orange);
+            return base.CheckDead();
+        }
+        public override void DrawEffects(ref Color drawColor)
+        {
+            if (BP4)
+            {
+                drawColor = Main.DiscoColor;
+            }
+            base.DrawEffects(ref drawColor);
+        }
         public override void AI()
         {
+
             if (npc.life > bossPhaseHealth * 3)
             {
                 //Set phase to 1.
