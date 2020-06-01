@@ -112,7 +112,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             //Check If Player Is Dead
             if (!AnyPlayerAlive)
             {
-                npc.color = Color.DarkSlateGray;
+                npc.color = Color.Gray;
 
                 if (bossLeaveBool == false)
                 {
@@ -125,7 +125,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.Black, 1);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.White, 1);
 
-                npc.velocity *= 1.01f;
+                npc.velocity *= 1.015f;
             }
             else
             {
