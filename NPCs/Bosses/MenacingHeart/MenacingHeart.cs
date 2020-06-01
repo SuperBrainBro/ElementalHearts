@@ -210,6 +210,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand1 > 4)
                 {
@@ -219,6 +222,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //No Gravity Projectiles
                 }
                 else if (tpPosRand1 > 2)
                 {
@@ -228,6 +233,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand1 > 0)
                 {
@@ -237,62 +245,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
-
-                //Giant Gravity Projectiles
-                if (Main.netMode != NetmodeID.MultiplayerClient)
-                {
-                    if (Main.rand.NextBool(2))
-                    {
-                        int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
-
-                        if (Main.expertMode)
-                        {
-                            amount += 2;
-                        }
-
-                        float degrees = 5f;
-                        Vector2 direction = -Vector2.UnitY;
-
-                        float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
-                        int sign = (distanceX > 0).ToDirectionInt();
-                        float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
-
-                        direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
-                        direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
-                        int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
-                        for (int i = 0; i < amount; i++)
-                        {
-                            Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
-                            direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
-                        }
-                    }
-                    else if (Main.rand.NextBool(2))
-                    {
-                        int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
-
-                        if (Main.expertMode)
-                        {
-                            amount += 2;
-                        }
-
-                        float degrees = 5f;
-                        Vector2 direction = -Vector2.UnitY;
-
-                        float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
-                        int sign = (distanceX > 0).ToDirectionInt();
-                        float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
-
-                        direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
-                        direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
-                        int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
-                        for (int i = 0; i < amount; i++)
-                        {
-                            Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
-                            direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
-                        }
-                    }
-                }
+                
                 P1 = 0;
             }
             else
@@ -313,6 +270,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand2 > 4)
                 {
@@ -322,6 +282,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //No Gravity Projectiles
                 }
                 else if (tpPosRand2 > 2)
                 {
@@ -331,6 +293,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand2 > 0)
                 {
@@ -340,37 +305,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
-
-                //Giant Gravity Projectiles
-                if (Main.netMode != NetmodeID.MultiplayerClient)
-                {
-                    if (Main.rand.NextBool(2))
-                    {
-                        int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
-
-                        if (Main.expertMode)
-                        {
-                            amount += 2;
-                        }
-
-                        float degrees = 5f;
-                        Vector2 direction = -Vector2.UnitY;
-
-                        float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
-                        int sign = (distanceX > 0).ToDirectionInt();
-                        float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
-
-                        direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
-                        direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
-                        int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
-                        for (int i = 0; i < amount; i++)
-                        {
-                            Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
-                            direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
-                        }
-                    }
-                }
+                
                 P2 = 0;
             }
             else
@@ -391,6 +330,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand3 > 4)
                 {
@@ -400,6 +342,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //No Gravity Projectiles
                 }
                 else if (tpPosRand3 > 2)
                 {
@@ -409,6 +353,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand3 > 0)
                 {
@@ -418,37 +365,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
 
-                //Giant Gravity Projectiles
-                if (Main.netMode != NetmodeID.MultiplayerClient)
-                {
-                    if (Main.rand.NextBool(3))
-                    {
-                        int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
-
-                        if (Main.expertMode)
-                        {
-                            amount += 2;
-                        }
-
-                        float degrees = 5f;
-                        Vector2 direction = -Vector2.UnitY;
-
-                        float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
-                        int sign = (distanceX > 0).ToDirectionInt();
-                        float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
-
-                        direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
-                        direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
-                        int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
-                        for (int i = 0; i < amount; i++)
-                        {
-                            Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
-                            direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
-                        }
-                    }
-                }
                 P3 = 0;
             }
             else
@@ -469,6 +390,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand4 > 4)
                 {
@@ -478,6 +402,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //No Gravity Projectiles
                 }
                 else if (tpPosRand4 > 2)
                 {
@@ -487,6 +413,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
                 else if (tpPosRand4 > 0)
                 {
@@ -496,37 +425,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                    //Gravity Projectiles
+                    GravityProjectiles(6);
                 }
 
-                //Giant Gravity Projectiles
-                if (Main.netMode != NetmodeID.MultiplayerClient)
-                {
-                    if (Main.rand.NextBool(4))
-                    {
-                        int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
-
-                        if (Main.expertMode)
-                        {
-                            amount += 2;
-                        }
-
-                        float degrees = 5f;
-                        Vector2 direction = -Vector2.UnitY;
-
-                        float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
-                        int sign = (distanceX > 0).ToDirectionInt();
-                        float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
-
-                        direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
-                        direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
-                        int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
-                        for (int i = 0; i < amount; i++)
-                        {
-                            Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
-                            direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
-                        }
-                    }
-                }
                 P4 = 0;
             }
             base.AI();
@@ -629,7 +532,38 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             base.FindFrame(frameHeight);
         }
+        public void GravityProjectiles(int randChance)
+        {
+            if (Main.rand.NextBool(randChance))
+            {
+                if (Main.netMode != NetmodeID.MultiplayerClient)
+                {
+                    int amount = Math.Min((int)(2f * (npc.lifeMax/2) / npc.life), 10);
 
+                    if (Main.expertMode)
+                    {
+                        amount += 2;
+                    }
+
+                    float degrees = 5f;
+                    Vector2 direction = -Vector2.UnitY;
+
+                    float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
+                    int sign = (distanceX > 0).ToDirectionInt();
+                    float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
+
+                    direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
+                    direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
+                    int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
+                    for (int i = 0; i < amount; i++)
+                    {
+                        Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
+                        direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
+                    }
+
+                }
+            }
+        }
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
