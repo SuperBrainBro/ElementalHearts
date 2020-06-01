@@ -17,7 +17,10 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Fireball);
-            projectile.timeLeft = 150;
+            projectile.width = 14;
+            projectile.height = 14;
+            projectile.scale = 2;
+            projectile.timeLeft = 200;
             projectile.penetrate = -1;
         }
 
