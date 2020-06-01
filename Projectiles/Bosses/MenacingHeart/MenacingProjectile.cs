@@ -9,6 +9,10 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 {
 	public class MenacingProjectile : ModProjectile
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("A Menacing Projectile");
+		}
 		public override void SetDefaults()
 		{
 			//projectile.aiStyle = 0;

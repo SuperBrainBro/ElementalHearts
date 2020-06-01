@@ -58,6 +58,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             bossPhaseHealth = npc.lifeMax / 4;
             base.SetDefaults();
         }
+        public override void DrawEffects(ref Color drawColor)
+        {
+            drawColor = Main.DiscoColor;
+            base.DrawEffects(ref drawColor);
+        }
         public override void AI()
         {
             if (npc.life > bossPhaseHealth * 3)
