@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using System;
+using System.IO;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -993,6 +994,47 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
             }
         }
+        public override void SendExtraAI(BinaryWriter writer)
+        {
+            //Phase
+            writer.Write(P1);
+            writer.Write(P2);
+            writer.Write(P3);
+            writer.Write(P4);
+
+            //Phase Attack
+            writer.Write(P1P);
+            writer.Write(P2P);
+            writer.Write(P3P);
+            writer.Write(P4P);
+
+            //Phase Bool
+            writer.Write(BP1);
+            writer.Write(BP2);
+            writer.Write(BP3);
+            writer.Write(BP4);
+        }
+        public override void ReceiveExtraAI(BinaryReader reader)
+        {
+            //Phase
+            P1 = reader.ReadInt32();
+            P2 = reader.ReadInt32();
+            P3 = reader.ReadInt32();
+            P4 = reader.ReadInt32();
+
+            //Phase Attack
+            P1P = reader.ReadBoolean();
+            P2P = reader.ReadBoolean();
+            P3P = reader.ReadBoolean();
+            P4P = reader.ReadBoolean();
+
+            //Phase Bool
+            BP1 = reader.ReadBoolean();
+            BP2 = reader.ReadBoolean();
+            BP3 = reader.ReadBoolean();
+            BP4 = reader.ReadBoolean();
+        }
+
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
