@@ -112,8 +112,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (bossLeaveBool == false)
                 {
-                    npc.velocity = new Vector2(0, 5);
+                    npc.velocity = new Vector2(0, -1);
                     bossLeaveBool = true;
+                    npc.timeLeft = 10;
                 }
                 npc.velocity *= 1.02f;
             }
