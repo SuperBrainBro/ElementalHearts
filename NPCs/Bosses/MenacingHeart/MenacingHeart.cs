@@ -60,7 +60,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override bool CheckDead()
         {
-            Main.NewText("[c/fffffff:<xXx_Menacing.Heart69$_xXx>] You have weakened me. Dont worry though, I will always come back!", Color.Orange);
+            Main.NewText("[c/fffffff:<Menacing.Heart69$>] You have weakened me. Dont worry though, I will always come back!", Color.Red);
             return base.CheckDead();
         }
         public override void DrawEffects(ref Color drawColor)
@@ -194,7 +194,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
 
             //This is the phase code, the one below, is the phase 1 code.
-            if (P1 >= 250)
+            if (P1 >= 200)
             {
                 npc.TargetClosest(true);
 
@@ -212,7 +212,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    if (Main.rand.NextBool(2))
+                    {
+                        GravityProjectiles(1);
+                    } else
+                    {
+                        GravityProjectiles(2);
+                    }
                 }
                 else if (tpPosRand1 > 4)
                 {
@@ -235,7 +241,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    if (Main.rand.NextBool(2))
+                    {
+                        GravityProjectiles(1);
+                    }
+                    else
+                    {
+                        GravityProjectiles(2);
+                    }
                 }
                 else if (tpPosRand1 > 0)
                 {
@@ -247,14 +260,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    if (Main.rand.NextBool(2))
+                    {
+                        GravityProjectiles(1);
+                    }
+                    else
+                    {
+                        GravityProjectiles(2);
+                    }
                 }
 
                 P1 = 0;
             }
             else
             //Phase 2.
-            if (P2 >= 200)
+            if (P2 >= 175)
             {
                 npc.TargetClosest(true);
 
@@ -272,7 +292,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    GravityProjectiles(2);
                 }
                 else if (tpPosRand2 > 4)
                 {
@@ -295,7 +315,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    GravityProjectiles(2);
                 }
                 else if (tpPosRand2 > 0)
                 {
@@ -307,14 +327,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    GravityProjectiles(2);
                 }
 
                 P2 = 0;
             }
             else
             //Phase 3.
-            if (P3 >= 100)
+            if (P3 >= 125)
             {
                 npc.TargetClosest(true);
 
@@ -332,7 +352,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    if (Main.rand.NextBool(2))
+                    {
+                        GravityProjectiles(2);
+                    }
+                    else
+                    {
+                        GravityProjectiles(3);
+                    }
                 }
                 else if (tpPosRand3 > 4)
                 {
@@ -355,7 +382,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    if (Main.rand.NextBool(2))
+                    {
+                        GravityProjectiles(2);
+                    }
+                    else
+                    {
+                        GravityProjectiles(3);
+                    }
                 }
                 else if (tpPosRand3 > 0)
                 {
@@ -367,7 +401,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    if (Main.rand.NextBool(2))
+                    {
+                        GravityProjectiles(2);
+                    } else
+                    {
+                        GravityProjectiles(3);
+                    }
                 }
 
                 P3 = 0;
@@ -392,7 +432,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    GravityProjectiles(3);
                 }
                 else if (tpPosRand4 > 4)
                 {
@@ -415,7 +455,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    GravityProjectiles(3);
                 }
                 else if (tpPosRand4 > 0)
                 {
@@ -427,7 +467,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                     //Gravity Projectiles
-                    GravityProjectiles(6);
+                    GravityProjectiles(3);
                 }
 
                 P4 = 0;
