@@ -28,6 +28,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public bool BP3;
         public bool BP4;
 
+        public bool bossLeaveBool;
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Menacing Heart");
@@ -41,7 +43,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.aiStyle = 0;
             npc.damage = 50;
             npc.defense = 16;
-            npc.lifeMax = 16000;
+            npc.lifeMax = 18000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
@@ -63,6 +65,26 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Main.NewText("[c/fffffff:<Menacing.Heart69$>] You have weakened me. Dont worry though, I will always come back!", Color.Red);
             return base.CheckDead();
         }
+        public override void UpdateLifeRegen(ref int damage)
+        {
+            if (BP1)
+            {
+                npc.lifeRegen = 1;
+            }
+            if (BP2)
+            {
+                npc.lifeRegen = 2;
+            }
+            if (BP3)
+            {
+                npc.lifeRegen = 3;
+            }
+            if (BP4)
+            {
+                npc.lifeRegen = 4;
+            }
+            base.UpdateLifeRegen(ref damage);
+        }
         public override void DrawEffects(ref Color drawColor)
         {
             if (BP4)
@@ -73,406 +95,420 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override void AI()
         {
-
-            if (npc.life > bossPhaseHealth * 3)
+            //Check If Player Is Dead
+            if (Main.ActivePlayersCount == 0)
             {
-                //Set phase to 1.
-                npc.ai[0] = 1;
-                BP1 = true;
-                BP2 = false;
-                BP3 = false;
-                BP4 = false;
-                npc.scale = 0.8f;
+                npc.color = Color.Silver;
 
-                //Phase Change Projectiles
-                if (P1P == false)
+                if (bossLeaveBool == false)
                 {
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    P1P = true;
+                    npc.velocity = new Vector2(0, 10);
+                    bossLeaveBool = true;
                 }
-            }
-            else if (npc.life > bossPhaseHealth * 2)
-            {
-                //Set phase to 2.
-                npc.ai[0] = 2;
-                BP1 = false;
-                BP2 = true;
-                BP3 = false;
-                BP4 = false;
-                npc.scale = 1f;
-
-                //Phase Change Projectiles
-                if (P2P == false)
-                {
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    P2P = true;
-                }
-            }
-            else if (npc.life > bossPhaseHealth * 1)
-            {
-                //Set phase to 3.
-                npc.ai[0] = 3;
-                BP1 = false;
-                BP2 = false;
-                BP3 = true;
-                BP4 = false;
-                npc.scale = 1.2f;
-
-                //Phase Change Projectiles
-                if (P3P == false)
-                {
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    P3P = true;
-                }
-            }
-            else if (npc.life > bossPhaseHealth * 0)
-            {
-                //Set phase to 4.
-                npc.ai[0] = 4;
-                BP1 = false;
-                BP2 = false;
-                BP3 = false;
-                BP4 = true;
-                npc.scale = 1.4f;
-
-                //Phase Change Projectiles
-                if (P4P == false)
-                {
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(4, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-4, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    P4P = true;
-                }
-            }
-
-            //npc.ai[0] is the current phase. So the below code, checks for if it is phase 1. If it is in phase 1, then npc.ai[1] goes up (which is the timer for phase 10
-            if (npc.ai[0] == 1)
-            {
-                P1++;
-            }
-            else if (npc.ai[0] == 2)
-            {
-                P2++;
-            }
-            else if (npc.ai[0] == 3)
-            {
-                P3++;
-            }
-            else if (npc.ai[0] == 4)
-            {
-                P4++;
-            }
-
-            //This is the phase code, the one below, is the phase 1 code.
-            if (P1 >= 200)
-            {
-                npc.TargetClosest(true);
-
-                //This generates a random tp Center.
-                float tpPosRand1;
-                tpPosRand1 = Main.rand.NextFloat(8);
-
-                if (tpPosRand1 > 6)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
-
-                    //Facing Left Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    if (Main.rand.NextBool(2))
-                    {
-                        GravityProjectiles(1);
-                    }
-                    else
-                    {
-                        GravityProjectiles(2);
-                    }
-                }
-                else if (tpPosRand1 > 4)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
-
-                    //Facing Up Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //No Gravity Projectiles
-                }
-                else if (tpPosRand1 > 2)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
-
-                    //Facing Right Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    if (Main.rand.NextBool(2))
-                    {
-                        GravityProjectiles(1);
-                    }
-                    else
-                    {
-                        GravityProjectiles(2);
-                    }
-                }
-                else if (tpPosRand1 > 0)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
-
-                    //Facing Down Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    if (Main.rand.NextBool(2))
-                    {
-                        GravityProjectiles(1);
-                    }
-                    else
-                    {
-                        GravityProjectiles(2);
-                    }
-                }
-
-                P1 = 0;
+                npc.velocity *= 2;
             }
             else
-            //Phase 2.
-            if (P2 >= 175)
             {
-                npc.TargetClosest(true);
-
-                //This generates a random tp position.
-                float tpPosRand2;
-                tpPosRand2 = Main.rand.NextFloat(8);
-
-                if (tpPosRand2 > 6)
+                if (npc.life > bossPhaseHealth * 3)
                 {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+                    //Set phase to 1.
+                    npc.ai[0] = 1;
+                    BP1 = true;
+                    BP2 = false;
+                    BP3 = false;
+                    BP4 = false;
+                    npc.scale = 0.8f;
 
-                    //Facing Left Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    GravityProjectiles(2);
-                }
-                else if (tpPosRand2 > 4)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
-
-                    //Facing Up Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //No Gravity Projectiles
-                }
-                else if (tpPosRand2 > 2)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
-
-                    //Facing Right Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    GravityProjectiles(2);
-                }
-                else if (tpPosRand2 > 0)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
-
-                    //Facing Down Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    GravityProjectiles(2);
-                }
-
-                P2 = 0;
-            }
-            else
-            //Phase 3.
-            if (P3 >= 125)
-            {
-                npc.TargetClosest(true);
-
-                //This generates a random tp position.
-                float tpPosRand3;
-                tpPosRand3 = Main.rand.NextFloat(8);
-
-                if (tpPosRand3 > 6)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
-
-                    //Facing Left Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    if (Main.rand.NextBool(2))
+                    //Phase Change Projectiles
+                    if (P1P == false)
                     {
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        P1P = true;
+                    }
+                }
+                else if (npc.life > bossPhaseHealth * 2)
+                {
+                    //Set phase to 2.
+                    npc.ai[0] = 2;
+                    BP1 = false;
+                    BP2 = true;
+                    BP3 = false;
+                    BP4 = false;
+                    npc.scale = 1f;
+
+                    //Phase Change Projectiles
+                    if (P2P == false)
+                    {
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        P2P = true;
+                    }
+                }
+                else if (npc.life > bossPhaseHealth * 1)
+                {
+                    //Set phase to 3.
+                    npc.ai[0] = 3;
+                    BP1 = false;
+                    BP2 = false;
+                    BP3 = true;
+                    BP4 = false;
+                    npc.scale = 1.2f;
+
+                    //Phase Change Projectiles
+                    if (P3P == false)
+                    {
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        P3P = true;
+                    }
+                }
+                else if (npc.life > bossPhaseHealth * 0)
+                {
+                    //Set phase to 4.
+                    npc.ai[0] = 4;
+                    BP1 = false;
+                    BP2 = false;
+                    BP3 = false;
+                    BP4 = true;
+                    npc.scale = 1.4f;
+
+                    //Phase Change Projectiles
+                    if (P4P == false)
+                    {
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(4, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-4, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        P4P = true;
+                    }
+                }
+
+                //npc.ai[0] is the current phase. So the below code, checks for if it is phase 1. If it is in phase 1, then npc.ai[1] goes up (which is the timer for phase 10
+                if (npc.ai[0] == 1)
+                {
+                    P1++;
+                }
+                else if (npc.ai[0] == 2)
+                {
+                    P2++;
+                }
+                else if (npc.ai[0] == 3)
+                {
+                    P3++;
+                }
+                else if (npc.ai[0] == 4)
+                {
+                    P4++;
+                }
+
+                //This is the phase code, the one below, is the phase 1 code.
+                if (P1 >= 200)
+                {
+                    npc.TargetClosest(true);
+
+                    //This generates a random tp Center.
+                    float tpPosRand1;
+                    tpPosRand1 = Main.rand.NextFloat(8);
+
+                    if (tpPosRand1 > 6)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+
+                        //Facing Left Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(1);
+                        }
+                        else
+                        {
+                            GravityProjectiles(2);
+                        }
+                    }
+                    else if (tpPosRand1 > 4)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+
+                        //Facing Up Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //No Gravity Projectiles
+                    }
+                    else if (tpPosRand1 > 2)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+
+                        //Facing Right Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(1);
+                        }
+                        else
+                        {
+                            GravityProjectiles(2);
+                        }
+                    }
+                    else if (tpPosRand1 > 0)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+
+                        //Facing Down Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(1);
+                        }
+                        else
+                        {
+                            GravityProjectiles(2);
+                        }
+                    }
+
+                    P1 = 0;
+                }
+                else
+                //Phase 2.
+                if (P2 >= 175)
+                {
+                    npc.TargetClosest(true);
+
+                    //This generates a random tp position.
+                    float tpPosRand2;
+                    tpPosRand2 = Main.rand.NextFloat(8);
+
+                    if (tpPosRand2 > 6)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+
+                        //Facing Left Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
                         GravityProjectiles(2);
                     }
-                    else
+                    else if (tpPosRand2 > 4)
                     {
-                        GravityProjectiles(3);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+
+                        //Facing Up Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //No Gravity Projectiles
                     }
-                }
-                else if (tpPosRand3 > 4)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
-
-                    //Facing Up Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //No Gravity Projectiles
-                }
-                else if (tpPosRand3 > 2)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
-
-                    //Facing Right Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    if (Main.rand.NextBool(2))
+                    else if (tpPosRand2 > 2)
                     {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+
+                        //Facing Right Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
                         GravityProjectiles(2);
                     }
-                    else
+                    else if (tpPosRand2 > 0)
                     {
-                        GravityProjectiles(3);
-                    }
-                }
-                else if (tpPosRand3 > 0)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
 
-                    //Facing Down Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        //Facing Down Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                    //Gravity Projectiles
-                    if (Main.rand.NextBool(2))
-                    {
+                        //Gravity Projectiles
                         GravityProjectiles(2);
                     }
-                    else
+
+                    P2 = 0;
+                }
+                else
+                //Phase 3.
+                if (P3 >= 125)
+                {
+                    npc.TargetClosest(true);
+
+                    //This generates a random tp position.
+                    float tpPosRand3;
+                    tpPosRand3 = Main.rand.NextFloat(8);
+
+                    if (tpPosRand3 > 6)
                     {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+
+                        //Facing Left Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(2);
+                        }
+                        else
+                        {
+                            GravityProjectiles(3);
+                        }
+                    }
+                    else if (tpPosRand3 > 4)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+
+                        //Facing Up Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //No Gravity Projectiles
+                    }
+                    else if (tpPosRand3 > 2)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+
+                        //Facing Right Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(2);
+                        }
+                        else
+                        {
+                            GravityProjectiles(3);
+                        }
+                    }
+                    else if (tpPosRand3 > 0)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+
+                        //Facing Down Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(2);
+                        }
+                        else
+                        {
+                            GravityProjectiles(3);
+                        }
+                    }
+
+                    P3 = 0;
+                }
+                else
+                //Phase 4.
+                if (P4 >= 75)
+                {
+                    npc.TargetClosest(true);
+
+                    //This generates a random tp Center.
+                    float tpPosRand4;
+                    tpPosRand4 = Main.rand.NextFloat(8);
+
+                    if (tpPosRand4 > 6)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
+
+                        //Facing Left Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
                         GravityProjectiles(3);
                     }
+                    else if (tpPosRand4 > 4)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+
+                        //Facing Up Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //No Gravity Projectiles
+                    }
+                    else if (tpPosRand4 > 2)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+
+                        //Facing Right Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        GravityProjectiles(3);
+                    }
+                    else if (tpPosRand4 > 0)
+                    {
+                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+
+                        //Facing Down Projectiles
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+
+                        //Gravity Projectiles
+                        GravityProjectiles(3);
+                    }
+
+                    P4 = 0;
                 }
-
-                P3 = 0;
-            }
-            else
-            //Phase 4.
-            if (P4 >= 75)
-            {
-                npc.TargetClosest(true);
-
-                //This generates a random tp Center.
-                float tpPosRand4;
-                tpPosRand4 = Main.rand.NextFloat(8);
-
-                if (tpPosRand4 > 6)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
-
-                    //Facing Left Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    GravityProjectiles(3);
-                }
-                else if (tpPosRand4 > 4)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
-
-                    //Facing Up Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //No Gravity Projectiles
-                }
-                else if (tpPosRand4 > 2)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
-
-                    //Facing Right Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    GravityProjectiles(3);
-                }
-                else if (tpPosRand4 > 0)
-                {
-                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
-
-                    //Facing Down Projectiles
-                    Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                    Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-
-                    //Gravity Projectiles
-                    GravityProjectiles(3);
-                }
-
-                P4 = 0;
             }
             base.AI();
         }
