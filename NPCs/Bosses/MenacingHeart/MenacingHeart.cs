@@ -93,10 +93,20 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             base.DrawEffects(ref drawColor);
         }
+        public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
+        {
+            npc.lifeMax = (int)(npc.lifeMax * 0.625f * bossLifeScale);
+            npc.damage = (int)(npc.damage * 0.6f);
+        }
+        public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
+        {
+            scale = 1.5f;
+            return null;
+        }
         public override void AI()
         {
             //Check If Player Is Dead
-            if (Main.ActivePlayersCount == 0)
+            if (!AnyPlayerAlive)
             {
                 npc.color = Color.Silver;
 
@@ -120,7 +130,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.scale = 0.8f;
 
                     //Phase Change Projectiles
-                    if (P1P == false)
+                    if (Main.netMode != NetmodeID.MultiplayerClient && P1P == false)
                     {
                         Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -145,7 +155,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.scale = 1f;
 
                     //Phase Change Projectiles
-                    if (P2P == false)
+                    if (Main.netMode != NetmodeID.MultiplayerClient && P2P == false)
                     {
                         Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -170,7 +180,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.scale = 1.2f;
 
                     //Phase Change Projectiles
-                    if (P3P == false)
+                    if (Main.netMode != NetmodeID.MultiplayerClient && P3P == false)
                     {
                         Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -195,7 +205,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.scale = 1.4f;
 
                     //Phase Change Projectiles
-                    if (P4P == false)
+                    if (Main.netMode != NetmodeID.MultiplayerClient && P4P == false)
                     {
                         Projectile.NewProjectile(npc.Center, new Vector2(0, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
@@ -229,7 +239,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
 
                 //This is the phase code, the one below, is the phase 1 code.
-                if (P1 >= 200)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P1 >= 200)
                 {
                     npc.TargetClosest(true);
 
@@ -310,7 +320,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else
                 //Phase 2.
-                if (P2 >= 175)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P2 >= 175)
                 {
                     npc.TargetClosest(true);
 
@@ -370,7 +380,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else
                 //Phase 3.
-                if (P3 >= 125)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P3 >= 125)
                 {
                     npc.TargetClosest(true);
 
@@ -451,7 +461,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else
                 //Phase 4.
-                if (P4 >= 75)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P4 >= 75)
                 {
                     npc.TargetClosest(true);
 
@@ -646,6 +656,25 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             potionType = ItemID.GreaterHealingPotion;
             base.BossLoot(ref name, ref potionType);
+        }
+        public static bool AnyPlayerAlive
+        {
+            get
+            {
+                Player p;
+                if (Main.netMode == NetmodeID.SinglePlayer)
+                {
+                    p = Main.LocalPlayer;
+                    return p.active && !(p.dead || p.ghost);
+                }
+                for (int i = 0; i < Main.player.Length; i++)
+                {
+                    p = Main.player[i];
+                    if (p.active && !p.dead)
+                        return true;
+                }
+                return false;
+            }
         }
     }
 }
