@@ -665,7 +665,40 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         amount += 2;
                     }
 
-                    float degrees = 12f;
+                    float degrees = 9f;
+                    Vector2 direction = -Vector2.UnitY;
+
+                    float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
+                    int sign = (distanceX > 0).ToDirectionInt();
+                    float tilt = 20 * Math.Min(1f, Math.Abs(distanceX) / 600);
+
+                    direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
+                    direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
+                    int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
+                    damage *= 10;
+                    for (int i = 0; i < amount; i++)
+                    {
+                        Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
+                        direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
+                    }
+
+                }
+            }
+            else if (Main.rand.NextBool(randChance * 2))
+            {
+                if (Main.netMode != NetmodeID.MultiplayerClient)
+                {
+                    int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
+
+                    if (Main.expertMode)
+                    {
+                        amount += 4;
+                    } else
+                    {
+                        amount += 2;
+                    }
+
+                    float degrees = 9f;
                     Vector2 direction = -Vector2.UnitY;
 
                     float distanceX = Main.player[npc.target].Center.X + Main.player[npc.target].velocity.X - npc.Center.X;
