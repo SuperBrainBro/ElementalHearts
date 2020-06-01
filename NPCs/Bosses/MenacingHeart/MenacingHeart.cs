@@ -154,7 +154,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.Roar);
+                        Main.PlaySound(SoundID.Roar, npc.position);
                         P1P = true;
                     }
                 }
@@ -184,7 +184,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.Roar);
+                        Main.PlaySound(SoundID.Roar, npc.position);
                         P2P = true;
                     }
                 }
@@ -214,7 +214,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.Roar);
+                        Main.PlaySound(SoundID.Roar, npc.position);
                         P3P = true;
                     }
                 }
@@ -244,7 +244,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.ForceRoar);
+                        Main.PlaySound(SoundID.Roar, npc.position);
                         P4P = true;
                     }
                 }
