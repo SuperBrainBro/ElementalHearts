@@ -42,7 +42,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.height = 128;
             npc.aiStyle = 0;
             npc.damage = 50;
-            npc.defense = 16;
+            npc.defense = 12;
             npc.lifeMax = 18000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
@@ -69,19 +69,19 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             if (BP1)
             {
-                npc.lifeRegen = 100 / 2;
+                npc.lifeRegen = 50 / 2;
             }
             if (BP2)
             {
-                npc.lifeRegen = 250 / 2;
+                npc.lifeRegen = 125 / 2;
             }
             if (BP3)
             {
-                npc.lifeRegen = 500 / 2;
+                npc.lifeRegen = 250 / 2;
             }
             if (BP4)
             {
-                npc.lifeRegen = 1000 / 2;
+                npc.lifeRegen = 500 / 2;
             }
             base.UpdateLifeRegen(ref damage);
         }
