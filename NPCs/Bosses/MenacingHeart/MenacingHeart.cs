@@ -113,10 +113,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (bossLeaveBool == false)
                 {
                     npc.velocity = new Vector2(0, -1);
-                    Dust.NewDust(npc.Center - new Vector2(0, 5), npc.width, npc.height / 2, DustID.Sandstorm, 0, 5, 0, Main.DiscoColor, 2);
                     bossLeaveBool = true;
                     npc.timeLeft = 10;
                 }
+                Dust.NewDust(npc.Center - new Vector2(0, 5), npc.width, npc.height / 2, DustID.Sandstorm, 0, 5, 0, Main.DiscoColor, 2);
+
                 npc.velocity *= 1.02f;
             }
             else
