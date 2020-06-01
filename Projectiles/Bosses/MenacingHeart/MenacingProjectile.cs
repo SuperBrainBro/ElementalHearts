@@ -29,7 +29,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 		public override void AI()
 		{
 			//Face Toward Velocity
-			projectile.rotation += 1.02;
+			projectile.rotation += 0.05f;
 			//^Not Not Enabled Because It Does Not Work
 
 			//Acceleration Effect
