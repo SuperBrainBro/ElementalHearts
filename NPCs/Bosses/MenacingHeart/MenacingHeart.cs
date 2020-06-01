@@ -70,22 +70,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             if (BP1)
             {
                 npc.lifeRegen = 50 / 2;
-                damage = 50 / 2;
+
             }
             else if (BP2)
             {
                 npc.lifeRegen = 125 / 2;
-                damage = 50 / 2;
+
             }
             else if (BP3)
             {
                 npc.lifeRegen = 250 / 2;
-                damage = 50 / 2;
+
             }
             else if (BP4)
             {
                 npc.lifeRegen = 500 / 2;
-                damage = 50 / 2;
+
             }
             base.UpdateLifeRegen(ref damage);
         }
@@ -653,6 +653,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
                     direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
                     int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
+                    damage *= 4;
                     for (int i = 0; i < amount; i++)
                     {
                         Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
