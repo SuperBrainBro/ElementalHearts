@@ -36,7 +36,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             cloneTimeLeft = 255;
             base.SetDefaults();
         }
-
+        public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
+        {
+            scale = 0f;
+            return base.DrawHealthBar(hbPosition, ref scale, ref position);
+        }
         public override void AI()
         {
             npc.alpha = (int)(255 - (cloneTimeLeft));
