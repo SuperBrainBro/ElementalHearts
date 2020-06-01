@@ -28,10 +28,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.DeathSound = SoundID.Item25;
             npc.value = 100000;
             npc.buffImmune[BuffID.Confused] = true;
-            npc.knockBackResist = 1f;
+            npc.knockBackResist = .33f;
             npc.noGravity = true;
             npc.noTileCollide = true;
-            npc.timeLeft = 100;
+            npc.timeLeft = 10;
             base.SetDefaults();
         }
     }
