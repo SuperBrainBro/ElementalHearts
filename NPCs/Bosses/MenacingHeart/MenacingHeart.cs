@@ -62,7 +62,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override bool CheckDead()
         {
-            Main.NewText("[c/fffffff:<Menacing.Heart69$>] You have weakened me. Dont worry though, I will always come back!", Color.Red);
+            Main.NewText("<Menacing.Heart69$> You have weakened me. I will come back though, if you ever need me.", Color.White);
             return base.CheckDead();
         }
         public override void UpdateLifeRegen(ref int damage)
