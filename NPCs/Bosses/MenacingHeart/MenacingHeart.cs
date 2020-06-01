@@ -70,18 +70,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             if (BP1)
             {
                 npc.lifeRegen = 50 / 2;
+                damage = 50 / 2;
             }
-            if (BP2)
+            else if (BP2)
             {
                 npc.lifeRegen = 125 / 2;
+                damage = 50 / 2;
             }
-            if (BP3)
+            else if (BP3)
             {
                 npc.lifeRegen = 250 / 2;
+                damage = 50 / 2;
             }
-            if (BP4)
+            else if (BP4)
             {
                 npc.lifeRegen = 500 / 2;
+                damage = 50 / 2;
             }
             base.UpdateLifeRegen(ref damage);
         }
