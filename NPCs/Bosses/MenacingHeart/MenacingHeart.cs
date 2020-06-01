@@ -124,13 +124,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
                 } else if (tpPosRand1 > 4)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(0, 200);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
                 } else if (tpPosRand1 > 2)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 } else if (tpPosRand1 > 0)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
 
                 Projectile.NewProjectile(npc.Center, new Vector2(1, 1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
@@ -151,19 +151,19 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (tpPosRand2 > 6)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
                 }
                 else if (tpPosRand2 > 4)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(0, 200);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
                 }
                 else if (tpPosRand2 > 2)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(-200, 0);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
                 }
                 else if (tpPosRand2 > 0)
                 {
-                    npc.position = Main.player[npc.target].Center + new Vector2(0, -200);
+                    npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
                 }
 
                 Projectile.NewProjectile(npc.Center, new Vector2(1, 1), ProjectileType<MenacingProjectile>(), 100, 1f, npc.whoAmI);
