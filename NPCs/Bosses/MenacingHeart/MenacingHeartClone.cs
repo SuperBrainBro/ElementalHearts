@@ -18,6 +18,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public override void SetDefaults()
         {
             npc.aiStyle = 0;
+            npc.alpha = 128;
             npc.width = 128;
             npc.height = 128;
             npc.damage = 50;
@@ -30,7 +31,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.knockBackResist = 1f;
             npc.noGravity = true;
             npc.noTileCollide = true;
-            npc.timeLeft = 10;
+            npc.timeLeft = 100;
             base.SetDefaults();
         }
     }

@@ -298,12 +298,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(-175, 0) * 1.5f;
+                        clone1.SpawnNPC(-175, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, 175) * 1.5f;
+                        clone2.SpawnNPC(0, 175);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, -175) * 1.5f;
+                        clone3.SpawnNPC(0, -175);
                     }
                     else if (tpPosRand1 > 4)
                     {
@@ -319,12 +322,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, -175) * 1.5f;
+                        clone1.SpawnNPC(0, -175);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(175, 0) * 1.5f;
+                        clone2.SpawnNPC(175, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(-175, 0) * 1.5f;
+                        clone3.SpawnNPC(-175, 0);
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -348,12 +354,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(175, 0) * 1.5f;
+                        clone1.SpawnNPC(175, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, -175) * 1.5f;
+                        clone2.SpawnNPC(0, -175);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, 175) * 1.5f;
+                        clone3.SpawnNPC(0, 175);
                     }
 
                     else if (tpPosRand1 > 0)
@@ -378,12 +387,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, 175) * 1.5f;
+                        clone1.SpawnNPC(0, 175);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(-175, 0) * 1.5f;
+                        clone2.SpawnNPC(-175, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
-                        clone3.npc.position = new Vector2(175, -0) * 1.5f;
+                        clone3.npc.position = new Vector2(175, 0) * 1.5f;
+                        clone3.SpawnNPC(175, 0);
                     }
 
                     SpawnHealHearts(4);
@@ -415,12 +427,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(-200, 0) * 1.5f;
+                        clone1.SpawnNPC(-200, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, 200) * 1.5f;
+                        clone2.SpawnNPC(0, 200);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, -200) * 1.5f;
+                        clone3.SpawnNPC(0, -200);
                     }
                     else if (tpPosRand2 > 4)
                     {
@@ -436,12 +451,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, -200) * 1.5f;
+                        clone1.SpawnNPC(0, -200);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(200, 0) * 1.5f;
+                        clone2.SpawnNPC(200, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(-200, 0) * 1.5f;
+                        clone3.SpawnNPC(-200, 0);
                     }
                     else if (tpPosRand2 > 2)
                     {
@@ -458,12 +476,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(200, 0) * 1.5f;
+                        clone1.SpawnNPC(200, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, -200) * 1.5f;
+                        clone2.SpawnNPC(0, -200);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, 200) * 1.5f;
+                        clone3.SpawnNPC(0, 200);
                     }
                     else if (tpPosRand2 > 0)
                     {
@@ -480,12 +501,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, 200) * 1.5f;
+                        clone1.SpawnNPC(0, 200);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(-200, 0) * 1.5f;
+                        clone2.SpawnNPC(-200, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(200, 0) * 1.5f;
+                        clone3.SpawnNPC(200, 0);
                     }
 
                     SpawnHealHearts(4);
@@ -523,12 +547,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(-225, 0) * 1.5f;
+                        clone1.SpawnNPC(-225, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, 225) * 1.5f;
+                        clone2.SpawnNPC(0, 225);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, -225) * 1.5f;
+                        clone3.SpawnNPC(0, -225);
                     }
                     else if (tpPosRand3 > 4)
                     {
@@ -544,12 +571,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, -225) * 1.5f;
+                        clone1.SpawnNPC(0, -225);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(225, 0) * 1.5f;
+                        clone2.SpawnNPC(225, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(-225, 0) * 1.5f;
+                        clone3.SpawnNPC(-225, 0);
                     }
                     else if (tpPosRand3 > 2)
                     {
@@ -573,12 +603,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(225, 0) * 1.5f;
+                        clone1.SpawnNPC(225, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, -225) * 1.5f;
+                        clone2.SpawnNPC(0, -225);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, 225) * 1.5f;
+                        clone3.SpawnNPC(0, 225);
                     }
                     else if (tpPosRand3 > 0)
                     {
@@ -602,12 +635,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, 225) * 1.5f;
+                        clone1.SpawnNPC(0, 225);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(-225, 0) * 1.5f;
+                        clone2.SpawnNPC(-225, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(225, 0) * 1.5f;
+                        clone3.SpawnNPC(225, 0);
                     }
 
                     SpawnHealHearts(3);
@@ -638,12 +674,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(-250, 0) * 1.5f;
+                        clone1.SpawnNPC(-250, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, 250) * 1.5f;
+                        clone2.SpawnNPC(0, 250);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, -250) * 1.5f;
+                        clone3.SpawnNPC(0, -250);
                     }
                     else if (tpPosRand4 > 4)
                     {
@@ -659,12 +698,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, -250) * 1.5f;
+                        clone1.SpawnNPC(0, -250);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(250, 0) * 1.5f;
+                        clone2.SpawnNPC(250, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(-250, 0) * 1.5f;
+                        clone3.SpawnNPC(-250, 0);
                     }
                     else if (tpPosRand4 > 2)
                     {
@@ -681,12 +723,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(250, 0) * 1.5f;
+                        clone1.SpawnNPC(250, 0);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(0, -250) * 1.5f;
+                        clone2.SpawnNPC(0, -250);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(0, 250) * 1.5f;
+                        clone3.SpawnNPC(0, 250);
                     }
                     else if (tpPosRand4 > 0)
                     {
@@ -703,12 +748,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         MenacingHeartClone clone1 = new MenacingHeartClone();
                         clone1.npc.position = new Vector2(0, 250) * 1.5f;
+                        clone1.SpawnNPC(0, 250);
 
                         MenacingHeartClone clone2 = new MenacingHeartClone();
                         clone2.npc.position = new Vector2(-250, 0) * 1.5f;
+                        clone2.SpawnNPC(-250, 0);
 
                         MenacingHeartClone clone3 = new MenacingHeartClone();
                         clone3.npc.position = new Vector2(250, 0) * 1.5f;
+                        clone3.SpawnNPC(250, 0);
                     }
 
                     SpawnHealHearts(3);
