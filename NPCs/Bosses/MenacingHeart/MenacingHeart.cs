@@ -215,7 +215,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     if (Main.rand.NextBool(2))
                     {
                         GravityProjectiles(1);
-                    } else
+                    }
+                    else
                     {
                         GravityProjectiles(2);
                     }
@@ -404,7 +405,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     if (Main.rand.NextBool(2))
                     {
                         GravityProjectiles(2);
-                    } else
+                    }
+                    else
                     {
                         GravityProjectiles(3);
                     }
