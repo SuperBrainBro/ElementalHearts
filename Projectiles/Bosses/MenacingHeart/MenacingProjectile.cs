@@ -24,6 +24,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 			projectile.hostile = true;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
+			projectile.timeLeft = 540;
 		}
 		public override void AI()
 		{
