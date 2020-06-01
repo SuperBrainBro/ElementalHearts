@@ -2,6 +2,4 @@ displayName = Lite's Elemental Hearts
 author = Vincent Jenei (Lite#4211)
 version = 0.1.2
 homepage = https://discord.gg/TD8EMB8
-includePDB = true
 buildIgnore = *.csproj, *.sln, *.user, *.md, obj\*, Guides\*, bin\*, .vs\*, .git\*, .gitignore
-modReferences = WebmilioCommons
