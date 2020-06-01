@@ -5,35 +5,15 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using System;
+using Microsoft.Xna.Framework.Audio;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
-    [AutoloadBossHead]
-    public class MenacingHeart : ModNPC
+    public class MenacingHeartClone : ModNPC
     {
-        public float bossPhaseHealth;
-
-        public float P1;
-        public float P2;
-        public float P3;
-        public float P4;
-
-        public bool P1P;
-        public bool P2P;
-        public bool P3P;
-        public bool P4P;
-
-        public bool BP1;
-        public bool BP2;
-        public bool BP3;
-        public bool BP4;
-
-        public bool bossLeaveBool;
-
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Menacing Heart");
-            Main.npcFrameCount[npc.type] = 14; // make sure to set this for your modnpcs.
         }
         public override void SetDefaults()
         {
@@ -41,8 +21,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.width = 128;
             npc.height = 128;
             npc.damage = 50;
-            npc.defense = 9;
-            npc.lifeMax = 13000;
+            npc.defense = 0;
+            npc.lifeMax = 1000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
@@ -184,7 +164,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.Roar);
                         P2P = true;
                     }
                 }
@@ -214,7 +193,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.Roar);
                         P3P = true;
                     }
                 }
@@ -244,7 +222,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
                         Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
-                        Main.PlaySound(SoundID.ForceRoar);
                         P4P = true;
                     }
                 }
