@@ -11,6 +11,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
     public class MenacingHeartClone : ModNPC
     {
+        public float cloneTimeLeft;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Menacing Heart");
@@ -31,8 +32,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.knockBackResist = 0f;
             npc.noGravity = true;
             npc.noTileCollide = true;
-            npc.timeLeft = 1;
+
+            cloneTimeLeft = 1000;
             base.SetDefaults();
+        }
+
+        public override void AI()
+        {
+            if (cloneTimeLeft < 0)
+            {
+                npc.active = false;
+            } else
+            {
+                cloneTimeLeft -= 1;
+            }
+            base.AI();
         }
     }
 }
