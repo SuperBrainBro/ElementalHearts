@@ -721,25 +721,61 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public void SpawnHealHearts(int chance)
         {
-            if (Main.rand.NextBool(chance))
+            if (Main.rand.NextBool(chance * 2))
             {
                 Item.NewItem(npc.position, ItemID.Heart);
                 if (Main.rand.NextBool(chance))
                 {
                     Item.NewItem(npc.position, ItemID.Heart);
-                    if (Main.rand.NextBool(chance))
+                    if (Main.rand.NextBool(chance * 2))
                     {
                         Item.NewItem(npc.position, ItemID.Heart);
                     }
                 }
             }
-            else if (Main.rand.NextBool(chance))
+            else if (Main.rand.NextBool(chance * 4))
             {
                 Item.NewItem(npc.position, ItemID.Heart);
                 if (Main.rand.NextBool(chance))
                 {
                     Item.NewItem(npc.position, ItemID.Heart);
-                    if (Main.rand.NextBool(chance))
+                    if (Main.rand.NextBool(chance * 2))
+                    {
+                        Item.NewItem(npc.position, ItemID.Heart);
+                    }
+                }
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.position, ItemID.Heart);
+                    if (Main.rand.NextBool(chance * 2))
+                    {
+                        Item.NewItem(npc.position, ItemID.Heart);
+                    }
+                }
+            }
+            else if (Main.rand.NextBool(chance * 8))
+            {
+                Item.NewItem(npc.position, ItemID.Heart);
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.position, ItemID.Heart);
+                    if (Main.rand.NextBool(chance * 2))
+                    {
+                        Item.NewItem(npc.position, ItemID.Heart);
+                    }
+                }
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.position, ItemID.Heart);
+                    if (Main.rand.NextBool(chance * 2))
+                    {
+                        Item.NewItem(npc.position, ItemID.Heart);
+                    }
+                }
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.position, ItemID.Heart);
+                    if (Main.rand.NextBool(chance * 2))
                     {
                         Item.NewItem(npc.position, ItemID.Heart);
                     }
