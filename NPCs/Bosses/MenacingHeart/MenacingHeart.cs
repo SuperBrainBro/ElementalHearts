@@ -266,7 +266,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
                             direction = direction.RotatedBy(MathHelper.ToRadians(degrees));
                         }
-                    } else if (Main.rand.NextBool(2))
+                    }
+                    else if (Main.rand.NextBool(2))
                     {
                         int amount = Math.Min((int)(2f * npc.lifeMax / npc.life), 10);
 
