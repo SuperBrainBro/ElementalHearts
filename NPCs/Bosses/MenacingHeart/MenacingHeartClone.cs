@@ -23,15 +23,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.height = 128;
             npc.damage = 50;
             npc.defense = -10;
-            npc.lifeMax = 500;
+            npc.lifeMax = 100;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             npc.value = 10000;
             npc.buffImmune[BuffID.Confused] = true;
-            npc.knockBackResist = .33f;
+            npc.knockBackResist = 0f;
             npc.noGravity = true;
             npc.noTileCollide = true;
-            npc.timeLeft = 10;
+            npc.timeLeft = 1;
             base.SetDefaults();
         }
     }
