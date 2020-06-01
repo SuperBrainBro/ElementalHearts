@@ -194,7 +194,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
 
             //This is the phase code, the one below, is the phase 1 code.
-            if (P1 >= 200)
+            if (P1 >= 250)
             {
                 npc.TargetClosest(true);
 
@@ -297,7 +297,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             //Phase 2.
-            if (P2 >= 150)
+            if (P2 >= 200)
             {
                 npc.TargetClosest(true);
 
@@ -375,7 +375,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             //Phase 3.
-            if (P3 >= 50)
+            if (P3 >= 100)
             {
                 npc.TargetClosest(true);
 
@@ -453,7 +453,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             //Phase 4.
-            if (P4 >= 50)
+            if (P4 >= 75)
             {
                 npc.TargetClosest(true);
 
