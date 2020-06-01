@@ -17,7 +17,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
         public override void SetDefaults()
         {
             projectile.CloneDefaults(ProjectileID.Fireball);
-            projectile.timeLeft = 540;
+            projectile.timeLeft = 150;
             projectile.penetrate = -1;
         }
 
