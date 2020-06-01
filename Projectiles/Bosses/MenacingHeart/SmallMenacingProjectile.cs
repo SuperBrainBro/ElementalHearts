@@ -11,7 +11,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fireball");
+            DisplayName.SetDefault("A Menacing Projectiles");
         }
 
         public override void SetDefaults()
@@ -20,7 +20,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
             projectile.width = 14;
             projectile.height = 14;
             projectile.scale = 1.5f;
-            projectile.timeLeft = 200;
+            projectile.timeLeft = 250;
             projectile.penetrate = -1;
         }
 

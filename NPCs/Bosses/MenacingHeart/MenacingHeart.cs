@@ -653,7 +653,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
                     direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
                     int damage = (int)(npc.damage / (Main.damageMultiplier * 2 * 4));
-                    damage *= 4;
+                    damage *= 10;
                     for (int i = 0; i < amount; i++)
                     {
                         Projectile.NewProjectile(npc.Top, direction * 10f, ModContent.ProjectileType<SmallMenacingProjectile>(), damage, 0f, Main.myPlayer);
