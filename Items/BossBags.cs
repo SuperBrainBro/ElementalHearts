@@ -12,7 +12,7 @@ namespace ElementalHearts.Items
 	{
 		public override void OpenVanillaBag(string context, Player player, int arg) {
 			//Reroll for devs
-			if (context == "bossBag") {
+			if (context == "bossBag" && Main.hardMode) {
 				if (player.name == "CAT") {
 					if (Main.rand.NextBool(10))
 					{
@@ -64,7 +64,7 @@ namespace ElementalHearts.Items
 				}
 			}
 			//Normal roll for normies
-			if (context == "bossBag") {
+			if (context == "bossBag" && context == "bossBag" && Main.hardMode) {
 				if (Main.rand.NextBool(20)) {
 					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
