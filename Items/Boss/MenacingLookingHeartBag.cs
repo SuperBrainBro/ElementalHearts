@@ -7,7 +7,7 @@ using ElementalHearts.NPCs.Bosses.MenacingHeart;
 
 namespace ElementalHearts.Items.Boss
 {
-	public class AbominationBag : ModItem
+	public class MenacingLookingHeartBag : ModItem
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Menacing Heart Treasure Bag");
