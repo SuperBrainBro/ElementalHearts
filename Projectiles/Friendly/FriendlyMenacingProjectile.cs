@@ -26,7 +26,7 @@ namespace ElementalHearts.Projectiles.Friendly
 			projectile.ignoreWater = false;
 			projectile.timeLeft = 500;
 
-			projectile.velocity /= 3;
+			projectile.velocity /= 2;
 		}
 		public override void AI()
 		{
