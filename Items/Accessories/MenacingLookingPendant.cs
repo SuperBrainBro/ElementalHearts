@@ -19,10 +19,9 @@ namespace ElementalHearts.Items.Accessories
 
 		public override void SetDefaults()
 		{
-			//sbyte realBackSlot = item.backSlot;
+			item.rare = ItemRarityID.Expert;
 			item.CloneDefaults(ItemID.PanicNecklace);
-			item.value = Item.sellPrice(0, 5, 0, 0);
-			//item.backSlot = realBackSlot;
+			item.value = Item.sellPrice(0, 1, 0, 0);
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)

@@ -65,7 +65,7 @@ namespace ElementalHearts.Items
 			}
 			//Normal roll for normies
 			if (context == "bossBag" && context == "bossBag" && Main.hardMode) {
-				if (Main.rand.NextBool(20)) {
+				if (Main.rand.NextBool(50)) {
 					player.QuickSpawnItem(ItemType<MaskOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<RobeOfCAT>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<WingsOfCAT>(), Main.rand.Next(1, 1));
@@ -81,7 +81,7 @@ namespace ElementalHearts.Items
 						player.QuickSpawnItem(ItemType<AstralStars>(), Main.rand.Next(1, 1));
 					}
 				}
-				if (Main.rand.NextBool(20)) {
+				if (Main.rand.NextBool(50)) {
 					player.QuickSpawnItem(ItemType<ChestLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<MaskLite>(), Main.rand.Next(1, 1));
 					player.QuickSpawnItem(ItemType<WingLite>(), Main.rand.Next(1, 1));
