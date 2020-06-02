@@ -76,6 +76,7 @@ namespace ElementalHearts.Tiles
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Menacing Looking Statue");
+            Tooltip.SetDefault("Summons a... creature?");
         }
 
         public override void SetDefaults()
