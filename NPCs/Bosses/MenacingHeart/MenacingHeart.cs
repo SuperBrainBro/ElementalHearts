@@ -6,6 +6,7 @@ using static Terraria.ModLoader.ModContent;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using System;
 using System.IO;
+using ElementalHearts.Items.Boss;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -955,20 +956,24 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.GreaterHealingPotion;
-            /*int choice = Main.rand.Next(10);
-if (choice == 0) {
-    Item.NewItem(npc.getRect(), ItemType<Trophy>());
-}
-if (Main.expertMode) {
-    Item.NewItem(npc.getRect(), ItemType<TreasureBag>());
-}
-else {
-    choice = Main.rand.Next(7);
-    if (choice == 0) {
-        Item.NewItem(npc.getRect(), ItemType<Mask>());
-    }
-    Item.NewItem(npc.getRect(), ItemType<Item>());
-}*/
+            int choice = Main.rand.Next(10);
+            if (choice == 0)
+            {
+                //Item.NewItem(npc.getRect(), ItemType<Trophy>());
+            }
+            if (Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<MenacingLookingHeartBag>());
+            }
+            else
+            {
+                choice = Main.rand.Next(7);
+                if (choice == 0)
+                {
+                    //Item.NewItem(npc.getRect(), ItemType<Mask>());
+                }
+                //Item.NewItem(npc.getRect(), ItemType<Item>());
+            }
             if (!ElementalHeartsWorld.downedMenacingHeart)
             {
                 ElementalHeartsWorld.downedMenacingHeart = true;
