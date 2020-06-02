@@ -606,7 +606,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
-                        GravityProjectiles(3);
+                        GravityProjectiles(4);
 
                         //Clone 1
                         if (Main.rand.NextBool(4))
@@ -645,7 +645,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
-                        GravityProjectiles(3);
+                        GravityProjectiles(4);
 
                         //Clone 3
                         if (Main.rand.NextBool(4))
@@ -665,7 +665,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
-                        GravityProjectiles(3);
+                        GravityProjectiles(4);
 
                         //Clone 4
                         if (Main.rand.NextBool(5))
