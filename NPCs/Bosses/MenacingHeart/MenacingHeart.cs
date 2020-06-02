@@ -42,8 +42,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.width = 128;
             npc.height = 128;
             npc.damage = 50;
-            npc.defense = 9;
-            npc.lifeMax = 13000;
+            npc.defense = 10;
+            npc.lifeMax = 14000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
