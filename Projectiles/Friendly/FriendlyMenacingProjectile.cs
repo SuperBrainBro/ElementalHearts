@@ -16,15 +16,17 @@ namespace ElementalHearts.Projectiles.Friendly
 		public override void SetDefaults()
 		{
 			//projectile.aiStyle = 0;
-			projectile.penetrate = -1;
+			projectile.penetrate = 0;
 			projectile.width = 22;
 			projectile.height = 22;
 			projectile.alpha =  0;
 			projectile.friendly = true;
 			projectile.hostile = false;
 			projectile.tileCollide = false;
-			projectile.ignoreWater = true;
+			projectile.ignoreWater = false;
 			projectile.timeLeft = 500;
+
+			projectile.velocity /= 3;
 		}
 		public override void AI()
 		{
@@ -33,7 +35,7 @@ namespace ElementalHearts.Projectiles.Friendly
 			//^Not Not Enabled Because It Does Not Work
 
 			//Acceleration Effect
-			projectile.velocity *= 1.05f;
+			projectile.velocity *= 1.01f;
 
 			//Dust
 			int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Main.DiscoColor, 1);
