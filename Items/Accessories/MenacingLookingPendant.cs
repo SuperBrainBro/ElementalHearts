@@ -19,9 +19,9 @@ namespace ElementalHearts.Items.Accessories
 
 		public override void SetDefaults()
 		{
+			item.CloneDefaults(ItemID.PanicNecklace);
 			item.rare = ItemRarityID.Expert;
 			item.expert = true;
-			item.CloneDefaults(ItemID.PanicNecklace);
 			item.value = Item.sellPrice(0, 1, 0, 0);
 		}
 
