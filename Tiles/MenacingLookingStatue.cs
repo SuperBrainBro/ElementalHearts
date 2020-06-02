@@ -32,7 +32,7 @@ namespace ElementalHearts.Tiles
 
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(i * 16, j * 16, 32, 48, ItemType<MenacingStatueItem>());
+            Item.NewItem(i * 16, j * 16, 32, 48, ItemType<MenacingLookingStatueItem>());
         }
 
         public override void HitWire(int i, int j)
@@ -71,7 +71,7 @@ namespace ElementalHearts.Tiles
         }
     }
 
-    public class MenacingStatueItem : ModItem
+    public class MenacingLookingStatueItem : ModItem
     {
         public override void SetStaticDefaults()
         {
