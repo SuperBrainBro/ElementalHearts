@@ -3,8 +3,9 @@ using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
+using ElementalHearts.NPCs.Bosses.MenacingHeart;
 
-namespace ExampleMod.Items.Abomination
+namespace ElementalHearts.Items.Boss
 {
 	public class AbominationBag : ModItem
 	{
@@ -34,6 +35,6 @@ namespace ExampleMod.Items.Abomination
 			player.QuickSpawnItem(ItemType<MenacingLookingPendant>());
 		}
 
-		public override int BossBagNPC => NPCType<ElementalHearts.NPCs.Bosses.MenacingHeart.MenacingHeart>();
+		public override int BossBagNPC => NPCType<MenacingHeart>();
 	}
 }
