@@ -29,14 +29,11 @@ namespace ExampleMod.Items.Abomination
 		public override void OpenBossBag(Player player) {
 			player.TryGettingDevArmor();
 			if (Main.rand.NextBool(7)) {
-				player.QuickSpawnItem(ItemType<AbominationMask>());
+				//player.QuickSpawnItem(ItemType<AbominationMask>());
 			}
-			player.QuickSpawnItem(ItemType<MoltenDrill>());
-			player.QuickSpawnItem(ItemType<ElementResidue>());
-			player.QuickSpawnItem(ItemType<PurityTotem>());
-			player.QuickSpawnItem(ItemType<SixColorShield>());
+			player.QuickSpawnItem(ItemType<MenacingLookingPendant>());
 		}
 
-		public override int BossBagNPC => NPCType<NPCs.Abomination.Abomination>();
+		public override int BossBagNPC => NPCType<ElementalHearts.NPCs.Bosses.MenacingHeart.MenacingHeart>();
 	}
 }
