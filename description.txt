@@ -20,6 +20,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.1.3.1
+	 Small change, made the dev sets only obtainable in hardmode!
 0.1.3
 	 LOTS OF BOSS AI PROGRESS!! I would say, the boss ai is done! Next update will (probably) add in the spawner and a few drops from the boss.
 	 I will also release a video of the boss (preferable no-hit if im able to)!
