@@ -7,7 +7,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 {
-	public class FriendlyMenacingProjectile : ModProjectile
+	public class MenacingProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
