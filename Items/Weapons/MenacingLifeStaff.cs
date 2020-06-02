@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using ElementalHearts.Projectiles.Friendly;
+using Microsoft.Xna.Framework;
 
 namespace ElementalHearts.Items.Weapons
 {
@@ -18,12 +19,12 @@ namespace ElementalHearts.Items.Weapons
 
 		public override void SetDefaults()
 		{
-			item.damage = 145;
+			item.damage = 90;
 			item.magic = true;
 			item.mana = 10;
 			item.width = 26;
 			item.height = 26;
-			item.useTime = 5;
+			item.useTime = 10;
 			item.useAnimation = 5;
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
@@ -35,5 +36,10 @@ namespace ElementalHearts.Items.Weapons
 			item.shootSpeed = 10f;
 		}
 
+		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			Dust.NewDust(position, 16, 16, 267, 0, 0, 0, Main.DiscoColor, 2);
+			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+		}
 	}
 }
