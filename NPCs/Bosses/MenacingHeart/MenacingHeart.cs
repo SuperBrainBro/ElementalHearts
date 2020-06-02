@@ -147,14 +147,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P1P == false)
                     {
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         Main.PlaySound(SoundID.Roar, npc.position);
                         P1P = true;
@@ -177,14 +177,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P2P == false)
                     {
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         Main.PlaySound(SoundID.Roar, npc.position);
                         P2P = true;
@@ -207,14 +207,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P3P == false)
                     {
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         Main.PlaySound(SoundID.Roar, npc.position);
                         P3P = true;
@@ -237,14 +237,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Phase Change Projectiles
                     if (Main.netMode != NetmodeID.MultiplayerClient && P4P == false)
                     {
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(4, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-4, -4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-4, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 4), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(4, 4), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(4, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(4, -4), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -4), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-4, -4), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-4, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         Main.PlaySound(SoundID.Roar, npc.position);
                         P4P = true;
@@ -283,9 +283,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(175, 0);
 
                         //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -310,9 +310,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, 175);
 
                         //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
 
@@ -329,9 +329,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(-175, 0);
 
                         //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -356,9 +356,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
 
                         //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -397,9 +397,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
 
                         //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         GravityProjectiles(2);
@@ -417,9 +417,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
 
                         //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
 
@@ -436,9 +436,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
 
                         //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         GravityProjectiles(2);
@@ -456,9 +456,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
 
                         //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         GravityProjectiles(2);
@@ -489,9 +489,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(225, 0);
 
                         //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -516,9 +516,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, 225);
 
                         //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
 
@@ -535,9 +535,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(-225, 0);
 
                         //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -562,9 +562,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, -225);
 
                         //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -602,9 +602,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(250, 0);
 
                         //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         GravityProjectiles(4);
@@ -622,9 +622,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, 250);
 
                         //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //No Gravity Projectiles
 
@@ -641,9 +641,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(-250, 0);
 
                         //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         GravityProjectiles(4);
@@ -661,9 +661,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         npc.Center = Main.player[npc.target].Center + new Vector2(0, -250);
 
                         //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
+                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<FriendlyMenacingProjectile>(), 50, 1f, Main.myPlayer);
 
                         //Gravity Projectiles
                         GravityProjectiles(4);

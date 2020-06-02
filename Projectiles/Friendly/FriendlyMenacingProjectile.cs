@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
+namespace ElementalHearts.Projectiles.Friendly
 {
 	public class FriendlyMenacingProjectile : ModProjectile
 	{
@@ -20,8 +20,8 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 			projectile.width = 22;
 			projectile.height = 22;
 			projectile.alpha =  0;
-			projectile.friendly = false;
-			projectile.hostile = true;
+			projectile.friendly = true;
+			projectile.hostile = false;
 			projectile.tileCollide = false;
 			projectile.ignoreWater = true;
 			projectile.timeLeft = 500;
@@ -33,7 +33,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
 			//^Not Not Enabled Because It Does Not Work
 
 			//Acceleration Effect
-			projectile.velocity *= 1.02f;
+			projectile.velocity *= 1.05f;
 
 			//Dust
 			int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Main.DiscoColor, 1);
