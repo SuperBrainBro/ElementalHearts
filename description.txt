@@ -20,6 +20,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.2
+	 Crimstone hearts can now only be used the right amount of time.
 0.2.1
 	 Boss now available also for Crimson worlds
 0.2

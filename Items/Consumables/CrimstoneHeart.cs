@@ -18,8 +18,8 @@ namespace ElementalHearts.Items.Consumables
 			item.rare = ItemRarityID.White;
 			item.value = 0;
 		}
-
-		public override bool CanUseItem(Player player) {
+		public override bool CanUseItem(Player player)
+		{
 			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CrimstoneLife <
 				   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
 		}
@@ -30,7 +30,7 @@ namespace ElementalHearts.Items.Consumables
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(1, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().CrimsandLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().CrimstoneLife += 1;
 			return true;
 		}
 
