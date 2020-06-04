@@ -14,13 +14,10 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts
 {
-
     public class ElementalHeartsPlayer : ModPlayer
     {
         //Debuffs/Buffs
         public bool curseCATsCurse;
-
-        public int ElementalHeartMax = 1;
 
         ////Life Crystals////
 
@@ -131,8 +128,8 @@ namespace ElementalHearts
 
         public override void ResetEffects()
         {
-            ElementalHeartsConfig config = new ElementalHeartsConfig();
-            ElementalHeartMax = config.MaxElementalHeartConfig;
+            //ElementalHeartsConfig config = new ElementalHeartsConfig();
+
 
             //Debuffs/Buffs
             curseCATsCurse = false;
