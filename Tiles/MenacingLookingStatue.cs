@@ -91,7 +91,15 @@ namespace ElementalHearts.Tiles
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.LifeCrystal, 5);
             recipe.AddIngredient(ItemID.StoneBlock, 100);
-            recipe.AddIngredient(ItemID.VilePowder, 25 );
+            recipe.AddIngredient(ItemID.VilePowder, 25);
+            recipe.AddTile(TileID.DemonAltar);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.LifeCrystal, 5);
+            recipe.AddIngredient(ItemID.StoneBlock, 100);
+            recipe.AddIngredient(ItemID.ViciousPowder, 25);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

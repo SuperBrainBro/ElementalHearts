@@ -20,6 +20,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.1
+	 Boss now available also for Crimson worlds
 0.2
 	 The boss is officially released!
 	 You can craft his spawner with 5 life crystals, 100 stone, and 25 vile powder at a demon altar.
