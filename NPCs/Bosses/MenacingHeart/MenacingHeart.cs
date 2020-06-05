@@ -124,14 +124,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.velocity = new Vector2(0, -0.5f);
                     bossLeaveBool = true;
-                    npc.timeLeft = 6;
+                    npc.timeLeft = 0;
                 }
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Main.DiscoColor, 2);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.Red, 1);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.Black, 1);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.White, 1);
 
-                npc.velocity *= 1.015f;
+                npc.velocity *= 1.05f;
             }
             else
             {

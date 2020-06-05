@@ -26,8 +26,8 @@ namespace ElementalHearts.Items.Weapons
 			item.mana = 10;
 			item.width = 48;
 			item.height = 48;
-			item.useTime = 15;
-			item.useAnimation = 15;
+			item.useTime = 16;
+			item.useAnimation = 16;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.knockBack = 8;
