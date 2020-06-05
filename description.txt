@@ -21,6 +21,8 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 
 Change-Log:
 0.2.2
+	 New weapon: Menacing Life Staff: Casts heart shaped projectiles that suck life from anything it touches. 
+	 Boss now has sounds when he changes phases.
 	 Crimstone hearts can now only be used the right amount of time.
 	 Fixed the empty heart item, it now clears ALL the heart's stats, and also doesn't crash on use anymore.
 0.2.1
