@@ -971,7 +971,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 Item.NewItem(npc.getRect(), ItemType<MenacingLookingHeartBag>());
             }
-            {
+            else {
                 choice = Main.rand.Next(7);
                 if (choice == 0)
                 {
