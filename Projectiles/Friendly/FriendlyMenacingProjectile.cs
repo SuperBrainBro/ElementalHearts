@@ -35,18 +35,18 @@ namespace ElementalHearts.Projectiles.Friendly
             {
                 if (Main.rand.NextBool(2))
                 {
-                    int dust1 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Main.DiscoColor, 1);
+                    int dust1 = Dust.NewDust(projectile.Center, 1, 1, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Main.DiscoColor, 1);
                     Main.dust[dust1].velocity /= 2f;
                 }
                 if (Main.rand.NextBool(2))
                 {
-                    int dust2 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Black, 1);
+                    int dust2 = Dust.NewDust(projectile.Center, 1, 1, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.Black, 1);
                     Main.dust[dust2].velocity /= 2f;
 
                 }
                 if (Main.rand.NextBool(2))
                 {
-                    int dust3 = Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.White, 1);
+                    int dust3 = Dust.NewDust(projectile.Center, 1, 1, DustID.Blood, projectile.velocity.X, projectile.velocity.Y, 0, Color.White, 1);
                     Main.dust[dust3].velocity /= 2f;
                 }
             }
@@ -80,7 +80,7 @@ namespace ElementalHearts.Projectiles.Friendly
         {
             for (int k = 0; k < 5; k++)
             {
-                Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, DustID.Blood, projectile.oldVelocity.X * 0.5f, projectile.oldVelocity.Y * 0.5f);
+                Dust.NewDust(projectile.Center + projectile.velocity, 1, 1, DustID.Blood, projectile.oldVelocity.X * 0.5f, projectile.oldVelocity.Y * 0.5f);
             }
             Main.PlaySound(SoundID.Item25, projectile.position);
         }

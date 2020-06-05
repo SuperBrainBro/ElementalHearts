@@ -77,6 +77,7 @@ namespace ElementalHearts.Tiles
         {
             DisplayName.SetDefault("Menacing Looking Statue");
             Tooltip.SetDefault("Summons a... creature?");
+            ItemID.Sets.SortingPriorityBossSpawns[item.type] = 13; // This helps sort inventory know this is a boss summoning item.
         }
 
         public override void SetDefaults()

@@ -17,6 +17,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
     {
         public float bossPhaseHealth;
 
+        public float timeLeftTillDespawn;
+
         public float P1;
         public float P2;
         public float P3;
@@ -59,6 +61,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.npcSlots = 5f;
             npc.boss = true;
             npc.netAlways = true;
+            npc.timeLeft = 0;
 
             bossPhaseHealth = npc.lifeMax / 4;
             base.SetDefaults();
@@ -124,14 +127,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.velocity = new Vector2(0, -0.5f);
                     bossLeaveBool = true;
-                    npc.timeLeft = 0;
                 }
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Main.DiscoColor, 2);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.Red, 1);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.Black, 1);
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.White, 1);
 
-                npc.velocity *= 1.05f;
+                npc.velocity *= 1.04f;
+                
+                if (timeLeftTillDespawn > 30)
+                {
+                    npc.active = false;
+                } else
+                {
+                    timeLeftTillDespawn += .1f;
+                }
             }
             else
             {
