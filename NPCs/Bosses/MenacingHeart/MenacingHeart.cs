@@ -8,6 +8,7 @@ using System;
 using System.IO;
 using ElementalHearts.Items.Boss;
 using Terraria.Audio;
+using ElementalHearts.Items.Weapons;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -970,14 +971,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 Item.NewItem(npc.getRect(), ItemType<MenacingLookingHeartBag>());
             }
-            else
             {
                 choice = Main.rand.Next(7);
                 if (choice == 0)
                 {
                     //Item.NewItem(npc.getRect(), ItemType<Mask>());
                 }
-                //Item.NewItem(npc.getRect(), ItemType<Item>());
+                Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());
             }
             if (!ElementalHeartsWorld.downedMenacingHeart)
             {
