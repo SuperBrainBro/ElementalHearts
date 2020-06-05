@@ -87,8 +87,8 @@ namespace ElementalHearts.Projectiles.Friendly
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            int healAmount = damage / 10 + (int)Main.rand.NextFloat(10);
-            healAmount /= 1 + (int)Main.rand.NextFloat(3);
+            int healAmount = damage / 10 + (int)Main.rand.NextFloat(5);
+            healAmount /= 1 + (int)Main.rand.NextFloat(4);
             Main.player[projectile.owner].HealEffect(healAmount, true);
             Main.player[projectile.owner].statLife += healAmount;
             projectile.Kill();        
