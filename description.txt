@@ -20,6 +20,12 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.3
+	 Added compatability with the boss checklist.
+	 Nerfed the menacing life staff a bit.
+	 Refined the boss a bit, fixed his projectile's dust.
+	 The boss now PROPERLY despawns.
+	 
 0.2.2
 	 New weapon: Menacing Life Staff: Casts heart shaped projectiles that suck life from anything it touches. 
 	 Boss now has sounds when he changes phases.

@@ -606,5 +606,23 @@ namespace ElementalHearts
         {
             reader.ReadInt32();
         }
+
+        public override void ProcessTriggers(TriggersSet triggersSet)
+        {
+            if (ElementalHearts.OpenHeartUI.JustPressed)
+            {
+                if (GetInstance<ElementalHearts>().HeartUIOpen)
+                {
+                    Main.NewText("Closed Heart UI", Color.Red);
+                    GetInstance<ElementalHearts>().HideMyUI();
+                } 
+                else
+                {
+                    Main.NewText("Opened Heart UI", Color.Red);
+                    GetInstance<ElementalHearts>().ShowMyUI();
+                }
+            }
+            base.ProcessTriggers(triggersSet);
+        }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using ElementalHearts.Items.Dev.CAT;
 using System;
 using System.Collections.Generic;
-using System.Messaging;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
