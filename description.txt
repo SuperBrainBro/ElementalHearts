@@ -21,6 +21,7 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 
 Change-Log:
 0.2.4
+	 Fixed the glass heart not adding to the corresponding material.
 	 Boss statue now also takes 25 wires, so that you can't accidentally make the spawner without a way to spawn it it.
 	 Removed Missile Lite (an uncompleted dev weapon which I kinda gave up on)
 0.2.3
