@@ -19,13 +19,6 @@ namespace ElementalHearts
 					Projectile.NewProjectile(projectile.position, Main.player[projectile.owner].velocity, ProjectileID.GiantBee, 50, 0, Main.player[projectile.owner].whoAmI);
 				}
 			}
-			if (Main.player[projectile.owner].HeldItem.type == ItemType<MissileLite>())
-			{
-				if (Main.rand.NextBool(20))
-				{
-					Projectile.NewProjectile(projectile.position, Main.player[projectile.owner].velocity, ProjectileID.GiantBee, 50, 0, Main.player[projectile.owner].whoAmI);
-				}
-			}
 			base.Kill(projectile, timeLeft);
 		}
 		public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
@@ -48,76 +41,30 @@ namespace ElementalHearts
 					if (Main.rand.NextBool(2))
 					{
 						//Only spawn Horizontal
-						int NPCProjLite1 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite2 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 0) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite3 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite4 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 0) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 0) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 0) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
 					}
 					else if (Main.rand.NextBool(2))
 					{
 						//Only spawn Diagonal
-						int NPCProjLite1 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite2 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite3 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite4 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
 					}
 					else if (Main.rand.NextBool(4))
 					{
 						//Spawn both
-						int NPCProjLite1 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite2 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 0) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite3 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite4 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 0) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite5 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite6 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite7 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite8 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-					}
-				}
-			}
-
-			if (Main.player[projectile.owner].HeldItem.type == ItemType<MissileLite>())
-			{
-				if (Main.rand.NextBool(8))
-				{
-					target.AddBuff(BuffID.Midas, 30);
-				}
-				else
-				{
-					if (Main.rand.NextBool(10))
-					{
-						target.AddBuff(BuffID.ShadowFlame, 30);
-					}
-				}
-				if (Main.rand.NextBool(8))
-				{
-					if (Main.rand.NextBool(2))
-					{
-						//Only spawn Horizontal
-						int NPCProjLite1 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite2 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 0) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite3 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite4 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 0) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-					}
-					else if (Main.rand.NextBool(2))
-					{
-						//Only spawn Diagonal
-						int NPCProjLite1 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite2 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite3 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite4 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, -10) / 2, ProjectileID.ChlorophyteBullet, 20 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-					}
-					else if (Main.rand.NextBool(4))
-					{
-						//Spawn both
-						int NPCProjLite1 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite2 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 0) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite3 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite4 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 0) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite5 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite6 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite7 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
-						int NPCProjLite8 = Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 0) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(0, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 0) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(10, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, 10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
+						Projectile.NewProjectile(Main.player[projectile.owner].position, new Vector2(-10, -10) / 2, ProjectileID.ChlorophyteBullet, 10 / 2, 1.5f, Main.player[projectile.owner].whoAmI);
 					}
 				}
 			}
