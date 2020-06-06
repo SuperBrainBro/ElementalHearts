@@ -93,6 +93,7 @@ namespace ElementalHearts.Tiles
             recipe.AddIngredient(ItemID.LifeCrystal, 5);
             recipe.AddIngredient(ItemID.StoneBlock, 100);
             recipe.AddIngredient(ItemID.VilePowder, 25);
+            recipe.AddIngredient(ItemID.Wire, 50);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
