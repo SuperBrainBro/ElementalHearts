@@ -150,8 +150,8 @@ namespace ElementalHearts
 			//Start Panel
 			startPanel = new UIPanel();
 			startPanel.Width.Set(300, 0);
-			startPanel.Height.Set(600, 0);
-			startPanel.VAlign = .75f;
+			startPanel.Height.Set(400, 0);
+			startPanel.VAlign = .5f;
 			startPanel.HAlign = .01575f;
 			startPanel.PaddingLeft = 10f;
 			startPanel.PaddingRight = 10f;
