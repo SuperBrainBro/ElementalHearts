@@ -126,6 +126,13 @@ namespace ElementalHearts
 		public Color buttonColor3;
 		public Color buttonColor4;
 
+		public bool preHardmodeOpen;
+		public bool hardmodeOpen;
+		public bool calamityOpen;
+		public bool thoriumOpen;
+		public bool expertOpen;
+		
+
 		public override void OnInitialize()
 		{
 			//Colors//
@@ -144,6 +151,13 @@ namespace ElementalHearts
 			Vector4 butCol4 = new Vector4(244, 160, 0, 255);
 			butCol4 /= 255;
 			buttonColor4 = new Color(butCol4);
+
+			//Bools//
+			preHardmodeOpen = false;
+			hardmodeOpen = false;
+			calamityOpen = false;
+			thoriumOpen = false;
+			expertOpen = false;
 
 			//Panels//
 
@@ -257,8 +271,77 @@ namespace ElementalHearts
 		}
 		private void OnButtonClick(UIMouseEvent evt, UIElement listeningElement)
 		{
-			//Open the pre hardmode menu
-			textPreHardmode.SetText("Pre-Hardmode");
+			//Pre-Hardmode
+			if(listeningElement == buttonPreHardmode)
+			{
+				if (preHardmodeOpen)
+				{
+					Main.NewText("Closed Pre-Hardmode Section.", Color.Red);
+				}
+				else
+				{
+					Main.NewText("Opened Pre-Hardmode Section.", Color.Red);
+				}								
+			}
+
+			//Hardmode
+			if (listeningElement == buttonHardmode)
+			{
+				if (preHardmodeOpen)
+				{
+					Main.NewText("Closed Hardmode Section.", Color.Red);
+				}
+				else
+				{
+					Main.NewText("Opened Hardmode Section.", Color.Red);
+				}
+			}
+
+			//Calamity
+			if (listeningElement == buttonCalamity)
+			{
+				if (preHardmodeOpen)
+				{
+					Main.NewText("Closed Calamity Section.", Color.Red);
+				}
+				else
+				{
+					Main.NewText("Opened Calamity Section.", Color.Red);
+				}
+			}
+
+			//Thorium
+			if (listeningElement == buttonThorium)
+			{
+				if (preHardmodeOpen)
+				{
+					Main.NewText("Closed Thorium Section.", Color.Red);
+				}
+				else
+				{
+					Main.NewText("Opened Thorium Section.", Color.Red);
+				}
+			}
+
+			//Expert
+			if (listeningElement == buttonExpert)
+			{
+				if (Main.expertMode)
+				{
+					if (preHardmodeOpen)
+					{
+						Main.NewText("Closed Expert Section.", Color.Red);
+					}
+					else
+					{
+						Main.NewText("Opened Expert Section.", Color.Red);
+					}
+				} 
+				else
+				{
+					Main.NewText("You Are Not In Expert Mode.", Color.Red);
+				}
+			}
 		}
 		public override void Update(GameTime gameTime)
 		{

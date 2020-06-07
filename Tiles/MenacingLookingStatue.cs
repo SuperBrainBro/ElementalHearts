@@ -117,9 +117,9 @@ namespace ElementalHearts.Tiles
             int ResetIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Reset"));
             if (ResetIndex != -1)
             {
-                tasks.Insert(ResetIndex + 1, new PassLegacy("Example Mod Statue Setup", delegate (GenerationProgress progress)
+                tasks.Insert(ResetIndex + 1, new PassLegacy("Menacing Looking Statue Setup", delegate (GenerationProgress progress)
                 {
-                    progress.Message = "Adding ExampleMod Statue";
+                    progress.Message = "Adding ElementalHearts Statue";
 
                     // Not necessary, just a precaution.
                     if (WorldGen.statueList.Any(point => point.X == TileType<MenacingLookingStatue>()))
