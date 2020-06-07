@@ -158,7 +158,7 @@ namespace ElementalHearts
 			startPanel.PaddingTop = 10f;
 			startPanel.PaddingBottom = 10f;
 
-			startPanel.BackgroundColor = Color.White * 0.5f;
+			startPanel.BackgroundColor = Color.White * 0.25f;
 			Append(startPanel);
 
 			startHeader = new UIText("Elemental Hearts", .75f, true);
