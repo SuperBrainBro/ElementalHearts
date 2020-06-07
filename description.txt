@@ -20,6 +20,9 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.5
+	 Some more UI progress.
+	 Fixed the boss statue recipe.
 0.2.4
 	 UI is now more transparent.
 	 Fixed the glass heart not adding to the corresponding material.
