@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Terraria;
@@ -126,6 +127,24 @@ namespace ElementalHearts
         //Multiplayer Thing
         public bool nonStopParty;
 
+        //Thorium Mod
+        public int AquaiteLife;
+        public int BrackishClumpLife;
+        public int DepthsRockLife;
+        public int IllumiteLife;
+        public int LifeQuartzLife;
+        public int LodestoneLife;
+        public int MagmaLife;
+        public int MossyMarineRockLife;
+        public int OnyxLife;
+        public int OpalLife;
+        public int PearlLife;
+        public int PermafrostLife;
+        public int SmoothCoalLife;
+        public int ThoriumLife;
+        public int ValadiumLife;
+        public int YewWoodLife;
+
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
@@ -235,6 +254,24 @@ namespace ElementalHearts
             //Dev Hearts
             player.statLifeMax2 += HeartOfCAT * 5;
             player.statLifeMax2 += CrystalLite * 5;
+
+            //Thorium Mod
+            player.statLifeMax2 += AquaiteLife * 1;
+            player.statLifeMax2 += BrackishClumpLife * 1;
+            player.statLifeMax2 += DepthsRockLife * 1;
+            player.statLifeMax2 += IllumiteLife * 1;
+            player.statLifeMax2 += LifeQuartzLife * 1;
+            player.statLifeMax2 += LodestoneLife * 1;
+            player.statLifeMax2 += MagmaLife * 1;
+            player.statLifeMax2 += MossyMarineRockLife * 1;
+            player.statLifeMax2 += OnyxLife * 1;
+            player.statLifeMax2 += OpalLife * 1;
+            player.statLifeMax2 += PearlLife * 1;
+            player.statLifeMax2 += PermafrostLife * 1;
+            player.statLifeMax2 += SmoothCoalLife * 1;
+            player.statLifeMax2 += ThoriumLife * 1;
+            player.statLifeMax2 += ValadiumLife * 1;
+            player.statLifeMax2 += YewWoodLife * 1;
         }
         public override void UpdateDead()
         {
@@ -367,6 +404,24 @@ namespace ElementalHearts
             packet.Write(HeartOfCAT);
             packet.Write(CrystalLite);
 
+            //Thorium Mod
+            packet.Write(AquaiteLife);
+            packet.Write(BrackishClumpLife);
+            packet.Write(DepthsRockLife);
+            packet.Write(IllumiteLife);
+            packet.Write(LifeQuartzLife);
+            packet.Write(LodestoneLife);
+            packet.Write(MagmaLife);
+            packet.Write(MossyMarineRockLife);
+            packet.Write(OnyxLife);
+            packet.Write(OpalLife);
+            packet.Write(PearlLife);
+            packet.Write(PermafrostLife);
+            packet.Write(SmoothCoalLife);
+            packet.Write(ThoriumLife);
+            packet.Write(ValadiumLife);
+            packet.Write(YewWoodLife);
+
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -488,6 +543,24 @@ namespace ElementalHearts
                 { "HeartOfCAT", HeartOfCAT},
                 { "CrystalLite", CrystalLite},
 
+                //Thorium Mod
+                { "AquaiteLife", AquaiteLife},
+                { "BrackishClumpLife", BrackishClumpLife},
+                { "DepthsRockLife", DepthsRockLife},
+                { "IllumiteLife", IllumiteLife},
+                { "LifeQuartzLife", LifeQuartzLife},
+                { "LodestoneLife", LodestoneLife},
+                { "MagmaLife", MagmaLife},
+                { "MossyMarineRockLife", MossyMarineRockLife},
+                { "OnyxLife", OnyxLife},
+                { "OpalLife", OpalLife},
+                { "PearlLife", PearlLife},
+                { "PermafrostLife", PermafrostLife},
+                { "SmoothCoalLife", SmoothCoalLife},
+                { "ThoriumLife", ThoriumLife},
+                { "ValadiumLife", ValadiumLife},
+                { "YewWoodLife", YewWoodLife},
+
                 //Other
                 {"nonStopParty", nonStopParty},
                 };
@@ -598,6 +671,24 @@ namespace ElementalHearts
             //Dev Hearts
             HeartOfCAT = tag.GetInt("HeartOfCAT");
             CrystalLite = tag.GetInt("CrystalLite");
+
+            //Thorium Mod
+            AquaiteLife = tag.GetInt("AquaiteLife");
+            BrackishClumpLife = tag.GetInt("BrackishClumpLife");
+            DepthsRockLife = tag.GetInt("DepthsRockLife");
+            IllumiteLife = tag.GetInt("IllumiteLife");
+            LifeQuartzLife = tag.GetInt("LifeQuartzLife");
+            LodestoneLife = tag.GetInt("LodestoneLife");
+            MagmaLife = tag.GetInt("MagmaLife");
+            MossyMarineRockLife = tag.GetInt("MossyMarineRockLife");
+            OnyxLife = tag.GetInt("OnyxLife");
+            OpalLife = tag.GetInt("OpalLife");
+            PearlLife = tag.GetInt("PearlLife");
+            PermafrostLife = tag.GetInt("PermafrostLife");
+            SmoothCoalLife = tag.GetInt("SmoothCoalLife");
+            ThoriumLife = tag.GetInt("ThoriumLife");
+            ValadiumLife = tag.GetInt("ValadiumLife");
+            YewWoodLife = tag.GetInt("YewWoodLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }
