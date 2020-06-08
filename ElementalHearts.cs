@@ -17,353 +17,366 @@ using Terraria.GameContent.UI.Elements;
 
 namespace ElementalHearts
 {
-	public class ElementalHearts : Mod
-	{
-		public static ModHotKey OpenHeartUI;
-		public bool HeartUIOpen;
-		public override void PostSetupContent() {
-			// Showcases mod support with Boss Checklist without referencing the mod
-			Mod bossChecklist = ModLoader.GetMod("BossChecklist");
-			if (bossChecklist != null) {
-				bossChecklist.Call("AddBoss", 5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
-				new List<int>() { 2493 /*Mask*/, 2489 /*Trophy; Change it later; I set default items for base*/ },
-				new List<int>() { ModContent.ItemType<Items.Boss.MenacingLookingHeartBag>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
-				"Find and activate a [i:" + ItemType("Tiles.MenacingLookingStatueItem") + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
-			}
-		}
+    public class ElementalHearts : Mod
+    {
+        public static ModHotKey OpenHeartUI;
+        public bool HeartUIOpen;
+        public override void PostSetupContent()
+        {
+            // Showcases mod support with Boss Checklist without referencing the mod
+            Mod bossChecklist = ModLoader.GetMod("BossChecklist");
+            if (bossChecklist != null)
+            {
+                bossChecklist.Call("AddBoss", 5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
+                new List<int>() { 2493 /*Mask*/, 2489 /*Trophy; Change it later; I set default items for base*/ },
+                new List<int>() { ModContent.ItemType<Items.Boss.MenacingLookingHeartBag>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
+                "Find and activate a [i:" + ItemType("Tiles.MenacingLookingStatueItem") + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
+            }
+        }
 
-		//UI STUFF
-		internal UserInterface MyInterface;
-		internal TheUI MyUI;
-		public override void Load()
-		{
-			// Registers a new hotkey
-			OpenHeartUI = RegisterHotKey("Open Heart UI", "H"); // See https://docs.microsoft.com/en-us/previous-versions/windows/xna/bb197781(v=xnagamestudio.41) for special keys
+        //UI STUFF
+        internal UserInterface MyInterface;
+        internal TheUI MyUI;
+        public override void Load()
+        {
+            // Registers a new hotkey
+            OpenHeartUI = RegisterHotKey("Open Heart UI", "H"); // See https://docs.microsoft.com/en-us/previous-versions/windows/xna/bb197781(v=xnagamestudio.41) for special keys
 
-			if (!Main.dedServ)
-			{
-				MyInterface = new UserInterface();
+            if (!Main.dedServ)
+            {
+                MyInterface = new UserInterface();
 
-				MyUI = new TheUI();
-				MyUI.Activate(); // Activate calls Initialize() on the UIState if not initialized, then calls OnActivate and then calls Activate on every child element
-			}
-			base.Load();
-		}
-		public override void Unload()
-		{
-			MyUI?.UnLoadUI(); // If you hold data that needs to be unloaded, call it in OO-fashion
-			MyUI = null;
-			base.Unload();
-		}
+                MyUI = new TheUI();
+                MyUI.Activate(); // Activate calls Initialize() on the UIState if not initialized, then calls OnActivate and then calls Activate on every child element
+            }
+            base.Load();
+        }
+        public override void Unload()
+        {
+            MyUI?.UnLoadUI(); // If you hold data that needs to be unloaded, call it in OO-fashion
+            MyUI = null;
+            base.Unload();
+        }
 
-		private GameTime _lastUpdateUiGameTime;
-		public override void UpdateUI(GameTime gameTime)
-		{
-			_lastUpdateUiGameTime = gameTime;
-			if (MyInterface?.CurrentState != null)
-			{
-				MyInterface.Update(gameTime);
-			}
-		}
+        private GameTime _lastUpdateUiGameTime;
+        public override void UpdateUI(GameTime gameTime)
+        {
+            _lastUpdateUiGameTime = gameTime;
+            if (MyInterface?.CurrentState != null)
+            {
+                MyInterface.Update(gameTime);
+            }
+        }
 
-		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
-		{
-			int mouseTextIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
-			if (mouseTextIndex != -1)
-			{
-				layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer(
-					"MyMod: MyInterface",
-					delegate
-					{
-						if (_lastUpdateUiGameTime != null && MyInterface?.CurrentState != null)
-						{
-							MyInterface.Draw(Main.spriteBatch, _lastUpdateUiGameTime);
-						}
-						return true;
-					},
-					   InterfaceScaleType.UI));
-			}
-		}
+        public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
+        {
+            int mouseTextIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
+            if (mouseTextIndex != -1)
+            {
+                layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer(
+                    "MyMod: MyInterface",
+                    delegate
+                    {
+                        if (_lastUpdateUiGameTime != null && MyInterface?.CurrentState != null)
+                        {
+                            MyInterface.Draw(Main.spriteBatch, _lastUpdateUiGameTime);
+                        }
+                        return true;
+                    },
+                       InterfaceScaleType.UI));
+            }
+        }
 
-		internal void ShowMyUI()
-		{
-			HeartUIOpen = true;
-			MyInterface?.SetState(MyUI);
-		}
+        internal void ShowMyUI()
+        {
+            HeartUIOpen = true;
+            MyInterface?.SetState(MyUI);
+        }
 
-		internal void HideMyUI()
-		{
-			HeartUIOpen = false;
-			MyInterface?.SetState(null);
-		}		
-	}
+        internal void HideMyUI()
+        {
+            HeartUIOpen = false;
+            MyInterface?.SetState(null);
+        }
+    }
 
-	//UI CLASS
-	public class TheUI : UIState
-	{
-		//Panels
-		private UIPanel startPanel;
-		private UIText startHeader;
+    //UI CLASS
+    public class TheUI : UIState
+    {
+        //Panels
+        private UIPanel startPanel;
+        private UIText startHeader;
 
-		//Buttons
-		public UIPanel buttonPreHardmode;
-		public UIText textPreHardmode;
+        //Buttons
+        public UIPanel buttonPreHardmode;
+        public UIText textPreHardmode;
 
-		public UIPanel buttonHardmode;
-		public UIText textHardmode;
+        public UIPanel buttonHardmode;
+        public UIText textHardmode;
 
-		public UIPanel buttonCalamity;
-		public UIText textCalamity;
+        public UIPanel buttonCalamity;
+        public UIText textCalamity;
 
-		public UIPanel buttonThorium;
-		public UIText textThorium;
+        public UIPanel buttonThorium;
+        public UIText textThorium;
 
-		public UIPanel buttonExpert;
-		public UIText textExpert;
+        public UIPanel buttonExpert;
+        public UIText textExpert;
 
-		public Color buttonColor1;
-		public Color buttonColor2;
-		public Color buttonColor3;
-		public Color buttonColor4;
+        public Color buttonColor1;
+        public Color buttonColor2;
+        public Color buttonColor3;
+        public Color buttonColor4;
 
-		public bool preHardmodeOpen;
-		public bool hardmodeOpen;
-		public bool calamityOpen;
-		public bool thoriumOpen;
-		public bool expertOpen;
-		
+        public bool preHardmodeOpen;
+        public bool hardmodeOpen;
+        public bool calamityOpen;
+        public bool thoriumOpen;
+        public bool expertOpen;
 
-		public override void OnInitialize()
-		{
-			//Colors//
-			Vector4 butCol1 = new Vector4(219, 68, 55, 255);
-			butCol1 /= 255;
-			buttonColor1 = new Color(butCol1);
 
-			Vector4 butCol2 = new Vector4(15, 157, 88, 255);
-			butCol2 /= 255;
-			buttonColor2 = new Color(butCol2);
+        public override void OnInitialize()
+        {
+            //Colors//
+            Vector4 butCol1 = new Vector4(219, 68, 55, 255);
+            butCol1 /= 255;
+            buttonColor1 = new Color(butCol1);
 
-			Vector4 butCol3 = new Vector4(66, 133, 244, 255);
-			butCol3 /= 255;
-			buttonColor3 = new Color(butCol3);
+            Vector4 butCol2 = new Vector4(15, 157, 88, 255);
+            butCol2 /= 255;
+            buttonColor2 = new Color(butCol2);
 
-			Vector4 butCol4 = new Vector4(244, 160, 0, 255);
-			butCol4 /= 255;
-			buttonColor4 = new Color(butCol4);
+            Vector4 butCol3 = new Vector4(66, 133, 244, 255);
+            butCol3 /= 255;
+            buttonColor3 = new Color(butCol3);
 
-			//Bools//
-			preHardmodeOpen = false;
-			hardmodeOpen = false;
-			calamityOpen = false;
-			thoriumOpen = false;
-			expertOpen = false;
+            Vector4 butCol4 = new Vector4(244, 160, 0, 255);
+            butCol4 /= 255;
+            buttonColor4 = new Color(butCol4);
 
-			//Panels//
+            //Bools//
+            preHardmodeOpen = false;
+            hardmodeOpen = false;
+            calamityOpen = false;
+            thoriumOpen = false;
+            expertOpen = false;
 
-			//Start Panel
-			startPanel = new UIPanel();
-			startPanel.Width.Set(300, 0);
-			startPanel.Height.Set(400, 0);
-			startPanel.VAlign = .5f;
-			startPanel.HAlign = .01575f;
-			startPanel.PaddingLeft = 10f;
-			startPanel.PaddingRight = 10f;
-			startPanel.PaddingTop = 10f;
-			startPanel.PaddingBottom = 10f;
+            //Panels//
 
-			startPanel.BackgroundColor = Color.White * 0.25f;
-			Append(startPanel);
+            //Start Panel
+            startPanel = new UIPanel();
+            startPanel.Width.Set(300, 0);
+            startPanel.Height.Set(400, 0);
+            startPanel.VAlign = .5f;
+            startPanel.HAlign = .01575f;
+            startPanel.PaddingLeft = 10f;
+            startPanel.PaddingRight = 10f;
+            startPanel.PaddingTop = 10f;
+            startPanel.PaddingBottom = 10f;
 
-			startHeader = new UIText("Elemental Hearts", .75f, true);
-			startHeader.HAlign = 0.5f;
-			startHeader.Top.Set(15, 0);
-			startPanel.Append(startHeader);
-			
-			//Buttons//
-			
-			//Pre Hardmode
-			buttonPreHardmode = new UIPanel();
-			buttonPreHardmode.Width.Set(200, 0);
-			buttonPreHardmode.Height.Set(50, 0);
-			buttonPreHardmode.HAlign = 0.5f;
-			buttonPreHardmode.Top.Set(50, 0);
+            startPanel.BackgroundColor = Color.White * 0.25f;
+            Append(startPanel);
 
-			buttonPreHardmode.OnClick += OnButtonClick;
+            startHeader = new UIText("Elemental Hearts", .75f, true);
+            startHeader.HAlign = 0.5f;
+            startHeader.Top.Set(15, 0);
+            startPanel.Append(startHeader);
 
-			buttonPreHardmode.BackgroundColor = buttonColor1 * 0.75f;
-			startPanel.Append(buttonPreHardmode);
+            //Buttons//
 
-			textPreHardmode = new UIText("Pre-Hardmode");
-			textPreHardmode.HAlign = 0.5f;
-			textPreHardmode.VAlign = 0.5f;
-			buttonPreHardmode.Append(textPreHardmode);
+            //Pre Hardmode
+            buttonPreHardmode = new UIPanel();
+            buttonPreHardmode.Width.Set(200, 0);
+            buttonPreHardmode.Height.Set(50, 0);
+            buttonPreHardmode.HAlign = 0.5f;
+            buttonPreHardmode.Top.Set(50, 0);
 
-			
-			//Hardmode
-			buttonHardmode = new UIPanel();
-			buttonHardmode.Width.Set(200, 0);
-			buttonHardmode.Height.Set(50, 0);
-			buttonHardmode.HAlign = 0.5f;
-			buttonHardmode.Top.Set(110, 0);
+            buttonPreHardmode.OnClick += OnButtonClick;
 
-			buttonHardmode.OnClick += OnButtonClick;
+            buttonPreHardmode.BackgroundColor = buttonColor1 * 0.75f;
+            startPanel.Append(buttonPreHardmode);
 
-			buttonHardmode.BackgroundColor = buttonColor2 * 0.75f;
-			startPanel.Append(buttonHardmode);
+            textPreHardmode = new UIText("Pre-Hardmode");
+            textPreHardmode.HAlign = 0.5f;
+            textPreHardmode.VAlign = 0.5f;
+            buttonPreHardmode.Append(textPreHardmode);
 
-			textHardmode = new UIText("Hardmode");
-			textHardmode.HAlign = 0.5f;
-			textHardmode.VAlign = 0.5f;
-			buttonHardmode.Append(textHardmode);
 
-			
-			//Calamity
-			buttonCalamity = new UIPanel();
-			buttonCalamity.Width.Set(200, 0);
-			buttonCalamity.Height.Set(50, 0);
-			buttonCalamity.HAlign = 0.5f;
-			buttonCalamity.Top.Set(170, 0);
+            //Hardmode
+            buttonHardmode = new UIPanel();
+            buttonHardmode.Width.Set(200, 0);
+            buttonHardmode.Height.Set(50, 0);
+            buttonHardmode.HAlign = 0.5f;
+            buttonHardmode.Top.Set(110, 0);
 
-			buttonCalamity.OnClick += OnButtonClick;
+            buttonHardmode.OnClick += OnButtonClick;
 
-			buttonCalamity.BackgroundColor = buttonColor3 * 0.75f;
-			startPanel.Append(buttonCalamity);
+            buttonHardmode.BackgroundColor = buttonColor2 * 0.75f;
+            startPanel.Append(buttonHardmode);
 
-			textCalamity = new UIText("Calamity");
-			textCalamity.HAlign = 0.5f;
-			textCalamity.VAlign = 0.5f;
-			buttonCalamity.Append(textCalamity);
+            textHardmode = new UIText("Hardmode");
+            textHardmode.HAlign = 0.5f;
+            textHardmode.VAlign = 0.5f;
+            buttonHardmode.Append(textHardmode);
 
-			//Thorium
-			buttonThorium = new UIPanel();
-			buttonThorium.Width.Set(200, 0);
-			buttonThorium.Height.Set(50, 0);
-			buttonThorium.HAlign = 0.5f;
-			buttonThorium.Top.Set(230, 0);
 
-			buttonThorium.OnClick += OnButtonClick;
+            //Calamity
+            buttonCalamity = new UIPanel();
+            buttonCalamity.Width.Set(200, 0);
+            buttonCalamity.Height.Set(50, 0);
+            buttonCalamity.HAlign = 0.5f;
+            buttonCalamity.Top.Set(170, 0);
 
-			buttonThorium.BackgroundColor = buttonColor4 * 0.75f;
-			startPanel.Append(buttonThorium);
+            buttonCalamity.OnClick += OnButtonClick;
 
-			textThorium = new UIText("Thorium");
-			textThorium.HAlign = 0.5f;
-			textThorium.VAlign = 0.5f;
-			buttonThorium.Append(textThorium);
+            buttonCalamity.BackgroundColor = buttonColor3 * 0.75f;
+            startPanel.Append(buttonCalamity);
 
-			//Expert
-			buttonExpert = new UIPanel();
-			buttonExpert.Width.Set(200, 0);
-			buttonExpert.Height.Set(50, 0);
-			buttonExpert.HAlign = 0.5f;
-			buttonExpert.Top.Set(290, 0);
+            textCalamity = new UIText("Calamity");
+            textCalamity.HAlign = 0.5f;
+            textCalamity.VAlign = 0.5f;
+            buttonCalamity.Append(textCalamity);
 
-			buttonExpert.OnClick += OnButtonClick;
+            //Thorium
+            buttonThorium = new UIPanel();
+            buttonThorium.Width.Set(200, 0);
+            buttonThorium.Height.Set(50, 0);
+            buttonThorium.HAlign = 0.5f;
+            buttonThorium.Top.Set(230, 0);
 
-			buttonExpert.BackgroundColor = Main.DiscoColor * 0.75f;
-			startPanel.Append(buttonExpert);
+            buttonThorium.OnClick += OnButtonClick;
 
-			textExpert = new UIText("Expert");
-			textExpert.HAlign = 0.5f;
-			textExpert.VAlign = 0.5f;
-			buttonExpert.Append(textExpert);			
-		}
-		private void OnButtonClick(UIMouseEvent evt, UIElement listeningElement)
-		{
-			//Pre-Hardmode
-			if(listeningElement == buttonPreHardmode)
-			{
-				if (preHardmodeOpen)
-				{
-					Main.NewText("Closed Pre-Hardmode Section.", Color.Red);
-				}
-				else
-				{
-					Main.NewText("Opened Pre-Hardmode Section.", Color.Red);
-				}								
-			}
+            buttonThorium.BackgroundColor = buttonColor4 * 0.75f;
+            startPanel.Append(buttonThorium);
 
-			//Hardmode
-			if (listeningElement == buttonHardmode)
-			{
-				if (preHardmodeOpen)
-				{
-					Main.NewText("Closed Hardmode Section.", Color.Red);
-				}
-				else
-				{
-					Main.NewText("Opened Hardmode Section.", Color.Red);
-				}
-			}
+            textThorium = new UIText("Thorium");
+            textThorium.HAlign = 0.5f;
+            textThorium.VAlign = 0.5f;
+            buttonThorium.Append(textThorium);
 
-			//Calamity
-			if (listeningElement == buttonCalamity)
-			{
-				if (preHardmodeOpen)
-				{
-					Main.NewText("Closed Calamity Section.", Color.Red);
-				}
-				else
-				{
-					Main.NewText("Opened Calamity Section.", Color.Red);
-				}
-			}
+            //Expert
+            buttonExpert = new UIPanel();
+            buttonExpert.Width.Set(200, 0);
+            buttonExpert.Height.Set(50, 0);
+            buttonExpert.HAlign = 0.5f;
+            buttonExpert.Top.Set(290, 0);
 
-			//Thorium
-			if (listeningElement == buttonThorium)
-			{
-				if (preHardmodeOpen)
-				{
-					Main.NewText("Closed Thorium Section.", Color.Red);
-				}
-				else
-				{
-					Main.NewText("Opened Thorium Section.", Color.Red);
-				}
-			}
+            buttonExpert.OnClick += OnButtonClick;
 
-			//Expert
-			if (listeningElement == buttonExpert)
-			{
-				if (Main.expertMode)
-				{
-					if (preHardmodeOpen)
-					{
-						Main.NewText("Closed Expert Section.", Color.Red);
-					}
-					else
-					{
-						Main.NewText("Opened Expert Section.", Color.Red);
-					}
-				} 
-				else
-				{
-					Main.NewText("You Are Not In Expert Mode.", Color.Red);
-				}
-			}
-		}
-		public override void Update(GameTime gameTime)
-		{
-			//Disco Borders
-			startPanel.BorderColor = Main.DiscoColor;
-			buttonPreHardmode.BorderColor = Main.DiscoColor;
-			buttonHardmode.BorderColor = Main.DiscoColor;
-			buttonCalamity.BorderColor = Main.DiscoColor;
-			buttonThorium.BorderColor = Main.DiscoColor;
-			buttonExpert.BorderColor = Main.DiscoColor;
+            buttonExpert.BackgroundColor = Main.DiscoColor * 0.75f;
+            startPanel.Append(buttonExpert);
 
-			//Disco Backgrounds
-			buttonExpert.BackgroundColor = Main.DiscoColor;
+            textExpert = new UIText("Expert");
+            textExpert.HAlign = 0.5f;
+            textExpert.VAlign = 0.5f;
+            buttonExpert.Append(textExpert);
+        }
+        private void OnButtonClick(UIMouseEvent evt, UIElement listeningElement)
+        {
+            //Pre-Hardmode
+            if (listeningElement == buttonPreHardmode)
+            {
+                if (preHardmodeOpen)
+                {
+                    Main.NewText("Closed Pre-Hardmode Section.", Color.Red);
+                    preHardmodeOpen = false;
+                }
+                else
+                {
+                    Main.NewText("Opened Pre-Hardmode Section.", Color.Red);
+                    preHardmodeOpen = true;
+                }
+            }
 
-			if (buttonPreHardmode.IsMouseHovering)
-			{
-				Main.hoverItemName = "Click to Open the Pre Hardmode Section.";
-			}
-		}
-		public void UnLoadUI()
-		{
+            //Hardmode
+            if (listeningElement == buttonHardmode)
+            {
+                if (hardmodeOpen)
+                {
+                    Main.NewText("Closed Hardmode Section.", Color.Red);
+                    hardmodeOpen = false;
+                }
+                else
+                {
+                    Main.NewText("Opened Hardmode Section.", Color.Red);
+                    hardmodeOpen = true;
+                }
+            }
 
-		}
-	}
+            //Calamity
+            if (listeningElement == buttonCalamity)
+            {
+                if (calamityOpen)
+                {
+                    Main.NewText("Closed Calamity Section.", Color.Red);
+                    calamityOpen = false;
+                }
+                else
+                {
+                    Main.NewText("Opened Calamity Section.", Color.Red);
+                    calamityOpen = true;
+                }
+            }
+
+            //Thorium
+            if (listeningElement == buttonThorium)
+            {
+                if (thoriumOpen)
+                {
+                    Main.NewText("Closed Thorium Section.", Color.Red);
+                    thoriumOpen = false;
+                }
+                else
+                {
+                    Main.NewText("Opened Thorium Section.", Color.Red);
+                    thoriumOpen = true;
+
+                }
+            }
+
+            //Expert
+            if (listeningElement == buttonExpert)
+            {
+                if (Main.expertMode)
+                {
+                    if (expertOpen)
+                    {
+                        Main.NewText("Closed Expert Section.", Color.Red);
+                        expertOpen = false;
+                    }
+                    else
+                    {
+                        Main.NewText("Opened Expert Section.", Color.Red);
+                        expertOpen = true;
+                    }
+                }
+                else
+                {
+                    Main.NewText("You Are Not In Expert Mode.", Color.Red);
+                }
+            }
+        }
+        public override void Update(GameTime gameTime)
+        {
+            //Disco Borders
+            startPanel.BorderColor = Main.DiscoColor;
+            buttonPreHardmode.BorderColor = Main.DiscoColor;
+            buttonHardmode.BorderColor = Main.DiscoColor;
+            buttonCalamity.BorderColor = Main.DiscoColor;
+            buttonThorium.BorderColor = Main.DiscoColor;
+            buttonExpert.BorderColor = Main.DiscoColor;
+
+            //Disco Backgrounds
+            buttonExpert.BackgroundColor = Main.DiscoColor;
+
+            if (buttonPreHardmode.IsMouseHovering)
+            {
+                Main.hoverItemName = "Click to Open the Pre Hardmode Section.";
+            }
+        }
+        public void UnLoadUI()
+        {
+
+        }
+    }
 }
