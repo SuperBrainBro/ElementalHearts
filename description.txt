@@ -2,7 +2,11 @@ Elemental Hearts is a mod which adds a ton of new consumable items which increas
 
 As with all of my mods, I prefer quality of quantity. This mod is a great addition to any modded playthrough, which adds a use for all of your leftover/extra blocks and ores.
 This mod spreads with progression, so that you can never become too powerful.
-In the future, we will also add support for mods like Calamity and Thorium.
+In the future, we will also add support for mods like Calamity.
+
+We currently have mod support with Thorium! If you are using the thorium mod, you will have another bonus 20+ hearts based on those elements!
+
+We also have a list to see which hearts you have made / not! Change the key in the config!
 
 This mod (currently) adds:
 	 87 consumable items.
@@ -21,6 +25,8 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 
 Change-Log:
 0.2.5
+	 Added over 20 new hearts based on the Thorium mod!
+	 Rainbow heart is now correct rarity.
 	 Some more UI progress.
 	 Fixed the boss statue recipe.
 0.2.4
