@@ -145,6 +145,40 @@ namespace ElementalHearts
         public int ValadiumLife;
         public int YewWoodLife;
 
+        //Calamity Mod
+        public int AbyssGravelLife;
+        public int AerialiteLife;
+        public int AstralClayLife;
+        public int AstralDirtLife;
+        public int AstralLife;
+        public int AstralIceLife;
+        public int AstralMonolithLife;
+        public int AstralSandLife;
+        public int AstralSandstoneLife;
+        public int AstralSnowLife;
+        public int AstralStoneLife;
+        public int AuricLife;
+        public int BrimstoneSlagLife;
+        public int CelestialRemainsLife;
+        public int CharredLife;
+        public int CinderplateLife;
+        public int CryonicLife;
+        public int EutrophicSandLife;
+        public int ExodiumClusterLife;
+        public int HardenedAstralSandLife;
+        public int HardenedSulphurousSandstoneLife;
+        public int NavystoneLife;
+        public int NovaeSlugLife;
+        public int PerennialLife;
+        public int PlantyMushLife;
+        public int ScoriaLife;
+        public int SeaPrismLife;
+        public int SulphurousSandLife;
+        public int SulphurousSandstoneLife;
+        public int TenebrisLife;
+        public int UelibloomLife;
+        public int VoidstoneLife;
+
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
@@ -272,6 +306,40 @@ namespace ElementalHearts
             player.statLifeMax2 += ThoriumLife * 1;
             player.statLifeMax2 += ValadiumLife * 1;
             player.statLifeMax2 += YewWoodLife * 1;
+
+            //Calamity Mod
+            player.statLifeMax2 += AbyssGravelLife * 1;
+            player.statLifeMax2 += AerialiteLife * 1;
+            player.statLifeMax2 += AstralClayLife * 1;
+            player.statLifeMax2 += AstralDirtLife * 1;
+            player.statLifeMax2 += AstralLife * 1;
+            player.statLifeMax2 += AstralIceLife * 1;
+            player.statLifeMax2 += AstralMonolithLife * 1;
+            player.statLifeMax2 += AstralSandLife * 1;
+            player.statLifeMax2 += AstralSandstoneLife * 1;
+            player.statLifeMax2 += AstralSnowLife * 1;
+            player.statLifeMax2 += AstralStoneLife * 1;
+            player.statLifeMax2 += AuricLife * 1;
+            player.statLifeMax2 += BrimstoneSlagLife * 1;
+            player.statLifeMax2 += CelestialRemainsLife * 1;
+            player.statLifeMax2 += CharredLife * 1;
+            player.statLifeMax2 += CinderplateLife * 1;
+            player.statLifeMax2 += CryonicLife * 1;
+            player.statLifeMax2 += EutrophicSandLife * 1;
+            player.statLifeMax2 += ExodiumClusterLife * 1;
+            player.statLifeMax2 += HardenedAstralSandLife * 1;
+            player.statLifeMax2 += HardenedSulphurousSandstoneLife * 1;
+            player.statLifeMax2 += NavystoneLife * 1;
+            player.statLifeMax2 += NovaeSlugLife * 1;
+            player.statLifeMax2 += PerennialLife * 1;
+            player.statLifeMax2 += PlantyMushLife * 1;
+            player.statLifeMax2 += ScoriaLife * 1;
+            player.statLifeMax2 += SeaPrismLife * 1;
+            player.statLifeMax2 += SulphurousSandLife * 1;
+            player.statLifeMax2 += SulphurousSandstoneLife * 1;
+            player.statLifeMax2 += TenebrisLife * 1;
+            player.statLifeMax2 += UelibloomLife * 1;
+            player.statLifeMax2 += VoidstoneLife * 1;
         }
         public override void UpdateDead()
         {
@@ -422,6 +490,40 @@ namespace ElementalHearts
             packet.Write(ValadiumLife);
             packet.Write(YewWoodLife);
 
+            //Calamity Mod
+            packet.Write(AbyssGravelLife);
+            packet.Write(AerialiteLife);
+            packet.Write(AstralClayLife);
+            packet.Write(AstralDirtLife);
+            packet.Write(AstralLife);
+            packet.Write(AstralIceLife);
+            packet.Write(AstralMonolithLife);
+            packet.Write(AstralSandLife);
+            packet.Write(AstralSandstoneLife);
+            packet.Write(AstralSnowLife);
+            packet.Write(AstralStoneLife);
+            packet.Write(AuricLife);
+            packet.Write(BrimstoneSlagLife);
+            packet.Write(CelestialRemainsLife);
+            packet.Write(CharredLife);
+            packet.Write(CinderplateLife);
+            packet.Write(CryonicLife);
+            packet.Write(EutrophicSandLife);
+            packet.Write(ExodiumClusterLife);
+            packet.Write(HardenedAstralSandLife);
+            packet.Write(HardenedSulphurousSandstoneLife);
+            packet.Write(NavystoneLife);
+            packet.Write(NovaeSlugLife);
+            packet.Write(PerennialLife);
+            packet.Write(PlantyMushLife);
+            packet.Write(ScoriaLife);
+            packet.Write(SeaPrismLife);
+            packet.Write(SulphurousSandLife);
+            packet.Write(SulphurousSandstoneLife);
+            packet.Write(TenebrisLife);
+            packet.Write(UelibloomLife);
+            packet.Write(VoidstoneLife);
+
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -561,6 +663,40 @@ namespace ElementalHearts
                 { "ValadiumLife", ValadiumLife},
                 { "YewWoodLife", YewWoodLife},
 
+                //Calamity Mod
+                { "AbyssGravelLife", AbyssGravelLife},
+                { "AerialiteLife", AerialiteLife},
+                { "AstralClayLife", AstralClayLife},
+                { "AstralDirtLife", AstralDirtLife},
+                { "AstralLife", AstralLife},
+                { "AstralIceLife", AstralIceLife},
+                { "AstralMonolithLife", AstralMonolithLife},
+                { "AstralSandLife", AstralSandLife},
+                { "AstralSandstoneLife", AstralSandstoneLife},
+                { "AstralSnowLife", AstralSnowLife},
+                { "AstralStoneLife", AstralStoneLife},
+                { "AuricLife", AuricLife},
+                { "BrimstoneSlagLife", BrimstoneSlagLife},
+                { "CelestialRemainsLife", CelestialRemainsLife},
+                { "CharredLife", CharredLife},
+                { "CinderplateLife", CinderplateLife},
+                { "CryonicLife", CryonicLife},
+                { "EutrophicSandLife", EutrophicSandLife},
+                { "ExodiumClusterLife", ExodiumClusterLife},
+                { "HardenedAstralSandLife", HardenedAstralSandLife},
+                { "HardenedSulphurousSandstoneLife", HardenedSulphurousSandstoneLife},
+                { "NavystoneLife", NavystoneLife},
+                { "NovaeSlugLife", NovaeSlugLife},
+                { "PerennialLife", PerennialLife},
+                { "PlantyMushLife", PlantyMushLife},
+                { "ScoriaLife", ScoriaLife},
+                { "SeaPrismLife", SeaPrismLife},
+                { "SulphurousSandLife", SulphurousSandLife},
+                { "SulphurousSandstoneLife", SulphurousSandstoneLife},
+                { "TenebrisLife", TenebrisLife},
+                { "UelibloomLife", UelibloomLife},
+                { "VoidstoneLife", VoidstoneLife},
+
                 //Other
                 {"nonStopParty", nonStopParty},
                 };
@@ -689,6 +825,40 @@ namespace ElementalHearts
             ThoriumLife = tag.GetInt("ThoriumLife");
             ValadiumLife = tag.GetInt("ValadiumLife");
             YewWoodLife = tag.GetInt("YewWoodLife");
+
+            //Calamity Mod
+            AbyssGravelLife = tag.GetInt("AbyssGravelLife");
+            AerialiteLife = tag.GetInt("AerialiteLife");
+            AstralClayLife = tag.GetInt("AstralClayLife");
+            AstralDirtLife = tag.GetInt("AstralDirtLife");
+            AstralLife = tag.GetInt("AstralLife");
+            AstralIceLife = tag.GetInt("AstralIceLife");
+            AstralMonolithLife = tag.GetInt("AstralMonolithLife");
+            AstralSandLife = tag.GetInt("AstralSandLife");
+            AstralSandstoneLife = tag.GetInt("AstralSandstoneLife");
+            AstralSnowLife = tag.GetInt("AstralSnowLife");
+            AstralStoneLife = tag.GetInt("AstralStoneLife");
+            AuricLife = tag.GetInt("AuricLife");
+            BrimstoneSlagLife = tag.GetInt("BrimstoneSlagLife");
+            CelestialRemainsLife = tag.GetInt("CelestialRemainsLife");
+            CharredLife = tag.GetInt("CharredLife");
+            CinderplateLife = tag.GetInt("CinderplateLife");
+            CryonicLife = tag.GetInt("CryonicLife");
+            EutrophicSandLife = tag.GetInt("EutrophicSandLife");
+            ExodiumClusterLife = tag.GetInt("ExodiumClusterLife");
+            HardenedAstralSandLife = tag.GetInt("HardenedAstralSandLife");
+            HardenedSulphurousSandstoneLife = tag.GetInt("HardenedSulphurousSandstoneLife");
+            NavystoneLife = tag.GetInt("NavystoneLife");
+            NovaeSlugLife = tag.GetInt("NovaeSlugLife");
+            PerennialLife = tag.GetInt("PerennialLife");
+            PlantyMushLife = tag.GetInt("PlantyMushLife");
+            ScoriaLife = tag.GetInt("ScoriaLife");
+            SeaPrismLife = tag.GetInt("SeaPrismLife");
+            SulphurousSandLife = tag.GetInt("SulphurousSandLife");
+            SulphurousSandstoneLife = tag.GetInt("SulphurousSandstoneLife");
+            TenebrisLife = tag.GetInt("TenebrisLife");
+            UelibloomLife = tag.GetInt("UelibloomLife");
+            VoidstoneLife = tag.GetInt("VoidstoneLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

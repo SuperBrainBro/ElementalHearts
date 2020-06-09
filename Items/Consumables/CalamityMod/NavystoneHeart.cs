@@ -4,13 +4,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.Items.Consumables.ThoriumMod
+namespace ElementalHearts.Items.Consumables.CalamityMod
 {
-	internal class AquaiteHeart : ModItem
+	internal class NavystoneHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 1");
-			DisplayName.SetDefault("Aquaite Heart");
+			DisplayName.SetDefault("Navystone Heart");
 		}
 
 		public override void SetDefaults() {
@@ -20,7 +20,7 @@ namespace ElementalHearts.Items.Consumables.ThoriumMod
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().AquaiteLife <
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().NavystoneLife <
 				   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
 		}
 
@@ -30,16 +30,16 @@ namespace ElementalHearts.Items.Consumables.ThoriumMod
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(1, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().AquaiteLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().NavystoneLife += 1;
 			return true;
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			Mod thoriumMod = ModLoader.GetMod("ThoriumMod");
-			if (thoriumMod != null) {
-				recipe.AddIngredient(thoriumMod.ItemType("Aquaite"), 100); ;
+			Mod calamityMod = ModLoader.GetMod("CalamityMod");
+			if (calamityMod != null) {
+				recipe.AddIngredient(calamityMod.ItemType("Navystone"), 100); ;
 				recipe.AddTile(TileID.Anvils);
 				recipe.SetResult(this, 1);
 				recipe.AddRecipe();
