@@ -26,6 +26,7 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 Change-Log:
 0.2.6
 	 Added over 20 new Calamity hearts!
+	 Some more UI work.
 0.2.5
 	 Added over 20 new hearts based on the Thorium mod!
 	 Rainbow heart is now correct rarity.

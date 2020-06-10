@@ -104,9 +104,11 @@ namespace ElementalHearts
     public class TheUI : UIState
     {
         //Panels
-        private UIPanel startPanel;
-        private UIText startHeader;
+        public UIPanel startPanel;
+        public UIText startHeader;
 
+        public UIPanel preHardmodePanel;
+        public UIText preHardmodeHeader;
         //Buttons
         public UIPanel buttonPreHardmode;
         public UIText textPreHardmode;
