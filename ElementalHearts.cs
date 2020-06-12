@@ -109,6 +109,16 @@ namespace ElementalHearts
 
         public UIPanel preHardmodePanel;
         public UIText preHardmodeHeader;
+
+        public UIPanel hardmodePanel;
+        public UIText hardmodeHeader;
+
+        public UIPanel calamityPanel;
+        public UIText calamityHeader;
+
+        public UIPanel thoriumPanel;
+        public UIText thoriumHeader;
+
         //Buttons
         public UIPanel buttonPreHardmode;
         public UIText textPreHardmode;
@@ -357,6 +367,26 @@ namespace ElementalHearts
                     Main.NewText("You Are Not In Expert Mode.", Color.Red);
                 }
             }
+        }
+        public void PreHardmodePanelInit()
+        {
+            preHardmodePanel = new UIPanel();
+            preHardmodePanel.Width.Set(300, 0);
+            preHardmodePanel.Height.Set(400, 0);
+            preHardmodePanel.VAlign = .5f;
+            preHardmodePanel.HAlign = .01575f;
+            preHardmodePanel.PaddingLeft = 10f;
+            preHardmodePanel.PaddingRight = 10f;
+            preHardmodePanel.PaddingTop = 10f;
+            preHardmodePanel.PaddingBottom = 10f;
+
+            preHardmodePanel.BackgroundColor = Color.White * 0.25f;
+            Append(preHardmodePanel);
+
+            preHardmodeHeader = new UIText("Elemental Hearts", .75f, true);
+            preHardmodeHeader.HAlign = 0.5f;
+            preHardmodeHeader.Top.Set(15, 0);
+            preHardmodePanel.Append(preHardmodeHeader);
         }
         public override void Update(GameTime gameTime)
         {
