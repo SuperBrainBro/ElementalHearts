@@ -796,7 +796,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         }
                     }
                     SpawnHealHearts(3);
-                    
+
                 }
             }
             base.AI();
