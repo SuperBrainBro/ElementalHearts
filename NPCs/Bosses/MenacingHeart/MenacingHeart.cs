@@ -46,9 +46,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.aiStyle = 0;
             npc.width = 128;
             npc.height = 128;
-            npc.damage = 100;
-            npc.defense = 10;
-            npc.lifeMax = 14000;
+            npc.damage = 69;
+            npc.defense = 16;
+            npc.lifeMax = 16000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(Terraria.ModLoader.SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
