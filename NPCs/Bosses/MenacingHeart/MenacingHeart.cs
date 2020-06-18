@@ -432,7 +432,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
 
@@ -457,7 +457,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
 
@@ -481,7 +481,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
 
@@ -506,7 +506,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
 
@@ -544,7 +544,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(225, 0);
 
@@ -576,7 +576,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 225);
 
@@ -600,7 +600,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(-225, 0);
 
@@ -632,7 +632,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -225);
 
@@ -677,7 +677,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(250, 0);
 
@@ -701,7 +701,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     else if (tpPosRand4 > 4)
                     {
                         Main.NewText("Sent Particle");
-                        if (P1 >= 300)
+                        if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 250);
 
@@ -725,7 +725,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(-250, 0);
 
@@ -750,7 +750,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+                        if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -250);
 
