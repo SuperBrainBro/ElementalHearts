@@ -457,9 +457,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.TargetClosest(true);
 
                     //This generates a random tp Center.
-                    tpPosRand1 = Main.rand.NextFloat(8);
+                    tpPosRand2 = Main.rand.NextFloat(8);
 
-                    if (tpPosRand1 > 6)
+                    if (tpPosRand2 > 6)
                     {
                         Main.NewText("Sent Particle");
 
@@ -467,7 +467,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(200, 0);
                     }
-                    else if (tpPosRand1 > 4)
+                    else if (tpPosRand2 > 4)
                     {
                         Main.NewText("Sent Particle");
 
@@ -476,7 +476,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
                     }
-                    else if (tpPosRand1 > 2)
+                    else if (tpPosRand2 > 2)
                     {
                         Main.NewText("Sent Particle");
 
@@ -485,7 +485,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
                     }
-                    else if (tpPosRand1 > 0)
+                    else if (tpPosRand2 > 0)
                     {
                         Main.NewText("Sent Particle");
 
@@ -502,7 +502,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     npc.Center = futurePosition;
 
-                    if (tpPosRand1 > 6)
+                    if (tpPosRand2 > 6)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -522,7 +522,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 4)
+                    if (tpPosRand2 > 4)
                     {
                         //No Gravity Projectiles
 
@@ -534,7 +534,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 2)
+                    if (tpPosRand2 > 2)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -554,7 +554,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 0)
+                    if (tpPosRand2 > 0)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -584,9 +584,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.TargetClosest(true);
 
                     //This generates a random tp Center.
-                    tpPosRand1 = Main.rand.NextFloat(8);
+                    tpPosRand3 = Main.rand.NextFloat(8);
 
-                    if (tpPosRand1 > 6)
+                    if (tpPosRand3 > 6)
                     {
                         Main.NewText("Sent Particle");
 
@@ -594,7 +594,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
                     }
-                    else if (tpPosRand1 > 4)
+                    else if (tpPosRand3 > 4)
                     {
                         Main.NewText("Sent Particle");
 
@@ -603,7 +603,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
                     }
-                    else if (tpPosRand1 > 2)
+                    else if (tpPosRand3 > 2)
                     {
                         Main.NewText("Sent Particle");
 
@@ -612,7 +612,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
                     }
-                    else if (tpPosRand1 > 0)
+                    else if (tpPosRand3 > 0)
                     {
                         Main.NewText("Sent Particle");
 
@@ -629,7 +629,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     npc.Center = futurePosition;
 
-                    if (tpPosRand1 > 6)
+                    if (tpPosRand3 > 6)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -649,7 +649,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 4)
+                    if (tpPosRand3 > 4)
                     {
                         //No Gravity Projectiles
 
@@ -661,7 +661,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 2)
+                    if (tpPosRand3 > 2)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -681,7 +681,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 0)
+                    if (tpPosRand3 > 0)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -711,9 +711,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     npc.TargetClosest(true);
 
                     //This generates a random tp Center.
-                    tpPosRand1 = Main.rand.NextFloat(8);
+                    tpPosRand4 = Main.rand.NextFloat(8);
 
-                    if (tpPosRand1 > 6)
+                    if (tpPosRand4 > 6)
                     {
                         Main.NewText("Sent Particle");
 
@@ -721,7 +721,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(250, 0);
                     }
-                    else if (tpPosRand1 > 4)
+                    else if (tpPosRand4 > 4)
                     {
                         Main.NewText("Sent Particle");
 
@@ -730,7 +730,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
                     }
-                    else if (tpPosRand1 > 2)
+                    else if (tpPosRand4 > 2)
                     {
                         Main.NewText("Sent Particle");
 
@@ -739,7 +739,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
                     }
-                    else if (tpPosRand1 > 0)
+                    else if (tpPosRand4 > 0)
                     {
                         Main.NewText("Sent Particle");
 
@@ -756,7 +756,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     npc.Center = futurePosition;
 
-                    if (tpPosRand1 > 6)
+                    if (tpPosRand4 > 6)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -776,7 +776,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 4)
+                    if (tpPosRand4 > 4)
                     {
                         //No Gravity Projectiles
 
@@ -788,7 +788,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 2)
+                    if (tpPosRand4 > 2)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
@@ -808,7 +808,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
-                    if (tpPosRand1 > 0)
+                    if (tpPosRand4 > 0)
                     {
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
