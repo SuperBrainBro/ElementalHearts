@@ -27,7 +27,7 @@ Change-Log:
 0.2.7
 	 Some more work on ui (which I hate doing lmao)
 	 Buffed Menacing Heart's health and defence.
-	 Added a particle that appears to where Menacing Heart will spawn next (AKA improved boss ai).
+	 Essentially REWROTE the Boss's AI, in order to add a particle that appears to where Menacing Heart will spawn next.
 0.2.6
 	 Added over 20 new Calamity hearts!
 	 Some more UI work.
