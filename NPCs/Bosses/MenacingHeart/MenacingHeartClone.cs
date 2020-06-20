@@ -32,7 +32,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.noGravity = true;
             npc.noTileCollide = true;
 
-            cloneTimeLeft = 255;
+            cloneTimeLeft = 420;
             base.SetDefaults();
         }
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)

@@ -36,6 +36,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public bool bossLeaveBool;
 
+        public Vector2 futurePosition;
+
+        public float tpPosRand1;
+        public float tpPosRand2;
+        public float tpPosRand3;
+        public float tpPosRand4;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Menacing Heart");
@@ -112,6 +118,34 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             scale = 1.5f;
             return null;
+        }
+        public void ProjectilesLeft()
+        {
+            //Facing Left Projectiles
+            Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+        }
+        public void ProjectilesRight()
+        {
+            //Facing Right Projectiles
+            Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+        }
+        public void ProjectilesUp()
+        {
+            //Facing Up Projectiles
+            Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+        }
+        public void ProjectilesDown()
+        {
+            //Facing Down Projectiles
+            Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
         }
         public override void AI()
         {
@@ -267,7 +301,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                 }
 
-                //npc.ai[0] is the current phase. So the below code, checks for if it is phase 1. If it is in phase 1, then npc.ai[1] goes up (which is the timer for phase 10
+                //npc.ai[0] is the current phase. So the below code, checks for if it is phase 1. If it is in phase 1, then npc.ai[1] goes up (which is the timer for phase 1)
                 if (npc.ai[0] == 1)
                 {
                     P1++;
@@ -290,156 +324,139 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
 
                 //This is the phase code, the one below, is the phase 1 code.
-                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 200)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 100)
                 {
                     npc.TargetClosest(true);
 
                     //This generates a random tp Center.
-                    float tpPosRand1;
                     tpPosRand1 = Main.rand.NextFloat(8);
 
                     if (tpPosRand1 > 6)
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
-                        {
-                            Main.NewText("Debug Text Rand Pos 1");
+                        Main.NewText("Debug Text Rand Pos 1");
 
-                            npc.Center = Main.player[npc.target].Center + new Vector2(175, 0);
-
-                            //Facing Left Projectiles
-                            Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                            //Gravity Projectiles
-                            if (Main.rand.NextBool(2))
-                            {
-                                GravityProjectiles(1);
-                            }
-                            else
-                            {
-                                GravityProjectiles(2);
-                            }
-
-                            //Clone 1
-                            if (Main.rand.NextBool(3))
-                            {
-                                NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
-                            }
-                            P1 = 0;
-                        }
+                        futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
                     }
                     else if (tpPosRand1 > 4)
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
-                        {
-                            Main.NewText("Debug Text Rand Pos 2");
 
-                            npc.Center = Main.player[npc.target].Center + new Vector2(0, 175);
+                        Main.NewText("Debug Text Rand Pos 2");
 
-                            //Facing Up Projectiles
-                            Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                            //No Gravity Projectiles
-
-                            //Clone 2
-                            if (Main.rand.NextBool(2))
-                            {
-                                NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            }
-                            P1 = 0;
-                        }
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
                     }
                     else if (tpPosRand1 > 2)
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
-                        {
-                            Main.NewText("Debug Text Rand Pos 3");
 
-                            npc.Center = Main.player[npc.target].Center + new Vector2(-175, 0);
+                        Main.NewText("Debug Text Rand Pos 3");
 
-                            //Facing Right Projectiles
-                            Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                            //Gravity Projectiles
-                            if (Main.rand.NextBool(2))
-                            {
-                                GravityProjectiles(1);
-                            }
-                            else
-                            {
-                                GravityProjectiles(2);
-                            }
-
-                            //Clone 3
-                            if (Main.rand.NextBool(3))
-                            {
-                                NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
-                            }
-                            P1 = 0;
-                        }
+                        futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
                     }
                     else if (tpPosRand1 > 0)
                     {
                         Main.NewText("Sent Particle");
 
-                        if (P1 >= 300)
+
+                        Main.NewText("Debug Text Rand Pos 4");
+
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
+                    }
+                }
+
+                if (P1 == 200)
+                {
+                    Main.NewText("Debug Text Set Pos Of Boss");
+
+                    npc.Center = futurePosition;
+
+                    if (tpPosRand1 > 6)
+                    {
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
                         {
-                            Main.NewText("Debug Text Rand Pos 4");
+                            GravityProjectiles(1);
+                        }
+                        else
+                        {
+                            GravityProjectiles(2);
+                        }
 
-                            npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
-
-                            //Facing Down Projectiles
-                            Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                            Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                            //Gravity Projectiles
-                            if (Main.rand.NextBool(2))
-                            {
-                                GravityProjectiles(1);
-                            }
-                            else
-                            {
-                                GravityProjectiles(2);
-                            }
-
-                            //Clone 4
-                            if (Main.rand.NextBool(4))
-                            {
-                                NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                                NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            }
-                            P1 = 0;
+                        //Clone 1
+                        if (Main.rand.NextBool(3))
+                        {
+                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
+                    if (tpPosRand1 > 4)
+                    {
+                        //No Gravity Projectiles
+
+                        //Clone 2
+                        if (Main.rand.NextBool(2))
+                        {
+                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
+                        }
+                    }
+                    if (tpPosRand1 > 2)
+                    {
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(1);
+                        }
+                        else
+                        {
+                            GravityProjectiles(2);
+                        }
+
+                        //Clone 3
+                        if (Main.rand.NextBool(3))
+                        {
+                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
+                        }
+                    }
+                    if (tpPosRand1 > 0)
+                    {
+                        //Gravity Projectiles
+                        if (Main.rand.NextBool(2))
+                        {
+                            GravityProjectiles(1);
+                        }
+                        else
+                        {
+                            GravityProjectiles(2);
+                        }
+
+                        //Clone 4
+                        if (Main.rand.NextBool(4))
+                        {
+                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
+                        }
+                    }
+                    P1 = 0;
                     SpawnHealHearts(4);
                 }
+
                 else
-                //Phase 2.
-                if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 200)
+            //Phase 2.
+            if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 200)
                 {
                     npc.TargetClosest(true);
 
                     //This generates a random tp position.
-                    float tpPosRand2;
                     tpPosRand2 = Main.rand.NextFloat(8);
 
                     if (tpPosRand2 > 6)
@@ -552,13 +569,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     SpawnHealHearts(4);
                 }
                 else
-                //Phase 3.
-                if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 200)
+            //Phase 3.
+            if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 200)
                 {
                     npc.TargetClosest(true);
 
                     //This generates a random tp position.
-                    float tpPosRand3;
                     tpPosRand3 = Main.rand.NextFloat(8);
 
                     if (tpPosRand3 > 6)
@@ -695,13 +711,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     SpawnHealHearts(3);
                 }
                 else
-                //Phase 4.
-                if (Main.netMode != NetmodeID.MultiplayerClient && P4 >= 75)
+            //Phase 4.
+            if (Main.netMode != NetmodeID.MultiplayerClient && P4 >= 75)
                 {
                     npc.TargetClosest(true);
 
                     //This generates a random tp Center.
-                    float tpPosRand4;
                     tpPosRand4 = Main.rand.NextFloat(8);
 
                     if (tpPosRand4 > 6)
