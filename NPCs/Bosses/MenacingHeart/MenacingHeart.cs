@@ -376,6 +376,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand1 > 6)
                     {
+                        ProjectilesLeft();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -396,6 +398,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand1 > 4)
                     {
+                        ProjectilesDown();
+
                         //No Gravity Projectiles
 
                         //Clone 2
@@ -408,6 +412,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand1 > 2)
                     {
+                        ProjectilesRight();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -428,6 +434,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand1 > 0)
                     {
+                        ProjectilesUp();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -504,6 +512,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand2 > 6)
                     {
+                        ProjectilesLeft();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -524,6 +534,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand2 > 4)
                     {
+                        ProjectilesDown();
+
                         //No Gravity Projectiles
 
                         //Clone 2
@@ -536,6 +548,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand2 > 2)
                     {
+                        ProjectilesRight();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -556,6 +570,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand2 > 0)
                     {
+                        ProjectilesUp();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -631,6 +647,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand3 > 6)
                     {
+                        ProjectilesLeft();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -651,6 +669,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand3 > 4)
                     {
+                        ProjectilesDown();
+
                         //No Gravity Projectiles
 
                         //Clone 2
@@ -663,6 +683,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand3 > 2)
                     {
+                        ProjectilesRight();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -683,6 +705,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand3 > 0)
                     {
+                        ProjectilesUp();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -758,6 +782,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand4 > 6)
                     {
+                        ProjectilesLeft();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -778,6 +804,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand4 > 4)
                     {
+                        ProjectilesDown();
+
                         //No Gravity Projectiles
 
                         //Clone 2
@@ -790,6 +818,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand4 > 2)
                     {
+                        ProjectilesRight();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
@@ -810,6 +840,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     if (tpPosRand4 > 0)
                     {
+                        ProjectilesUp();
+
                         //Gravity Projectiles
                         if (Main.rand.NextBool(2))
                         {
