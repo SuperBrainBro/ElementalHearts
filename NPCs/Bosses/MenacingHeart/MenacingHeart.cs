@@ -134,11 +134,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 Dust.NewDust(npc.position, npc.width, npc.height, DustID.Sandstorm, 0, 5, 0, Color.White, 1);
 
                 npc.velocity *= 1.04f;
-                
+
                 if (timeLeftTillDespawn > 30)
                 {
                     npc.active = false;
-                } else
+                }
+                else
                 {
                     timeLeftTillDespawn += .1f;
                 }
@@ -295,27 +296,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand1 > 6)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(175, 0);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (P1 >= 300)
                         {
-                            GravityProjectiles(1);
-                        }
-                        else
-                        {
-                            GravityProjectiles(2);
-                        }
-
-                        //Clone 1
-                        if (Main.rand.NextBool(3))
-                        {
-<<<<<<< HEAD
                             npc.Center = Main.player[npc.target].Center + new Vector2(175, 0);
 
                             //Facing Left Projectiles
@@ -342,28 +326,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P1 = 0;
 
-=======
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand1 > 4)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 175);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //No Gravity Projectiles
-
-                        //Clone 2
-                        if (Main.rand.NextBool(2))
+                        if (P1 >= 300)
                         {
-<<<<<<< HEAD
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 175);
 
                             //Facing Up Projectiles
@@ -382,26 +352,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P1 = 0;
 
-=======
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand1 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-175, 0);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (P1 >= 300)
                         {
-<<<<<<< HEAD
                             npc.Center = Main.player[npc.target].Center + new Vector2(-175, 0);
 
                             //Facing Right Projectiles
@@ -428,46 +386,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P1 = 0;
 
-=======
-                            GravityProjectiles(1);
-                        }
-                        else
-                        {
-                            GravityProjectiles(2);
-                        }
-
-                        //Clone 3
-                        if (Main.rand.NextBool(3))
-                        {
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand1 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (P1 >= 300)
                         {
-                            GravityProjectiles(1);
-                        }
-                        else
-                        {
-                            GravityProjectiles(2);
-                        }
-
-                        //Clone 4
-                        if (Main.rand.NextBool(4))
-                        {
-<<<<<<< HEAD
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
 
                             //Facing Down Projectiles
@@ -494,11 +420,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P1 = 0;
 
-=======
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     SpawnHealHearts(4);
@@ -516,25 +437,20 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand2 > 6)
                     {
-<<<<<<< HEAD
                         Main.NewText("Sent Particle");
 
                         if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
-=======
-                        npc.Center = Main.player[npc.target].Center + new Vector2(200, 0);
->>>>>>> parent of 6986f6e... base code for the particle stuff
 
-                        //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            //Facing Left Projectiles
+                            Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
-                        //Gravity Projectiles
-                        GravityProjectiles(2);
+                            //Gravity Projectiles
+                            GravityProjectiles(2);
 
-<<<<<<< HEAD
                             //Clone 1
                             if (Main.rand.NextBool(3))
                             {
@@ -544,21 +460,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P2 = 0;
 
-=======
-                        //Clone 1
-                        if (Main.rand.NextBool(3))
-                        {
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 200, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -200, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand2 > 4)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
+                        Main.NewText("Sent Particle");
 
-<<<<<<< HEAD
                         if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 200);
@@ -579,42 +486,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P2 = 0;
 
-=======
-                        //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //No Gravity Projectiles
-
-                        //Clone 2
-                        if (Main.rand.NextBool(2))
-                        {
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -200, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand2 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
+                        Main.NewText("Sent Particle");
 
-<<<<<<< HEAD
                         if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(-200, 0);
-=======
-                        //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
->>>>>>> parent of 6986f6e... base code for the particle stuff
 
-                        //Gravity Projectiles
-                        GravityProjectiles(2);
+                            //Facing Right Projectiles
+                            Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
-<<<<<<< HEAD
                             //Gravity Projectiles
                             GravityProjectiles(2);
 
@@ -627,35 +513,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P2 = 0;
 
-=======
-                        //Clone 3
-                        if (Main.rand.NextBool(3))
-                        {
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -200, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 200, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand2 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
+                        Main.NewText("Sent Particle");
 
-<<<<<<< HEAD
                         if (P2 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -200);
-=======
-                        //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
->>>>>>> parent of 6986f6e... base code for the particle stuff
 
-                        //Gravity Projectiles
-                        GravityProjectiles(2);
+                            //Facing Down Projectiles
+                            Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                            Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
-<<<<<<< HEAD
                             //Gravity Projectiles
                             GravityProjectiles(2);
 
@@ -668,14 +540,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P2 = 0;
 
-=======
-                        //Clone 4
-                        if (Main.rand.NextBool(4))
-                        {
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 200, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     SpawnHealHearts(4);
@@ -692,24 +556,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand3 > 6)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(225, 0);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
-                        {
-                            GravityProjectiles(2);
-                        }
-                        else
-                        {
-                            GravityProjectiles(3);
-                        }
-
-<<<<<<< HEAD
                         if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(225, 0);
@@ -738,26 +586,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P3 = 0;
 
-=======
-                        //Clone 1
-                        if (Main.rand.NextBool(3))
-                        {
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -200, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 200, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -200, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand3 > 4)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 225);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-<<<<<<< HEAD
                         if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 225);
@@ -778,28 +612,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P3 = 0;
 
-=======
-                        //No Gravity Projectiles
-
-                        //Clone 2
-                        if (Main.rand.NextBool(2))
-                        {
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -225, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand3 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-225, 0);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-<<<<<<< HEAD
                         if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(-225, 0);
@@ -828,36 +646,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             }
                             P3 = 0;
 
-=======
-                        //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
-                        {
-                            GravityProjectiles(2);
-                        }
-                        else
-                        {
-                            GravityProjectiles(3);
-                        }
-
-                        //Clone 3
-                        if (Main.rand.NextBool(3))
-                        {
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -225, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 225, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand3 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -225);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-<<<<<<< HEAD
                         if (P3 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -225);
@@ -885,24 +679,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             }
                             P3 = 0;
-=======
-                        //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
-                        {
-                            GravityProjectiles(2);
-                        }
-                        else
-                        {
-                            GravityProjectiles(3);
-                        }
-
-                        //Clone 4
-                        if (Main.rand.NextBool(4))
-                        {
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 225, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     SpawnHealHearts(3);
@@ -919,9 +695,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand4 > 6)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(250, 0);
+                        Main.NewText("Sent Particle");
 
-<<<<<<< HEAD
                         if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(250, 0);
@@ -942,27 +717,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -250, NPCType<MenacingHeartClone>());
                             }
                             P4 = 0;
-=======
-                        //Facing Left Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //Gravity Projectiles
-                        GravityProjectiles(4);
-
-                        //Clone 1
-                        if (Main.rand.NextBool(4))
-                        {
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -250, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 250, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -250, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand4 > 4)
                     {
-<<<<<<< HEAD
                         Main.NewText("Sent Particle");
                         if (P4 >= 300)
                         {
@@ -983,35 +741,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             }
                             P4 = 0;
-=======
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, 250);
-
-                        //Facing Up Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //No Gravity Projectiles
-
-                        //Clone 2
-                        if (Main.rand.NextBool(3))
-                        {
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -225, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -225, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand4 > 2)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(-250, 0);
+                        Main.NewText("Sent Particle");
 
-                        //Facing Right Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 0), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, -3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-<<<<<<< HEAD
                         if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(-250, 0);
@@ -1032,24 +767,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 250, NPCType<MenacingHeartClone>());
                             }
                             P4 = 0;
-=======
-                        //Gravity Projectiles
-                        GravityProjectiles(4);
-
-                        //Clone 3
-                        if (Main.rand.NextBool(4))
-                        {
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 250, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -250, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 250, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
                     else if (tpPosRand4 > 0)
                     {
-                        npc.Center = Main.player[npc.target].Center + new Vector2(0, -250);
+                        Main.NewText("Sent Particle");
 
-<<<<<<< HEAD
                         if (P4 >= 300)
                         {
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -250);
@@ -1070,25 +793,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 250, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             }
                             P4 = 0;
-=======
-                        //Facing Down Projectiles
-                        Projectile.NewProjectile(npc.Center, new Vector2(3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-                        Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-
-                        //Gravity Projectiles
-                        GravityProjectiles(4);
-
-                        //Clone 4
-                        if (Main.rand.NextBool(5))
-                        {
-                            NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 250, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -250, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 250, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
->>>>>>> parent of 6986f6e... base code for the particle stuff
                         }
                     }
-
                     SpawnHealHearts(3);
 
                 }
@@ -1378,7 +1084,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             {
                 Item.NewItem(npc.getRect(), ItemType<MenacingLookingHeartBag>());
             }
-            else {
+            else
+            {
                 choice = Main.rand.Next(7);
                 if (choice == 0)
                 {

@@ -24,6 +24,9 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.7
+	 Buffed Menacing Heart's health and defence.
+	 Added a particle that appears to where Menacing Heart will spawn next.
 0.2.6
 	 Added over 20 new Calamity hearts!
 	 Some more UI work.
