@@ -271,18 +271,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (npc.ai[0] == 1)
                 {
                     P1++;
+                    Main.NewText(P1.ToString());
                 }
                 else if (npc.ai[0] == 2)
                 {
                     P2++;
+                    Main.NewText(P2.ToString());
                 }
                 else if (npc.ai[0] == 3)
                 {
                     P3++;
+                    Main.NewText(P3.ToString());
                 }
                 else if (npc.ai[0] == 4)
                 {
                     P4++;
+                    Main.NewText(P4.ToString());
                 }
 
                 //This is the phase code, the one below, is the phase 1 code.
@@ -300,6 +304,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         if (P1 >= 300)
                         {
+                            Main.NewText("Debug Text Rand Pos 1");
+
                             npc.Center = Main.player[npc.target].Center + new Vector2(175, 0);
 
                             //Facing Left Projectiles
@@ -325,7 +331,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, -50 + (int)Main.player[npc.target].Center.Y + -175, NPCType<MenacingHeartClone>());
                             }
                             P1 = 0;
-
                         }
                     }
                     else if (tpPosRand1 > 4)
@@ -334,6 +339,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         if (P1 >= 300)
                         {
+                            Main.NewText("Debug Text Rand Pos 2");
+
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, 175);
 
                             //Facing Up Projectiles
@@ -351,7 +358,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(-50 + (int)Main.player[npc.target].Center.X + -175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             }
                             P1 = 0;
-
                         }
                     }
                     else if (tpPosRand1 > 2)
@@ -360,6 +366,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         if (P1 >= 300)
                         {
+                            Main.NewText("Debug Text Rand Pos 3");
+
                             npc.Center = Main.player[npc.target].Center + new Vector2(-175, 0);
 
                             //Facing Right Projectiles
@@ -385,7 +393,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(0 + (int)Main.player[npc.target].Center.X + 0, 50 + (int)Main.player[npc.target].Center.Y + 175, NPCType<MenacingHeartClone>());
                             }
                             P1 = 0;
-
                         }
                     }
                     else if (tpPosRand1 > 0)
@@ -394,6 +401,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         if (P1 >= 300)
                         {
+                            Main.NewText("Debug Text Rand Pos 4");
+
                             npc.Center = Main.player[npc.target].Center + new Vector2(0, -175);
 
                             //Facing Down Projectiles
@@ -419,13 +428,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                                 NPC.NewNPC(50 + (int)Main.player[npc.target].Center.X + 175, 0 + (int)Main.player[npc.target].Center.Y + 0, NPCType<MenacingHeartClone>());
                             }
                             P1 = 0;
-
                         }
                     }
                     SpawnHealHearts(4);
                 }
                 else
-
                 //Phase 2.
                 if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 200)
                 {
