@@ -324,7 +324,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
 
                 //This is the Phase code, the one below, is the Phase 1 code.
-                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 100)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 110)
                 {
                     npc.TargetClosest(true);
 
@@ -368,7 +368,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                 }
 
-                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 200)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 210)
                 {
                     Main.NewText("Debug Text Set Pos Of Boss");
 
@@ -452,7 +452,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 else
             //Phase 2.
-            if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 80)
+            if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 90)
                 {
                     npc.TargetClosest(true);
 
@@ -465,7 +465,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(200, 0);
                     }
                     else if (tpPosRand1 > 4)
                     {
@@ -474,7 +474,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -483,7 +483,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
                     }
                     else if (tpPosRand1 > 0)
                     {
@@ -492,11 +492,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -200);
                     }
                 }
 
-                if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 160)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 170)
                 {
                     Main.NewText("Debug Text Set Pos Of Boss");
 
@@ -579,7 +579,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else
             //Phase 3.
-            if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 60)
+            if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 70)
                 {
                     npc.TargetClosest(true);
 
@@ -592,7 +592,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
                     }
                     else if (tpPosRand1 > 4)
                     {
@@ -601,7 +601,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -610,7 +610,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
                     }
                     else if (tpPosRand1 > 0)
                     {
@@ -619,11 +619,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -225);
                     }
                 }
 
-                if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 120)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 130)
                 {
                     Main.NewText("Debug Text Set Pos Of Boss");
 
@@ -706,7 +706,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 }
                 else
             //Phase 4.
-            if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 40)
+            if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 50)
                 {
                     npc.TargetClosest(true);
 
@@ -719,7 +719,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(250, 0);
                     }
                     else if (tpPosRand1 > 4)
                     {
@@ -728,7 +728,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -737,7 +737,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
                     }
                     else if (tpPosRand1 > 0)
                     {
@@ -746,11 +746,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
-                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
+                        futurePosition = Main.player[npc.target].Center + new Vector2(0, -250);
                     }
                 }
 
-                if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 80)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 100)
                 {
                     Main.NewText("Debug Text Set Pos Of Boss");
 
