@@ -20,7 +20,7 @@ namespace ElementalHearts.Projectiles.Bosses.MenacingHeart
             projectile.width = 14;
             projectile.height = 14;
             projectile.scale = 1.5f;
-            projectile.timeLeft = 250;
+            projectile.timeLeft = 200;
             projectile.penetrate = -1;
         }
 
