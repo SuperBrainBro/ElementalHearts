@@ -37,7 +37,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public bool bossLeaveBool;
 
         public Vector2 futurePosition;
-
+        public Vector2 clonePosition;
+        
         public float tpPosRand1;
         public float tpPosRand2;
         public float tpPosRand3;
@@ -337,6 +338,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
                     }
                     else if (tpPosRand1 > 4)
@@ -346,6 +348,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
                     }
                     else if (tpPosRand1 > 2)
@@ -355,6 +358,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
                     }
                     else if (tpPosRand1 > 0)
@@ -364,6 +368,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
                     }
                 }
@@ -391,9 +396,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -406,9 +411,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         if (Main.rand.NextBool(2))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -429,9 +434,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -452,9 +457,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         if (Main.rand.NextBool(4))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     P1 = 0;
@@ -475,6 +480,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(200, 0);
                     }
                     else if (tpPosRand2 > 4)
@@ -484,6 +490,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
                     }
                     else if (tpPosRand2 > 2)
@@ -493,6 +500,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
                     }
                     else if (tpPosRand2 > 0)
@@ -502,6 +510,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -200);
                     }
                 }
@@ -529,9 +538,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -544,9 +553,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         if (Main.rand.NextBool(2))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -567,9 +576,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -590,9 +599,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         if (Main.rand.NextBool(4))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     P1 = 0;
@@ -613,6 +622,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
                     }
                     else if (tpPosRand3 > 4)
@@ -622,6 +632,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
                     }
                     else if (tpPosRand3 > 2)
@@ -631,6 +642,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
                     }
                     else if (tpPosRand3 > 0)
@@ -640,6 +652,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -225);
                     }
                 }
@@ -667,9 +680,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -682,9 +695,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         if (Main.rand.NextBool(2))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -705,9 +718,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -728,9 +741,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         if (Main.rand.NextBool(4))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     P1 = 0;
@@ -751,6 +764,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 1");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(250, 0);
                     }
                     else if (tpPosRand4 > 4)
@@ -760,6 +774,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 2");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
                     }
                     else if (tpPosRand4 > 2)
@@ -769,6 +784,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 3");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
                     }
                     else if (tpPosRand4 > 0)
@@ -778,6 +794,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         Main.NewText("Debug Text Rand Pos 4");
 
+                        clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -250);
                     }
                 }
@@ -805,9 +822,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 1
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -820,9 +837,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 2
                         if (Main.rand.NextBool(2))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -843,9 +860,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 3
                         if (Main.rand.NextBool(3))
                         {
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, -50 + (int)futurePosition.Y + -175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
                     }
                     else
@@ -866,9 +883,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Clone 4
                         if (Main.rand.NextBool(4))
                         {
-                            NPC.NewNPC(0 + (int)futurePosition.X + 0, 50 + (int)futurePosition.Y + 175, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(-50 + (int)futurePosition.X + -175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
-                            NPC.NewNPC(50 + (int)futurePosition.X + 175, 0 + (int)futurePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
+                            NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
                     }
                     P1 = 0;
