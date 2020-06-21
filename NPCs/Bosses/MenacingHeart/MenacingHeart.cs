@@ -38,7 +38,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public Vector2 futurePosition;
         public Vector2 clonePosition;
-        
+
         public float tpPosRand1;
         public float tpPosRand2;
         public float tpPosRand3;
@@ -347,7 +347,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ////Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
@@ -358,7 +358,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
@@ -369,7 +369,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
@@ -493,7 +493,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
@@ -504,7 +504,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
@@ -515,7 +515,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -200);
@@ -639,7 +639,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
@@ -650,7 +650,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
@@ -661,7 +661,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -225);
@@ -785,7 +785,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
@@ -796,7 +796,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
@@ -807,7 +807,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         //Main.NewText("Sent Particle");
 
 
-                        
+
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -250);
