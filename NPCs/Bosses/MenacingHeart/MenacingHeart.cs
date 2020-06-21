@@ -306,22 +306,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (npc.ai[0] == 1)
                 {
                     P1++;
-                    Main.NewText(P1.ToString());
+                    //Main.NewText(P1.ToString());
                 }
                 else if (npc.ai[0] == 2)
                 {
                     P2++;
-                    Main.NewText(P2.ToString());
+                    //Main.NewText(P2.ToString());
                 }
                 else if (npc.ai[0] == 3)
                 {
                     P3++;
-                    Main.NewText(P3.ToString());
+                    //Main.NewText(P3.ToString());
                 }
                 else if (npc.ai[0] == 4)
                 {
                     P4++;
-                    Main.NewText(P4.ToString());
+                    //Main.NewText(P4.ToString());
                 }
 
                 //This is the Phase code, the one below, is the Phase 1 code.
@@ -334,42 +334,46 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand1 > 6)
                     {
-                        Main.NewText("Sent Particle");
+                        ////Main.NewText("Sent Particle");
 
-                        Main.NewText("Debug Text Rand Pos 1");
+                        //
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand1 > 4)
                     {
-                        Main.NewText("Sent Particle");
+                        ////Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 2");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand1 > 2)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 3");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand1 > 0)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 4");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                 }
 
@@ -476,42 +480,46 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand2 > 6)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
-                        Main.NewText("Debug Text Rand Pos 1");
+                        //
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(200, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand2 > 4)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 2");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand2 > 2)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 3");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand2 > 0)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 4");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -200);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                 }
 
@@ -618,42 +626,46 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand3 > 6)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
-                        Main.NewText("Debug Text Rand Pos 1");
+                        //
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand3 > 4)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 2");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand3 > 2)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 3");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand3 > 0)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 4");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -225);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                 }
 
@@ -760,42 +772,46 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand4 > 6)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
-                        Main.NewText("Debug Text Rand Pos 1");
+                        //
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(250, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand4 > 4)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 2");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand4 > 2)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 3");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                     else if (tpPosRand4 > 0)
                     {
-                        Main.NewText("Sent Particle");
+                        //Main.NewText("Sent Particle");
 
 
-                        Main.NewText("Debug Text Rand Pos 4");
+                        
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -250);
+                        Dust.NewDust(futurePosition, 16, 16, DustID.Blood, 0, 0, 0, Color.Red, 3);
                     }
                 }
 
