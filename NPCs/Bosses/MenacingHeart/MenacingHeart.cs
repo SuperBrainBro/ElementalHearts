@@ -54,7 +54,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.width = 128;
             npc.height = 128;
             npc.damage = 69;
-            npc.defense = 16;
+            npc.defense = 12;
             npc.lifeMax = 16000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
@@ -405,7 +405,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesLeft();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
@@ -443,7 +443,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesRight();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
@@ -567,7 +567,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesLeft();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
@@ -607,7 +607,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesRight();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
@@ -733,7 +733,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesLeft();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
@@ -773,7 +773,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesRight();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
@@ -899,7 +899,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesLeft();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(4))
                         {
                             GravityProjectiles(1);
                         }
@@ -940,7 +940,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesRight();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(4))
                         {
                             GravityProjectiles(1);
                         }
@@ -964,7 +964,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         ProjectilesDown();
 
                         //Gravity Projectiles
-                        if (Main.rand.NextBool(2))
+                        if (Main.rand.NextBool(3))
                         {
                             GravityProjectiles(1);
                         }
