@@ -567,6 +567,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
+                        P2 = 0;
                     }
                     else
                     if (tpPosRand2 > 4)
@@ -582,6 +583,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
+                        P2 = 0;
                     }
                     else
                     if (tpPosRand2 > 2)
@@ -605,6 +607,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
+                        P2 = 0;
                     }
                     else
                     if (tpPosRand2 > 0)
@@ -628,8 +631,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
+                        P2 = 0;
                     }
-                    P1 = 0;
+
                     SpawnHealHearts(4);
                 }
                 else
@@ -721,6 +725,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
+                        P3 = 0;
                     }
                     else
                     if (tpPosRand3 > 4)
@@ -736,6 +741,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
+                        P3 = 0;
                     }
                     else
                     if (tpPosRand3 > 2)
@@ -759,6 +765,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
+                        P3 = 0;
                     }
                     else
                     if (tpPosRand3 > 0)
@@ -782,8 +789,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
+                        P3 = 0;
                     }
-                    P1 = 0;
+
                     SpawnHealHearts(4);
                 }
                 else
