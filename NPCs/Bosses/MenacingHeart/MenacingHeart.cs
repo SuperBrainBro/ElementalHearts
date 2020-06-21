@@ -305,22 +305,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 if (npc.ai[0] == 1)
                 {
                     P1++;
-                    //Main.NewText(P1.ToString());
+                    Main.NewText(P1.ToString());
                 }
                 else if (npc.ai[0] == 2)
                 {
                     P2++;
-                    //Main.NewText(P2.ToString());
+                    Main.NewText(P2.ToString());
                 }
                 else if (npc.ai[0] == 3)
                 {
                     P3++;
-                    //Main.NewText(P3.ToString());
+                    Main.NewText(P3.ToString());
                 }
                 else if (npc.ai[0] == 4)
                 {
                     P4++;
-                    //Main.NewText(P4.ToString());
+                    Main.NewText(P4.ToString());
                 }
 
                 //This is the Phase code, the one below, is the Phase 1 code.
@@ -457,7 +457,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     P1 = 0;
                     SpawnHealHearts(4);
                 }
-
                 else
             //Phase 2.
             if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 90)
