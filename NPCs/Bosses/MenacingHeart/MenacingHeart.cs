@@ -340,9 +340,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
 
                     }
                     else if (tpPosRand1 > 4)
@@ -354,9 +356,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -367,9 +371,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand1 > 0)
                     {
@@ -380,9 +386,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                 }
 
@@ -495,9 +503,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(200, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand2 > 4)
                     {
@@ -508,9 +518,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand2 > 2)
                     {
@@ -521,9 +533,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand2 > 0)
                     {
@@ -534,9 +548,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -200);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                 }
 
@@ -653,9 +669,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand3 > 4)
                     {
@@ -666,9 +684,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand3 > 2)
                     {
@@ -679,9 +699,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand3 > 0)
                     {
@@ -692,9 +714,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -225);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                 }
 
@@ -811,9 +835,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(250, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand4 > 4)
                     {
@@ -824,9 +850,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand4 > 2)
                     {
@@ -837,9 +865,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                     else if (tpPosRand4 > 0)
                     {
@@ -850,9 +880,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -250);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
-                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.Red, 5);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
+                        Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Color.White, 3);
                     }
                 }
 
