@@ -42,6 +42,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override void AI()
         {
+            //LIGHT (BEFORE EVERYTHING ELSE)
+            Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
+
             npc.alpha = (int)(255 - (cloneTimeLeft));
             if (cloneTimeLeft < 0)
             {
