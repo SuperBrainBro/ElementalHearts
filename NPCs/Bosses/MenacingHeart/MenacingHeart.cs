@@ -888,7 +888,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                 }
 
-                if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 100)
+                if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 125)
                 {
 
 
