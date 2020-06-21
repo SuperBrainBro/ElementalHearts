@@ -379,7 +379,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 210)
                 {
-                    Main.NewText("Debug Text Set Pos Of Boss");
+
 
                     npc.Center = futurePosition;
 
@@ -525,7 +525,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 170)
                 {
-                    Main.NewText("Debug Text Set Pos Of Boss");
+
 
                     npc.Center = futurePosition;
 
@@ -671,7 +671,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 130)
                 {
-                    Main.NewText("Debug Text Set Pos Of Boss");
+
 
                     npc.Center = futurePosition;
 
@@ -817,7 +817,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 100)
                 {
-                    Main.NewText("Debug Text Set Pos Of Boss");
+
 
                     npc.Center = futurePosition;
 
@@ -842,6 +842,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                         }
+                        P4 = 0;
+
                     }
                     else
                     if (tpPosRand4 > 4)
@@ -857,6 +859,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
+                        P4 = 0;
                     }
                     else
                     if (tpPosRand4 > 2)
@@ -880,6 +883,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, -50 + (int)clonePosition.Y + -175, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(0 + (int)clonePosition.X + 0, 50 + (int)clonePosition.Y + 175, NPCType<MenacingHeartClone>());
                         }
+                        P4 = 0;
                     }
                     else
                     if (tpPosRand4 > 0)
@@ -903,8 +907,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                             NPC.NewNPC(-50 + (int)clonePosition.X + -175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                             NPC.NewNPC(50 + (int)clonePosition.X + 175, 0 + (int)clonePosition.Y + 0, NPCType<MenacingHeartClone>());
                         }
+                        P4 = 0;
                     }
-                    P1 = 0;
                     SpawnHealHearts(4);
                 }
             }
