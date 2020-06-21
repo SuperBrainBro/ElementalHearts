@@ -1107,7 +1107,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     direction = direction.RotatedBy(MathHelper.ToRadians(sign * tilt));
                     direction = direction.RotatedBy(-MathHelper.ToRadians(-degrees / 2 + degrees * amount / 2));
-                    int damage = (int)(npc.damage / (Main.damageMultiplier * 2));
+                    int damage = (int)(npc.damage / (Main.damageMultiplier * 20));
                     damage *= 10;
                     for (int i = 0; i < amount; i++)
                     {
