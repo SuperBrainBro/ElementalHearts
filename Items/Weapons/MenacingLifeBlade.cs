@@ -57,18 +57,18 @@ namespace ElementalHearts.Items.Weapons
 			{
 				speedEffect = true;
 			}
-			else if (item.useTime <= 24)
+			else if (item.useTime <= 18)
 			{
 				speedEffect = false;
 			}
 
 			if (speedEffect)
 			{
-				speedValue += 0.1f;
+				speedValue += 0.25f;
 			}
 			else if (!speedEffect)
 			{
-				speedValue -= 0.1f;
+				speedValue -= 0.25f;
 			}
 			
 			if (speedValue >= 1)
