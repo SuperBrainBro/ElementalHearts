@@ -33,7 +33,7 @@ namespace ElementalHearts.Items.Weapons
 			item.knockBack = 8;
 			item.value = 6775;
 			item.rare = ItemRarityID.LightRed;
-			item.UseSound = SoundID.Item7;
+			item.UseSound = SoundID.Item1;
 			//item.shoot = ProjectileType<FriendlyMenacingProjectile>();
 			//item.shootSpeed = 6f;
 			item.autoReuse = true;
