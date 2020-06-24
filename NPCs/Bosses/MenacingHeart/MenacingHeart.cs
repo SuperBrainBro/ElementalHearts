@@ -829,10 +829,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                     if (tpPosRand4 > 6)
                     {
-                        //Main.NewText("Sent Particle");
-
-                        //
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(250, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -843,11 +839,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand4 > 4)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 250);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -858,11 +849,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand4 > 2)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-250, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -873,11 +859,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand4 > 0)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -250);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
