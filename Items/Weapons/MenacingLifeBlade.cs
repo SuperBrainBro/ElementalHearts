@@ -27,8 +27,8 @@ namespace ElementalHearts.Items.Weapons
 			item.width = 46;
 			item.crit = 12;
 			item.height = 50;
-			item.useTime = 6;
-			item.useAnimation = 6;
+			item.useTime = 26;
+			item.useAnimation = 26;
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 8;
 			item.value = 6775;
