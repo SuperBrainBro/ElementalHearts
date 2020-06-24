@@ -25,6 +25,7 @@ namespace ElementalHearts.Items.Weapons
 			item.damage = 50;
 			item.melee = true;
 			item.width = 46;
+			item.crit = 12;
 			item.height = 50;
 			item.useTime = 6;
 			item.useAnimation = 6;

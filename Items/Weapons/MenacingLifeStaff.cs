@@ -24,6 +24,7 @@ namespace ElementalHearts.Items.Weapons
 			item.damage = 50;
 			item.magic = true;
 			item.mana = 10;
+			item.crit = 12;
 			item.width = 48;
 			item.height = 48;
 			item.useTime = 16;
