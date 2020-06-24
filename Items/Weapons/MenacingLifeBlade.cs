@@ -87,6 +87,8 @@ namespace ElementalHearts.Items.Weapons
 			
 			base.HoldItem(player);
 		}
+
+		//Heal Player On Hit
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
 		{
 			int healAmount = damage / (10 + (int)Main.rand.NextFloat(5));
