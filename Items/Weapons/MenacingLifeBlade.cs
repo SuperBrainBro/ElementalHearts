@@ -95,6 +95,7 @@ namespace ElementalHearts.Items.Weapons
 			healAmount /= 1 + (int)Main.rand.NextFloat(4);
 			Main.player[item.owner].HealEffect(healAmount, true);
 			Main.player[item.owner].statLife += healAmount;
+			Main.PlaySound(SoundID.Item35, target.position);
 			base.OnHitNPC(player, target, damage, knockBack, crit);
 		}
 	}
