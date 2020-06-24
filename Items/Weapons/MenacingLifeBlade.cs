@@ -16,7 +16,7 @@ namespace ElementalHearts.Items.Weapons
 		public float speedValue;
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Casts heart shaped projectiles that suck life from anything it touches.");
+			Tooltip.SetDefault("A sharp sword forged out of ancient life quartz. \nThe blade sucks life from anything it touches.");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
@@ -86,6 +86,14 @@ namespace ElementalHearts.Items.Weapons
 			}
 			
 			base.HoldItem(player);
+		}
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		{
+			int healAmount = damage / (10 + (int)Main.rand.NextFloat(5));
+			healAmount /= 1 + (int)Main.rand.NextFloat(4);
+			Main.player[item.owner].HealEffect(healAmount, true);
+			Main.player[item.owner].statLife += healAmount;
+			base.OnHitNPC(player, target, damage, knockBack, crit);
 		}
 	}
 }

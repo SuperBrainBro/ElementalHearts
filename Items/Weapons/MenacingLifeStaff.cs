@@ -15,7 +15,7 @@ namespace ElementalHearts.Items.Weapons
 		public bool speedEffect;
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Casts heart shaped projectiles that suck life from anything it touches.");
+			Tooltip.SetDefault("A mystic staff forged out of ancient life quartz. \nCasts heart shaped projectiles that suck life from anything it touches.");
 			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
