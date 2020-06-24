@@ -73,14 +73,14 @@ namespace ElementalHearts.Items.Weapons
 			
 			if (speedValue >= 10)
 			{
-				item.useTime += 1;
-				item.useAnimation += 1;
+				item.useTime -= 1;
+				item.useAnimation -= 1;
 				speedValue = 0;
 			} 
 			else if(speedValue <= -10)
 			{
-				item.useTime -= 1;
-				item.useAnimation -= 1;
+				item.useTime += 1;
+				item.useAnimation += 1;
 				speedValue = 0;
 			}
 			
