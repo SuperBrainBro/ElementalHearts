@@ -53,23 +53,10 @@ namespace ElementalHearts.Items.Weapons
 		}
 		public override void HoldItem(Player player)
 		{
-			if(speedValue >= 1)
-			{
-				item.useTime += 1;
-				item.useAnimation += 1;
-				speedValue = 0;
-			} 
-			else if(speedValue <= 1)
-			{
-				item.useTime -= 1;
-				item.useAnimation -= 1;
-				speedValue = 0;
-			}
-
 			if (item.useTime >= 12)
 			{
 				speedEffect = false;
-			} 
+			}
 			else if (item.useTime <= 3)
 			{
 				speedEffect = true;
@@ -83,6 +70,21 @@ namespace ElementalHearts.Items.Weapons
 			{
 				speedValue -= 0.01f;
 			}
+
+			/*
+			if (speedValue >= 1)
+			{
+				item.useTime += 1;
+				item.useAnimation += 1;
+				speedValue = 0;
+			} 
+			else if(speedValue <= 1)
+			{
+				item.useTime -= 1;
+				item.useAnimation -= 1;
+				speedValue = 0;
+			}
+			*/
 			base.HoldItem(player);
 		}
 	}
