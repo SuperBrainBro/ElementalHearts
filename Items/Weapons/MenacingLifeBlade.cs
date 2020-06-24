@@ -58,7 +58,8 @@ namespace ElementalHearts.Items.Weapons
 				item.useTime += 1;
 				item.useAnimation += 1;
 				speedValue = 0;
-			} else if(speedValue <= 1)
+			} 
+			else if(speedValue <= 1)
 			{
 				item.useTime -= 1;
 				item.useAnimation -= 1;
@@ -67,20 +68,20 @@ namespace ElementalHearts.Items.Weapons
 
 			if (item.useTime >= 12)
 			{
-				speedEffect = true;
+				speedEffect = false;
 			} 
 			else if (item.useTime <= 3)
 			{
-				speedEffect = false;
+				speedEffect = true;
 			}
 
 			if (speedEffect)
 			{
-				speedValue += 0.1f;
+				speedValue += 0.01f;
 			}
 			else
 			{
-				speedValue -= 0.1f;
+				speedValue -= 0.01f;
 			}
 			base.HoldItem(player);
 		}
