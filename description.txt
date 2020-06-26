@@ -25,7 +25,8 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 
 Change-Log:
 0.2.9
-	 Fixed Menacing Heart drop, same for treasure bag
+	 Fixed Menacing Heart drop, same for treasure bag.
+	 Fixed Menacing Heart Keeper animation.
 0.2.8
 	 A new weapon: Menacing Life Blade, a sword which drops from the Menacing Heart boss.
 	 A new weapon: Menacing Heart Keeper, a bow which drops from the Menacing Heart boss.
