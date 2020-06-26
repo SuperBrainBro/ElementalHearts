@@ -16,7 +16,7 @@ namespace ElementalHearts.Items.Weapons
 		public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("A mystic staff forged out of ancient life quartz. \nCasts heart shaped projectiles that suck life from anything it touches.");
-			Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
+			//Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
 		public override void SetDefaults()
