@@ -75,7 +75,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override bool CheckDead()
         {
-            Main.NewText("<Menacing.Heart69$> You have weakened me. I will come back though, if you ever need me.", Color.White);
+            Main.NewText("<Menacing.Heart" + /*69$*/"" + "> You have weakened me. I will come back though, if you ever need me.", Color.White);
             return base.CheckDead();
         }
         public override void UpdateLifeRegen(ref int damage)
@@ -1223,7 +1223,13 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     //Item.NewItem(npc.getRect(), ItemType<Mask>());
                 }
-                Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());
+                if (Main.rand.NextBool(3)) {
+                    Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());
+                } else if (Main.rand.NextBool(3)) {
+                    Item.NewItem(npc.getRect(), ItemType<MenacingLifeBlade>());
+                } else {
+                    Item.NewItem(npc.getRect(), ItemType<MenacingHeartKeeper>());
+                }
             }
             if (!ElementalHeartsWorld.downedMenacingHeart)
             {

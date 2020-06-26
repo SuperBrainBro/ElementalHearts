@@ -24,6 +24,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.9
+	 Fixed Menacing Heart drop, same for treasure bag
 0.2.8
 	 A new weapon: Menacing Life Blade, a sword which drops from the Menacing Heart boss.
 	 A new weapon: Menacing Heart Keeper, a bow which drops from the Menacing Heart boss.
