@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Weapons
 
 		public override void SetDefaults()
 		{
-			item.damage = 50;
+			item.damage = 40;
 			item.ranged = true;
 			item.crit = 12;
 			item.width = 26;

@@ -9,7 +9,7 @@ using System.IO;
 using ElementalHearts.Items.Boss;
 using Terraria.Audio;
 using ElementalHearts.Items.Weapons;
-
+using ElementalHearts.Items.Consumables;
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
     [AutoloadBossHead]
@@ -1223,6 +1223,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     //Item.NewItem(npc.getRect(), ItemType<Mask>());
                 }
+                Item.NewItem(npc.getRect(), ItemType<MenacingHeartItem>());
                 if (Main.rand.NextBool(3)) {
                     Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());
                 } else if (Main.rand.NextBool(3)) {

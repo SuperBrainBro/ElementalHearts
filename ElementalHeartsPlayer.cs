@@ -179,6 +179,8 @@ namespace ElementalHearts
         public int UelibloomLife;
         public int VoidstoneLife;
 
+        //Boss Hearts
+        public int MenacingLife;
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
@@ -340,6 +342,9 @@ namespace ElementalHearts
             player.statLifeMax2 += TenebrisLife * 1;
             player.statLifeMax2 += UelibloomLife * 1;
             player.statLifeMax2 += VoidstoneLife * 1;
+
+            //Boss Hearts
+            player.statLifeMax2 += MenacingLife * 5;
         }
         public override void UpdateDead()
         {
@@ -525,6 +530,9 @@ namespace ElementalHearts
             packet.Write(VoidstoneLife);
 
 
+            //Boss Hearts
+            packet.Write(MenacingLife);
+
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
         }
@@ -696,10 +704,13 @@ namespace ElementalHearts
                 { "TenebrisLife", TenebrisLife},
                 { "UelibloomLife", UelibloomLife},
                 { "VoidstoneLife", VoidstoneLife},
+    
+                //Boss Hearts                          
+                { "MenacingLife", MenacingLife},
 
                 //Other
-                {"nonStopParty", nonStopParty},
-                };
+                { "nonStopParty", nonStopParty},
+            };
         }
 
         public override void Load(TagCompound tag)
@@ -859,6 +870,9 @@ namespace ElementalHearts
             TenebrisLife = tag.GetInt("TenebrisLife");
             UelibloomLife = tag.GetInt("UelibloomLife");
             VoidstoneLife = tag.GetInt("VoidstoneLife");
+
+            //Boss Hearts
+            MenacingLife = tag.GetInt("MenacingLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

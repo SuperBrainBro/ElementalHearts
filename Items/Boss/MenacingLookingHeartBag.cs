@@ -5,6 +5,7 @@ using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Items.Weapons;
+using ElementalHearts.Items.Consumables;
 
 namespace ElementalHearts.Items.Boss
 {
@@ -34,6 +35,7 @@ namespace ElementalHearts.Items.Boss
 				//player.QuickSpawnItem(ItemType<AbominationMask>());
 			}
 			player.QuickSpawnItem(ItemType<MenacingLookingPendant>());
+			player.QuickSpawnItem(ItemType<MenacingHeartItem>());
 			if (Main.rand.NextBool(3)) {
 				player.QuickSpawnItem(ItemType<MenacingLifeStaff>());
 			} else if (Main.rand.NextBool(3)) {
