@@ -5,7 +5,7 @@ using static Terraria.ModLoader.ModContent;
 using Terraria.ID;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Items.Weapons;
-using ElementalHearts.Items.Consumables;
+using ElementalHearts.Items.Consumables.Bosses;
 
 namespace ElementalHearts.Items.Boss
 {

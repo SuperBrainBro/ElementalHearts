@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.Items.Consumables
+namespace ElementalHearts.Items.Consumables.Bosses
 {
 	internal class MenacingHeartItem : ModItem
 	{

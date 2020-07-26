@@ -9,7 +9,8 @@ using System.IO;
 using ElementalHearts.Items.Boss;
 using Terraria.Audio;
 using ElementalHearts.Items.Weapons;
-using ElementalHearts.Items.Consumables;
+using ElementalHearts.Items.Consumables.Bosses;
+
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
     [AutoloadBossHead]
