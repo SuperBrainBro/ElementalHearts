@@ -21,7 +21,7 @@ namespace ElementalHearts.Projectiles.Friendly
             projectile.ranged = true;
             projectile.penetrate = 3;
             projectile.timeLeft = 600;
-            projectile.scale = .25f;
+            projectile.scale = .5f;
         }
 
         public override void AI()
