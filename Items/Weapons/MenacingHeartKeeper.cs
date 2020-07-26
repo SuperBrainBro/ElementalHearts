@@ -15,7 +15,7 @@ namespace ElementalHearts.Items.Weapons
 		public bool speedEffect;
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("A mystic staff forged out of ancient life quartz. \nHeart shaped projectiles, which accompany arrows, suck life from anything it touches.");
+			Tooltip.SetDefault("A mystic staff forged out of ancient life quartz. \nSeeking heart shaped projectiles, which accompany arrows, suck life from anything it touches.");
 			//Item.staff[item.type] = true; //this makes the useStyle animate as a staff instead of as a gun
 		}
 
@@ -34,7 +34,7 @@ namespace ElementalHearts.Items.Weapons
 			item.value = 6775;
 			item.rare = ItemRarityID.LightRed;
 			item.UseSound = SoundID.Item5;
-			//item.shoot = ProjectileID.arrow
+			item.shoot = ProjectileID.WoodenArrowFriendly;
 			item.useAmmo = AmmoID.Arrow;
 			item.shootSpeed = 6f;
 			item.autoReuse = true;
@@ -51,7 +51,7 @@ namespace ElementalHearts.Items.Weapons
 			Dust.NewDust(position, 8, 8, 2, 0, 0, 0, Main.DiscoColor, 2);
 			Dust.NewDust(position, 8, 8, 1, 0, 0, 0, Main.DiscoColor, 1);
 
-			Projectile.NewProjectile(position, new Vector2(speedX, speedY), damage, (int)knockBack, Main.myPlayer);
+			Projectile.NewProjectile(position, new Vector2(speedX, speedY), ProjectileType<FriendlyMenacingProjectile>(), damage, knockBack, Main.myPlayer);
 			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
 		}
 		public override void HoldItem(Player player)

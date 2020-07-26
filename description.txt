@@ -24,6 +24,8 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.10
+	 Fixed and upgraded the Menacing Heart Keeper weapon. It is now accompanied by homing heart shaped projectiles once out of every 2 arrows.
 0.2.9
 	 Fixed Menacing Heart drop, same for treasure bag.
 	 Fixed Menacing Heart Keeper animation.
