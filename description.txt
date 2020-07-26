@@ -26,7 +26,7 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 Change-Log:
 0.2.10
 	 Fixed and upgraded the Menacing Heart Keeper weapon. It is now accompanied by homing heart shaped projectiles once out of every 2 arrows.
-	 Added the Mencaing Heart, a consumable version of the Menacing Heart Boss. It permanately increases life by 5.
+	 Added the Menecing Heart, a consumable version of the Menacing Heart Boss. It permanately increases life by 5.
 	 Fixed the Menacing Heart loot table.
 0.2.9
 	 Fixed Menacing Heart drop, same for treasure bag.
