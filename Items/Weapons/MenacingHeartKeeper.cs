@@ -12,6 +12,7 @@ namespace ElementalHearts.Items.Weapons
 {
     class MenacingHeartKeeper : ModItem
 	{
+		public int shootCountInt;
 		public bool speedEffect;
 		public override void SetStaticDefaults()
 		{
@@ -51,8 +52,19 @@ namespace ElementalHearts.Items.Weapons
 			Dust.NewDust(position, 8, 8, 2, 0, 0, 0, Main.DiscoColor, 2);
 			Dust.NewDust(position, 8, 8, 1, 0, 0, 0, Main.DiscoColor, 1);
 
-			Projectile.NewProjectile(position, new Vector2(speedX, speedY), ProjectileType<FriendlyMenacingProjectile>(), damage, knockBack, Main.myPlayer);
-			return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+			if (shootCountInt == 1)
+			{
+				Projectile.NewProjectile(position, new Vector2(speedX, speedY), ProjectileType<SeekingFriendlyMenacingProjectile>(), damage, knockBack, Main.myPlayer);
+				shootCountInt = 0;
+			}
+			else
+			{
+				if (shootCountInt == 0)
+				{
+					shootCountInt = 1;
+				}
+			}
+		return base.Shoot(player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
 		}
 		public override void HoldItem(Player player)
 		{
