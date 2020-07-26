@@ -21,6 +21,7 @@ namespace ElementalHearts.Projectiles.Friendly
         }
         public override void AI()
         {
+            //Gravity
             projectile.velocity.Y += projectile.ai[0];
 
             //Face Toward Velocity
