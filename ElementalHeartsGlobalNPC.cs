@@ -1,4 +1,5 @@
 using ElementalHearts.Items.Consumables;
+using ElementalHearts.Items.Consumables.Bosses;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -18,6 +19,18 @@ namespace ElementalHearts
 		}
 		public override void NPCLoot(NPC npc)
 		{
+            //King Slime Expert Drop
+            if (npc.type == NPCID.KingSlime && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<RoyalSlimeHeart>());
+            }
+
+			//Eye of Cthulhu Expert Drop
+			if (npc.type == NPCID.EyeofCthulhu && Main.expertMode)
+			{
+				Item.NewItem(npc.getRect(), ItemType<EyeHeart>());
+			}
+
 			//Brain Of Cthulu Expert Drop
 			if (npc.type == NPCID.BrainofCthulhu && Main.expertMode)
 			{
@@ -36,9 +49,15 @@ namespace ElementalHearts
 			{
 				Item.NewItem(npc.getRect(), ItemType<WormHeart>());
 			}
-			if (HC == 1 && BC == 0 && TC == 0 && Main.expertMode) //incase the Head is the last thing killed
+            if (HC == 1 && BC == 0 && TC == 0 && Main.expertMode) //incase the Head is the last thing killed
+            {
+                Item.NewItem(npc.getRect(), ItemType<WormHeart>());
+            }
+
+			//Skeletron Expert Drop
+			if (npc.type == NPCID.SkeletronHead && Main.expertMode)
 			{
-				Item.NewItem(npc.getRect(), ItemType<WormHeart>());
+				Item.NewItem(npc.getRect(), ItemType<BoneHeart>());
 			}
 
 			//Wall Of Flesh Expert Drop

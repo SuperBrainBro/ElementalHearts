@@ -27,9 +27,10 @@ namespace ElementalHearts
             Mod bossChecklist = ModLoader.GetMod("BossChecklist");
             if (bossChecklist != null)
             {
-                bossChecklist.Call("AddBoss", 5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
+                bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
                 new List<int>() { 2493 /*Mask*/, 2489 /*Trophy; Change it later; I set default items for base*/ },
-                new List<int>() { ModContent.ItemType<Items.Boss.MenacingLookingHeartBag>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
+                new List<int>() { ModContent.ItemType<Items.Boss.MenacingLookingHeartBag>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>(),
+                ModContent.ItemType<Items.Weapons.MenacingHeartKeeper>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
                 "Find and activate a [i:" + ItemType("Tiles.MenacingLookingStatueItem") + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
             }
         }

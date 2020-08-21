@@ -24,9 +24,14 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.11
+	 Added the Royal Slime Heart, a consumable version of the King Slime. It permanately increases life by 5.
+	 Added the Eye Heart, a consumable version of the Eye of Cthulhu. It permanately increases life by 5.
+	 Added the Bone Heart, a consumable version of the Skeletron. It permanately increases life by 5.
+	 Fixed the Menacing Heart loot table. (boss checklist support fixes)
 0.2.10
 	 Fixed and upgraded the Menacing Heart Keeper weapon. It is now accompanied by homing heart shaped projectiles once out of every 2 arrows.
-	 Added the Menecing Heart, a consumable version of the Menacing Heart Boss. It permanately increases life by 5.
+	 Added the Menacing Heart, a consumable version of the Menacing Heart Boss. It permanately increases life by 5.
 	 Fixed the Menacing Heart loot table.
 0.2.9
 	 Fixed Menacing Heart drop, same for treasure bag.

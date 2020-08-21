@@ -6,11 +6,11 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables.Bosses
 {
-	internal class MenacingHeartItem : ModItem
+	internal class BoneHeart : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Permanently increases maximum life by 5");
-			DisplayName.SetDefault("Menacing Heart");
+			DisplayName.SetDefault("Bone Heart");
 		}
 
 		public override void SetDefaults() {
@@ -21,7 +21,7 @@ namespace ElementalHearts.Items.Consumables.Bosses
 		}
 
 		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().MenacingLife <
+			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().BoneLife <
 				   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
 		}
 
@@ -31,7 +31,7 @@ namespace ElementalHearts.Items.Consumables.Bosses
 			if (Main.myPlayer == player.whoAmI) {
 				player.HealEffect(5, true);
 			}
-			player.GetModPlayer<ElementalHeartsPlayer>().MenacingLife += 1;
+			player.GetModPlayer<ElementalHeartsPlayer>().BoneLife += 1;
 			return true;
 		}
 	}

@@ -181,6 +181,10 @@ namespace ElementalHearts
 
         //Boss Hearts
         public int MenacingLife;
+        public int RoyalSlimeLife;
+        public int EyeLife;
+        public int BoneLife;
+
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
@@ -345,6 +349,9 @@ namespace ElementalHearts
 
             //Boss Hearts
             player.statLifeMax2 += MenacingLife * 5;
+            player.statLifeMax2 += RoyalSlimeLife * 5;
+            player.statLifeMax2 += EyeLife * 5;
+            player.statLifeMax2 += BoneLife * 5;
         }
         public override void UpdateDead()
         {
@@ -532,6 +539,9 @@ namespace ElementalHearts
 
             //Boss Hearts
             packet.Write(MenacingLife);
+            packet.Write(RoyalSlimeLife);
+            packet.Write(EyeLife);
+            packet.Write(BoneLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -707,6 +717,9 @@ namespace ElementalHearts
     
                 //Boss Hearts                          
                 { "MenacingLife", MenacingLife},
+                { "RoyalSlimeLife", RoyalSlimeLife},
+                { "EyeLife", EyeLife},
+                { "BoneLife", BoneLife},
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -873,6 +886,9 @@ namespace ElementalHearts
 
             //Boss Hearts
             MenacingLife = tag.GetInt("MenacingLife");
+            RoyalSlimeLife = tag.GetInt("RoyalSlimeLife");
+            EyeLife = tag.GetInt("EyeLife");
+            BoneLife = tag.GetInt("BoneLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

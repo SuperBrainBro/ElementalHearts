@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AfFeNSogbnj8PtMRS9UzCc0Vq7t31NDSWXFNQKGDainN2QkAL1zcOwmgNEzXoF6xz5z0ab84DZRzHShK72f9aw==",
+  "dgSpecHash": "eQ9xRyzcs42LzKD5T/4HkU1ceNCElI1TY0yHv21HMvMYRy457HgwUfzt+QCJUI709Yi8bZUwnOA5p4M8nAtBTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
+  "projectFilePath": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vincent\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
+    "C:\\Users\\palma\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
   ],
   "logs": []
 }
