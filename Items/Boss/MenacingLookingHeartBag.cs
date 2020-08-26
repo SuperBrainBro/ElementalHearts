@@ -30,7 +30,9 @@ namespace ElementalHearts.Items.Boss
 		}
 
 		public override void OpenBossBag(Player player) {
-			player.TryGettingDevArmor();
+			if (Main.hardMode) {
+				player.TryGettingDevArmor();
+			}
 			if (Main.rand.NextBool(7)) {
 				//player.QuickSpawnItem(ItemType<AbominationMask>());
 			}
