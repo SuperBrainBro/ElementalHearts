@@ -15,6 +15,7 @@ using Terraria.UI;
 using ElementalHearts;
 using Terraria.GameContent.UI.Elements;
 using ElementalHearts.Tiles;
+using ElementalHearts.Items.Consumables.Bosses;
 
 namespace ElementalHearts
 {
