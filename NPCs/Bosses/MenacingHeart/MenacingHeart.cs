@@ -10,6 +10,7 @@ using ElementalHearts.Items.Boss;
 using Terraria.Audio;
 using ElementalHearts.Items.Weapons;
 using ElementalHearts.Items.Consumables.Bosses;
+using ElementalHearts.Tiles;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -1211,7 +1212,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             int choice = Main.rand.Next(10);
             if (choice == 0)
             {
-                //Item.NewItem(npc.getRect(), ItemType<Trophy>());
+                Item.NewItem(npc.getRect(), ItemType<MenacingHeartTrophyItem>());
             }
             if (Main.expertMode)
             {
