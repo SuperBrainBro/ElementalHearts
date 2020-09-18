@@ -14,6 +14,7 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using ElementalHearts;
 using Terraria.GameContent.UI.Elements;
+using ElementalHearts.Tiles;
 
 namespace ElementalHearts
 {
@@ -28,10 +29,10 @@ namespace ElementalHearts
             if (bossChecklist != null)
             {
                 bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
-                new List<int>() { 2493 /*Mask*/, 2489 /*Trophy; Change it later; I set default items for base*/ },
-                new List<int>() { ModContent.ItemType<Items.Boss.MenacingLookingHeartBag>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>(),
+                new List<int>() { 2493 /*Mask*/, 2489 /*Trophy; Change it later; I set default items for base*/, ModContent.ItemType<MHMb>() },
+                new List<int>() { ModContent.ItemType<MenacingHeartItem>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>(),
                 ModContent.ItemType<Items.Weapons.MenacingHeartKeeper>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
-                "Find and activate a [i:" + ItemType("Tiles.MenacingLookingStatueItem") + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
+                "Find and activate a [i:" + ModContent.ItemType<MenacingLookingStatueItem>() + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
             }
         }
 
@@ -49,6 +50,10 @@ namespace ElementalHearts
 
                 MyUI = new TheUI();
                 MyUI.Activate(); // Activate calls Initialize() on the UIState if not initialized, then calls OnActivate and then calls Activate on every child element
+
+                #region Music Boxes
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic"), ModContent.ItemType<MHMb>(), ModContent.TileType<MHMbTile>());
+                #endregion
             }
             base.Load();
         }
