@@ -184,6 +184,8 @@ namespace ElementalHearts
         public int RoyalSlimeLife;
         public int EyeLife;
         public int BoneLife;
+        public int AncientLife;
+        public int CelestialLife;
 
         public override void ResetEffects()
         {
@@ -352,6 +354,8 @@ namespace ElementalHearts
             player.statLifeMax2 += RoyalSlimeLife * 5;
             player.statLifeMax2 += EyeLife * 5;
             player.statLifeMax2 += BoneLife * 5;
+            player.statLifeMax2 += AncientLife * 10;
+            player.statLifeMax2 += CelestialLife * 10;
         }
         public override void UpdateDead()
         {
@@ -542,6 +546,8 @@ namespace ElementalHearts
             packet.Write(RoyalSlimeLife);
             packet.Write(EyeLife);
             packet.Write(BoneLife);
+            packet.Write(AncientLife);
+            packet.Write(CelestialLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -720,6 +726,8 @@ namespace ElementalHearts
                 { "RoyalSlimeLife", RoyalSlimeLife},
                 { "EyeLife", EyeLife},
                 { "BoneLife", BoneLife},
+                { "AncientLife", AncientLife},
+                { "CelestialLife", CelestialLife},
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -889,6 +897,8 @@ namespace ElementalHearts
             RoyalSlimeLife = tag.GetInt("RoyalSlimeLife");
             EyeLife = tag.GetInt("EyeLife");
             BoneLife = tag.GetInt("BoneLife");
+            AncientLife = tag.GetInt("AncientLife");
+            CelestialLife = tag.GetInt("CelestialLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

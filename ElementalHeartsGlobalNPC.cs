@@ -17,77 +17,89 @@ namespace ElementalHearts
 		public override void ResetEffects(NPC npc) {
 			curseCATsCurse = false;
 		}
-		public override void NPCLoot(NPC npc)
-		{
+        public override void NPCLoot(NPC npc)
+        {
             //King Slime Expert Drop
             if (npc.type == NPCID.KingSlime && Main.expertMode)
             {
                 Item.NewItem(npc.getRect(), ItemType<RoyalSlimeHeart>());
             }
 
-			//Eye of Cthulhu Expert Drop
-			if (npc.type == NPCID.EyeofCthulhu && Main.expertMode)
-			{
-				Item.NewItem(npc.getRect(), ItemType<EyeHeart>());
-			}
+            //Eye of Cthulhu Expert Drop
+            if (npc.type == NPCID.EyeofCthulhu && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<EyeHeart>());
+            }
 
-			//Brain Of Cthulu Expert Drop
-			if (npc.type == NPCID.BrainofCthulhu && Main.expertMode)
-			{
-				Item.NewItem(npc.getRect(), ItemType<BrainHeart>());
-			}
+            //Brain Of Cthulu Expert Drop
+            if (npc.type == NPCID.BrainofCthulhu && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<BrainHeart>());
+            }
 
-			//Eater Of Worlds Expert Drop
-			int HC = NPC.CountNPCS(NPCID.EaterofWorldsHead);
-			int BC = NPC.CountNPCS(NPCID.EaterofWorldsBody);
-			int TC = NPC.CountNPCS(NPCID.EaterofWorldsTail);
-			if (HC == 0 && BC == 0 && TC == 1 && Main.expertMode) //incase the tail is the last thing killed
-			{
-				Item.NewItem(npc.getRect(), ItemType<WormHeart>());
-			}
-			if (HC == 0 && BC == 1 && TC == 0 && Main.expertMode) //incase the Body is the last thing killed
-			{
-				Item.NewItem(npc.getRect(), ItemType<WormHeart>());
-			}
+            //Eater Of Worlds Expert Drop
+            int HC = NPC.CountNPCS(NPCID.EaterofWorldsHead);
+            int BC = NPC.CountNPCS(NPCID.EaterofWorldsBody);
+            int TC = NPC.CountNPCS(NPCID.EaterofWorldsTail);
+            if (HC == 0 && BC == 0 && TC == 1 && Main.expertMode) //incase the tail is the last thing killed
+            {
+                Item.NewItem(npc.getRect(), ItemType<WormHeart>());
+            }
+            if (HC == 0 && BC == 1 && TC == 0 && Main.expertMode) //incase the Body is the last thing killed
+            {
+                Item.NewItem(npc.getRect(), ItemType<WormHeart>());
+            }
             if (HC == 1 && BC == 0 && TC == 0 && Main.expertMode) //incase the Head is the last thing killed
             {
                 Item.NewItem(npc.getRect(), ItemType<WormHeart>());
             }
 
-			//Skeletron Expert Drop
-			if (npc.type == NPCID.SkeletronHead && Main.expertMode)
-			{
-				Item.NewItem(npc.getRect(), ItemType<BoneHeart>());
-			}
+            //Skeletron Expert Drop
+            if (npc.type == NPCID.SkeletronHead && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<BoneHeart>());
+            }
 
-			//Wall Of Flesh Expert Drop
-			if (npc.type == NPCID.WallofFlesh && Main.expertMode)
-			{
-				Item.NewItem(npc.getRect(), ItemType<DemonHeartMK2>());
-			}
+            //Wall Of Flesh Expert Drop
+            if (npc.type == NPCID.WallofFlesh && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<DemonHeartMK2>());
+            }
 
-			//Mechanical Pieces
-			int TS = NPC.CountNPCS(NPCID.Spazmatism);
-			int TR = NPC.CountNPCS(NPCID.Retinazer);
-			if (TS == 0 && TR == 1 && Main.expertMode) //incase Retinazer is the last thing killed
-			{
-				Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece1>());
-			}
-			if (TS == 1 && TR == 0 && Main.expertMode) //incase Spazmatism is the last thing killed
-			{
-				Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece1>());
-			}
+            //Mechanical Pieces
+            int TS = NPC.CountNPCS(NPCID.Spazmatism);
+            int TR = NPC.CountNPCS(NPCID.Retinazer);
+            if (TS == 0 && TR == 1 && Main.expertMode) //incase Retinazer is the last thing killed
+            {
+                Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece1>());
+            }
+            if (TS == 1 && TR == 0 && Main.expertMode) //incase Spazmatism is the last thing killed
+            {
+                Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece1>());
+            }
 
-			if (npc.type == NPCID.TheDestroyer && Main.expertMode)
-			{
-				Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece2>());
-			}
+            if (npc.type == NPCID.TheDestroyer && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece2>());
+            }
 
-			if (npc.type == NPCID.SkeletronPrime && Main.expertMode)
-			{
-				Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece3>());
-			}
-		}
+            if (npc.type == NPCID.SkeletronPrime && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece3>());
+            }
+
+            //Lunatic Cultist Expert Drop
+            if (npc.type == NPCID.CultistBoss && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<AncientHeart>());
+            }
+
+            //Moon Lord Expert Drop
+            if (npc.type == NPCID.MoonLordCore && Main.expertMode)
+            {
+                Item.NewItem(npc.getRect(), ItemType<CelestialHeart>());
+            }
+        }
 
 		public override void UpdateLifeRegen(NPC npc, ref int damage) {
 			if (curseCATsCurse) {
