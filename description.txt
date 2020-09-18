@@ -26,6 +26,9 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 Change-Log:
 0.2.12
 	 Added 'Autoload' to cross-mod hearts.
+	 Added Menacing Heart trophy.
+	 Added the Ancient Heart, a consumable version of the Lunatic Cultist. It permanately increases life by 10.
+	 Added the Celestial Heart, a consumable version of the Moon Lord It permanately increases life by 10.
 0.2.11
 	 Added the Royal Slime Heart, a consumable version of the King Slime. It permanately increases life by 5.
 	 Added the Eye Heart, a consumable version of the Eye of Cthulhu. It permanately increases life by 5.
