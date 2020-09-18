@@ -45,5 +45,10 @@ namespace ElementalHearts.Items.Consumables.ThoriumMod
 				recipe.AddRecipe();
 			}
 		}
+
+		public override bool Autoload(ref string name)
+		{
+			return ModLoader.GetMod("ThoriumMod") != null;
+		}
 	}
 }
