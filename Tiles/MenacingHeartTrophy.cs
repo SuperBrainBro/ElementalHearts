@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
+using Terraria.ID;
 
 namespace ElementalHearts.Tiles
 {
@@ -31,6 +32,12 @@ namespace ElementalHearts.Tiles
 
     public class MenacingHeartTrophyItem : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Menacing Heart Trophy");
+            base.SetStaticDefaults();
+        }
+
         public override void SetDefaults()
         {
             item.width = 32;
@@ -40,10 +47,10 @@ namespace ElementalHearts.Tiles
             item.autoReuse = true;
             item.useAnimation = 15;
             item.useTime = 10;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.consumable = true;
             item.value = 50000;
-            item.rare = 1;
+            item.rare = ItemRarityID.Blue;
             item.createTile = TileType<MenacingHeartTrophy>();
             item.placeStyle = 0;
         }

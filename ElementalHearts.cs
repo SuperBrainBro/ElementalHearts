@@ -1,21 +1,14 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.GameContent.Dyes;
-using Terraria.Graphics.Shaders;
-using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
-using ElementalHearts;
 using Terraria.GameContent.UI.Elements;
 using ElementalHearts.Tiles;
 using ElementalHearts.Items.Consumables.Bosses;
+using System.Linq;
+using ElementalHearts.NPCs.Bosses.MenacingHeart;
 
 namespace ElementalHearts
 {
@@ -30,10 +23,28 @@ namespace ElementalHearts
             if (bossChecklist != null)
             {
                 bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
-                new List<int>() { 2493 /*Mask*/, ModContent.ItemType<MenacingHeartTrophyItem>(), ModContent.ItemType<MHMb>() },
+                new List<int>() { ModContent.ItemType<MenacingHeartTrophyItem>(), ModContent.ItemType<MHMb>() },
                 new List<int>() { ModContent.ItemType<MenacingHeartItem>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>(),
                 ModContent.ItemType<Items.Weapons.MenacingHeartKeeper>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
                 "Find and activate a [i:" + ModContent.ItemType<MenacingLookingStatueItem>() + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
+            }
+        }
+
+        public override void UpdateMusic(ref int music, ref MusicPriority priority)
+        {
+            if (Main.musicVolume != 0)
+            {
+                if (Main.myPlayer != -1 && Main.LocalPlayer.active)
+                {
+                    if (Main.npc.Any(n => n.active && n.boss))
+                    {
+                        if (NPC.AnyNPCs(ModContent.NPCType<MenacingHeart>()))
+                        {
+                            music = GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
+                            priority = MusicPriority.BossHigh;
+                        }
+                    }
+                }
             }
         }
 

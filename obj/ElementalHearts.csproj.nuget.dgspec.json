@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj": {}
+    "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj": {
+    "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj",
+        "projectUniqueName": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
         "projectName": "ElementalHearts",
-        "projectPath": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj",
+        "projectPath": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
         "packagesPath": "C:\\Users\\palma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\obj\\",
+        "outputPath": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\palma\\AppData\\Roaming\\NuGet\\NuGet.Config",
