@@ -12,7 +12,7 @@ namespace ElementalHearts.Items.Boss
 	public class MenacingLookingHeartBag : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Menacing Heart Treasure Bag");
+			DisplayName.SetDefault("Treasure Bag");
 			Tooltip.SetDefault("{$CommonItemTooltip.RightClickToOpen}");
 		}
 
