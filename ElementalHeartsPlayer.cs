@@ -17,6 +17,9 @@ namespace ElementalHearts
 {
     public class ElementalHeartsPlayer : ModPlayer
     {
+        public bool shadowFox = false;
+        public bool shadowFoxB = false;
+        public bool setBonusFox = false;
         //Debuffs/Buffs
         public bool curseCATsCurse;
 
@@ -183,14 +186,18 @@ namespace ElementalHearts
         public int MenacingLife;
         public int RoyalSlimeLife;
         public int EyeLife;
+        public int HiveLife;
         public int BoneLife;
+        public int PlantLife;
         public int AncientLife;
         public int CelestialLife;
 
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
-
+            shadowFox = false;
+            shadowFoxB = false;
+            setBonusFox = false;
 
             //Debuffs/Buffs
             curseCATsCurse = false;
@@ -353,7 +360,9 @@ namespace ElementalHearts
             player.statLifeMax2 += MenacingLife * 5;
             player.statLifeMax2 += RoyalSlimeLife * 5;
             player.statLifeMax2 += EyeLife * 5;
+            player.statLifeMax2 += HiveLife * 5;
             player.statLifeMax2 += BoneLife * 5;
+            player.statLifeMax2 += PlantLife * 10;
             player.statLifeMax2 += AncientLife * 10;
             player.statLifeMax2 += CelestialLife * 10;
         }
@@ -545,7 +554,9 @@ namespace ElementalHearts
             packet.Write(MenacingLife);
             packet.Write(RoyalSlimeLife);
             packet.Write(EyeLife);
+            packet.Write(HiveLife);
             packet.Write(BoneLife);
+            packet.Write(PlantLife);
             packet.Write(AncientLife);
             packet.Write(CelestialLife);
 
@@ -725,7 +736,9 @@ namespace ElementalHearts
                 { "MenacingLife", MenacingLife},
                 { "RoyalSlimeLife", RoyalSlimeLife},
                 { "EyeLife", EyeLife},
+                { "HiveLife", HiveLife},
                 { "BoneLife", BoneLife},
+                { "PlantLife", PlantLife},
                 { "AncientLife", AncientLife},
                 { "CelestialLife", CelestialLife},
 
@@ -896,7 +909,9 @@ namespace ElementalHearts
             MenacingLife = tag.GetInt("MenacingLife");
             RoyalSlimeLife = tag.GetInt("RoyalSlimeLife");
             EyeLife = tag.GetInt("EyeLife");
+            HiveLife = tag.GetInt("HiveLife");
             BoneLife = tag.GetInt("BoneLife");
+            PlantLife = tag.GetInt("PlantLife");
             AncientLife = tag.GetInt("AncientLife");
             CelestialLife = tag.GetInt("CelestialLife");
 
@@ -916,7 +931,7 @@ namespace ElementalHearts
                 {
                     Main.NewText("Closed Heart UI", Color.Red);
                     GetInstance<ElementalHearts>().HideMyUI();
-                } 
+                }
                 else
                 {
                     Main.NewText("Opened Heart UI", Color.Red);

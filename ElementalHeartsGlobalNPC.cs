@@ -19,22 +19,43 @@ namespace ElementalHearts
 		}
         public override void NPCLoot(NPC npc)
         {
-            //King Slime Expert Drop
-            if (npc.type == NPCID.KingSlime && Main.expertMode)
+            switch (npc.type) //Expert Drop of...
             {
-                Item.NewItem(npc.getRect(), ItemType<RoyalSlimeHeart>());
-            }
-
-            //Eye of Cthulhu Expert Drop
-            if (npc.type == NPCID.EyeofCthulhu && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<EyeHeart>());
-            }
-
-            //Brain Of Cthulu Expert Drop
-            if (npc.type == NPCID.BrainofCthulhu && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<BrainHeart>());
+                case NPCID.KingSlime when Main.expertMode: //King Slime
+                    Item.NewItem(npc.getRect(), ItemType<RoyalSlimeHeart>());
+                    break;
+                case NPCID.EyeofCthulhu when Main.expertMode: //Eye of Cthulhu
+                    Item.NewItem(npc.getRect(), ItemType<EyeHeart>());
+                    break;
+                case NPCID.BrainofCthulhu when Main.expertMode: //Brain of Cthulhu
+                    Item.NewItem(npc.getRect(), ItemType<BrainHeart>());
+                    break;
+                case NPCID.QueenBee when Main.expertMode: //Queen Bee
+                    Item.NewItem(npc.getRect(), ItemType<HiveHeart>());
+                    break;
+                case NPCID.SkeletronHead when Main.expertMode: //Skeletron
+                    Item.NewItem(npc.getRect(), ItemType<BoneHeart>());
+                    break;
+                case NPCID.WallofFlesh when Main.expertMode: //Wall of Flesh
+                    Item.NewItem(npc.getRect(), ItemType<DemonHeartMK2>());
+                    break;
+                case NPCID.TheDestroyer when Main.expertMode: //The Destroyer
+                    Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece2>());
+                    break;
+                case NPCID.SkeletronPrime when Main.expertMode: //Skeletron Prime
+                    Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece3>());
+                    break;
+                case NPCID.Plantera when Main.expertMode: //Plantera
+                    Item.NewItem(npc.getRect(), ItemType<PlantHeart>());
+                    break;
+                case NPCID.CultistBoss when Main.expertMode: //Lunatic Cultist
+                    Item.NewItem(npc.getRect(), ItemType<AncientHeart>());
+                    break;
+                case NPCID.MoonLordCore when Main.expertMode: //Moon Lord
+                    Item.NewItem(npc.getRect(), ItemType<CelestialHeart>());
+                    break;
+                default:
+                    break;
             }
 
             //Eater Of Worlds Expert Drop
@@ -54,18 +75,6 @@ namespace ElementalHearts
                 Item.NewItem(npc.getRect(), ItemType<WormHeart>());
             }
 
-            //Skeletron Expert Drop
-            if (npc.type == NPCID.SkeletronHead && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<BoneHeart>());
-            }
-
-            //Wall Of Flesh Expert Drop
-            if (npc.type == NPCID.WallofFlesh && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<DemonHeartMK2>());
-            }
-
             //Mechanical Pieces
             int TS = NPC.CountNPCS(NPCID.Spazmatism);
             int TR = NPC.CountNPCS(NPCID.Retinazer);
@@ -76,28 +85,6 @@ namespace ElementalHearts
             if (TS == 1 && TR == 0 && Main.expertMode) //incase Spazmatism is the last thing killed
             {
                 Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece1>());
-            }
-
-            if (npc.type == NPCID.TheDestroyer && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece2>());
-            }
-
-            if (npc.type == NPCID.SkeletronPrime && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece3>());
-            }
-
-            //Lunatic Cultist Expert Drop
-            if (npc.type == NPCID.CultistBoss && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<AncientHeart>());
-            }
-
-            //Moon Lord Expert Drop
-            if (npc.type == NPCID.MoonLordCore && Main.expertMode)
-            {
-                Item.NewItem(npc.getRect(), ItemType<CelestialHeart>());
             }
         }
 
