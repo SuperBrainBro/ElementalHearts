@@ -20,7 +20,7 @@ namespace ElementalHearts.Items.Dev.CAT
 			item.shootSpeed *= 0.75f;
 			item.summon = true;
 			item.damage = 45;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.autoReuse = true;
 			item.melee = false;
 			item.ranged = false;

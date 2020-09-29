@@ -11,10 +11,10 @@ namespace ElementalHearts
 	public class ElementalHeartsGlobalNPC : GlobalNPC
 	{
 		public override bool InstancePerEntity => true;
-		
-		public bool curseCATsCurse;
 
-		public override void ResetEffects(NPC npc) {
+        public bool curseCATsCurse;
+
+        public override void ResetEffects(NPC npc) {
 			curseCATsCurse = false;
 		}
         public override void NPCLoot(NPC npc)
@@ -47,6 +47,9 @@ namespace ElementalHearts
                     break;
                 case NPCID.Plantera when Main.expertMode: //Plantera
                     Item.NewItem(npc.getRect(), ItemType<PlantHeart>());
+                    break;
+                case NPCID.Golem when Main.expertMode: //Golem
+                    Item.NewItem(npc.getRect(), ItemType<LihzhardianHeart>());
                     break;
                 case NPCID.CultistBoss when Main.expertMode: //Lunatic Cultist
                     Item.NewItem(npc.getRect(), ItemType<AncientHeart>());

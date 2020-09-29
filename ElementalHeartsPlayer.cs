@@ -17,6 +17,7 @@ namespace ElementalHearts
 {
     public class ElementalHeartsPlayer : ModPlayer
     {
+        public float dmgReduct = 0;
         public bool shadowFox = false;
         public bool shadowFoxB = false;
         public bool setBonusFox = false;
@@ -189,12 +190,14 @@ namespace ElementalHearts
         public int HiveLife;
         public int BoneLife;
         public int PlantLife;
+        public int LihzhardianLife;
         public int AncientLife;
         public int CelestialLife;
 
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
+            dmgReduct = 0;
             shadowFox = false;
             shadowFoxB = false;
             setBonusFox = false;
@@ -363,6 +366,7 @@ namespace ElementalHearts
             player.statLifeMax2 += HiveLife * 5;
             player.statLifeMax2 += BoneLife * 5;
             player.statLifeMax2 += PlantLife * 10;
+            player.statLifeMax2 += LihzhardianLife * 10;
             player.statLifeMax2 += AncientLife * 10;
             player.statLifeMax2 += CelestialLife * 10;
         }
@@ -383,6 +387,15 @@ namespace ElementalHearts
                 player.lifeRegenTime = 0;
                 player.lifeRegen -= 128;
             }
+        }
+
+        public override void OnHitByNPC(NPC npc, int damage, bool crit)
+        {
+            if (dmgReduct > 0)
+            {
+                damage = (int)((damage / 100) * dmgReduct);
+            }
+            base.OnHitByNPC(npc, damage, crit);
         }
 
         public override void clientClone(ModPlayer clientClone)
@@ -557,6 +570,7 @@ namespace ElementalHearts
             packet.Write(HiveLife);
             packet.Write(BoneLife);
             packet.Write(PlantLife);
+            packet.Write(LihzhardianLife);
             packet.Write(AncientLife);
             packet.Write(CelestialLife);
 
@@ -739,6 +753,7 @@ namespace ElementalHearts
                 { "HiveLife", HiveLife},
                 { "BoneLife", BoneLife},
                 { "PlantLife", PlantLife},
+                { "LihzhardianLife", LihzhardianLife },
                 { "AncientLife", AncientLife},
                 { "CelestialLife", CelestialLife},
 
@@ -912,6 +927,7 @@ namespace ElementalHearts
             HiveLife = tag.GetInt("HiveLife");
             BoneLife = tag.GetInt("BoneLife");
             PlantLife = tag.GetInt("PlantLife");
+            LihzhardianLife = tag.GetInt("LihzhardianLife");
             AncientLife = tag.GetInt("AncientLife");
             CelestialLife = tag.GetInt("CelestialLife");
 

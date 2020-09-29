@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using Terraria.ID;
 
 namespace ElementalHearts.Items.Dev.CAT
 {
@@ -15,7 +16,7 @@ namespace ElementalHearts.Items.Dev.CAT
 		public override void SetDefaults() {
 			item.width = 22;
 			item.height = 20;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.accessory = true;
 		}
 		//these wings use the same values as the solar wings
