@@ -24,6 +24,10 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.13
+	 Slightly increased Menacing Heart's HP to: 17000 (from 16000)
+	 Slightly reduced Menacing Heart's defence to: 7 (from 9)
+	 Increased Menacing Heart's coin drops to: 1-2 platinum (from 50 gold).
 0.2.12
 	 Added 'Autoload' to cross-mod hearts.
 	 Added Menacing Heart trophy.
