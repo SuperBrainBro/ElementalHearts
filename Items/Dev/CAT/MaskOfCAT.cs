@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -13,7 +12,7 @@ namespace ElementalHearts.Items.Dev.CAT
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Maskof");
-            Tooltip.SetDefault("'Great for impersonating devs!'");
+            Tooltip.SetDefault("'Great for impersonating devs!'\nThe Starbreaker... what under his mask?");
         }
 
         public override void SetDefaults()
@@ -54,7 +53,7 @@ namespace ElementalHearts.Items.Dev.CAT
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Maskof");
+            DisplayName.SetDefault("Mask of Fox");
             Tooltip.SetDefault("'Great for impersonating devs!'\nWho knew he was a fox?");
         }
 
@@ -104,6 +103,7 @@ namespace ElementalHearts.Items.Dev.CAT
                 player.statManaMax2 += 20 / 2;
                 player.allDamage += .5f / 2;
             }
+            player.buffImmune[mod.BuffType("FoxShadowB")] = false;
         }
     }
 }

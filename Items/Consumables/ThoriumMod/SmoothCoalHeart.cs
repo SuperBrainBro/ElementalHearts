@@ -1,54 +1,58 @@
-﻿using Microsoft.Xna.Framework;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables.ThoriumMod
 {
-	internal class SmoothCoalHeart : ModItem
-	{
-		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Permanently increases maximum life by 1");
-			DisplayName.SetDefault("Smooth Coal Heart");
-		}
+    internal class SmoothCoalHeart : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Tooltip.SetDefault("Permanently increases maximum life by 1");
+            DisplayName.SetDefault("Smooth Coal Heart");
+        }
 
-		public override void SetDefaults() {
-			item.CloneDefaults(ItemID.LifeFruit);
-			//item.rare = ItemRarityID.LightPurple;
-			item.value = 0;
-		}
+        public override void SetDefaults()
+        {
+            item.CloneDefaults(ItemID.LifeFruit);
+            //item.rare = ItemRarityID.LightPurple;
+            item.value = 0;
+        }
 
-		public override bool CanUseItem(Player player) {
-			return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().SmoothCoalLife <
-				   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
-		}
+        public override bool CanUseItem(Player player)
+        {
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().SmoothCoalLife <
+                   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
+        }
 
-		public override bool UseItem(Player player) {
-			player.statLifeMax2 += 1;
-			player.statLife += 1;
-			if (Main.myPlayer == player.whoAmI) {
-				player.HealEffect(1, true);
-			}
-			player.GetModPlayer<ElementalHeartsPlayer>().SmoothCoalLife += 1;
-			return true;
-		}
+        public override bool UseItem(Player player)
+        {
+            player.statLifeMax2 += 1;
+            player.statLife += 1;
+            if (Main.myPlayer == player.whoAmI)
+            {
+                player.HealEffect(1, true);
+            }
+            player.GetModPlayer<ElementalHeartsPlayer>().SmoothCoalLife += 1;
+            return true;
+        }
 
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			Mod thoriumMod = ModLoader.GetMod("ThoriumMod");
-			if (thoriumMod != null) {
-				recipe.AddIngredient(thoriumMod.ItemType("SmoothCoal"), 100); ;
-				recipe.AddTile(TileID.Anvils);
-				recipe.SetResult(this, 1);
-				recipe.AddRecipe();
-			}
-		}
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            Mod thoriumMod = ModLoader.GetMod("ThoriumMod");
+            if (thoriumMod != null)
+            {
+                recipe.AddIngredient(thoriumMod.ItemType("SmoothCoal"), 100); ;
+                recipe.AddTile(TileID.Anvils);
+                recipe.SetResult(this, 1);
+                recipe.AddRecipe();
+            }
+        }
 
-		public override bool Autoload(ref string name)
-		{
-			return ModLoader.GetMod("ThoriumMod") != null;
-		}
-	}
+        public override bool Autoload(ref string name)
+        {
+            return ModLoader.GetMod("ThoriumMod") != null;
+        }
+    }
 }

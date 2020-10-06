@@ -1,14 +1,7 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
+using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.GameInput;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
@@ -101,12 +94,22 @@ namespace ElementalHearts
         public int PearlwoodLife;
         public int SpookyLife;
 
+        //Souls
+        public int SoulofLightLife;
+        public int SoulofNightLife;
+        public int SoulofFlightLife;
+        public int SoulofFrightLife;
+        public int SoulofMightLife;
+        public int SoulofSightLife;
+        public int SoulofBlightLife;
+
         //Other
         public int RainbowLife;
         public int CogLife;
         public int FleshLife;
         public int LesionLife;
         public int CrystalLife;
+        public int EctoplasmLife;
 
         //Basic Ores
         public int CobaltLife;
@@ -191,6 +194,7 @@ namespace ElementalHearts
         public int BoneLife;
         public int PlantLife;
         public int LihzhardianLife;
+        public int FisharkLife;
         public int AncientLife;
         public int CelestialLife;
 
@@ -280,12 +284,22 @@ namespace ElementalHearts
             player.statLifeMax2 += PearlwoodLife * 5;
             player.statLifeMax2 += SpookyLife * 7;
 
+            //Souls
+            player.statLifeMax2 += SoulofLightLife * 4;
+            player.statLifeMax2 += SoulofNightLife * 4;
+            player.statLifeMax2 += SoulofFlightLife * 4;
+            player.statLifeMax2 += SoulofFrightLife * 5;
+            player.statLifeMax2 += SoulofMightLife * 5;
+            player.statLifeMax2 += SoulofSightLife * 5;
+            player.statLifeMax2 += SoulofBlightLife * 5;
+
             //Other
             player.statLifeMax2 += RainbowLife * 5;
             player.statLifeMax2 += CogLife * 5;
             player.statLifeMax2 += FleshLife * 5;
             player.statLifeMax2 += LesionLife * 5;
             player.statLifeMax2 += CrystalLife * 7;
+            player.statLifeMax2 += EctoplasmLife * 8;
 
             //Basic Ores
             player.statLifeMax2 += CobaltLife * 5;
@@ -367,6 +381,7 @@ namespace ElementalHearts
             player.statLifeMax2 += BoneLife * 5;
             player.statLifeMax2 += PlantLife * 10;
             player.statLifeMax2 += LihzhardianLife * 10;
+            player.statLifeMax2 += FisharkLife * 10;
             player.statLifeMax2 += AncientLife * 10;
             player.statLifeMax2 += CelestialLife * 10;
         }
@@ -483,12 +498,22 @@ namespace ElementalHearts
             packet.Write(PearlwoodLife);
             packet.Write(SpookyLife);
 
+            //Souls
+            packet.Write(SoulofLightLife);
+            packet.Write(SoulofNightLife);
+            packet.Write(SoulofFlightLife);
+            packet.Write(SoulofMightLife);
+            packet.Write(SoulofSightLife);
+            packet.Write(SoulofFrightLife);
+            packet.Write(SoulofBlightLife);
+
             //Other
             packet.Write(RainbowLife);
             packet.Write(CogLife);
             packet.Write(FleshLife);
             packet.Write(LesionLife);
             packet.Write(CrystalLife);
+            packet.Write(EctoplasmLife);
 
             //Basic Ores
             packet.Write(CobaltLife);
@@ -571,6 +596,7 @@ namespace ElementalHearts
             packet.Write(BoneLife);
             packet.Write(PlantLife);
             packet.Write(LihzhardianLife);
+            packet.Write(FisharkLife);
             packet.Write(AncientLife);
             packet.Write(CelestialLife);
 
@@ -667,12 +693,22 @@ namespace ElementalHearts
                 {"PearlwoodLife", PearlwoodLife},
                 {"SpookyLife", SpookyLife},
 
+                //Souls
+                { "SoulofLightLife", SoulofLightLife },
+                { "SoulofNightLife", SoulofNightLife },
+                { "SoulofFlightLife", SoulofFlightLife },
+                { "SoulofFrightLife", SoulofFrightLife },
+                { "SoulofMightLife", SoulofMightLife },
+                { "SoulofSightLife", SoulofSightLife },
+                { "SoulofBlightLife", SoulofBlightLife },
+
                 //Other
                 {"RainbowLife", RainbowLife},
                 {"CogLife", CogLife},
                 {"FleshLife", FleshLife},
                 {"LesionLife", LesionLife},
                 {"CrystalLife", CrystalLife},
+                { "EctoplasmLife", EctoplasmLife },
 
                 //Basic Ores
                 {"CobaltLife", CobaltLife},
@@ -754,6 +790,7 @@ namespace ElementalHearts
                 { "BoneLife", BoneLife},
                 { "PlantLife", PlantLife},
                 { "LihzhardianLife", LihzhardianLife },
+                { "FisharkLife", FisharkLife },
                 { "AncientLife", AncientLife},
                 { "CelestialLife", CelestialLife},
 
@@ -841,12 +878,22 @@ namespace ElementalHearts
             PearlwoodLife = tag.GetInt("PearlwoodLife");
             SpookyLife = tag.GetInt("SpookyLife");
 
+            //Souls
+            SoulofLightLife = tag.GetInt("SoulofLightLife");
+            SoulofNightLife = tag.GetInt("SoulofNightLife");
+            SoulofFlightLife = tag.GetInt("SoulofFlightLife");
+            SoulofFrightLife = tag.GetInt("SoulofFrightLife");
+            SoulofMightLife = tag.GetInt("SoulofMightLife");
+            SoulofSightLife = tag.GetInt("SoulofSightLife");
+            SoulofBlightLife = tag.GetInt("SoulofBlightLife");
+
             //Other
             RainbowLife = tag.GetInt("RainbowLife");
             CogLife = tag.GetInt("CogLife");
             FleshLife = tag.GetInt("FleshLife");
             LesionLife = tag.GetInt("LesionLife");
             CrystalLife = tag.GetInt("CrystalLife");
+            EctoplasmLife = tag.GetInt("EctoplasmLife");
 
             //Basic Ores
             CobaltLife = tag.GetInt("CobaltLife");
@@ -928,6 +975,7 @@ namespace ElementalHearts
             BoneLife = tag.GetInt("BoneLife");
             PlantLife = tag.GetInt("PlantLife");
             LihzhardianLife = tag.GetInt("LihzhardianLife");
+            FisharkLife = tag.GetInt("FisharkLife");
             AncientLife = tag.GetInt("AncientLife");
             CelestialLife = tag.GetInt("CelestialLife");
 

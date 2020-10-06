@@ -1,29 +1,31 @@
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.GameContent.UI;
+using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using Terraria.ID;
-using Microsoft.Xna.Framework;
-using Terraria.GameContent.UI;
 
 namespace ElementalHearts.Items.Dev.AppleInTheSky
 {
-	[AutoloadEquip(EquipType.Wings)]
-	public class EvenFlameWings : ModItem
-	{
-		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("EvenFlame Wings");
-			Tooltip.SetDefault("AppleInTheSky would be proud of you...");
-		}
+    [AutoloadEquip(EquipType.Wings)]
+    public class EvenFlameWings : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("EvenFlame Wings");
+            Tooltip.SetDefault("AppleInTheSky would be proud of you...");
+        }
 
-		public override void SetDefaults() {
-			item.width = 22;
-			item.height = 20;
-			item.value = 10000;
-			item.rare = ItemRarityID.Expert;
+        public override void SetDefaults()
+        {
+            item.width = 22;
+            item.height = 20;
+            item.value = 10000;
+            item.rare = ItemRarityID.Expert;
             item.accessory = true;
             item.expertOnly = true;
-			item.expert = true;
-		}
+            item.expert = true;
+        }
 
         public void DamageReduction(Player player, bool hideVisual, NPC npc)
         {
@@ -77,10 +79,17 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
             this.DamageReduction(player, hideVisual, default);
         }
 
+        float fade = Main.GameUpdateCount % 200 / 60f;
+        int index = (int)(Main.GameUpdateCount / 200 % 2);
         Color[] itemNameCycleColors = new Color[]{
-            ItemRarity.GetColor(ItemRarityID.Red),
-            new Color(0, 0, 0)
+            new Color(255, 61, 39),
+            new Color(53, 57, 63)
         };
+
+        public override Color? GetAlpha(Color lightColor)
+        {
+            return new Color(Main.DiscoR, 0, 0);
+        }
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
         {
@@ -88,27 +97,25 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
             {
                 if (line2.mod == "Terraria" && line2.Name == "ItemName")
                 {
-                    float fade = Main.GameUpdateCount % 10 / 60f;
-                    int index = (int)(Main.GameUpdateCount / 10 % 2);
                     line2.overrideColor = Color.Lerp(itemNameCycleColors[index], itemNameCycleColors[(index + 1) % 2], fade);
                 }
             }
         }
 
         public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
-			ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
-		{
-			ascentWhenFalling = 0.85f;
-			ascentWhenRising = 0.15f;
-			maxCanAscendMultiplier = 1f;
-			maxAscentMultiplier = 3f;
-			constantAscend = 0.135f;
-		}
+            ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
+        {
+            ascentWhenFalling = 0.85f;
+            ascentWhenRising = 0.15f;
+            maxCanAscendMultiplier = 1f;
+            maxAscentMultiplier = 3f;
+            constantAscend = 0.135f;
+        }
 
-		public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
-		{
-			speed = 5f;
-			acceleration *= 2.5f;
-		}
-	}
+        public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
+        {
+            speed = 5f;
+            acceleration *= 2.5f;
+        }
+    }
 }

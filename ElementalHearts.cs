@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using ElementalHearts.Items.Consumables.Bosses;
+using ElementalHearts.NPCs.Bosses.MenacingHeart;
+using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.GameContent.UI.Elements;
 using Terraria.ModLoader;
 using Terraria.UI;
-using Terraria.GameContent.UI.Elements;
-using ElementalHearts.Tiles;
-using ElementalHearts.Items.Consumables.Bosses;
-using System.Linq;
-using ElementalHearts.NPCs.Bosses.MenacingHeart;
 
 namespace ElementalHearts
 {

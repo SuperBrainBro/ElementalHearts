@@ -1,8 +1,8 @@
-﻿using ElementalHearts.NPCs.Bosses.MenacingHeart;
-using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ElementalHearts.NPCs.Bosses.MenacingHeart;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.Generation;

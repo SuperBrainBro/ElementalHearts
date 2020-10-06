@@ -57,7 +57,7 @@ namespace ElementalHearts.Items.Dev.CAT
                     base.projectile.timeLeft = 2;
                 }
             }
-            projectile.position = new Vector2(Main.player[projectile.owner].position.X, Main.player[projectile.owner].position.Y) + new Vector2(0, -10f);
+            //projectile.position = new Vector2(Main.player[projectile.owner].position.X, Main.player[projectile.owner].position.Y + 32);
             projectile.spriteDirection = Main.player[projectile.owner].direction;
             if (NPC.downedSlimeKing)
             {

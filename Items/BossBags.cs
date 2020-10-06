@@ -1,8 +1,6 @@
 using ElementalHearts.Items.Dev.CAT;
 using ElementalHearts.Items.Dev.Lite;
-using ElementalHearts.Items.Consumables;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 

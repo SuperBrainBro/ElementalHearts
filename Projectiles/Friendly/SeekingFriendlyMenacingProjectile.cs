@@ -1,9 +1,8 @@
-using Microsoft.Xna.Framework;
 using System;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Projectiles.Friendly
 {
@@ -128,11 +127,14 @@ namespace ElementalHearts.Projectiles.Friendly
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            int healAmount = damage / (10 + (int)Main.rand.NextFloat(4));
-            healAmount /= 1 + (int)Main.rand.NextFloat(4);
-            Main.player[projectile.owner].HealEffect(healAmount, true);
-            Main.player[projectile.owner].statLife += healAmount;
-            projectile.Kill();        
+            if (target.type != NPCID.TargetDummy)
+            {
+                int healAmount = damage / (10 + (int)Main.rand.NextFloat(4));
+                healAmount /= 1 + (int)Main.rand.NextFloat(4);
+                Main.player[projectile.owner].HealEffect(healAmount, true);
+                Main.player[projectile.owner].statLife += healAmount;
+                projectile.Kill();
+            }
         }
         public override Color? GetAlpha(Color lightColor)
         {

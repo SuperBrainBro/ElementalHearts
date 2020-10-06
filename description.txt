@@ -25,10 +25,23 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 
 Change-Log:
 0.2.12
+	 Fixed bug with Catastrophic Edge.
+	 Fixed 'bug' wit Heart Emptier.
 	 Added 'Autoload' to cross-mod hearts.
 	 Added Menacing Heart trophy.
+	 Added the Soul of Flight, Light and Night Hearts, a hearts made from Soul of Flight, Light or Night. They permanately increases life by 4.
+	 Added the Soul of Fright, Might and Sight Hearts, a hearts made from Soul of Fright, Might or Sight. They permanately increases life by 5.
+	 Added the Soul of Blight Heart, a heart made from Soul of Blight. It permanately increases life by 5. (Cross-Mod)
+	 Added the Ectoplasm Heart, a heart made from Ectoplasm. It permanately increases life by 7.
+	 Added the Heart of the Hives, a consumable version of the Queen Bee. It permanately increases life by 10.
+	 Added the Plant Heart, a consumable version of the Plantera. It permanately increases life by 10.
+	 Added the Lihzhardian Heart, a consumable version of the Golem. It permanately increases life by 10.
 	 Added the Ancient Heart, a consumable version of the Lunatic Cultist. It permanately increases life by 10.
 	 Added the Celestial Heart, a consumable version of the Moon Lord It permanately increases life by 10.
+	 Added the EvenFlame Wings, a dev wings of AppleInTheSky.
+	 Fixed bug with Target Dummies and Menacing Life Staff/Blade.
+	 Renamed a lot CAT stuff into Starbreaker stuff.
+	 Added second variation of FOX mask.
 0.2.11
 	 Added the Royal Slime Heart, a consumable version of the King Slime. It permanately increases life by 5.
 	 Added the Eye Heart, a consumable version of the Eye of Cthulhu. It permanately increases life by 5.

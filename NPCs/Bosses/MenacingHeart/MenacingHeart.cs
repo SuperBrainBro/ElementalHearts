@@ -1,16 +1,16 @@
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
-using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using System;
 using System.IO;
 using ElementalHearts.Items.Boss;
-using Terraria.Audio;
-using ElementalHearts.Items.Weapons;
 using ElementalHearts.Items.Consumables.Bosses;
+using ElementalHearts.Items.Weapons;
+using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Audio;
+using Terraria.ID;
+using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -77,7 +77,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         }
         public override bool CheckDead()
         {
-            Main.NewText("<Menacing.Heart" + /*69$*/"" + "> You have weakened me. I will come back though, if you ever need me.", Color.White);
+            Main.NewText("<Menacing Heart> You have weakened me. I will come back though, if you ever need me.", Color.White);
             return base.CheckDead();
         }
         public override void UpdateLifeRegen(ref int damage)
@@ -1226,11 +1226,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     //Item.NewItem(npc.getRect(), ItemType<Mask>());
                 }
                 Item.NewItem(npc.getRect(), ItemType<MenacingHeartItem>());
-                if (Main.rand.NextBool(3)) {
+                if (Main.rand.NextBool(3))
+                {
                     Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());
-                } else if (Main.rand.NextBool(3)) {
+                }
+                else if (Main.rand.NextBool(3))
+                {
                     Item.NewItem(npc.getRect(), ItemType<MenacingLifeBlade>());
-                } else {
+                }
+                else
+                {
                     Item.NewItem(npc.getRect(), ItemType<MenacingHeartKeeper>());
                 }
             }

@@ -2,10 +2,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
-using ElementalHearts.Projectiles.Bosses.MenacingHeart;
-using System;
-using Microsoft.Xna.Framework.Audio;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -49,7 +45,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             if (cloneTimeLeft < 0)
             {
                 npc.active = false;
-            } else
+            }
+            else
             {
                 cloneTimeLeft -= 5;
             }
