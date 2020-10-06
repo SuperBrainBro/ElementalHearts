@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {}
+    "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {
+    "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
+        "projectUniqueName": "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
         "projectName": "ElementalHearts",
-        "projectPath": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
-        "packagesPath": "C:\\Users\\palma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\obj\\",
+        "projectPath": "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
+        "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
+        "outputPath": "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\palma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,7 +43,7 @@
               "version": "[0.1.*, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
