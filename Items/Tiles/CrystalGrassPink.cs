@@ -1,9 +1,5 @@
-﻿using Terraria;
-using Terraria.ID;
+﻿using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using System.Runtime.CompilerServices;
-using ElementalHearts.Tiles;
 
 namespace ElementalHearts.Items.Tiles
 {
