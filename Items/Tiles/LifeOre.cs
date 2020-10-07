@@ -31,7 +31,7 @@ namespace ElementalHearts.Items.Tiles
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(this, 100);
+            recipe.AddIngredient(this, 10);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(ItemID.LifeCrystal, 1);
             recipe.AddRecipe();
