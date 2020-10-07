@@ -12,9 +12,11 @@ namespace ElementalHearts.Items.Tiles
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Life Ore");
+            Tooltip.SetDefault("Can be used to craft various life crystal related items.");
         }
         public override void SetDefaults()
         {
+            item.rare = ItemRarityID.Orange;
             item.width = 8;
             item.height = 8;
             item.maxStack = 999;
@@ -29,10 +31,10 @@ namespace ElementalHearts.Items.Tiles
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("LifeOre"), 10);
+            recipe.AddIngredient(this, 100);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(ItemID.LifeCrystal, 1);
-            recipe.Create();
+            recipe.AddRecipe();
         }
     }
 }

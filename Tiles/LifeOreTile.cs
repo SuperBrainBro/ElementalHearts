@@ -21,7 +21,7 @@ namespace ElementalHearts.Tiles
             name.SetDefault("Life Ore");
 
             AddMapEntry(new Color(255, 44, 44), name);
-            //minPick = 60; Needs higher than lead.
+            minPick = 60;
         }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
