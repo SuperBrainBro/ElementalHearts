@@ -7,7 +7,7 @@ namespace ElementalHearts.Items.Tiles
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Life Ore");
+            DisplayName.SetDefault("Ancient Life Ore");
             Tooltip.SetDefault("Can be used to craft various life crystal related items.");
         }
         public override void SetDefaults()

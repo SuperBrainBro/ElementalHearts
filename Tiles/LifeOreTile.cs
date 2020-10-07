@@ -12,13 +12,11 @@ namespace ElementalHearts.Tiles
         {
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
-            Main.tileLighted[Type] = true;
             Main.tileBlockLight[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            Main.tileStone[Type] = true;
+            minPick = 45;
+            Main.tileLighted[Type] = true;
 
-
-
+            dustType = DustID.CrystalPulse2;
             drop = mod.ItemType("LifeOre");
 
             ModTranslation name = CreateMapEntryName();
@@ -37,5 +35,12 @@ namespace ElementalHearts.Tiles
         {
             num = fail ? 1 : 3;
         }
+
+        public override bool KillSound(int i, int j)
+        {
+            Main.PlaySound(SoundID.Item, i * 16, j * 16, 27);
+            return false;
+        }
+
     }
 }
