@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.World.Generation;
-using Microsoft.Xna.Framework;
-using Terraria.GameContent.Generation;
-using System.Linq;
 using Terraria.ModLoader.IO;
+using static Terraria.ModLoader.ModContent;
+using ElementalHearts.Tiles;
 
 namespace ElementalHearts
 {
@@ -83,7 +81,7 @@ namespace ElementalHearts
                 int Yo = Y + Main.rand.Next(-240, 240);
                 if (Main.tile[Xo, Yo].type == TileID.RedBrick)   //this is the tile where the ore will spawn
                 
-                WorldGen.TileRunner(Xo, Yo, WorldGen.genRand.Next(5, 10), WorldGen.genRand.Next(5, 10), mod.TileType("CustomOreTile"), false, 0f, 0f, false, true);  //   5, 10 is how big is the ore veins.
+                WorldGen.TileRunner(Xo, Yo, WorldGen.genRand.Next(5, 10), WorldGen.genRand.Next(5, 10), TileType<LifeOreTile>(), false, 0f, 0f, false, true);  //   5, 10 is how big is the ore veins.
             }
         }
     }

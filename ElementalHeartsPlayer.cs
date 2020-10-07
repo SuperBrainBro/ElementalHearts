@@ -406,9 +406,9 @@ namespace ElementalHearts
 
         public override void OnHitByNPC(NPC npc, int damage, bool crit)
         {
-            if (dmgReduct > 0)
+            if (dmgReduct == 1 || dmgReduct > 1)
             {
-                damage = (int)((damage / 100) * dmgReduct);
+                damage = damage - (int)(damage / 100 * dmgReduct);
             }
             base.OnHitByNPC(npc, damage, crit);
         }

@@ -10,6 +10,14 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
     [AutoloadEquip(EquipType.Wings)]
     public class EvenFlameWings : ModItem
     {
+        //LITE DONT TOUCH THIS FILE!!!
+        //ONLY EXCEPTION IS FIXES
+        //ALSO, I MADE THIS FILE (before your 'fix')
+        //HOW APPLE WANTED! (i suggest to him some
+        //additions so i remade it)
+        //
+        //                  - Fox
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("EvenFlame Wings");
@@ -82,13 +90,13 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
         float fade = Main.GameUpdateCount % 200 / 60f;
         int index = (int)(Main.GameUpdateCount / 200 % 2);
         Color[] itemNameCycleColors = new Color[]{
-            new Color(128, 128, 128),
-            new Color(0, 0, 0)
+            new Color(255, 61, 39),
+            new Color(53, 57, 63)
         };
 
         public override Color? GetAlpha(Color lightColor)
         {
-            return new Color(Main.DiscoG, Main.DiscoB, Main.DiscoR);
+            return new Color(Main.DiscoG, 64, 64);
         }
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
