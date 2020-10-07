@@ -25,7 +25,7 @@ namespace ElementalHearts.Tiles
         }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            r = 2f;
+            r = 1.25f;
             g = .25f;
             b = .25f;
         }
