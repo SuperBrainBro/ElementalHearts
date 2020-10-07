@@ -24,14 +24,6 @@ namespace ElementalHearts.Tiles
             //minPick = 60; Needs higher than lead.
         }
 
-
-        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
-        {
-            r = 0.5f;
-            g = 0.75f;
-            b = 1f;
-        }
-
         public override void NumDust(int i, int j, bool fail, ref int num)
         {
             num = fail ? 1 : 3;
