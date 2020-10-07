@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Walls
 {
-    public class CrystalWalls : ModItem
+    public class CrystalWallItem : ModItem
     {
         public override void SetStaticDefaults()
         {
