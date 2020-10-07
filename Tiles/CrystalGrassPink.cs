@@ -10,7 +10,7 @@ namespace ElementalHearts.Tiles
         public override void SetDefaults()
         {
             Main.tileSolid[Type] = true;
-            Main.tileMergeDirt[Type] = false;
+            Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = false;
             Main.tileLavaDeath[Type] = true;
 
