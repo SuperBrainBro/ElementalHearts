@@ -2,6 +2,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using System.Runtime.CompilerServices;
+using ElementalHearts.Tiles;
 
 namespace ElementalHearts.Items.Tiles
 {
@@ -14,7 +16,16 @@ namespace ElementalHearts.Items.Tiles
         }
         public override void SetDefaults()
         {
-
+            item.width = 8;
+            item.height = 8;
+            item.maxStack = 999;
+            item.consumable = true;
+            item.useStyle = ItemUseStyleID.SwingThrow;
+            item.useTime = 10;
+            item.useAnimation = 10;
+            item.createTile = mod.TileType("CrystalGrass");
+            item.autoReuse = true;
+            item.value = 100;
         }
     }
 }
