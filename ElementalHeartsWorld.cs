@@ -79,18 +79,11 @@ namespace ElementalHearts
 
                 WorldGen.TileRunner(X, Y, 100, WorldGen.genRand.Next(50, 100), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
 
-                //Ore
-                for (int k = 0; k < 600; k++)                     //750 is the ore spawn rate. the bigger is the number = more ore spawns
-                {
-                    int Xo = X + Main.rand.Next(-240, 240);
-                    int Yo = Y + Main.rand.Next(-240, 240);
-                    if (Main.tile[Xo, Yo].type == TileID.RedBrick)   //this is the tile where the ore will spawn
-                    {
-
-
-                        WorldGen.TileRunner(Xo, Yo, (double)WorldGen.genRand.Next(5, 10), WorldGen.genRand.Next(5, 10), mod.TileType("CustomOreTile"), false, 0f, 0f, false, true);  //   5, 10 is how big is the ore veins.
-                    }
-                }
+                int Xo = X + Main.rand.Next(-240, 240);
+                int Yo = Y + Main.rand.Next(-240, 240);
+                if (Main.tile[Xo, Yo].type == TileID.RedBrick)   //this is the tile where the ore will spawn
+                
+                WorldGen.TileRunner(Xo, Yo, WorldGen.genRand.Next(5, 10), WorldGen.genRand.Next(5, 10), mod.TileType("CustomOreTile"), false, 0f, 0f, false, true);  //   5, 10 is how big is the ore veins.
             }
         }
     }
