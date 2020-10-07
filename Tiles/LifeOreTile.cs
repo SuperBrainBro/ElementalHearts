@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using IL.Terraria.Audio;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -12,10 +13,13 @@ namespace ElementalHearts.Tiles
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = true;
+            Main.tileBlockLight[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            Main.tileStone[Type] = true;
+
+
 
             drop = mod.ItemType("LifeOre");
-            dustType = DustID.Confetti;
 
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Life Ore");
