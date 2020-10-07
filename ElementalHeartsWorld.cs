@@ -105,11 +105,11 @@ namespace ElementalHearts
 					grassType += Main.rand.NextFloat(-50, 50);
                     if (grassType >= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(300, 300), 1, TileType<Tiles.CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(50, 200), 1, TileType<Tiles.CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 					else if (grassType <= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(300, 300), 1, TileType<Tiles.CrystalGrassPink>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(100, 150), 1, TileType<Tiles.CrystalGrassPink>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 
 					int x;
