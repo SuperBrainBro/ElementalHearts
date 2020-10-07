@@ -93,7 +93,7 @@ namespace ElementalHearts
 				// 8400 2400
 				// 3 in small
 				// 6 large
-				for (int i = 0; i < (int)Main.maxTilesX / 800; i++)
+				for (int i = 0; i < (int)Main.maxTilesX / 400; i++)
 				{
 					int Xvalue = WorldGen.genRand.Next(50, Main.maxTilesX - 700);
 					int Yvalue = WorldGen.genRand.Next((int)WorldGen.rockLayer - 200, Main.maxTilesY - 700);
@@ -102,14 +102,14 @@ namespace ElementalHearts
 					int XvalueMid = Xvalue + 400;
 					int YvalueMid = Yvalue + 400;
 
-					grassType += Main.rand.NextFloat(-10, 10);
+					grassType += Main.rand.NextFloat(-50, 50);
                     if (grassType >= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(20, 100), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(50, 100), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 					else if (grassType <= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(20, 100), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(50, 100), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 
 					int x;
@@ -158,7 +158,7 @@ namespace ElementalHearts
 							WorldGen.GrowTree(E, F);
 						}
 					}
-					for (int Ore = 0; Ore < 1600; Ore++)
+					for (int Ore = 0; Ore < 2500; Ore++)
 					{
 						int Xore = XvalueMid + Main.rand.Next(-300, 300);
 						int Yore = YvalueMid + Main.rand.Next(-300, 300);
