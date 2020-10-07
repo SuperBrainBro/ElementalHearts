@@ -12,7 +12,6 @@ namespace ElementalHearts.Items.Tiles
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Crystal Grass");
-            Tooltip.SetDefault("Can be placed");
         }
         public override void SetDefaults()
         {
