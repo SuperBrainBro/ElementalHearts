@@ -11,10 +11,10 @@ namespace ElementalHearts.Tiles
         {
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = false;
-            Main.tileLighted[Type] = true;
+            Main.tileLighted[Type] = false;
             Main.tileLavaDeath[Type] = true;
 
-            drop = ItemID.DirtBlock;
+            drop = mod.ItemType("CrystalGrassPinkItem");
             dustType = DustID.Dirt;
 
             ModTranslation name = CreateMapEntryName();
