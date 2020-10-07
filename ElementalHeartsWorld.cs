@@ -114,7 +114,7 @@ namespace ElementalHearts
 
 					int x;
 					int y;
-					int maxTries = 25000;
+					int maxTries = 35000;
 					int tries = 0;
 					int successes = 0;
 
@@ -158,13 +158,13 @@ namespace ElementalHearts
 							WorldGen.GrowTree(E, F);
 						}
 					}
-					for (int Ore = 0; Ore < 1500; Ore++)
+					for (int Ore = 0; Ore < 1600; Ore++)
 					{
 						int Xore = XvalueMid + Main.rand.Next(-300, 300);
 						int Yore = YvalueMid + Main.rand.Next(-300, 300);
 						if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 						{
-							WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 9), WorldGen.genRand.Next(3, 6), TileType<LifeOreTile>(), false, 0f, 0f, false, true);
+							WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 9), WorldGen.genRand.Next(3, 9), TileType<LifeOreTile>(), false, 0f, 0f, false, true);
 						}
 					}
 
@@ -173,5 +173,5 @@ namespace ElementalHearts
 				}
 			}));
 		}
-	}
+    }
 }
