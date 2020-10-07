@@ -18,7 +18,7 @@ namespace ElementalHearts.Walls
 			Main.wallHouse[Type] = true;
 			Main.wallLight[Type] = true;
 			dustType = DustID.CrystalPulse2;
-			AddMapEntry(new Color(150, 150, 150));
+			AddMapEntry(new Color(160, 60, 40));
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
