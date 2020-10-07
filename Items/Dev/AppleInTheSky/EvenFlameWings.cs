@@ -29,7 +29,7 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
 
         public void DamageReduction(Player player, bool hideVisual, NPC npc)
         {
-            var dmgReduct = GetInstance<ElementalHeartsPlayer>().dmgReduct;
+            float dmgReduct = GetInstance<ElementalHeartsPlayer>().dmgReduct;
             if (NPC.downedMechBossAny)
             {
                 dmgReduct = 2.5f;
@@ -68,27 +68,27 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            if (!player.arcticDivingGear)
+            if (!player.HasItem(ItemID.MasterNinjaGear))
             {
                 player.wingTimeMax = 150;
             }
             else
             {
-                player.wingTimeMax = 99999999 * 21;
+                player.wingTimeMax = 10000;
             }
-            this.DamageReduction(player, hideVisual, default);
+            DamageReduction(player, hideVisual, default);
         }
 
         float fade = Main.GameUpdateCount % 200 / 60f;
         int index = (int)(Main.GameUpdateCount / 200 % 2);
         Color[] itemNameCycleColors = new Color[]{
-            new Color(255, 61, 39),
-            new Color(53, 57, 63)
+            new Color(128, 128, 128),
+            new Color(0, 0, 0)
         };
 
         public override Color? GetAlpha(Color lightColor)
         {
-            return new Color(Main.DiscoR, 0, 0);
+            return new Color(Main.DiscoG, Main.DiscoB, Main.DiscoR);
         }
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> tooltips)
@@ -105,10 +105,10 @@ namespace ElementalHearts.Items.Dev.AppleInTheSky
         public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
             ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
         {
-            ascentWhenFalling = 0.85f;
-            ascentWhenRising = 0.15f;
+            ascentWhenFalling = 1f;
+            ascentWhenRising = 0.1f;
             maxCanAscendMultiplier = 1f;
-            maxAscentMultiplier = 3f;
+            maxAscentMultiplier = 2f;
             constantAscend = 0.135f;
         }
 
