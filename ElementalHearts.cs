@@ -8,8 +8,11 @@ using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -84,8 +87,11 @@ namespace ElementalHearts
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             LoadDyes();
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             if (Main.netMode != NetmodeID.Server)
@@ -98,6 +104,9 @@ namespace ElementalHearts
                 }
             }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
