@@ -39,6 +39,9 @@ namespace ElementalHearts
                 case NPCID.WallofFlesh when Main.expertMode: //Wall of Flesh
                     Item.NewItem(npc.getRect(), ItemType<DemonHeartMK2>());
                     break;
+                //case NPCID.QueenSlimeBoss when Main.expertMode: //Queen Slime
+                //    Item.NewItem(npc.getRect(), ItemType<VolatileHeartIsntItSameAsMenacingHeartLol>());
+                //    break;
                 case NPCID.TheDestroyer when Main.expertMode: //The Destroyer
                     Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece2>());
                     break;
@@ -51,6 +54,12 @@ namespace ElementalHearts
                 case NPCID.Golem when Main.expertMode: //Golem
                     Item.NewItem(npc.getRect(), ItemType<LihzhardianHeart>());
                     break;
+                case NPCID.DukeFishron when Main.expertMode: //Duke Fishron
+                    Item.NewItem(npc.getRect(), ItemType<TruffleHeart>());
+                    break;
+                //case NPCID.HallowBoss when Main.expertMode: //Empress of Light
+                //    Item.NewItem(npc.getRect(), ItemType<SoaringHeartSameWithThatBoi>());
+                //    break;
                 case NPCID.CultistBoss when Main.expertMode: //Lunatic Cultist
                     Item.NewItem(npc.getRect(), ItemType<AncientHeart>());
                     break;

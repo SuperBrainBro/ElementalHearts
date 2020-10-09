@@ -192,8 +192,10 @@ namespace ElementalHearts
         public int EyeLife;
         public int HiveLife;
         public int BoneLife;
+        public int VolatileLife;
         public int PlantLife;
         public int LihzhardianLife;
+        public int SoaringLife;
         public int FisharkLife;
         public int AncientLife;
         public int CelestialLife;
@@ -379,8 +381,10 @@ namespace ElementalHearts
             player.statLifeMax2 += EyeLife * 5;
             player.statLifeMax2 += HiveLife * 5;
             player.statLifeMax2 += BoneLife * 5;
+            player.statLifeMax2 += VolatileLife * 10;
             player.statLifeMax2 += PlantLife * 10;
             player.statLifeMax2 += LihzhardianLife * 10;
+            player.statLifeMax2 += SoaringLife * 10;
             player.statLifeMax2 += FisharkLife * 10;
             player.statLifeMax2 += AncientLife * 10;
             player.statLifeMax2 += CelestialLife * 10;
@@ -595,7 +599,9 @@ namespace ElementalHearts
             packet.Write(HiveLife);
             packet.Write(BoneLife);
             packet.Write(PlantLife);
+            packet.Write(VolatileLife);
             packet.Write(LihzhardianLife);
+            packet.Write(SoaringLife);
             packet.Write(FisharkLife);
             packet.Write(AncientLife);
             packet.Write(CelestialLife);
@@ -788,8 +794,10 @@ namespace ElementalHearts
                 { "EyeLife", EyeLife},
                 { "HiveLife", HiveLife},
                 { "BoneLife", BoneLife},
+                { "VolatileLife", VolatileLife },
                 { "PlantLife", PlantLife},
                 { "LihzhardianLife", LihzhardianLife },
+                { "SoaringLife", SoaringLife },
                 { "FisharkLife", FisharkLife },
                 { "AncientLife", AncientLife},
                 { "CelestialLife", CelestialLife},
@@ -973,8 +981,10 @@ namespace ElementalHearts
             EyeLife = tag.GetInt("EyeLife");
             HiveLife = tag.GetInt("HiveLife");
             BoneLife = tag.GetInt("BoneLife");
+            VolatileLife = tag.GetInt("VolatileLife");
             PlantLife = tag.GetInt("PlantLife");
             LihzhardianLife = tag.GetInt("LihzhardianLife");
+            SoaringLife = tag.GetInt("SoaringLife");
             FisharkLife = tag.GetInt("FisharkLife");
             AncientLife = tag.GetInt("AncientLife");
             CelestialLife = tag.GetInt("CelestialLife");

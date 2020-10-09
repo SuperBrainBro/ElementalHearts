@@ -2,11 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using ElementalHearts.Items.Consumables.Bosses;
+using ElementalHearts.Items.Dyes;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
+using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.UI;
 
@@ -67,8 +70,19 @@ namespace ElementalHearts
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic"), ModContent.ItemType<MHMb>(), ModContent.TileType<MHMbTile>());
                 #endregion
             }
+
+            LoadDyes();
             base.Load();
         }
+
+        public static void LoadDyes()
+        {
+            Ref<Effect> pixelShaderRef = Main.PixelShaderRef;
+            GameShaders.Armor.BindShader(ModContent.ItemType<MenacingDye>(), new ArmorShaderData(
+                pixelShaderRef,
+                "ArmorColored")).UseImage("ElementalHearts/Items/Dyes/MenacingDyeFilter").UseColor(200, 66, 107);
+        }
+
         public override void Unload()
         {
             MyUI?.UnLoadUI(); // If you hold data that needs to be unloaded, call it in OO-fashion

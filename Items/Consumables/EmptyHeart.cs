@@ -146,8 +146,10 @@ namespace ElementalHearts.Items.Consumables
                     player.GetModPlayer<ElementalHeartsPlayer>().EyeLife = 0;
                     player.GetModPlayer<ElementalHeartsPlayer>().HiveLife = 0;
                     player.GetModPlayer<ElementalHeartsPlayer>().BoneLife = 0;
+                    player.GetModPlayer<ElementalHeartsPlayer>().VolatileLife = 0;
                     player.GetModPlayer<ElementalHeartsPlayer>().PlantLife = 0;
                     player.GetModPlayer<ElementalHeartsPlayer>().LihzhardianLife = 0;
+                    player.GetModPlayer<ElementalHeartsPlayer>().SoaringLife = 0;
                     player.GetModPlayer<ElementalHeartsPlayer>().AncientLife = 0;
                     player.GetModPlayer<ElementalHeartsPlayer>().CelestialLife = 0;
                     break;
