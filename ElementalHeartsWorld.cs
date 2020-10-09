@@ -140,7 +140,7 @@ namespace ElementalHearts
 							{
 								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 								{
-									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileID.Stone, false, 0f, 0f, false, true);
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 18), TileID.Stone, false, 0f, 0f, false, true);
 								}
 							}
 						}
@@ -150,14 +150,14 @@ namespace ElementalHearts
 							{
 								if (Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 								{
-									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 16), WorldGen.genRand.Next(3, 16), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(6, 16), WorldGen.genRand.Next(6, 16), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
 								}
 							}
 							else
 							{
 								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>()) // A = x, B = y.
 								{
-									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 16), WorldGen.genRand.Next(3, 16), TileType<CrystalGrassPink>(), false, 0f, 0f, false, true);
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(6, 16), WorldGen.genRand.Next(6, 16), TileType<CrystalGrassPink>(), false, 0f, 0f, false, true);
 								}
 							}
 						}
@@ -182,7 +182,7 @@ namespace ElementalHearts
 							}
 						}
 					}
-					for (int C = 0; C < 3000; C++)
+					for (int Crystal = 0; Crystal < 1500; Crystal++)
 					{
 						int E = Xvalue + WorldGen.genRand.Next(300, 300);
 						int F = Yvalue + WorldGen.genRand.Next(300, 300);
@@ -197,7 +197,7 @@ namespace ElementalHearts
 						}
 
 					}
-					for (int Ore = 0; Ore < 3000; Ore++)
+					for (int Ore = 0; Ore < 1500; Ore++)
 					{
 						int Xore = XvalueMid + Main.rand.Next(-150, 150);
 						int Yore = YvalueMid + Main.rand.Next(-150, 300);
