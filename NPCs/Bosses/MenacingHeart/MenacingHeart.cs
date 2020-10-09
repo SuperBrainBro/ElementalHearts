@@ -13,6 +13,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using ElementalHearts.Effects;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -156,6 +157,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             //LIGHT (BEFORE EVERYTHING ELSE)
             Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
+
+            //Spawn Shockwave
+            Projectile.NewProjectile(npc.position, npc.velocity, ProjectileType<ShockwaveBasic>(), 0, 0, Main.myPlayer);
 
             //Check If Player Is Dead
             if (!AnyPlayerAlive)

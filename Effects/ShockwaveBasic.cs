@@ -17,9 +17,14 @@ namespace ElementalHearts.Effects
         private int rippleSpeed = 15;
         private float distortStrength = 100f;
 
+        public override void SetStaticDefaults()
+        {
+            projectile.timeLeft = 200;
+        }
+
         public override void AI()
         {
-            if (projectile.timeLeft <= 180)
+            if (projectile.timeLeft <= 200)
             {
                 if (projectile.ai[0] == 0)
                 {
@@ -36,7 +41,7 @@ namespace ElementalHearts.Effects
 
                 if (Main.netMode != NetmodeID.Server && Filters.Scene["ShockwaveBasic"].IsActive())
                 {
-                    float progress = (180f - projectile.timeLeft) / 60f;
+                    float progress = (200f - projectile.timeLeft) / 60f;
                     Filters.Scene["Shockwave"].GetShader().UseProgress(progress).UseOpacity(distortStrength * (1 - progress / 3f));
                 }
             }
