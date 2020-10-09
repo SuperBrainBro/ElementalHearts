@@ -7,8 +7,11 @@ using ElementalHearts.Items.Dyes;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 using Terraria;
@@ -80,8 +83,11 @@ namespace ElementalHearts
             }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             LoadDyes();
 =======
+=======
+>>>>>>> Stashed changes
             if (Main.netMode != NetmodeID.Server)
             {
                 if (Main.netMode != NetmodeID.Server)
@@ -91,6 +97,9 @@ namespace ElementalHearts
                     Filters.Scene["Shockwave"].Load();
                 }
             }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             base.Load();
         }
