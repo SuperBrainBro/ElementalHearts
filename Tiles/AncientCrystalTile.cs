@@ -35,9 +35,11 @@ namespace ElementalHearts.Tiles
 			TileObjectData.addAlternate(0);
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-			//ModTranslation name = CreateMapEntryName();
-			//name.SetDefault("Torch");
-			//AddMapEntry(new Color(200, 200, 200), name);
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Ancient Life Crystal");
+
+			AddMapEntry(new Color(255, 60, 60), name);
+			drop = mod.ItemType("AncientCrystal");
 			dustType = DustID.PinkCrystalShard;
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Torches };
@@ -58,6 +60,12 @@ namespace ElementalHearts.Tiles
 				g = 0.1f;
 				b = 0.1f;
 			}
+		}
+
+		public override bool KillSound(int i, int j)
+		{
+			Main.PlaySound(SoundID.Item, i * 16, j * 16, 27);
+			return false;
 		}
 
 		public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height)
