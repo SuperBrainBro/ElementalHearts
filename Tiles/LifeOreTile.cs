@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using IL.Terraria.Audio;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,17 +12,17 @@ namespace ElementalHearts.Tiles
         {
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
+            Main.tileBlockLight[Type] = true;
+            minPick = 45;
             Main.tileLighted[Type] = true;
-            Main.tileLavaDeath[Type] = true;
 
+            dustType = DustID.PinkCrystalShard;
             drop = mod.ItemType("LifeOre");
-            dustType = DustID.Confetti;
 
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Life Ore");
 
-            AddMapEntry(new Color(255, 44, 44), name);
-            minPick = 60;
+            AddMapEntry(new Color(255, 50, 50), name);
         }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -33,5 +34,12 @@ namespace ElementalHearts.Tiles
         {
             num = fail ? 1 : 3;
         }
+
+        public override bool KillSound(int i, int j)
+        {
+            Main.PlaySound(SoundID.Item, i * 16, j * 16, 27);
+            return false;
+        }
+
     }
 }

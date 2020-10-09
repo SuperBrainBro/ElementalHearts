@@ -3,11 +3,11 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Tiles
 {
-    public class LifeOre : ModItem
+    public class AncientCrystal : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Ancient Life Ore");
+            DisplayName.SetDefault("Ancient Life Crystal Shard");
             Tooltip.SetDefault("Can be used to craft various life crystal related items.");
         }
         public override void SetDefaults()
@@ -20,14 +20,14 @@ namespace ElementalHearts.Items.Tiles
             item.useStyle = ItemUseStyleID.SwingThrow;
             item.useTime = 10;
             item.useAnimation = 10;
-            item.createTile = mod.TileType("LifeOreTile");
+            item.createTile = mod.TileType("AncientCrystalTile");
             item.autoReuse = true;
             item.value = 10000;
         }
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(this, 20);
+            recipe.AddIngredient(this, 10);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(ItemID.LifeCrystal, 1);
             recipe.AddRecipe();
