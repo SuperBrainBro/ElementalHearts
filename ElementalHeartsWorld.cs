@@ -138,21 +138,18 @@ namespace ElementalHearts
 						x = Xvalue + WorldGen.genRand.Next(350, 450);
 						y = Yvalue + WorldGen.genRand.Next(350, 450);
 						
-						if (WorldGen.PlaceChest(x, y, (ushort)TileID.Heart, false, 2) != -1)
+						if (WorldGen.PlaceChest(x, y, TileID.Heart, false, 2) != -1)
 						{
 							successes++;
 						}
 						
 						tries++;
 					}
-					for (int C = 0; C < 110000; C++)
+					for (int C = 0; C < 4000; C++)
 					{
 						int E = Xvalue + WorldGen.genRand.Next(340, 460);
 						int F = Yvalue + WorldGen.genRand.Next(340, 460);
-						if (Main.tile[E, F] == null)
-						{
-							WorldGen.PlaceTile(E, F, TileType<AncientCrystalTile>());
-						}
+						WorldGen.PlaceTile(E, F, TileType<AncientCrystalTile>());
 					}
 					for (int trees = 0; trees < 50000; trees++)
 					{
