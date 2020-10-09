@@ -77,9 +77,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
             bossPhaseHealth = npc.lifeMax / 4;
 
-            //Spawn Shockwave
-            Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
             base.SetDefaults();
         }
         public override bool CheckDead()
@@ -163,6 +160,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
 
 
+            //Spawn Shockwave
+            Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
 
             //Check If Player Is Dead
             if (!AnyPlayerAlive)

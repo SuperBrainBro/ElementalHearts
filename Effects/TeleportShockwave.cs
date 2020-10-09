@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Effects
 {
-    public class ShockwaveBasic : ModProjectile {
+    public class TeleportShockwave : ModProjectile {
 
         private int rippleCount = 3;
         private int rippleSize = 5;
@@ -33,16 +33,16 @@ namespace ElementalHearts.Effects
                     projectile.friendly = false; // Stop the bomb from hurting enemies.
                     projectile.hostile = false;
 
-                    if (Main.netMode != NetmodeID.Server && !Filters.Scene["ShockwaveBasic"].IsActive())
+                    if (Main.netMode != NetmodeID.Server && !Filters.Scene["TeleportShockwave"].IsActive())
                     {
-                        Filters.Scene.Activate("Shockwave", projectile.Center).GetShader().UseColor(rippleCount, rippleSize, rippleSpeed).UseTargetPosition(projectile.Center);
+                        Filters.Scene.Activate("TeleportShockwave", projectile.Center).GetShader().UseColor(rippleCount, rippleSize, rippleSpeed).UseTargetPosition(projectile.Center);
                     }
                 }
 
                 if (Main.netMode != NetmodeID.Server && Filters.Scene["ShockwaveBasic"].IsActive())
                 {
                     float progress = (200f - projectile.timeLeft) / 60f;
-                    Filters.Scene["Shockwave"].GetShader().UseProgress(progress).UseOpacity(distortStrength * (1 - progress / 3f));
+                    Filters.Scene["TeleportShockwave"].GetShader().UseProgress(progress).UseOpacity(distortStrength * (1 - progress / 3f));
                 }
             }
         }
