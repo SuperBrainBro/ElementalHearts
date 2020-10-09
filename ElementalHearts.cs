@@ -6,26 +6,14 @@ using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Dyes;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.Graphics.Effects;
-using Terraria.Graphics.Shaders;
 using Terraria.ID;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace ElementalHearts
 {
@@ -84,32 +72,21 @@ namespace ElementalHearts
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic"), ModContent.ItemType<MHMb>(), ModContent.TileType<MHMbTile>());
                 #endregion
             }
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
             LoadDyes();
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
             if (Main.netMode != NetmodeID.Server)
             {
                 if (Main.netMode != NetmodeID.Server)
                 {
                     Ref<Effect> screenRef = new Ref<Effect>(GetEffect("Effects/ShockwaveEffect")); // The path to the compiled shader file.
-                    Filters.Scene["Shockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
-                    Filters.Scene["Shockwave"].Load();
+                    Filters.Scene["TeleportShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["TeleportShockwave"].Load();
+                    Filters.Scene["PhaseChangeShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["TeleportShockwave"].Load();
+                    Filters.Scene["BasicShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["TeleportShockwave"].Load();
                 }
             }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
             base.Load();
         }
 

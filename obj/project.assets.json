@@ -27,23 +27,23 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.5": [
-      "tModLoader.CodeAssist >= 0.1.*"
+      "tModLoader.CodeAssist >= 0.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\palma\\.nuget\\packages\\": {}
+    "C:\\Users\\Vincent\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
+      "projectUniqueName": "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
       "projectName": "ElementalHearts",
-      "projectPath": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
-      "packagesPath": "C:\\Users\\palma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\palma\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\obj\\",
+      "projectPath": "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
+      "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
+      "outputPath": "G:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\palma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -69,7 +69,7 @@
         "dependencies": {
           "tModLoader.CodeAssist": {
             "target": "Package",
-            "version": "[0.1.*, )"
+            "version": "[0.1.1, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
