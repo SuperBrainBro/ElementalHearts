@@ -148,16 +148,16 @@ namespace ElementalHearts
 						{
 							if (Main.rand.NextBool())
 							{
-								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 								{
-									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 16), WorldGen.genRand.Next(3, 16), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
 								}
 							}
 							else
 							{
-								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>()) // A = x, B = y.
 								{
-									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileType<CrystalGrassPink>(), false, 0f, 0f, false, true);
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 16), WorldGen.genRand.Next(3, 16), TileType<CrystalGrassPink>(), false, 0f, 0f, false, true);
 								}
 							}
 						}
