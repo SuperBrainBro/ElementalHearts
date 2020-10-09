@@ -109,9 +109,23 @@ namespace ElementalHearts
 					}
 					else if (grassType <= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(45, 75), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(45, 75), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
 					}
 
+					for (int A = Xvalue; A < XvalueHigh; A++)
+					{
+						for (int B = Yvalue; B < YvalueHigh; B++)
+						{
+							if (Main.tile[A, B] != null)
+							{
+								if (Main.tile[A, B].type == TileType<Tiles.CrystalGrass>())
+								{
+									WorldGen.KillWall(A, B);
+									WorldGen.PlaceWall(A, B, mod.WallType("CrystalWall"));
+								}
+							}
+						}
+					}
 					int x;
 					int y;
 					int maxTries = 50000;
@@ -131,17 +145,11 @@ namespace ElementalHearts
 						
 						tries++;
 					}
-					for (int C = 0; C < 40; C++)
+					for (int C = 0; C < 110000; C++)
 					{
 						int E = Xvalue + WorldGen.genRand.Next(340, 460);
 						int F = Yvalue + WorldGen.genRand.Next(340, 460);
-						WorldGen.PlaceTile(E, F, TileType<AncientCrystalTile>());
-					}
-					for (int C = 0; C < 35; C++)
-					{
-						int E = Xvalue + WorldGen.genRand.Next(340, 460);
-						int F = Yvalue + WorldGen.genRand.Next(340, 460);
-						if (Main.tile[E, F] != null)
+						if (Main.tile[E, F] == null)
 						{
 							WorldGen.PlaceTile(E, F, TileType<AncientCrystalTile>());
 						}
