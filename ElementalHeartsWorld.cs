@@ -105,11 +105,11 @@ namespace ElementalHearts
 					grassType += Main.rand.NextFloat(-50, 50);
                     if (grassType >= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(40, 90), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 90), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 					else if (grassType <= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(40, 90), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 90), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
 					}
 					int x;
 					int y;
@@ -117,7 +117,7 @@ namespace ElementalHearts
 					int tries = 0;
 					int successes = 0;
 
-					WorldGen.digTunnel(Xvalue + 300, Yvalue + 300, 0, 0, WorldGen.genRand.Next(15, 20), WorldGen.genRand.Next(10, 15), false);
+					WorldGen.digTunnel(Xvalue + 300, Yvalue + 300, 0, 0, WorldGen.genRand.Next(10, 15), WorldGen.genRand.Next(6, 12), false);
 					while (tries < maxTries && successes < 20)
 					{
 						x = Xvalue + WorldGen.genRand.Next(300, 300);
