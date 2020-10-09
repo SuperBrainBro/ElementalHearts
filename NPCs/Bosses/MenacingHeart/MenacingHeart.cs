@@ -6,9 +6,11 @@ using ElementalHearts.Items.Weapons;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.ID;
 using Terraria;
 using Terraria.Audio;
-using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 

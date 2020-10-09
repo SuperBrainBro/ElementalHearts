@@ -1,17 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Xna.Framework;
 using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Dyes;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
+<<<<<<< Updated upstream
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+=======
+>>>>>>> Stashed changes
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.UI;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.ID;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace ElementalHearts
 {
@@ -71,7 +79,19 @@ namespace ElementalHearts
                 #endregion
             }
 
+<<<<<<< Updated upstream
             LoadDyes();
+=======
+            if (Main.netMode != NetmodeID.Server)
+            {
+                if (Main.netMode != NetmodeID.Server)
+                {
+                    Ref<Effect> screenRef = new Ref<Effect>(GetEffect("Effects/ShockwaveEffect")); // The path to the compiled shader file.
+                    Filters.Scene["Shockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["Shockwave"].Load();
+                }
+            }
+>>>>>>> Stashed changes
             base.Load();
         }
 
