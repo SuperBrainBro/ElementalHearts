@@ -164,11 +164,11 @@ namespace ElementalHearts
 							WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 12), WorldGen.genRand.Next(3, 12), TileType<LifeOreTile>(), false, 0f, 0f, false, true);
 						}
 					}
-					for (int Blocks = 0; Blocks < 1000; Blocks++)
+					for (int Blocks = 0; Blocks < 1500; Blocks++)
 					{
 						int Xore = XvalueMid + Main.rand.Next(-300, 300);
 						int Yore = YvalueMid + Main.rand.Next(-300, 300);
-                        if (Main.rand.NextBool())
+						if (Main.rand.NextBool())
 						{
 							if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 							{
@@ -177,23 +177,33 @@ namespace ElementalHearts
 						}
 						else if (Main.rand.NextBool())
 						{
-							if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+							if (Main.rand.NextBool())
 							{
-								WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
+								}
+							}
+							else if (Main.rand.NextBool())
+							{
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileType<CrystalGrassPink>(), false, 0f, 0f, false, true);
+								}
 							}
 						}
 						else if (Main.rand.NextBool())
 						{
 							if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 							{
-								WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
+								WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileID.Mud, false, 0f, 0f, false, true);
 							}
 						}
-						else if(Main.rand.NextBool())
+						else if (Main.rand.NextBool())
 						{
 							if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 							{
-								WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileID.Grass, false, 0f, 0f, false, true);
+								WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileID.Sand, false, 0f, 0f, false, true);
 							}
 						}
 					}
