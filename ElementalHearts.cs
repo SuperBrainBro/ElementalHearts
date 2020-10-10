@@ -82,9 +82,9 @@ namespace ElementalHearts
                     Filters.Scene["TeleportShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
                     Filters.Scene["TeleportShockwave"].Load();
                     Filters.Scene["PhaseChangeShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
-                    Filters.Scene["TeleportShockwave"].Load();
+                    Filters.Scene["PhaseChangeShockwave"].Load();
                     Filters.Scene["BasicShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
-                    Filters.Scene["TeleportShockwave"].Load();
+                    Filters.Scene["BasicShockwave"].Load();
                 }
             }
             base.Load();

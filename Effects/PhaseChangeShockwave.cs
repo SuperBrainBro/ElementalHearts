@@ -10,11 +10,11 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Effects
 {
-    public class ShockwaveBasic : ModProjectile
+    public class PhaseChangeShockwave : ModProjectile
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("A Basic Shockwave");
+            DisplayName.SetDefault("A Phase Change Shockwave");
         }
         public override void SetDefaults()
         {
@@ -28,9 +28,9 @@ namespace ElementalHearts.Effects
             projectile.timeLeft = 255;
         }
         private int rippleCount = 1;
-        private int rippleSize = 5;
-        private int rippleSpeed = 15;
-        private float distortStrength = 500f;
+        private int rippleSize = 3;
+        private int rippleSpeed = 20;
+        private float distortStrength = 250f;
 
         public override void AI()
         {

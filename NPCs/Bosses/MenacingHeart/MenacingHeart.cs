@@ -154,15 +154,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
             Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
         }
+        public bool SpawnShockwave = false;
         public override void AI()
         {
             //LIGHT (BEFORE EVERYTHING ELSE)
             Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
 
-
             //Spawn Shockwave
-            Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
-            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
+            if(SpawnShockwave != true)
+            {
+                if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
+                {
+                    Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
+                    Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
+                }
+                SpawnShockwave = true;
+            }
 
             //Check If Player Is Dead
             if (!AnyPlayerAlive)

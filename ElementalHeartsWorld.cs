@@ -182,7 +182,7 @@ namespace ElementalHearts
 							}
 						}
 					}
-					for (int Crystal = 0; Crystal < 1500; Crystal++)
+					for (int Crystal = 0; Crystal < 3000; Crystal++)
 					{
 						int E = Xvalue + WorldGen.genRand.Next(300, 300);
 						int F = Yvalue + WorldGen.genRand.Next(300, 300);
@@ -197,7 +197,7 @@ namespace ElementalHearts
 						}
 
 					}
-					for (int Ore = 0; Ore < 1500; Ore++)
+					for (int Ore = 0; Ore < 1000; Ore++)
 					{
 						int Xore = XvalueMid + Main.rand.Next(-150, 150);
 						int Yore = YvalueMid + Main.rand.Next(-150, 300);
