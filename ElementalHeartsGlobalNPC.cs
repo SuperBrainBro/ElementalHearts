@@ -1,5 +1,7 @@
 using ElementalHearts.Items.Consumables;
 using ElementalHearts.Items.Consumables.Bosses;
+using ElementalHearts.Items.Consumables.Bosses.CrossMod;
+using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,6 +21,7 @@ namespace ElementalHearts
         }
         public override void NPCLoot(NPC npc)
         {
+            #region Vanilla Bosses
             switch (npc.type) //Expert Drop of...
             {
                 case NPCID.KingSlime when Main.expertMode: //King Slime
@@ -98,6 +101,69 @@ namespace ElementalHearts
             {
                 Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece1>());
             }
+            #endregion
+
+            #region Modded Bosses
+            if (Main.expertMode)
+            {
+                #region Elemental Hearts
+                if (npc.type == NPCType<MenacingHeart>())
+                {
+                    Item.NewItem(npc.getRect(), ItemType<MenacingHeartItem>());
+                }
+                #endregion
+                #region Thorium Mod
+                if (ModLoader.GetMod("ThoriumMod") != null)
+                {
+                    Mod mod = ModLoader.GetMod("ThoriumMod");
+                    if (npc.type == mod.NPCType("TheGrandThunderBirdv2"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ZephyrsHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("QueenJelly"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<SeaBreezeHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Viscount"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<VampiresHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("GraniteEnergyStorm"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartOfTheStorm>());
+                    }
+                    else if (npc.type == mod.NPCType("TheBuriedWarrior"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ChampionsHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("ThePrimeScouter"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<OmegaHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("BoreanStriderPopped"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<IceBoundStriderHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("FallenDeathBeholder2"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<BeholderHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("LichHeadless"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<LichsHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("AbyssionReleased"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<AbyssalHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("RealityBreaker"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DormantHeart>());
+                    }
+                }
+                #endregion
+            }
+            #endregion
         }
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)

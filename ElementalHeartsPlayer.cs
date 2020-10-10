@@ -199,6 +199,17 @@ namespace ElementalHearts
         public int FisharkLife;
         public int AncientLife;
         public int CelestialLife;
+        public int ZephyrsLife;
+        public int SeaBreezeLife;
+        public int VampiresLife;
+        public int LifeOfTheStorm;
+        public int ChampionsLife;
+        public int OmegaLife;
+        public int IceBoundStriderLife;
+        public int FallenLife;
+        public int LichsLife;
+        public int AbyssalLife;
+        public int DormantLife;
 
         public override void ResetEffects()
         {
@@ -388,6 +399,17 @@ namespace ElementalHearts
             player.statLifeMax2 += FisharkLife * 10;
             player.statLifeMax2 += AncientLife * 10;
             player.statLifeMax2 += CelestialLife * 10;
+            player.statLifeMax2 += ZephyrsLife * 5;
+            player.statLifeMax2 += SeaBreezeLife * 5;
+            player.statLifeMax2 += VampiresLife * 5;
+            player.statLifeMax2 += LifeOfTheStorm * 5;
+            player.statLifeMax2 += ChampionsLife * 5;
+            player.statLifeMax2 += OmegaLife * 5;
+            player.statLifeMax2 += IceBoundStriderLife * 10;
+            player.statLifeMax2 += FallenLife * 10;
+            player.statLifeMax2 += LichsLife * 10;
+            player.statLifeMax2 += AbyssalLife * 10;
+            player.statLifeMax2 += DormantLife * 10;
         }
         public override void UpdateDead()
         {
@@ -412,7 +434,7 @@ namespace ElementalHearts
         {
             if (dmgReduct == 1 || dmgReduct > 1)
             {
-                damage = damage - (int)(damage / 100 * dmgReduct);
+                damage -= (int)(damage / 100 * dmgReduct);
             }
             base.OnHitByNPC(npc, damage, crit);
         }
@@ -605,6 +627,17 @@ namespace ElementalHearts
             packet.Write(FisharkLife);
             packet.Write(AncientLife);
             packet.Write(CelestialLife);
+            packet.Write(ZephyrsLife);
+            packet.Write(SeaBreezeLife);
+            packet.Write(VampiresLife);
+            packet.Write(LifeOfTheStorm);
+            packet.Write(ChampionsLife);
+            packet.Write(OmegaLife);
+            packet.Write(IceBoundStriderLife);
+            packet.Write(FallenLife);
+            packet.Write(LichsLife);
+            packet.Write(AbyssalLife);
+            packet.Write(DormantLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -801,6 +834,17 @@ namespace ElementalHearts
                 { "FisharkLife", FisharkLife },
                 { "AncientLife", AncientLife},
                 { "CelestialLife", CelestialLife},
+                { "ZephyrsLife", ZephyrsLife },
+                { "SeaBreezeLife", SeaBreezeLife },
+                { "VampiresLife", VampiresLife },
+                { "LifeOfTheStorm", LifeOfTheStorm },
+                { "ChampionsLife", ChampionsLife },
+                { "OmegaLife", OmegaLife },
+                { "IceBoundStriderLife", IceBoundStriderLife},
+                { "FallenLife", FallenLife },
+                { "LichsLife", LichsLife },
+                { "AbyssalLife", AbyssalLife },
+                { "DormantLife", DormantLife },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -988,6 +1032,17 @@ namespace ElementalHearts
             FisharkLife = tag.GetInt("FisharkLife");
             AncientLife = tag.GetInt("AncientLife");
             CelestialLife = tag.GetInt("CelestialLife");
+            ZephyrsLife = tag.GetInt("ZephyrsLife");
+            SeaBreezeLife = tag.GetInt("SeaBreezeLife");
+            VampiresLife = tag.GetInt("VampiresLife");
+            LifeOfTheStorm = tag.GetInt("LifeOfTheStorm");
+            ChampionsLife = tag.GetInt("ChampionsLife");
+            OmegaLife = tag.GetInt("OmegaLife");
+            IceBoundStriderLife = tag.GetInt("IceBoundStriderLife");
+            FallenLife = tag.GetInt("FallenLife");
+            LichsLife = tag.GetInt("LichsLife");
+            AbyssalLife = tag.GetInt("AbyssalLife");
+            DormantLife = tag.GetInt("DormantLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }
