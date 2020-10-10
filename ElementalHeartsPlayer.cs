@@ -210,6 +210,10 @@ namespace ElementalHearts
         public int LichsLife;
         public int AbyssalLife;
         public int DormantLife;
+        public int DD2DarkLifeT1;
+        public int DD2DarkLifeT3;
+        public int DD2SnotLifeT2;
+        public int DD2SnotLifeT3;
 
         public override void ResetEffects()
         {
@@ -410,6 +414,10 @@ namespace ElementalHearts
             player.statLifeMax2 += LichsLife * 10;
             player.statLifeMax2 += AbyssalLife * 10;
             player.statLifeMax2 += DormantLife * 10;
+            player.statLifeMax2 += DD2DarkLifeT1 * 5;
+            player.statLifeMax2 += DD2DarkLifeT3 * 10;
+            player.statLifeMax2 += DD2SnotLifeT2 * 5;
+            player.statLifeMax2 += DD2SnotLifeT3 * 10;
         }
         public override void UpdateDead()
         {
@@ -638,6 +646,10 @@ namespace ElementalHearts
             packet.Write(LichsLife);
             packet.Write(AbyssalLife);
             packet.Write(DormantLife);
+            packet.Write(DD2DarkLifeT1);
+            packet.Write(DD2DarkLifeT3);
+            packet.Write(DD2SnotLifeT2);
+            packet.Write(DD2SnotLifeT3);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -845,6 +857,10 @@ namespace ElementalHearts
                 { "LichsLife", LichsLife },
                 { "AbyssalLife", AbyssalLife },
                 { "DormantLife", DormantLife },
+                { "DD2DarkHeartT1", DD2DarkLifeT1 },
+                { "DD2DarkHeartT3", DD2DarkLifeT3 },
+                { "DD2SnotHeartT2", DD2SnotLifeT2 },
+                { "DD2SnotHeartT3", DD2SnotLifeT3 },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -1043,6 +1059,10 @@ namespace ElementalHearts
             LichsLife = tag.GetInt("LichsLife");
             AbyssalLife = tag.GetInt("AbyssalLife");
             DormantLife = tag.GetInt("DormantLife");
+            DD2DarkLifeT1 = tag.GetInt("DD2DarkLifeT1");
+            DD2DarkLifeT3 = tag.GetInt("DD2DarkLifeT3");
+            DD2SnotLifeT2 = tag.GetInt("DD2SnotLifeT2");
+            DD2SnotLifeT3 = tag.GetInt("DD2SnotLifeT3");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

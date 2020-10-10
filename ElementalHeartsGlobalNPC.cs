@@ -33,6 +33,14 @@ namespace ElementalHearts
                 case NPCID.BrainofCthulhu when Main.expertMode: //Brain of Cthulhu
                     Item.NewItem(npc.getRect(), ItemType<BrainHeart>());
                     break;
+                case NPCID.DD2DarkMageT1 when Main.expertMode:
+                case NPCID.DD2DarkMageT3 when Main.expertMode:
+                    if (npc.type == NPCID.DD2DarkMageT1)
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DarkHeart>());
+                    }
+                    else { Item.NewItem(npc.getRect(), ItemType<DarkHeart2>()); }
+                    break;
                 case NPCID.QueenBee when Main.expertMode: //Queen Bee
                     Item.NewItem(npc.getRect(), ItemType<HiveHeart>());
                     break;
@@ -50,6 +58,14 @@ namespace ElementalHearts
                     break;
                 case NPCID.SkeletronPrime when Main.expertMode: //Skeletron Prime
                     Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece3>());
+                    break;
+                case NPCID.DD2OgreT2 when Main.expertMode:
+                case NPCID.DD2OgreT3 when Main.expertMode:
+                    if (npc.type == NPCID.DD2OgreT2)
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<SnotHeart>());
+                    }
+                    else { Item.NewItem(npc.getRect(), ItemType<SnotHeart2>()); }
                     break;
                 case NPCID.Plantera when Main.expertMode: //Plantera
                     Item.NewItem(npc.getRect(), ItemType<PlantHeart>());
