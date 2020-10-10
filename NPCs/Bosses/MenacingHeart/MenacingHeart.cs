@@ -225,6 +225,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P1P = true;
                     }
                 }
@@ -255,6 +259,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P2P = true;
                     }
                 }
@@ -285,6 +293,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P3P = true;
                     }
                 }
@@ -315,6 +327,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P4P = true;
                     }
                 }
@@ -357,11 +373,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand1 > 4)
                     {
@@ -372,11 +383,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand1 > 2)
                     {
@@ -387,11 +393,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand1 > 0)
                     {
@@ -402,11 +403,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                 }
 
@@ -519,11 +515,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand2 > 4)
                     { 
@@ -534,11 +525,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand2 > 2)
                     { 
@@ -549,11 +535,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand2 > 0)
                     {
@@ -564,11 +545,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                 }
 
@@ -685,11 +661,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand3 > 4)
                     {
@@ -700,11 +671,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand3 > 2)
                     {
@@ -715,11 +681,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand3 > 0)
                     {
@@ -730,11 +691,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                 }
 
@@ -852,11 +808,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand4 > 4)
                     {
@@ -867,11 +818,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand4 > 2)
                     {
@@ -882,11 +828,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                     else if (tpPosRand4 > 0)
                     {
@@ -897,11 +838,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
-                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
-                        {
-                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<TeleportShockwave>(), 0, 0f, Main.myPlayer);
-                        }
                     }
                 }
 
@@ -1281,6 +1217,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
                 }
             }
+
+
+            if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+            {
+                Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+            }
+            if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
+            {
+                Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
+            }
             base.BossLoot(ref name, ref potionType);
         }
         public static bool AnyPlayerAlive
@@ -1302,5 +1248,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 return false;
             }
         }
+
     }
 }

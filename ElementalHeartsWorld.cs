@@ -105,19 +105,19 @@ namespace ElementalHearts
 					grassType += Main.rand.NextFloat(-50, 50);
                     if (grassType >= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 90), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 70), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 					else if (grassType <= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 90), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 70), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
 					}
 					int x;
 					int y;
-					int maxTries = 50000;
+					int maxTries = 100000;
 					int tries = 0;
 					int successes = 0;
 
-					WorldGen.digTunnel(Xvalue + 300, Yvalue + 300, 0, 0, WorldGen.genRand.Next(10, 15), WorldGen.genRand.Next(6, 12), false);
+					WorldGen.digTunnel(Xvalue + 400, Yvalue + 400, 0, 0, WorldGen.genRand.Next(15, 18), WorldGen.genRand.Next(14, 17), false);
 					while (tries < maxTries && successes < 20)
 					{
 						x = Xvalue + WorldGen.genRand.Next(300, 300);
@@ -182,24 +182,25 @@ namespace ElementalHearts
 							}
 						}
 					}
-					for (int Crystal = 0; Crystal < 3000; Crystal++)
+					for (int Crystal = 0; Crystal < 20000; Crystal++)
 					{
-						int E = Xvalue + WorldGen.genRand.Next(300, 300);
-						int F = Yvalue + WorldGen.genRand.Next(300, 300);
+						int E = XvalueMid + Main.rand.Next(-150, 300);
+						int F = YvalueMid + Main.rand.Next(-150, 300);
 						Tile tilePre = Framing.GetTileSafely(E, F);
-						if (tilePre.type == TileType<CrystalGrass>() || tilePre.type == TileType<CrystalGrassPink>())
+						if (tilePre.type == TileType<CrystalGrass>() || tilePre.type == TileType<CrystalGrassPink>() || tilePre.type == TileType<LifeOreTile>())
 						{
-							Tile tile = Framing.GetTileSafely(E + (int)Main.rand.NextFloat(-1, 1), F + (int)Main.rand.NextFloat(-1, 1));
-							if (!tile.active())
+							int Ep = E + (int)Main.rand.NextFloat(-1, 1);
+							int Fp = F + (int)Main.rand.NextFloat(-1, 1);
+							Tile tile = Framing.GetTileSafely(Ep, Fp);
+							if (!tile.active() && tile.wall > 0)
 							{
-								WorldGen.PlaceTile(E, F, TileType<AncientCrystalTile>());
+								WorldGen.PlaceTile(Ep, Fp, TileType<AncientCrystalTile>());
 							}
 						}
-
 					}
 					for (int Ore = 0; Ore < 1000; Ore++)
 					{
-						int Xore = XvalueMid + Main.rand.Next(-150, 150);
+						int Xore = XvalueMid + Main.rand.Next(-150, 300);
 						int Yore = YvalueMid + Main.rand.Next(-150, 300);
 						if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 						{
