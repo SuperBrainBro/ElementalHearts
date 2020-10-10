@@ -122,6 +122,118 @@ namespace ElementalHearts
             #region Modded Bosses
             if (Main.expertMode)
             {
+                #region Calamity Mod
+                if (ModLoader.GetMod("CalamityMod") != null)
+                {
+                    Mod mod = ModLoader.GetMod("CalamityMod");
+                    if (npc.type == mod.NPCType("DesertScourgeHead"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<OceanHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("CrabulonIdle"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<OceanHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("HiveMindP2"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<RottenHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("PerforatorHive"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<BloodyWormHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("SlimeGodCore"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<PolarizedHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Cryogen"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartOfCryogen>());
+                    }
+                    else if (npc.type == mod.NPCType("BrimstoneElemental"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<GehennaHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("AquaticScourgeHead"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<AquaticHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Calamitas"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<VoidOfHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Siren"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("Leviathan")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<HeartAmbergris>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("Leviathan"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("Siren")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<HeartAmbergris>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("AstrumAureus"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<GravistarHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("PlaguebringerGoliath"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<CrystallizedToxicHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("ScavengerBody"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<CorpusHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("AstrumDeusHead"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<AstralBossHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("ProfanedGuardianBoss"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ProfanedHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Bumblefuck"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DynamoStemHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Providence"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<BlazingHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("StormWeaverHeadNaked"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ArmoredHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("CeaselessVoid"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DarkPlasmicHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Polterghast"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<TwistingHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("OldDuke"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<AfflictedHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("DevourerofGodsHeadS"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<NebulousHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Yharon"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DraconicHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("SupremeCalamitas"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<CalamitousHeart>());
+                    }
+                }
+                #endregion
                 #region Elemental Hearts
                 if (npc.type == NPCType<MenacingHeart>())
                 {
