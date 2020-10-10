@@ -1,17 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Xna.Framework;
 using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Dyes;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.UI;
+using Terraria.Graphics.Effects;
+using Terraria.ID;
 
 namespace ElementalHearts
 {
@@ -70,8 +72,21 @@ namespace ElementalHearts
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic"), ModContent.ItemType<MHMb>(), ModContent.TileType<MHMbTile>());
                 #endregion
             }
-
             LoadDyes();
+
+            if (Main.netMode != NetmodeID.Server)
+            {
+                if (Main.netMode != NetmodeID.Server)
+                {
+                    Ref<Effect> screenRef = new Ref<Effect>(GetEffect("Effects/ShockwaveEffect")); // The path to the compiled shader file.
+                    Filters.Scene["TeleportShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["TeleportShockwave"].Load();
+                    Filters.Scene["PhaseChangeShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["PhaseChangeShockwave"].Load();
+                    Filters.Scene["BasicShockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
+                    Filters.Scene["BasicShockwave"].Load();
+                }
+            }
             base.Load();
         }
 

@@ -105,38 +105,23 @@ namespace ElementalHearts
 					grassType += Main.rand.NextFloat(-50, 50);
                     if (grassType >= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(45, 75), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 70), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
 					}
 					else if (grassType <= 0)
 					{
-						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(45, 75), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
-					}
-
-					for (int A = Xvalue; A < XvalueHigh; A++)
-					{
-						for (int B = Yvalue; B < YvalueHigh; B++)
-						{
-							if (Main.tile[A, B] != null)
-							{
-								if (Main.tile[A, B].type == TileType<Tiles.CrystalGrass>())
-								{
-									WorldGen.KillWall(A, B);
-									WorldGen.PlaceWall(A, B, mod.WallType("CrystalWall"));
-								}
-							}
-						}
+						WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 70), 1, TileType<CrystalGrassPink>(), false, 0f, 0f, true, true); 
 					}
 					int x;
 					int y;
-					int maxTries = 50000;
+					int maxTries = 100000;
 					int tries = 0;
 					int successes = 0;
 
 					WorldGen.digTunnel(Xvalue + 400, Yvalue + 400, 0, 0, WorldGen.genRand.Next(15, 18), WorldGen.genRand.Next(14, 17), false);
 					while (tries < maxTries && successes < 20)
 					{
-						x = Xvalue + WorldGen.genRand.Next(350, 450);
-						y = Yvalue + WorldGen.genRand.Next(350, 450);
+						x = Xvalue + WorldGen.genRand.Next(300, 300);
+						y = Yvalue + WorldGen.genRand.Next(300, 300);
 						
 						if (WorldGen.PlaceChest(x, y, TileID.Heart, false, 2) != -1)
 						{
@@ -145,32 +130,83 @@ namespace ElementalHearts
 						
 						tries++;
 					}
-					for (int C = 0; C < 4000; C++)
+					for (int Blocks = 0; Blocks < 3000; Blocks++)
 					{
-						int E = Xvalue + WorldGen.genRand.Next(340, 460);
-						int F = Yvalue + WorldGen.genRand.Next(340, 460);
-						WorldGen.PlaceTile(E, F, TileType<AncientCrystalTile>());
-					}
-					for (int trees = 0; trees < 50000; trees++)
-					{
-						int E = Xvalue + WorldGen.genRand.Next(340, 460);
-						int F = Yvalue + WorldGen.genRand.Next(340, 460);
-						Tile tile = Framing.GetTileSafely(E, F);
-						if (tile.type == TileType<CrystalGrass>() || tile.type == TileType<CrystalGrassPink>())
+						int Xore = XvalueMid + Main.rand.Next(-150, 150);
+						int Yore = YvalueMid + Main.rand.Next(-150, 150);
+						if (Main.rand.NextBool())
 						{
-							WorldGen.GrowTree(E, F);
+							if (Main.rand.NextBool())
+							{
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 18), TileID.Stone, false, 0f, 0f, false, true);
+								}
+							}
+						}
+						if (Main.rand.NextBool())
+						{
+							if (Main.rand.NextBool())
+							{
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(6, 16), WorldGen.genRand.Next(6, 16), TileType<CrystalGrass>(), false, 0f, 0f, false, true);
+								}
+							}
+							else
+							{
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(6, 16), WorldGen.genRand.Next(6, 16), TileType<CrystalGrassPink>(), false, 0f, 0f, false, true);
+								}
+							}
+						}
+						else if (Main.rand.NextBool())
+						{
+							if (Main.rand.NextBool())
+							{
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileID.Mud, false, 0f, 0f, false, true);
+								}
+							}
+						}
+						else if (Main.rand.NextBool())
+						{
+							if (Main.rand.NextBool())
+							{
+								if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
+								{
+									WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 8), WorldGen.genRand.Next(3, 8), TileID.Sand, false, 0f, 0f, false, true);
+								}
+							}
 						}
 					}
-					for (int Ore = 0; Ore < 5000; Ore++)
+					for (int Crystal = 0; Crystal < 20000; Crystal++)
 					{
-						int Xore = XvalueMid + Main.rand.Next(-300, 300);
-						int Yore = YvalueMid + Main.rand.Next(-300, 300);
+						int E = XvalueMid + Main.rand.Next(-150, 300);
+						int F = YvalueMid + Main.rand.Next(-150, 300);
+						Tile tilePre = Framing.GetTileSafely(E, F);
+						if (tilePre.type == TileType<CrystalGrass>() || tilePre.type == TileType<CrystalGrassPink>() || tilePre.type == TileType<LifeOreTile>())
+						{
+							int Ep = E + (int)Main.rand.NextFloat(-1, 1);
+							int Fp = F + (int)Main.rand.NextFloat(-1, 1);
+							Tile tile = Framing.GetTileSafely(Ep, Fp);
+							if (!tile.active() && tile.wall > 0)
+							{
+								WorldGen.PlaceTile(Ep, Fp, TileType<AncientCrystalTile>());
+							}
+						}
+					}
+					for (int Ore = 0; Ore < 1000; Ore++)
+					{
+						int Xore = XvalueMid + Main.rand.Next(-150, 300);
+						int Yore = YvalueMid + Main.rand.Next(-150, 300);
 						if (Main.tile[Xore, Yore].type == TileType<CrystalGrass>() || Main.tile[Xore, Yore].type == TileType<CrystalGrassPink>()) // A = x, B = y.
 						{
 							WorldGen.TileRunner(Xore, Yore, WorldGen.genRand.Next(3, 12), WorldGen.genRand.Next(3, 12), TileType<LifeOreTile>(), false, 0f, 0f, false, true);
 						}
 					}
-
 
 					BiomeCenters.Add(new Point(XvalueMid, YvalueMid));
 				}

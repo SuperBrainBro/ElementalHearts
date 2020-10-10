@@ -6,11 +6,14 @@ using ElementalHearts.Items.Weapons;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.ID;
 using Terraria;
 using Terraria.Audio;
-using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using ElementalHearts.Effects;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -73,6 +76,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.timeLeft = 0;
 
             bossPhaseHealth = npc.lifeMax / 4;
+
             base.SetDefaults();
         }
         public override bool CheckDead()
@@ -150,10 +154,21 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
             Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
         }
+        public bool SpawnShockwave = false;
         public override void AI()
         {
             //LIGHT (BEFORE EVERYTHING ELSE)
             Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
+
+            //Spawn Shockwave
+            if(SpawnShockwave != true)
+            {
+                if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
+                {
+                    Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
+                }
+                SpawnShockwave = true;
+            }
 
             //Check If Player Is Dead
             if (!AnyPlayerAlive)
@@ -210,6 +225,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P1P = true;
                     }
                 }
@@ -240,6 +259,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P2P = true;
                     }
                 }
@@ -270,6 +293,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P3P = true;
                     }
                 }
@@ -300,6 +327,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Projectile.NewProjectile(npc.Center, new Vector2(-4, 4), ProjectileType<MenacingProjectile>(), 50 * 2, 1f, Main.myPlayer);
 
                         Main.PlaySound(new LegacySoundStyle(SoundID.ForceRoar, 0), npc.Center);
+                        if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+                        {
+                            Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+                        }
                         P4P = true;
                     }
                 }
@@ -331,15 +362,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.TargetClosest(true);
 
-                    //This generates a random tp Center.
                     tpPosRand1 = Main.rand.NextFloat(8);
 
                     if (tpPosRand1 > 6)
                     {
-                        ////Main.NewText("Sent Particle");
-
-                        //
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(175, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -347,15 +373,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
-
                     }
                     else if (tpPosRand1 > 4)
                     {
-                        ////Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 175);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -366,11 +386,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand1 > 2)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-175, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -381,11 +396,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand1 > 0)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -175);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -494,15 +504,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.TargetClosest(true);
 
-                    //This generates a random tp Center.
                     tpPosRand2 = Main.rand.NextFloat(8);
 
                     if (tpPosRand2 > 6)
                     {
-                        //Main.NewText("Sent Particle");
-
-                        //
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(200, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -512,12 +517,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                     }
                     else if (tpPosRand2 > 4)
-                    {
-                        //Main.NewText("Sent Particle");
-
-
-
-
+                    { 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -527,12 +527,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                     }
                     else if (tpPosRand2 > 2)
-                    {
-                        //Main.NewText("Sent Particle");
-
-
-
-
+                    { 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -543,11 +538,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand2 > 0)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -200);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -660,15 +650,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.TargetClosest(true);
 
-                    //This generates a random tp Center.
                     tpPosRand3 = Main.rand.NextFloat(8);
 
                     if (tpPosRand3 > 6)
-                    {
-                        //Main.NewText("Sent Particle");
-
-                        //
-
+                    { 
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -679,11 +664,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand3 > 4)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 225);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -694,11 +674,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand3 > 2)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-225, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -709,11 +684,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     }
                     else if (tpPosRand3 > 0)
                     {
-                        //Main.NewText("Sent Particle");
-
-
-
-
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, -225);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -1247,6 +1217,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     NetMessage.SendData(MessageID.WorldData); // Immediately inform clients of new world state.
                 }
             }
+
+
+            if (Main.netMode != NetmodeID.Server && !Filters.Scene["PhaseChangeShockwave"].IsActive())
+            {
+                Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<PhaseChangeShockwave>(), 0, 0f, Main.myPlayer);
+            }
+            if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
+            {
+                Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
+            }
             base.BossLoot(ref name, ref potionType);
         }
         public static bool AnyPlayerAlive
@@ -1268,5 +1248,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 return false;
             }
         }
+
     }
 }
