@@ -96,7 +96,7 @@ namespace ElementalHearts
             Ref<Effect> pixelShaderRef = Main.PixelShaderRef;
             GameShaders.Armor.BindShader(ModContent.ItemType<MenacingDye>(), new ArmorShaderData(
                 pixelShaderRef,
-                "ArmorColored")).UseImage("ElementalHearts/Items/Dyes/MenacingDyeFilter").UseColor(200, 66, 107);
+                "ArmorColored")).UseImage("Images/Misc/noise").UseColor(200, 66, 107);
         }
 
         public override void Unload()

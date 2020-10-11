@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -12,6 +13,7 @@ namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
         {
             Tooltip.SetDefault("Permanently increases maximum life by 15");
             DisplayName.SetDefault("Dynamo Stem Heart");
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(4, 5));
         }
 
         public override void SetDefaults()

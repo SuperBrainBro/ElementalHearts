@@ -51,6 +51,8 @@ Change-Log:
 	   +Lich's Heart
 	   +Abyssal Heart
 	   +Dormant Heart
+	  Calamity Mod:
+	   +List too huge.
 	 UPDATED BOSS AI:
 	  Shockwave effect!
 	 Misc:
