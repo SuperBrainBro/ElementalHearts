@@ -1,6 +1,8 @@
 ﻿using Terraria.ModLoader;
 using Terraria.ID;
 using ElementalHearts.Items.Tiles;
+using Terraria;
+using Microsoft.Xna.Framework;
 
 namespace ElementalHearts.Items.Dyes
 {
@@ -14,7 +16,11 @@ namespace ElementalHearts.Items.Dyes
             item.value = 10000;
             item.rare = ItemRarityID.Orange;
         }
-
+        public override void DrawArmorColor(Player drawPlayer, float shadow, ref Color color, ref int glowMask, ref Color glowMaskColor)
+        {
+            color = new Color(Main.DiscoColor.R + 255, Main.DiscoColor.G, Main.DiscoColor.B);
+            base.DrawArmorColor(drawPlayer, shadow, ref color, ref glowMask, ref glowMaskColor);
+        }
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Menacing Dye");
