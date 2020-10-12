@@ -73,7 +73,7 @@ namespace ElementalHearts
                 AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/MenacingHeartBossMusic"), ModContent.ItemType<MHMb>(), ModContent.TileType<MHMbTile>());
                 #endregion
             }
-            LoadDyes();
+            ElementalHeartsDyeInit.Load();
 
             if (Main.netMode != NetmodeID.Server)
             {
@@ -89,14 +89,6 @@ namespace ElementalHearts
                 }
             }
             base.Load();
-        }
-
-        public static void LoadDyes()
-        {
-            Ref<Effect> pixelShaderRef = Main.PixelShaderRef;
-            GameShaders.Armor.BindShader(ModContent.ItemType<MenacingDye>(), new ArmorShaderData(
-                pixelShaderRef,
-                "ArmorColored")).UseImage("Images/Misc/noise").UseColor(200, 66, 107);
         }
 
         public override void Unload()
