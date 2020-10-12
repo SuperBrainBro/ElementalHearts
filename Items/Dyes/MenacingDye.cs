@@ -18,7 +18,7 @@ namespace ElementalHearts.Items.Dyes
         }
         public override void DrawArmorColor(Player drawPlayer, float shadow, ref Color color, ref int glowMask, ref Color glowMaskColor)
         {
-            color = new Color(Main.DiscoColor.R + 255, Main.DiscoColor.G, Main.DiscoColor.B);
+            color = new Color(147, 12, 56, 1);
             base.DrawArmorColor(drawPlayer, shadow, ref color, ref glowMask, ref glowMaskColor);
         }
         public override void SetStaticDefaults()
