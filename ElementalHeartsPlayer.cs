@@ -10,6 +10,7 @@ namespace ElementalHearts
 {
     public class ElementalHeartsPlayer : ModPlayer
     {
+        public bool ZoneLifeCrystalCave;
         public float dmgReduct = 0;
         public bool shadowFox = false;
         public bool shadowFoxB = false;
@@ -1201,5 +1202,52 @@ namespace ElementalHearts
             }
             base.ProcessTriggers(triggersSet);
         }
+
+        public override void UpdateBiomes()
+        {
+            ZoneLifeCrystalCave = ElementalHeartsWorld.lifeCrystalTiles > 50;
+        }
+
+        public override bool CustomBiomesMatch(Player other)
+        {
+            ElementalHeartsPlayer modOther = other.GetModPlayer<ElementalHeartsPlayer>();
+            return ZoneLifeCrystalCave == modOther.ZoneLifeCrystalCave;
+            // If you have several Zones, you might find the &= operator or other logic operators useful:
+            // bool allMatch = true;
+            // allMatch &= ZoneExample == modOther.ZoneExample;
+            // allMatch &= ZoneModel == modOther.ZoneModel;
+            // return allMatch;
+            // Here is an example just using && chained together in one statemeny 
+            // return ZoneExample == modOther.ZoneExample && ZoneModel == modOther.ZoneModel;
+        }
+
+        public override void CopyCustomBiomesTo(Player other)
+        {
+            ElementalHeartsPlayer modOther = other.GetModPlayer<ElementalHeartsPlayer>();
+            modOther.ZoneLifeCrystalCave = ZoneLifeCrystalCave;
+        }
+
+        public override void SendCustomBiomes(BinaryWriter writer)
+        {
+            BitsByte flags = new BitsByte();
+            flags[0] = ZoneLifeCrystalCave;
+            writer.Write(flags);
+        }
+
+        public override void ReceiveCustomBiomes(BinaryReader reader)
+        {
+            BitsByte flags = reader.ReadByte();
+            ZoneLifeCrystalCave = flags[0];
+        }
+
+        //We need map background for our mini-biome? i dont sure so ehhhhh
+        /*public override Texture2D GetMapBackgroundImage()
+        {
+            if (ZoneExample)
+            {
+                return mod.GetTexture("ExampleBiomeMapBackground");
+            }
+            return null;
+        }*/
     }
 }
