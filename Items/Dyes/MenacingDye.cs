@@ -15,11 +15,13 @@ namespace ElementalHearts.Items.Dyes
             item.maxStack = 99;
             item.value = 10000;
             item.rare = ItemRarityID.Orange;
+            byte dye = item.dye;
+            item.CloneDefaults(ItemID.GelDye);
+            item.dye = dye;
         }
         public override void DrawArmorColor(Player drawPlayer, float shadow, ref Color color, ref int glowMask, ref Color glowMaskColor)
         {
-            color = new Color(147, 12, 56, 1);
-            base.DrawArmorColor(drawPlayer, shadow, ref color, ref glowMask, ref glowMaskColor);
+            
         }
         public override void SetStaticDefaults()
         {
