@@ -17,21 +17,46 @@ Github Repo: https://github.com/SuperBrainBro/ElementalHearts
 
 Mod By:
 Vincent Jenei (Lite#4211)
-CAT (TheLuxure#5356)
+FOX (Starbreaker The Interstellar Fox#5356)
 
 We also have a discord server, so I will make the invite as the "homepage". Hop on in, chat, and even contibute to the mod.
 I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
-0.2.2
+0.2.20.1
 	 NEW BIOME:
 	  Ancient Life Biome.
 	   +Ancient Life ORE
 	   +Ancient Life Shards
 	   +Varied items / equipment based on the new biome.
+	 New Boss Hearts:
+	  Vanilla:
+	   +Dark Heart
+	   +Volatile Heart
+	   +Snot Heart
+	   +Plant Heart
+	   +Lihzhardian Heart
+	   +Truffle Heart
+	   +Soaring Heart
+	  Thorium Mod:
+	   +Zephyr's Heart
+	   +Sea Breeze Heart
+	   +Vampire's Heart
+	   +Heart of the Storm
+	   +Champion's Heart
+	   +Omega Heart
+	   +Ice Bound Strider Heart
+	   +Fallen Heart
+	   +Lich's Heart
+	   +Abyssal Heart
+	   +Dormant Heart
+	  Calamity Mod:
+	   +List too huge.
 	 UPDATED BOSS AI:
 	  Shockwave effect!
+	 Misc:
+	  Menacing Heart (boss heart) won't anymore drop from Menacing Heart in non-expert world.
 0.2.14
 	 Fixed Apple's wings and now his wings are like how he wanted them.
 	 

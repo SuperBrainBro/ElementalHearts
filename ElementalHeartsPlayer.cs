@@ -199,6 +199,46 @@ namespace ElementalHearts
         public int FisharkLife;
         public int AncientLife;
         public int CelestialLife;
+        public int ZephyrsLife;
+        public int SeaBreezeLife;
+        public int VampiresLife;
+        public int LifeOfTheStorm;
+        public int ChampionsLife;
+        public int OmegaLife;
+        public int IceBoundStriderLife;
+        public int FallenLife;
+        public int LichsLife;
+        public int AbyssalLife;
+        public int DormantLife;
+        public int DD2DarkLifeT1;
+        public int DD2DarkLifeT3;
+        public int DD2SnotLifeT2;
+        public int DD2SnotLifeT3;
+        public int OceanLife;
+        public int FungalLife;
+        public int RottenLife;
+        public int BloodyWormLife;
+        public int PolarizedLife;
+        public int LifeOfCryogen;
+        public int GehennaLife;
+        public int AquaticLife;
+        public int VoidOfLife;
+        public int LifeAmbergris;
+        public int GravistarLife;
+        public int CrystallizedToxicLife;
+        public int CorpusLife;
+        public int AstralBossLife;
+        public int ProfanedLife;
+        public int DynamoStemLife;
+        public int BlazingLife;
+        public int ArmoredLife;
+        public int DarkPlasmicLife;
+        public int TwistingLife;
+        public int AfflictedLife;
+        public int MutatedLife;
+        public int NebulousLife;
+        public int DraconicLife;
+        public int CalamitousLife;
 
         public override void ResetEffects()
         {
@@ -388,6 +428,46 @@ namespace ElementalHearts
             player.statLifeMax2 += FisharkLife * 10;
             player.statLifeMax2 += AncientLife * 10;
             player.statLifeMax2 += CelestialLife * 10;
+            player.statLifeMax2 += ZephyrsLife * 5;
+            player.statLifeMax2 += SeaBreezeLife * 5;
+            player.statLifeMax2 += VampiresLife * 5;
+            player.statLifeMax2 += LifeOfTheStorm * 5;
+            player.statLifeMax2 += ChampionsLife * 5;
+            player.statLifeMax2 += OmegaLife * 5;
+            player.statLifeMax2 += IceBoundStriderLife * 10;
+            player.statLifeMax2 += FallenLife * 10;
+            player.statLifeMax2 += LichsLife * 10;
+            player.statLifeMax2 += AbyssalLife * 10;
+            player.statLifeMax2 += DormantLife * 10;
+            player.statLifeMax2 += DD2DarkLifeT1 * 5;
+            player.statLifeMax2 += DD2DarkLifeT3 * 10;
+            player.statLifeMax2 += DD2SnotLifeT2 * 5;
+            player.statLifeMax2 += DD2SnotLifeT3 * 10;
+            player.statLifeMax2 += OceanLife * 5;
+            player.statLifeMax2 += FungalLife * 5;
+            player.statLifeMax2 += RottenLife * 5;
+            player.statLifeMax2 += BloodyWormLife * 5;
+            player.statLifeMax2 += PolarizedLife * 5;
+            player.statLifeMax2 += LifeOfCryogen * 10;
+            player.statLifeMax2 += GehennaLife * 10;
+            player.statLifeMax2 += AquaticLife * 10;
+            player.statLifeMax2 += VoidOfLife * 10;
+            player.statLifeMax2 += LifeAmbergris * 10;
+            player.statLifeMax2 += GravistarLife * 10;
+            player.statLifeMax2 += CrystallizedToxicLife * 10;
+            player.statLifeMax2 += CorpusLife * 10;
+            player.statLifeMax2 += AstralBossLife * 10;
+            player.statLifeMax2 += ProfanedLife * 15;
+            player.statLifeMax2 += DynamoStemLife * 15;
+            player.statLifeMax2 += BlazingLife * 15;
+            player.statLifeMax2 += ArmoredLife * 15;
+            player.statLifeMax2 += DarkPlasmicLife * 15;
+            player.statLifeMax2 += TwistingLife * 15;
+            player.statLifeMax2 += AfflictedLife * 15;
+            player.statLifeMax2 += MutatedLife * 15;
+            player.statLifeMax2 += NebulousLife * 15;
+            player.statLifeMax2 += DraconicLife * 15;
+            player.statLifeMax2 += CalamitousLife * 15;
         }
         public override void UpdateDead()
         {
@@ -412,7 +492,7 @@ namespace ElementalHearts
         {
             if (dmgReduct == 1 || dmgReduct > 1)
             {
-                damage = damage - (int)(damage / 100 * dmgReduct);
+                damage -= (int)(damage / 100 * dmgReduct);
             }
             base.OnHitByNPC(npc, damage, crit);
         }
@@ -591,7 +671,6 @@ namespace ElementalHearts
             packet.Write(UelibloomLife);
             packet.Write(VoidstoneLife);
 
-
             //Boss Hearts
             packet.Write(MenacingLife);
             packet.Write(RoyalSlimeLife);
@@ -605,6 +684,45 @@ namespace ElementalHearts
             packet.Write(FisharkLife);
             packet.Write(AncientLife);
             packet.Write(CelestialLife);
+            packet.Write(ZephyrsLife);
+            packet.Write(SeaBreezeLife);
+            packet.Write(VampiresLife);
+            packet.Write(LifeOfTheStorm);
+            packet.Write(ChampionsLife);
+            packet.Write(OmegaLife);
+            packet.Write(IceBoundStriderLife);
+            packet.Write(FallenLife);
+            packet.Write(LichsLife);
+            packet.Write(AbyssalLife);
+            packet.Write(DormantLife);
+            packet.Write(DD2DarkLifeT1);
+            packet.Write(DD2DarkLifeT3);
+            packet.Write(DD2SnotLifeT2);
+            packet.Write(DD2SnotLifeT3);
+            packet.Write(OceanLife);
+            packet.Write(FungalLife);
+            packet.Write(RottenLife);
+            packet.Write(BloodyWormLife);
+            packet.Write(PolarizedLife);
+            packet.Write(LifeOfCryogen);
+            packet.Write(GehennaLife);
+            packet.Write(AquaticLife);
+            packet.Write(VoidOfLife);
+            packet.Write(LifeAmbergris);
+            packet.Write(GravistarLife);
+            packet.Write(CrystallizedToxicLife);
+            packet.Write(CorpusLife);
+            packet.Write(AstralBossLife);
+            packet.Write(ProfanedLife);
+            packet.Write(DynamoStemLife);
+            packet.Write(BlazingLife);
+            packet.Write(ArmoredLife);
+            packet.Write(DarkPlasmicLife);
+            packet.Write(TwistingLife);
+            packet.Write(MutatedLife);
+            packet.Write(NebulousLife);
+            packet.Write(DraconicLife);
+            packet.Write(CalamitousLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -801,6 +919,35 @@ namespace ElementalHearts
                 { "FisharkLife", FisharkLife },
                 { "AncientLife", AncientLife},
                 { "CelestialLife", CelestialLife},
+                { "ZephyrsLife", ZephyrsLife },
+                { "SeaBreezeLife", SeaBreezeLife },
+                { "VampiresLife", VampiresLife },
+                { "LifeOfTheStorm", LifeOfTheStorm },
+                { "ChampionsLife", ChampionsLife },
+                { "OmegaLife", OmegaLife },
+                { "IceBoundStriderLife", IceBoundStriderLife},
+                { "FallenLife", FallenLife },
+                { "LichsLife", LichsLife },
+                { "AbyssalLife", AbyssalLife },
+                { "DormantLife", DormantLife },
+                { "DD2DarkHeartT1", DD2DarkLifeT1 },
+                { "DD2DarkHeartT3", DD2DarkLifeT3 },
+                { "DD2SnotHeartT2", DD2SnotLifeT2 },
+                { "DD2SnotHeartT3", DD2SnotLifeT3 },
+                { "OceanLife", OceanLife },
+                { "FungalLife", FungalLife },
+                { "RottenLife", RottenLife },
+                { "BloodyWormLife", BloodyWormLife },
+                { "PolarizedLife", PolarizedLife },
+                { "LifeOfCryogen", LifeOfCryogen },
+                { "GehennaLife", GehennaLife },
+                { "AquaticLife", AquaticLife },
+                { "VoidOfLife", VoidOfLife },
+                { "LifeAmbergris", LifeAmbergris },
+                { "GravistarLife", GravistarLife },
+                { "CrystallizedToxicLife", CrystallizedToxicLife },
+                { "CorpusLife", CorpusLife },
+                { "AstralBossLife", AstralBossLife },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -988,6 +1135,46 @@ namespace ElementalHearts
             FisharkLife = tag.GetInt("FisharkLife");
             AncientLife = tag.GetInt("AncientLife");
             CelestialLife = tag.GetInt("CelestialLife");
+            ZephyrsLife = tag.GetInt("ZephyrsLife");
+            SeaBreezeLife = tag.GetInt("SeaBreezeLife");
+            VampiresLife = tag.GetInt("VampiresLife");
+            LifeOfTheStorm = tag.GetInt("LifeOfTheStorm");
+            ChampionsLife = tag.GetInt("ChampionsLife");
+            OmegaLife = tag.GetInt("OmegaLife");
+            IceBoundStriderLife = tag.GetInt("IceBoundStriderLife");
+            FallenLife = tag.GetInt("FallenLife");
+            LichsLife = tag.GetInt("LichsLife");
+            AbyssalLife = tag.GetInt("AbyssalLife");
+            DormantLife = tag.GetInt("DormantLife");
+            DD2DarkLifeT1 = tag.GetInt("DD2DarkLifeT1");
+            DD2DarkLifeT3 = tag.GetInt("DD2DarkLifeT3");
+            DD2SnotLifeT2 = tag.GetInt("DD2SnotLifeT2");
+            DD2SnotLifeT3 = tag.GetInt("DD2SnotLifeT3");
+            OceanLife = tag.GetInt("OceanLife");
+            FungalLife = tag.GetInt("FungalLife");
+            RottenLife = tag.GetInt("RottenLife");
+            BloodyWormLife = tag.GetInt("BloodyWormLife");
+            PolarizedLife = tag.GetInt("PolarizedLife");
+            LifeOfCryogen = tag.GetInt("LifeOfCryogen");
+            GehennaLife = tag.GetInt("GehennaLife");
+            AquaticLife = tag.GetInt("AquaticLife");
+            VoidOfLife = tag.GetInt("VoidOfLife");
+            LifeAmbergris = tag.GetInt("LifeAmbergris");
+            GravistarLife = tag.GetInt("GravistarLife");
+            CrystallizedToxicLife = tag.GetInt("CrystallizedToxicLife");
+            CorpusLife = tag.GetInt("CorpusLife");
+            AstralBossLife = tag.GetInt("AstralBossLife");
+            ProfanedLife = tag.GetInt("ProfanedLife");
+            DynamoStemLife = tag.GetInt("DynamoStemLife");
+            BlazingLife = tag.GetInt("BlazingLife");
+            ArmoredLife = tag.GetInt("ArmoredLife");
+            DarkPlasmicLife = tag.GetInt("DarkPlasmicLife");
+            TwistingLife = tag.GetInt("TwistingLife");
+            AfflictedLife = tag.GetInt("AfflictedLife");
+            MutatedLife = tag.GetInt("MutatedLife");
+            NebulousLife = tag.GetInt("NebulousLife");
+            DraconicLife = tag.GetInt("DraconicLife");
+            CalamitousLife = tag.GetInt("CalamitousLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

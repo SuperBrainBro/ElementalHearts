@@ -1195,7 +1195,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     //Item.NewItem(npc.getRect(), ItemType<Mask>());
                 }
-                Item.NewItem(npc.getRect(), ItemType<MenacingHeartItem>());
                 if (Main.rand.NextBool(3))
                 {
                     Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());

@@ -14,6 +14,7 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
+using Steamworks;
 
 namespace ElementalHearts
 {
@@ -95,7 +96,7 @@ namespace ElementalHearts
             Ref<Effect> pixelShaderRef = Main.PixelShaderRef;
             GameShaders.Armor.BindShader(ModContent.ItemType<MenacingDye>(), new ArmorShaderData(
                 pixelShaderRef,
-                "ArmorColored")).UseImage("ElementalHearts/Items/Dyes/MenacingDyeFilter").UseColor(200, 66, 107);
+                "ArmorColored")).UseImage("Images/Misc/noise").UseColor(200, 66, 107);
         }
 
         public override void Unload()
@@ -430,8 +431,10 @@ namespace ElementalHearts
             preHardmodePanel.BackgroundColor = Color.White * 0.25f;
             Append(preHardmodePanel);
 
-            preHardmodeHeader = new UIText("Elemental Hearts", .75f, true);
-            preHardmodeHeader.HAlign = 0.5f;
+            preHardmodeHeader = new UIText("Elemental Hearts", .75f, true)
+            {
+                HAlign = 0.5f
+            };
             preHardmodeHeader.Top.Set(15, 0);
             preHardmodePanel.Append(preHardmodeHeader);
         }

@@ -10,6 +10,11 @@ namespace ElementalHearts.Items.Dev.CAT
         {
             Tooltip.SetDefault("Permanently increases maximum life by 5"
                             + "\n'Great for impersonating devs!'");
+            if (Main.LocalPlayer.name != "Fox")
+            {
+                Tooltip.SetDefault("Permanently increases maximum life by 5?"
+                            + "\n'Great for impersonating devs!'");
+            }
             DisplayName.SetDefault("Heartof");
         }
 
@@ -30,6 +35,11 @@ namespace ElementalHearts.Items.Dev.CAT
         {
             player.statLifeMax2 += 5;
             player.statLife += 5;
+            if (Main.LocalPlayer.name != "Fox")
+            {
+                player.statLifeMax2 -= 10;
+                player.statLife -= 10;
+            }
             if (Main.myPlayer == player.whoAmI)
             {
                 player.HealEffect(5, true);
