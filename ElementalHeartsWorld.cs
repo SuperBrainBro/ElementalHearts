@@ -204,7 +204,7 @@ namespace ElementalHearts
 							int Ep = E + (int)Main.rand.NextFloat(-1, 1);
 							int Fp = F + (int)Main.rand.NextFloat(-1, 1);
 							Tile tile = Framing.GetTileSafely(Ep, Fp);
-							if (!tile.active() && tile.wall > 0)
+							if (!tile.active())
 							{
 								WorldGen.PlaceTile(Ep, Fp, TileType<AncientCrystalTile>());
 							}
