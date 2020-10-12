@@ -43,8 +43,8 @@ namespace ElementalHearts.Tiles
 			drop = mod.ItemType("AncientCrystal");
 			dustType = DustID.PinkCrystalShard;
 			disableSmartCursor = true;
-			adjTiles = new int[] { TileID.Torches };
-			torch = true;
+			//adjTiles = new int[] { TileID.Torches };
+			//torch = true;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
