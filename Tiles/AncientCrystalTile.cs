@@ -35,7 +35,7 @@ namespace ElementalHearts.Tiles
 			TileObjectData.newAlternate.AnchorWall = true;
 			TileObjectData.addAlternate(0);
 			TileObjectData.addTile(Type);
-			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
+
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Ancient Life Crystal");
 
@@ -43,8 +43,6 @@ namespace ElementalHearts.Tiles
 			drop = mod.ItemType("AncientCrystal");
 			dustType = DustID.PinkCrystalShard;
 			disableSmartCursor = true;
-			//adjTiles = new int[] { TileID.Torches };
-			//torch = true;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
