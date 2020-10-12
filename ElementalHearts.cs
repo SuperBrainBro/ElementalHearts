@@ -57,6 +57,10 @@ namespace ElementalHearts
         //UI STUFF
         internal UserInterface MyInterface;
         internal TheUI MyUI;
+        public const string MenacingHeart_Head_Boss = "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeart_Head_Boss";
+        public const string MenacingHeart_Head_Boss2 = "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeart_Head_Boss2";
+        public const string MenacingHeart_Head_Boss3 = "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeart_Head_Boss3";
+        public const string MenacingHeart_Head_Boss4 = "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeart_Head_Boss4";
         public override void Load()
         {
             // Registers a new hotkey
@@ -74,6 +78,12 @@ namespace ElementalHearts
                 #endregion
             }
             ElementalHeartsDyeInit.Load();
+            #region Boss Heads
+            AddBossHeadTexture(MenacingHeart_Head_Boss);
+            AddBossHeadTexture(MenacingHeart_Head_Boss2);
+            AddBossHeadTexture(MenacingHeart_Head_Boss3);
+            AddBossHeadTexture(MenacingHeart_Head_Boss4);
+            #endregion
 
             if (Main.netMode != NetmodeID.Server)
             {

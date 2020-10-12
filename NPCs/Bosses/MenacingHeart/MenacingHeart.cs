@@ -79,6 +79,26 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
             base.SetDefaults();
         }
+        public override void BossHeadSlot(ref int index)
+        {
+            if (BP1)
+            {
+                index = NPCHeadLoader.GetBossHeadSlot(ElementalHearts.MenacingHeart_Head_Boss);
+            }
+            else if (BP2)
+            {
+                index = NPCHeadLoader.GetBossHeadSlot(ElementalHearts.MenacingHeart_Head_Boss2);
+            }
+            else if (BP3)
+            {
+                index = NPCHeadLoader.GetBossHeadSlot(ElementalHearts.MenacingHeart_Head_Boss3);
+            }
+            else if (BP4)
+            {
+                index = NPCHeadLoader.GetBossHeadSlot(ElementalHearts.MenacingHeart_Head_Boss4);
+            }
+            base.BossHeadSlot(ref index);
+        }
         public override bool CheckDead()
         {
             Main.NewText("<Menacing Heart> You have weakened me. I will come back though, if you ever need me.", Color.White);
