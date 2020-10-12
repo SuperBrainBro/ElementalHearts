@@ -24,7 +24,7 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
-0.2.2
+0.2.20.1
 	 NEW BIOME:
 	  Ancient Life Biome.
 	   +Ancient Life ORE
