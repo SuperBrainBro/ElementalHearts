@@ -65,7 +65,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(Terraria.ModLoader.SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
             musicPriority = MusicPriority.BossLow;
-            npc.value = 400000;
+            npc.value = 200000;
             npc.buffImmune[BuffID.Confused] = true;
             npc.knockBackResist = 0f;
             npc.noGravity = true;
@@ -88,22 +88,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         {
             if (BP1)
             {
-                npc.lifeRegen = 50 / 3;
+                npc.lifeRegen = 50 / 5;
 
             }
             else if (BP2)
             {
-                npc.lifeRegen = 125 / 4;
+                npc.lifeRegen = 125 / 6;
 
             }
             else if (BP3)
             {
-                npc.lifeRegen = 250 / 5;
+                npc.lifeRegen = 250 / 7;
 
             }
             else if (BP4)
             {
-                npc.lifeRegen = 500 / 6;
+                npc.lifeRegen = 500 / 8;
 
             }
             base.UpdateLifeRegen(ref damage);
@@ -154,20 +154,23 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
             Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
         }
-        public bool SpawnShockwave = false;
+        public bool Spawn = false;
         public override void AI()
         {
             //LIGHT (BEFORE EVERYTHING ELSE)
             Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
 
             //Spawn Shockwave
-            if(SpawnShockwave != true)
+            if(Spawn != true)
             {
+                //Shcokwave
                 if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
                 {
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
                 }
-                SpawnShockwave = true;
+                Spawn = true;
+
+
             }
 
             //Check If Player Is Dead
@@ -408,8 +411,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 210)
                 {
-
-
                     npc.Center = futurePosition;
 
                     if (tpPosRand1 > 6)
