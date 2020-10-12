@@ -15,8 +15,9 @@ namespace ElementalHearts
     public class ElementalHeartsWorld : ModWorld
     {
         public static bool downedMenacingHeart;
+		public static int lifeCrystalTiles;
 
-        public override void Initialize()
+		public override void Initialize()
         {
             downedMenacingHeart = false;
         }
@@ -67,6 +68,17 @@ namespace ElementalHearts
             BitsByte flags = reader.ReadByte();
             downedMenacingHeart = flags[0];
         }
+
+        public override void ResetNearbyTileEffects()
+        {
+            lifeCrystalTiles = 0;
+            base.ResetNearbyTileEffects();
+        }
+
+		public override void TileCountsAvailable(int[] tileCounts)
+		{
+			lifeCrystalTiles = tileCounts[TileType<CrystalGrass>()] + tileCounts[TileType<CrystalGrassPink>()];
+		}
 
 
 
