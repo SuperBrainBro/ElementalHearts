@@ -146,6 +146,22 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             scale = 1.5f;
             return null;
         }
+        public void spawnBoxTiles()
+        {
+            int width = 25;
+            int height = 25;
+
+            int xValueMin = Player.tileRangeX - 50;
+            int xValueMax = Player.tileRangeX + 50;
+            int yValueMin = Player.tileRangeY - 50;
+            int yValueMax = Player.tileRangeY + 50;
+
+            grassType += Main.rand.NextFloat(-50, 50);
+            if (grassType >= 0)
+            {
+                WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 70), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
+            }
+        }
         public void ProjectilesLeft()
         {
             //Facing Left Projectiles

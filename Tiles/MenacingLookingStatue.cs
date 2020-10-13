@@ -58,7 +58,7 @@ namespace ElementalHearts.Tiles
             if (Wiring.CheckMech(x, y, 30) && NPC.MechSpawn((float)spawnX, (float)spawnY, NPCType<MenacingHeart>()))
             {
                 //npcIndex = 
-                NPC.NewNPC(spawnX, spawnY - 120, NPCType<MenacingHeart>());
+                NPC.NewNPC(Player.tileRangeX, Player.tileRangeY - 120, NPCType<MenacingHeart>());
             }
             //if (npcIndex >= 0)
             //{
