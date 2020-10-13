@@ -147,20 +147,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             return null;
         }
         public void spawnBoxTiles()
-        {
+        {            
+            Player player = Main.player[npc.target];
             int width = 25;
             int height = 25;
 
-            int xValueMin = Player.tileRangeX - 50;
-            int xValueMax = Player.tileRangeX + 50;
-            int yValueMin = Player.tileRangeY - 50;
-            int yValueMax = Player.tileRangeY + 50;
+            int xValueMin = (int)player.position.X - width;
+            int xValueMax = (int)player.position.X + width;
+            int yValueMin = (int)player.position.Y - height;
+            int yValueMax = (int)player.position.Y + height;
 
-            grassType += Main.rand.NextFloat(-50, 50);
-            if (grassType >= 0)
-            {
-                WorldGen.TileRunner(XvalueMid, YvalueMid, (double)WorldGen.genRand.Next(60, 70), 1, TileType<CrystalGrass>(), false, 0f, 0f, true, true); //c = x, d = y
-            }
         }
         public void ProjectilesLeft()
         {
