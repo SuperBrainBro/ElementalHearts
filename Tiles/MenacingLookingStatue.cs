@@ -55,8 +55,12 @@ namespace ElementalHearts.Tiles
             // If you want to make an NPC spawning statue, see below.
             //int npcIndex = -1;
             // 30 is the time before it can be used again. NPC.MechSpawn checks nearby for other spawns to prevent too many spawns. 3 in immediate vicinity, 6 nearby, 10 in world.
-            if (Wiring.CheckMech(x, y, 30) && NPC.MechSpawn((float)spawnX, (float)spawnY, NPCType<MenacingHeart>()))
+            if (Wiring.CheckMech(x, y, 30) && NPC.MechSpawn((float)spawnX, (float)spawnY, NPCType<MenacingHeart>())
+                 && !NPC.AnyNPCs(NPCType<MenacingHeart>()))
             {
+                //From Fox:
+                //    Lite, I want to disappoint you, but your NPC.MechSpawn isn't working.
+
                 //npcIndex = 
                 NPC.NewNPC(spawnX, spawnY - 120, NPCType<MenacingHeart>());
             }

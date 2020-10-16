@@ -36,11 +36,11 @@ namespace ElementalHearts
             };
         }
 
-        public override void Load(TagCompound tag)
-        {
-            var downed = tag.GetList<string>("downed");
-            downedMenacingHeart = downed.Contains("menacingHeart");
-        }
+		public override void Load(TagCompound tag)
+		{
+			var downed = tag.GetList<string>("downed");
+			downedMenacingHeart = downed.Contains("menacingHeart");
+		}
 
         public override void LoadLegacy(BinaryReader reader)
         {

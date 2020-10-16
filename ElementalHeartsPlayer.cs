@@ -10,6 +10,7 @@ namespace ElementalHearts
 {
     public class ElementalHeartsPlayer : ModPlayer
     {
+        public bool lifeArmour;
         public bool ZoneLifeCrystalCave;
         public float dmgReduct = 0;
         public bool shadowFox = false;
@@ -244,6 +245,7 @@ namespace ElementalHearts
         public override void ResetEffects()
         {
             //ElementalHeartsConfig config = new ElementalHeartsConfig();
+            lifeArmour = false;
             dmgReduct = 0;
             shadowFox = false;
             shadowFoxB = false;
@@ -1249,5 +1251,19 @@ namespace ElementalHearts
             }
             return null;
         }*/
+
+        public override void ModifyHitByNPC(NPC npc, ref int damage, ref bool crit)
+        {
+            //Player target = player;
+            if (lifeArmour && player.name == "Lite")
+            {
+                if (Main.hardMode)
+                {
+                    damage = (int)(damage * 1.25f);
+                }
+                else { damage = (int)(damage * 1.5f); }
+            }
+            base.ModifyHitByNPC(npc, ref damage, ref crit);
+        }
     }
 }
