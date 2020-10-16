@@ -146,6 +146,18 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             scale = 1.5f;
             return null;
         }
+        public void spawnBoxTiles()
+        {            
+            Player player = Main.player[npc.target];
+            int width = 25;
+            int height = 25;
+
+            int xValueMin = (int)player.position.X - width;
+            int xValueMax = (int)player.position.X + width;
+            int yValueMin = (int)player.position.Y - height;
+            int yValueMax = (int)player.position.Y + height;
+
+        }
         public void ProjectilesLeft()
         {
             //Facing Left Projectiles

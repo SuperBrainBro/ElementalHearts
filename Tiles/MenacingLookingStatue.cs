@@ -62,7 +62,7 @@ namespace ElementalHearts.Tiles
                 //    Lite, I want to disappoint you, but your NPC.MechSpawn isn't working.
 
                 //npcIndex = 
-                NPC.NewNPC(spawnX, spawnY - 120, NPCType<MenacingHeart>());
+                NPC.NewNPC(Player.tileRangeX, Player.tileRangeY - 120, NPCType<MenacingHeart>());
             }
             //if (npcIndex >= 0)
             //{

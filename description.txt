@@ -55,6 +55,8 @@ Change-Log:
 	   +List too huge.
 	 UPDATED BOSS AI:
 	  Shockwave effect!
+	  Adjusted Menacing Heart's life regen.
+	 Menacing Dye
 	 Misc:
 	  Menacing Heart (boss heart) won't anymore drop from Menacing Heart in non-expert world.
 0.2.14
