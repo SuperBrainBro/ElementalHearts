@@ -18,7 +18,7 @@ namespace ElementalHearts.Items.Dev.CAT
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.Starfury);
-            item.shootSpeed *= 0.75f;
+            item.shootSpeed *= 2f;
             item.summon = true;
             item.damage = 45;
             item.rare = ItemRarityID.Cyan;
@@ -50,6 +50,11 @@ namespace ElementalHearts.Items.Dev.CAT
                 type = ProjectileType<DreamerStarMega2>();
             }
             else if (Main.rand.NextBool(10))
+            {
+                type = ProjectileType<DreamerStarUltra>();
+            }
+            else { type = ProjectileType<DreamerStarSmall>(); }
+            if (player.name == "Fox")
             {
                 type = ProjectileType<DreamerStarUltra>();
             }

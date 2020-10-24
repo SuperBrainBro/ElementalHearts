@@ -132,7 +132,7 @@ namespace ElementalHearts
                     }
                     else if (npc.type == mod.NPCType("CrabulonIdle"))
                     {
-                        Item.NewItem(npc.getRect(), ItemType<OceanHeart>());
+                        Item.NewItem(npc.getRect(), ItemType<FungalHeart>());
                     }
                     else if (npc.type == mod.NPCType("HiveMindP2"))
                     {
@@ -158,7 +158,7 @@ namespace ElementalHearts
                     {
                         Item.NewItem(npc.getRect(), ItemType<AquaticHeart>());
                     }
-                    else if (npc.type == mod.NPCType("Calamitas"))
+                    else if (npc.type == mod.NPCType("CalamitasRun3"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<VoidOfHeart>());
                     }
@@ -184,11 +184,11 @@ namespace ElementalHearts
                     {
                         Item.NewItem(npc.getRect(), ItemType<CrystallizedToxicHeart>());
                     }
-                    else if (npc.type == mod.NPCType("ScavengerBody"))
+                    else if (npc.type == mod.NPCType("RavagerBody"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<CorpusHeart>());
                     }
-                    else if (npc.type == mod.NPCType("AstrumDeusHead"))
+                    else if (npc.type == mod.NPCType("AstrumDeusHeadSpectral"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AstralBossHeart>());
                     }
@@ -212,13 +212,17 @@ namespace ElementalHearts
                     {
                         Item.NewItem(npc.getRect(), ItemType<DarkPlasmicHeart>());
                     }
-                    else if (npc.type == mod.NPCType("Polterghast"))
+                    else if (npc.type == mod.NPCType("Signus"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<TwistingHeart>());
                     }
-                    else if (npc.type == mod.NPCType("OldDuke"))
+                    else if (npc.type == mod.NPCType("Polterghast"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AfflictedHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("OldDuke"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<MutatedHeart>());
                     }
                     else if (npc.type == mod.NPCType("DevourerofGodsHeadS"))
                     {

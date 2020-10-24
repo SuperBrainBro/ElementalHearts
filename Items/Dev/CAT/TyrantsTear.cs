@@ -20,9 +20,9 @@ namespace ElementalHearts.Items.Dev.CAT
             item.damage = 20;
             item.ranged = true;
             item.width = 30;
-            item.height = 70;
-            item.useTime = 10;
-            item.useAnimation = 10;
+            item.height = 30;
+            item.useTime = 2;
+            item.useAnimation = 2;
             item.useStyle = ItemUseStyleID.HoldingOut;
             item.noMelee = true;
             item.knockBack = 0f;
@@ -30,7 +30,7 @@ namespace ElementalHearts.Items.Dev.CAT
             item.rare = ItemRarityID.Cyan;
             item.autoReuse = true;
             item.shoot = ProjectileType<TyrantsTear_Arrow>();
-            item.shootSpeed = 15f;
+            item.shootSpeed = 20f;
             item.useAmmo = 0;
         }
 

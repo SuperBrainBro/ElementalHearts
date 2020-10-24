@@ -1,4 +1,3 @@
-using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -38,6 +37,7 @@ namespace ElementalHearts.Items.Dev.CAT
 
         public override void AI()
         {
+            projectile.position.Y = Main.player[projectile.owner].position.Y + 16f;
             bool flag = projectile.type == mod.ProjectileType("FoxShadow");
             Player player = Main.player[base.projectile.owner];
             ElementalHeartsPlayer elementalHeartsPlayer = new ElementalHeartsPlayer();
@@ -122,7 +122,7 @@ namespace ElementalHearts.Items.Dev.CAT
             }
             base.AI();
 
-            this.dust--;
+            /*this.dust--;
             if (this.dust >= 0)
             {
                 int num = 50;
@@ -312,7 +312,7 @@ namespace ElementalHearts.Items.Dev.CAT
                         base.projectile.netUpdate = true;
                     }
                 }
-            }
+            }*/
         }
 
         public int dust = 3;

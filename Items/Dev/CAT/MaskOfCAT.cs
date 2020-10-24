@@ -92,6 +92,7 @@ namespace ElementalHearts.Items.Dev.CAT
                 for (int k = 0; k < player.buffImmune.Length; k++)
                 {
                     player.buffImmune[k] = true;
+                    player.buffImmune[BuffType<FoxShadowB>()] = false;
                 }
                 player.statManaMax2 += 20 * 2;
                 player.maxMinions += 2;
@@ -103,7 +104,6 @@ namespace ElementalHearts.Items.Dev.CAT
                 player.statManaMax2 += 20 / 2;
                 player.allDamage += .5f / 2;
             }
-            player.buffImmune[mod.BuffType("FoxShadowB")] = false;
         }
     }
 }

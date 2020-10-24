@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Consumables.CalamityMod
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Permanently increases maximum life by 1");
-            DisplayName.SetDefault("Novae Slug Heart");
+            DisplayName.SetDefault("Novae Slag Heart");
         }
 
         public override void SetDefaults()
