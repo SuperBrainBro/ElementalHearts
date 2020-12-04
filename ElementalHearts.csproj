@@ -13,4 +13,15 @@
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CalamityMod">
+      <HintPath>..\..\ModReference\CalamityMod@1.4.5.007\CalamityMod.FNA.dll</HintPath>
+    </Reference>
+    <Reference Include="FargowiltasSouls">
+      <HintPath>..\..\ModReference\FargowiltasSouls@1.3.92.1\FargowiltasSouls.FNA.dll</HintPath>
+    </Reference>
+    <Reference Include="ThoriumMod">
+      <HintPath>..\..\ModReference\ThoriumMod@1.6.3.12\ThoriumMod.FNA.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

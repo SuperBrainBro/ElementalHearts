@@ -241,6 +241,9 @@ namespace ElementalHearts
         public int NebulousLife;
         public int DraconicLife;
         public int CalamitousLife;
+        public int DeviLife;
+        public int AbomLife;
+        public int MutantLife;
 
         public override void ResetEffects()
         {
@@ -471,6 +474,9 @@ namespace ElementalHearts
             player.statLifeMax2 += NebulousLife * 15;
             player.statLifeMax2 += DraconicLife * 15;
             player.statLifeMax2 += CalamitousLife * 15;
+            player.statLifeMax2 += DeviLife * 5;
+            player.statLifeMax2 += AbomLife * 15;
+            player.statLifeMax2 += MutantLife * 15;
         }
         public override void UpdateDead()
         {
@@ -726,6 +732,9 @@ namespace ElementalHearts
             packet.Write(NebulousLife);
             packet.Write(DraconicLife);
             packet.Write(CalamitousLife);
+            packet.Write(DeviLife);
+            packet.Write(AbomLife);
+            packet.Write(MutantLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -951,6 +960,20 @@ namespace ElementalHearts
                 { "CrystallizedToxicLife", CrystallizedToxicLife },
                 { "CorpusLife", CorpusLife },
                 { "AstralBossLife", AstralBossLife },
+                { "ProfanedLife", ProfanedLife },
+                { "DynamoStemLife", DynamoStemLife },
+                { "BlazingLife", BlazingLife },
+                { "ArmoredLife", ArmoredLife },
+                { "DarkPlasmicLife", DarkPlasmicLife },
+                { "TwistingLife", TwistingLife },
+                { "AfflictedLife", AfflictedLife },
+                { "MutatedLife", MutatedLife },
+                { "NebulousLife", NebulousLife },
+                { "DraconicLife", DraconicLife },
+                { "CalamitousLife", CalamitousLife },
+                { "DeviLife", DeviLife },
+                { "AbomLife", AbomLife },
+                { "MutantLife", MutantLife },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -1178,6 +1201,9 @@ namespace ElementalHearts
             NebulousLife = tag.GetInt("NebulousLife");
             DraconicLife = tag.GetInt("DraconicLife");
             CalamitousLife = tag.GetInt("CalamitousLife");
+            DeviLife = tag.GetInt("DeviLife");
+            AbomLife = tag.GetInt("AbomLife");
+            MutantLife = tag.GetInt("MutantLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

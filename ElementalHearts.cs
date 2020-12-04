@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using ElementalHearts.Items.Consumables.Bosses;
-using ElementalHearts.Items.Dyes;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework.Graphics;
@@ -14,7 +13,8 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
-using Steamworks;
+using ElementalHearts.Items.Consumables;
+using ElementalHearts.Items.Consumables.Bosses.CrossMod;
 
 namespace ElementalHearts
 {
@@ -28,12 +28,16 @@ namespace ElementalHearts
             Mod bossChecklist = ModLoader.GetMod("BossChecklist");
             if (bossChecklist != null)
             {
-                bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<NPCs.Bosses.MenacingHeart.MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() => ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<Tiles.MenacingLookingStatueItem>(),
-                new List<int>() { ModContent.ItemType<MenacingHeartTrophyItem>(), ModContent.ItemType<MHMb>() },
-                new List<int>() { ModContent.ItemType<MenacingHeartItem>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>(),
-                ModContent.ItemType<Items.Weapons.MenacingHeartKeeper>(), ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
-                "Find and activate a [i:" + ModContent.ItemType<MenacingLookingStatueItem>() + "]", "", "ElementalHearts/NPCs/Bosses/MenacingHeart/MenacingHeartClone");
+                bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() =>
+                ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<MenacingLookingStatueItem>(), new List<int>() {
+                    ModContent.ItemType<MenacingHeartTrophyItem>(), ModContent.ItemType<MHMb>() }, new List<int>() { ModContent.
+                    ItemType<MenacingHeartItem>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.
+                    ItemType<Items.Weapons.MenacingLifeStaff>(), ModContent.ItemType<Items.Weapons.MenacingHeartKeeper>(),
+                        ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
+                "Find and activate a [i:" + ModContent.ItemType<MenacingLookingStatueItem>() + "]", "", "ElementalHearts/NPCs/" +
+                "Bosses/MenacingHeart/MenacingHeartClone");
             }
+            AddHeartsToBossChecklist();
         }
 
         public override void UpdateMusic(ref int music, ref MusicPriority priority)
@@ -147,6 +151,92 @@ namespace ElementalHearts
         {
             HeartUIOpen = false;
             MyInterface?.SetState(null);
+        }
+        public void AddHeartsToBossChecklist()
+        {
+            Mod bossChecklist = ModLoader.GetMod("BossChecklist");
+            Mod calamity = ModLoader.GetMod("CalamityMod");
+            Mod fargoSouls = ModLoader.GetMod("FargowiltasSouls");
+            Mod thorium = ModLoader.GetMod("ThoriumMod");
+            if (bossChecklist == null)
+                return;
+            #region Vanilla
+            AddLoot("AddToBossLoot", "Terraria", "KingSlime", ModContent.ItemType<RoyalSlimeHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "EyeofCthulhu", ModContent.ItemType<EyeHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "EaterofWorldsHead", ModContent.ItemType<WormHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "BrainofCthulhu", ModContent.ItemType<BrainHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "QueenBee", ModContent.ItemType<HiveHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "SkeletronHead", ModContent.ItemType<BoneHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "WallofFlesh", ModContent.ItemType<DemonHeartMK2>());
+            AddLoot("AddToBossLoot", "Terraria", "TheTwins", ModContent.ItemType<MechanicalCrystalPiece1>());
+            AddLoot("AddToBossLoot", "Terraria", "TheDestroyer", ModContent.ItemType<MechanicalCrystalPiece2>());
+            AddLoot("AddToBossLoot", "Terraria", "SkeletronPrime", ModContent.ItemType<MechanicalCrystalPiece3>());
+            AddLoot("AddToBossLoot", "Terraria", "Plantera", ModContent.ItemType<PlantHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "Golem", ModContent.ItemType<LihzhardianHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "DukeFishron", ModContent.ItemType<TruffleHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "CultistBoss", ModContent.ItemType<AncientHeart>());
+            AddLoot("AddToBossLoot", "Terraria", "MoonLord", ModContent.ItemType<CelestialHeart>());
+            #endregion
+
+            #region Calamity Mod
+            if (calamity != null)
+            {
+                AddLoot("AddToBossLoot", calamity.Name, "Desert Scourge", ModContent.ItemType<OceanHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Crabulon", ModContent.ItemType<FungalHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Hive Mind", ModContent.ItemType<RottenHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "The Perforators", ModContent.ItemType<BloodyWormHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Slime God", ModContent.ItemType<PolarizedHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Cryogen", ModContent.ItemType<HeartOfCryogen>());
+                AddLoot("AddToBossLoot", calamity.Name, "Aquatic Scourge", ModContent.ItemType<AquaticHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Brimstone Elemental", ModContent.ItemType<GehennaHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Calamitas", ModContent.ItemType<VoidOfHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Leviathan", ModContent.ItemType<HeartAmbergris>());
+                AddLoot("AddToBossLoot", calamity.Name, "Astrum Aureus", ModContent.ItemType<AstralBossHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Plaguebringer Goliath", ModContent.ItemType<CrystallizedToxicHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Ravager", ModContent.ItemType<CorpusHeart>());
+                //AddLoot("AddToBossLoot", calamity.Name, "Astrum Deus", ModContent.ItemType<OceanHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Dragonfolly", ModContent.ItemType<DynamoStemHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Providence", ModContent.ItemType<BlazingHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Ceaseless Void", ModContent.ItemType<DarkPlasmicHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Storm Weaver", ModContent.ItemType<ArmoredHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Signus", ModContent.ItemType<TwistingHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Polterghast", ModContent.ItemType<AfflictedHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Old Duke", ModContent.ItemType<MutatedHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Devourer of Gods", ModContent.ItemType<NebulousHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Yharon", ModContent.ItemType<DraconicHeart>());
+                AddLoot("AddToBossLoot", calamity.Name, "Supreme Calamitas", ModContent.ItemType<CalamitousHeart>());
+            }
+            #endregion
+            #region Fargowiltas Souls
+            if (fargoSouls != null)
+            {
+                AddLoot("AddToBossLoot", fargoSouls.Name, "Deviantt", ModContent.ItemType<DeviHeart>());
+                AddLoot("AddToBossLoot", fargoSouls.Name, "Abominationn", ModContent.ItemType<AbomHeart>());
+                AddLoot("AddToBossLoot", fargoSouls.Name, "Mutant", ModContent.ItemType<MutantHeart>());
+            }
+            #endregion
+            #region Thorium Mod
+            if (thorium != null)
+            {
+                AddLoot("AddToBossLoot", thorium.Name, "The Grand Thunder Bird", ModContent.ItemType<ZephyrsHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "The Queen Jellyfish", ModContent.ItemType<SeaBreezeHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "Viscount", ModContent.ItemType<VampiresHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "Granite Energy Storm", ModContent.ItemType<HeartOfTheStorm>());
+                AddLoot("AddToBossLoot", thorium.Name, "Buried Champion", ModContent.ItemType<ChampionsHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "Star Scouter", ModContent.ItemType<OmegaHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "Borean Strider", ModContent.ItemType<IceBoundStriderHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "Coznix, the Fallen Beholder", ModContent.ItemType<BeholderHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "The Lich", ModContent.ItemType<LichsHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "Abyssion, the Forgotten One", ModContent.ItemType<AbyssalHeart>());
+                AddLoot("AddToBossLoot", thorium.Name, "The Primordials", ModContent.ItemType<DormantHeart>());
+            }
+            #endregion
+        }
+
+        private void AddLoot(string call, string modID, string bossName, int item)
+        {
+            Mod bossChecklist = ModLoader.GetMod("BossChecklist");
+            bossChecklist.Call(new object[4] { call, modID, bossName, item });
         }
     }
 

@@ -1,10 +1,12 @@
-﻿using Terraria;
+﻿using CalamityMod.Items.Placeables.Ores;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables.CalamityMod
 {
-    internal class ExodiumClusterHeart : ModItem
+    internal class ExodiumClusterHeart : CalamityCrossModItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,19 +42,10 @@ namespace ElementalHearts.Items.Consumables.CalamityMod
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            Mod calamityMod = ModLoader.GetMod("CalamityMod");
-            if (calamityMod != null)
-            {
-                recipe.AddIngredient(calamityMod.ItemType("ExodiumClusterOre"), 100); ;
-                recipe.AddTile(TileID.Anvils);
-                recipe.SetResult(this, 1);
-                recipe.AddRecipe();
-            }
-        }
-
-        public override bool Autoload(ref string name)
-        {
-            return ModLoader.GetMod("CalamityMod") != null;
+            recipe.AddIngredient(ItemType<ExodiumClusterOre>(), 100);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
         }
     }
 }

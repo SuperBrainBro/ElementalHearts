@@ -4,12 +4,12 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
 {
-    internal class RottenHeart : CalamityCrossModItem
+    internal class DeviHeart : FargoSoulsCrossModItem
     {
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Permanently increases maximum life by 5");
-            DisplayName.SetDefault("Rotten Heart");
+            DisplayName.SetDefault("Sparkling Heart");
         }
 
         public override void SetDefaults()
@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().RottenLife <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().DeviLife <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -34,7 +34,7 @@ namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
             {
                 player.HealEffect(5, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer>().RottenLife += 1;
+            player.GetModPlayer<ElementalHeartsPlayer>().DeviLife += 1;
             return true;
         }
     }

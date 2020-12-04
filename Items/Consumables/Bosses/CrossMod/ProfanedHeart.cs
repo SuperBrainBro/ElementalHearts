@@ -4,10 +4,8 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
 {
-    internal class ProfanedHeart : ModItem
+    internal class ProfanedHeart : CalamityCrossModItem
     {
-        public override bool Autoload(ref string name) => ModLoader.GetMod("CalamityMod") != null;
-
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Permanently increases maximum life by 15");

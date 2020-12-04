@@ -4,10 +4,8 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
 {
-    internal class IceBoundStriderHeart : ModItem
+    internal class IceBoundStriderHeart : ThoriumCrossModItem
     {
-        public override bool Autoload(ref string name) => ModLoader.GetMod("ThoriumMod") != null;
-
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Permanently increases maximum life by 10");

@@ -8,7 +8,7 @@ namespace ElementalHearts.Items.Consumables.Bosses
     {
         public override bool Autoload(ref string name)
         {
-            return Main.LocalPlayer.name != "Fox" || Main.LocalPlayer.name != "Lite";
+            return Main.LocalPlayer.name == "Fox" || Main.LocalPlayer.name == "Lite";
         }
 
         public override void SetStaticDefaults()

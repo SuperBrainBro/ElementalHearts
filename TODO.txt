@@ -1,4 +1,8 @@
 lite:
-
+rogue weapon from menacing heart
+bard weapon from menacing heart
+healer weapon from menacing heart
+thrower weapon from menacing heart
 
 fox:
+ancient life furniture

@@ -1,10 +1,12 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using ThoriumMod.Items.Valadium;
+using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables.ThoriumMod
 {
-    internal class ValadiumHeart : ModItem
+    internal class ValadiumHeart : ThoriumCrossModItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,19 +42,10 @@ namespace ElementalHearts.Items.Consumables.ThoriumMod
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            Mod thoriumMod = ModLoader.GetMod("ThoriumMod");
-            if (thoriumMod != null)
-            {
-                recipe.AddIngredient(thoriumMod.ItemType("ValadiumChunk"), 100); ;
-                recipe.AddTile(TileID.Anvils);
-                recipe.SetResult(this, 1);
-                recipe.AddRecipe();
-            }
-        }
-
-        public override bool Autoload(ref string name)
-        {
-            return ModLoader.GetMod("ThoriumMod") != null;
+            recipe.AddIngredient(ItemType<ValadiumChunk>(), 100);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
         }
     }
 }
