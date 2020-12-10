@@ -1,0 +1,49 @@
+﻿using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace ElementalHearts.Items.Consumables
+{
+    internal class IchorHeart : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Tooltip.SetDefault("Permanently increases maximum life by 5");
+            DisplayName.SetDefault("Ichor Heart");
+        }
+
+        public override void SetDefaults()
+        {
+            item.CloneDefaults(ItemID.LifeFruit);
+            item.rare = ItemRarityID.LightRed;
+            item.value = 0;
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().IchorLife <
+                   ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
+        }
+
+        public override bool UseItem(Player player)
+        {
+            player.statLifeMax2 += 5;
+            player.statLife += 5;
+            if (Main.myPlayer == player.whoAmI)
+            {
+                player.HealEffect(5, true);
+            }
+            player.GetModPlayer<ElementalHeartsPlayer2>().IchorLife += 1;
+            return true;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.Ichor, 100); ;
+            recipe.AddTile(TileID.CrystalBall);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
+        }
+    }
+}

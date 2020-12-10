@@ -1,49 +1,10 @@
-using CalamityMod.NPCs.AquaticScourge;
-using CalamityMod.NPCs.AstrumAureus;
-using CalamityMod.NPCs.AstrumDeus;
-using CalamityMod.NPCs.BrimstoneElemental;
-using CalamityMod.NPCs.Bumblebirb;
-using CalamityMod.NPCs.Calamitas;
-using CalamityMod.NPCs.CeaselessVoid;
-using CalamityMod.NPCs.Crabulon;
-using CalamityMod.NPCs.Cryogen;
-using CalamityMod.NPCs.DesertScourge;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.NPCs.HiveMind;
-using CalamityMod.NPCs.Leviathan;
-using CalamityMod.NPCs.OldDuke;
-using CalamityMod.NPCs.Perforator;
-using CalamityMod.NPCs.PlaguebringerGoliath;
-using CalamityMod.NPCs.Polterghast;
-using CalamityMod.NPCs.ProfanedGuardians;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.NPCs.Ravager;
-using CalamityMod.NPCs.Signus;
-using CalamityMod.NPCs.SlimeGod;
-using CalamityMod.NPCs.StormWeaver;
-using CalamityMod.NPCs.SupremeCalamitas;
-using CalamityMod.NPCs.Yharon;
 using ElementalHearts.Items.Consumables;
 using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Consumables.Bosses.CrossMod;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
-using FargowiltasSouls.NPCs.AbomBoss;
-using FargowiltasSouls.NPCs.DeviBoss;
-using FargowiltasSouls.NPCs.MutantBoss;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThoriumMod.NPCs.Bat;
-using ThoriumMod.NPCs.Beholder;
-using ThoriumMod.NPCs.Blizzard;
-using ThoriumMod.NPCs.Buried;
-using ThoriumMod.NPCs.Depths;
-using ThoriumMod.NPCs.Granite;
-using ThoriumMod.NPCs.Lich;
-using ThoriumMod.NPCs.Primordials;
-using ThoriumMod.NPCs.QueenJelly;
-using ThoriumMod.NPCs.Scouter;
-using ThoriumMod.NPCs.Thunder;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts
@@ -165,115 +126,133 @@ namespace ElementalHearts
                 if (ModLoader.GetMod("CalamityMod") != null)
                 {
                     Mod mod = ModLoader.GetMod("CalamityMod");
-                    if (npc.type == NPCType<DesertScourgeHead>())
+                    if (npc.type == mod.NPCType("DesertScourgeHead"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<OceanHeart>());
                     }
-                    else if (npc.type == NPCType<CrabulonIdle>())
+                    else if (npc.type == mod.NPCType("CrabulonIdle"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<FungalHeart>());
                     }
-                    else if (npc.type == NPCType<HiveMindP2>())
+                    else if (npc.type == mod.NPCType("HiveMindP2"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<RottenHeart>());
                     }
-                    else if (npc.type == NPCType<PerforatorHive>())
+                    else if (npc.type == mod.NPCType("PerforatorHive"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<BloodyWormHeart>());
                     }
-                    else if (npc.type == NPCType<SlimeGodCore>())
+                    else if (npc.type == mod.NPCType("SlimeGodCore"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<PolarizedHeart>());
                     }
-                    else if (npc.type == NPCType<Cryogen>())
+                    else if (npc.type == mod.NPCType("Cryogen"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<HeartOfCryogen>());
                     }
-                    else if (npc.type == NPCType<BrimstoneElemental>())
+                    else if (npc.type == mod.NPCType("BrimstoneElemental"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<GehennaHeart>());
                     }
-                    else if (npc.type == NPCType<AquaticScourgeHead>())
+                    else if (npc.type == mod.NPCType("AquaticScourgeHead"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AquaticHeart>());
                     }
-                    else if (npc.type == NPCType<CalamitasRun3>())
+                    else if (npc.type == mod.NPCType("CalamitasRun3"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<VoidOfHeart>());
                     }
-                    else if (npc.type == NPCType<Siren>())
+                    else if (npc.type == mod.NPCType("Siren"))
                     {
-                        if (!NPC.AnyNPCs(NPCType<Leviathan>()))
+                        if (!NPC.AnyNPCs(mod.NPCType("Leviathan")))
                         {
                             Item.NewItem(npc.getRect(), ItemType<HeartAmbergris>());
                         }
                     }
-                    else if (npc.type == NPCType<Leviathan>())
+                    else if (npc.type == mod.NPCType("Leviathan"))
                     {
-                        if (!NPC.AnyNPCs(NPCType<Siren>()))
+                        if (!NPC.AnyNPCs(mod.NPCType("Siren")))
                         {
                             Item.NewItem(npc.getRect(), ItemType<HeartAmbergris>());
                         }
                     }
-                    else if (npc.type == NPCType<AstrumAureus>())
+                    else if (npc.type == mod.NPCType("AstrumAureus"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<GravistarHeart>());
                     }
-                    else if (npc.type == NPCType<PlaguebringerGoliath>())
+                    else if (npc.type == mod.NPCType("PlaguebringerGoliath"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<CrystallizedToxicHeart>());
                     }
-                    else if (npc.type == NPCType<RavagerBody>())
+                    else if (npc.type == mod.NPCType("RavagerBody"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<CorpusHeart>());
                     }
-                    else if (npc.type == NPCType<AstrumDeusHeadSpectral>())
+                    else if (npc.type == mod.NPCType("AstrumDeusHeadSpectral"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AstralBossHeart>());
                     }
-                    else if (npc.type == NPCType<ProfanedGuardianBoss>())
+                    else if (npc.type == mod.NPCType("ProfanedGuardianBoss"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<ProfanedHeart>());
                     }
-                    else if (npc.type == NPCType<Bumblefuck>())
+                    else if (npc.type == mod.NPCType("Bumblefuck"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<DynamoStemHeart>());
                     }
-                    else if (npc.type == NPCType<Providence>())
+                    else if (npc.type == mod.NPCType("Providence"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<BlazingHeart>());
                     }
-                    else if (npc.type == NPCType<StormWeaverHeadNaked>())
+                    else if (npc.type == mod.NPCType("StormWeaverHeadNaked"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<ArmoredHeart>());
                     }
-                    else if (npc.type == NPCType<CeaselessVoid>())
+                    else if (npc.type == mod.NPCType("CeaselessVoid"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<DarkPlasmicHeart>());
                     }
-                    else if (npc.type == NPCType<Signus>())
+                    else if (npc.type == mod.NPCType("Signus"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<TwistingHeart>());
                     }
-                    else if (npc.type == NPCType<Polterghast>())
+                    else if (npc.type == mod.NPCType("Polterghast"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AfflictedHeart>());
                     }
-                    else if (npc.type == NPCType<OldDuke>())
+                    else if (npc.type == mod.NPCType("OldDuke"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<MutatedHeart>());
                     }
-                    else if (npc.type == NPCType<DevourerofGodsHeadS>())
+                    else if (npc.type == mod.NPCType("DevourerofGodsHeadS"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<NebulousHeart>());
                     }
-                    else if (npc.type == NPCType<Yharon>())
+                    else if (npc.type == mod.NPCType("Yharon"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<DraconicHeart>());
                     }
-                    else if (npc.type == NPCType<SupremeCalamitas>())
+                    else if (npc.type == mod.NPCType("SupremeCalamitas"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<CalamitousHeart>());
+                    }
+                }
+                #endregion
+                #region Consolaria
+                if (ModLoader.GetMod("Consolaria") != null)
+                {
+                    Mod mod = ModLoader.GetMod("Consolaria");
+                    if (npc.type == mod.NPCType("Lepus"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<EasterHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("TurkortheUngrateful"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartoPlenty>());
+                    }
+                    else if (npc.type == mod.NPCType("Ocram"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartoPlenty>());
                     }
                 }
                 #endregion
@@ -283,67 +262,178 @@ namespace ElementalHearts
                     Item.NewItem(npc.getRect(), ItemType<MenacingHeartItem>());
                 }
                 #endregion
+                #region Elements Awoken
+                if (ModLoader.GetMod("ElementsAwoken") != null)
+                {
+                    Mod mod = ModLoader.GetMod("ElementsAwoken");
+                    if (npc.type == mod.NPCType("Wasteland"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<VenomHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Infernace"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<InfernoHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("ScourgeFighter"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ScourgeHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("RegarothHead"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartofHope>());
+                    }
+                    else if (npc.type == mod.NPCType("Permafrost"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartoftheFrost>());
+                    }
+                    else if (npc.type == mod.NPCType("Obsidious"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<SacredHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Aqueous"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<AqueousHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("AncientWyrmHead"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("TheEye")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<DrakonianHeart>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("TheEye"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("AncientWyrmHead")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<DrakonianHeart>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("TheGuardianFly"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<FieryHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Volcanox"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<CharredHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("VoidLeviathan"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartofDespair>());
+                    }
+                    else if (npc.type == mod.NPCType("Azana"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartoftheInfection>());
+                    }
+                    else if (npc.type == mod.NPCType("AncientAmalgam"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<CrystallineHeart>());
+                    }
+                }
+                #endregion
                 #region Fargowiltas Souls
                 if (ModLoader.GetMod("FargowiltasSouls") != null)
                 {
-                    if (npc.type == NPCType<DeviBoss>())
+                    Mod mod = ModLoader.GetMod("FargowiltasSouls");
+                    if (npc.type == mod.NPCType("DeviBoss"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<DeviHeart>());
                     }
-                    else if (npc.type == NPCType<AbomBoss>())
+                    else if (npc.type == mod.NPCType("AbomBoss"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AbomHeart>());
                     }
-                    else if (npc.type == NPCType<MutantBoss>())
+                    else if (npc.type == mod.NPCType("MutantBoss"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<MutantHeart>());
+                    }
+                }
+                #endregion
+                #region Laugicality
+                if (ModLoader.GetMod("Laugicality") != null)
+                {
+                    Mod mod = ModLoader.GetMod("Laugicality");
+                    if (npc.type == mod.NPCType("DuneSharkron"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<Pyraheart>());
+                    }
+                    else if (npc.type == mod.NPCType("Hypothema"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<Hearthema>());
+                    }
+                    else if (npc.type == mod.NPCType("Ragnar"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<MoltenHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("AnDio3"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<AnDioBossHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("TheAnnihilator"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<MechanicalCrystalPiece2>());
+                    }
+                    else if (npc.type == mod.NPCType("Slybertron"))
+                    {
+                        // MechanicalCrystalPiece4
+                    }
+                    else if (npc.type == mod.NPCType("SteamTrain"))
+                    {
+                        // MechanicalCrystalPiece5
+                    }
+                    else if (npc.type == mod.NPCType("Etheria"))
+                    {
+                        if (Laugicality.LaugicalityWorld.downedTrueEtheria)
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<EtheriaHeart>());
+                        }
                     }
                 }
                 #endregion
                 #region Thorium Mod
                 if (ModLoader.GetMod("ThoriumMod") != null)
                 {
-                    if (npc.type == NPCType<TheGrandThunderBirdv2>())
+                    Mod mod = ModLoader.GetMod("ThoriumMod");
+                    if (npc.type == mod.NPCType("TheGrandThunderBirdv2"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<ZephyrsHeart>());
                     }
-                    else if (npc.type == NPCType<QueenJelly>())
+                    else if (npc.type == mod.NPCType("QueenJelly"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<SeaBreezeHeart>());
                     }
-                    else if (npc.type == NPCType<Viscount>())
+                    else if (npc.type == mod.NPCType("Viscount"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<VampiresHeart>());
                     }
-                    else if (npc.type == NPCType<GraniteEnergyStorm>())
+                    else if (npc.type == mod.NPCType("GraniteEnergyStorm"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<HeartOfTheStorm>());
                     }
-                    else if (npc.type == NPCType<TheBuriedWarrior>())
+                    else if (npc.type == mod.NPCType("TheBuriedWarrior"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<ChampionsHeart>());
                     }
-                    else if (npc.type == NPCType<ThePrimeScouter>())
+                    else if (npc.type == mod.NPCType("ThePrimeScouter"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<OmegaHeart>());
                     }
-                    else if (npc.type == NPCType<BoreanStriderPopped>())
+                    else if (npc.type == mod.NPCType("BoreanStriderPopped"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<IceBoundStriderHeart>());
                     }
-                    else if (npc.type == NPCType<FallenDeathBeholder2>())
+                    else if (npc.type == mod.NPCType("FallenDeathBeholder2"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<BeholderHeart>());
                     }
-                    else if (npc.type == NPCType<LichHeadless>())
+                    else if (npc.type == mod.NPCType("LichHeadless"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<LichsHeart>());
                     }
-                    else if (npc.type == NPCType<AbyssionReleased>())
+                    else if (npc.type == mod.NPCType("AbyssionReleased"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<AbyssalHeart>());
                     }
-                    else if (npc.type == NPCType<RealityBreaker>())
+                    else if (npc.type == mod.NPCType("RealityBreaker"))
                     {
                         Item.NewItem(npc.getRect(), ItemType<DormantHeart>());
                     }

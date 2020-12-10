@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Consumables
 
         /// <summary>
         /// This block need for easier system of clearing hearts.
-        ///'Type' is for choosing type/category
+        /// 'Type' is for choosing type/category
         /// </summary>
         /// <param name="player"></param>
         /// <param name="type"></param>

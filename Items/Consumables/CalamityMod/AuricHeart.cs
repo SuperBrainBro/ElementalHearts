@@ -1,4 +1,5 @@
-﻿using CalamityMod.Items.Placeables.Ores;
+﻿using CalamityMod;
+using CalamityMod.Items.Placeables.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,6 +20,7 @@ namespace ElementalHearts.Items.Consumables.CalamityMod
             item.CloneDefaults(ItemID.LifeFruit);
             //item.rare = ItemRarityID.LightPurple;
             item.value = 0;
+            item.Calamity().customRarity = CalamityRarity.Violet;
         }
 
         public override bool CanUseItem(Player player)

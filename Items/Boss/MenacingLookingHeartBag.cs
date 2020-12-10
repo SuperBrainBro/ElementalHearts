@@ -1,5 +1,4 @@
 using ElementalHearts.Items.Accessories;
-using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Weapons;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using Terraria;

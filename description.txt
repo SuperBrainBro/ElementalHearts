@@ -24,6 +24,32 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.20.2
+	 Added the Cursed Flame Heart, a heart made from Cursed Flame. It permanately increases life by 5.
+	 Added the Ichor Heart, a heart made from Ichor. It permanately increases life by 5.
+	 New Boss Hearts:
+	  Consolaria:
+	   +Easter Heart
+	   +Heart o' Plenty
+	   +Cursed Heart
+	  Fargo's Mod:
+	   +Sparkling Heart
+	   +Abominable Heart
+	   +Phantasmal Heart
+	  Element's Awoken:
+	   +Venom Heart
+	   +Inferno Heart
+	   +Scourge Heart
+	   +Heart of Hope
+	   +Sacred Heart
+	   +Heart of the Frost
+	   +Aqueous' Heart
+	   +Drakonian Heart
+	   +Fiery Heart
+	   +Charred Heart
+	   +Heart of Despair
+	   +Heart of the Infection
+	   +Crystalline Locket
 0.2.20.1
 	 NEW BIOME:
 	  Ancient Life Biome.

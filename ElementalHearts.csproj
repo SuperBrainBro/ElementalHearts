@@ -17,8 +17,17 @@
     <Reference Include="CalamityMod">
       <HintPath>..\..\ModReference\CalamityMod@1.4.5.007\CalamityMod.FNA.dll</HintPath>
     </Reference>
+    <Reference Include="Consolaria">
+      <HintPath>..\..\ModReference\Consolaria@1.2.3.3\Consolaria.FNA.dll</HintPath>
+    </Reference>
+    <Reference Include="ElementsAwoken">
+      <HintPath>..\..\ModReference\ElementsAwoken@1.3.13.3\ElementsAwoken.FNA.dll</HintPath>
+    </Reference>
     <Reference Include="FargowiltasSouls">
       <HintPath>..\..\ModReference\FargowiltasSouls@1.3.92.1\FargowiltasSouls.FNA.dll</HintPath>
+    </Reference>
+    <Reference Include="Laugicality">
+      <HintPath>..\..\ModReference\Laugicality@0.1.7.10\Laugicality.FNA.dll</HintPath>
     </Reference>
     <Reference Include="ThoriumMod">
       <HintPath>..\..\ModReference\ThoriumMod@1.6.3.12\ThoriumMod.FNA.dll</HintPath>

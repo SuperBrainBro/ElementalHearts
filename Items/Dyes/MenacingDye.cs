@@ -1,8 +1,8 @@
-﻿using Terraria.ModLoader;
-using Terraria.ID;
-using ElementalHearts.Items.Tiles;
-using Terraria;
+﻿using ElementalHearts.Items.Tiles;
 using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Dyes
 {

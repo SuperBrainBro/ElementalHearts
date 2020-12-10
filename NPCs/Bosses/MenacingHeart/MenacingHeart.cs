@@ -1,19 +1,17 @@
 using System;
 using System.IO;
+using ElementalHearts.Effects;
 using ElementalHearts.Items.Boss;
-using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Weapons;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework;
-using Terraria.Graphics.Effects;
-using Terraria.Graphics.Shaders;
-using Terraria.ID;
 using Terraria;
 using Terraria.Audio;
+using Terraria.Graphics.Effects;
+using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using ElementalHearts.Effects;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 {
@@ -147,7 +145,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             return null;
         }
         public void spawnBoxTiles()
-        {            
+        {
             Player player = Main.player[npc.target];
             int width = 25;
             int height = 25;
@@ -193,7 +191,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Lighting.AddLight(npc.Center, new Vector3(1, 0, 0));
 
             //Spawn Shockwave
-            if(Spawn != true)
+            if (Spawn != true)
             {
                 //Shcokwave
                 if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
@@ -550,7 +548,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                     }
                     else if (tpPosRand2 > 4)
-                    { 
+                    {
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(0, 200);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -560,7 +558,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
                     }
                     else if (tpPosRand2 > 2)
-                    { 
+                    {
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(-200, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);
@@ -686,7 +684,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                     tpPosRand3 = Main.rand.NextFloat(8);
 
                     if (tpPosRand3 > 6)
-                    { 
+                    {
                         clonePosition = Main.player[npc.target].Center;
                         futurePosition = Main.player[npc.target].Center + new Vector2(225, 0);
                         Dust.NewDust(futurePosition, 16, 16, 55, 0, 0, 0, Main.DiscoColor, 3);

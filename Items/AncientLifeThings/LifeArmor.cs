@@ -3,7 +3,6 @@ using ElementalHearts.Items.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static ElementalHearts.Items.AncientLifeThings.LifeArmor;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.AncientLifeThings

@@ -17,7 +17,7 @@ namespace ElementalHearts.Items.Consumables.CalamityMod
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.LifeFruit);
-            //item.rare = ItemRarityID.LightPurple;
+            item.rare = ItemRarityID.Red;
             item.value = 0;
         }
 
