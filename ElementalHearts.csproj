@@ -32,5 +32,8 @@
     <Reference Include="ThoriumMod">
       <HintPath>..\..\ModReference\ThoriumMod@1.6.3.12\ThoriumMod.FNA.dll</HintPath>
     </Reference>
+    <Reference Include="WebmilioCommons">
+      <HintPath>..\..\ModReference\WebmilioCommons@0.1.14.2\WebmilioCommons.FNA.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
