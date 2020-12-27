@@ -4,5 +4,5 @@ version = 0.2.20.2
 homepage = https://discord.gg/TD8EMB8
 buildIgnore = *.csproj, *.sln, *.user, *.md, obj\*, Guides\*, bin\*, .vs\*, .git\*, .gitignore
 
-weakReferences = CalamityMod, Laugicality, ThoriumMod, ElementsAwoken, Consolaria, FargowiltasSouls
-sortAfter = CalamityMod, Laugicality, ThoriumMod, ElementsAwoken, Consolaria, FargowiltasSouls
+weakReferences = WebmilioCommons, CalamityMod, Laugicality, ThoriumMod, ElementsAwoken, Consolaria, FargowiltasSouls
+sortAfter = WebmilioCommons, CalamityMod, Laugicality, ThoriumMod, ElementsAwoken, Consolaria, FargowiltasSouls

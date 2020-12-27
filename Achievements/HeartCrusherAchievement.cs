@@ -15,7 +15,8 @@ namespace ElementalHearts.Achievements
 
         public override void SetDefaults()
         {
-            AddConditions(NPCKilledCondition.Create((short)(int)ModContent.NPCType<MenacingHeart>()));
+            AddCompletionFlag();
+            AddConditions(NPCKilledCondition.Create((short)ModContent.NPCType<MenacingHeart>()));
         }
 
         private Mod mod = ModLoader.GetMod("WebmilioCommons");

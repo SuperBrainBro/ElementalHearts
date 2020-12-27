@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using ElementalHearts.Achievements;
 using ElementalHearts.Effects;
 using ElementalHearts.Items.Boss;
 using ElementalHearts.Items.Weapons;
@@ -11,6 +12,7 @@ using Terraria.Audio;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
+using WebmilioCommons.Achievements;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
@@ -1209,6 +1211,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void BossLoot(ref string name, ref int potionType)
         {
+            if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>
+                    (Main.player[npc.target]);
             potionType = ItemID.GreaterHealingPotion;
             int choice = Main.rand.Next(10);
             if (choice == 0)
