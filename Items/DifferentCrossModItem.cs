@@ -44,4 +44,11 @@ namespace ElementalHearts.Items
             return ModLoader.GetMod("Laugicality") != null;
         }
     }
+    public abstract class RedemptionCrossModItem : ModItem
+    {
+        public override bool Autoload(ref string name)
+        {
+            return ModLoader.GetMod("Redemption") != null;
+        }
+    }
 }

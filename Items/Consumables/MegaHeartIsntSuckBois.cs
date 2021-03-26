@@ -4,24 +4,24 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class MushroomHeart : ModItem
+    internal class MegaHeartIsntSuckBois : ModItem
     {
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Permanently increases maximum life by 2");
-            DisplayName.SetDefault("Mushroom Heart");
+            DisplayName.SetDefault("Mega Heart");
         }
 
         public override void SetDefaults()
         {
             item.CloneDefaults(ItemID.LifeFruit);
-            item.rare = ItemRarityID.Blue;
+            item.rare = ItemRarityID.Orange;
             item.value = 0;
         }
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().MushroomLife <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().MegaLife <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -33,18 +33,8 @@ namespace ElementalHearts.Items.Consumables
             {
                 player.HealEffect(2, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer>().MushroomLife += 1;
+            player.GetModPlayer<ElementalHeartsPlayer2>().MegaLife += 1;
             return true;
-        }
-
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Mushroom, 500000);
-            recipe.AddIngredient(ItemID.GlowingMushroom, 500000);
-            recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this, 1);
-            recipe.AddRecipe();
         }
     }
 }

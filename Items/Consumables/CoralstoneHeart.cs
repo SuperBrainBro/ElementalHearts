@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CoralstoneBlock, 100);
+            recipe.AddIngredient(ItemID.CoralstoneBlock, 1000000);
             recipe.needWater = true;
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

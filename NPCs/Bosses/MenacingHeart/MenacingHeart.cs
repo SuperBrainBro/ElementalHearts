@@ -50,7 +50,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public float tpPosRand4;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Menacing Heart");
+            DisplayName.SetDefault("Menacing Heart 2.0");
             Main.npcFrameCount[npc.type] = 14; // make sure to set this for your modnpcs.
         }
         public override void SetDefaults()
@@ -74,6 +74,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.boss = true;
             npc.netAlways = true;
             npc.timeLeft = 0;
+            npc.dontTakeDamage = true;
 
             bossPhaseHealth = npc.lifeMax / 4;
 
@@ -1211,8 +1212,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void BossLoot(ref string name, ref int potionType)
         {
-            if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>
-                    (Main.player[npc.target]);
+            if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>(Main.player[npc.target]);
             potionType = ItemID.GreaterHealingPotion;
             int choice = Main.rand.Next(10);
             if (choice == 0)

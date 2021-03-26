@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.PearlstoneBlock, 100); ;
+            recipe.AddIngredient(ItemID.PearlstoneBlock, 1000000); ;
             recipe.AddTile(TileID.Hellforge);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
