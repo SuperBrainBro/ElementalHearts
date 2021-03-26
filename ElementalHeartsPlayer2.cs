@@ -21,6 +21,7 @@ namespace ElementalHearts
         public int RadioactiveSandLife;
         public int RadioactiveSandstoneLife;
         public int MegaLife;
+        public int BestLife;
 
         //Boss Hearts
         public int EasterLife;
@@ -61,6 +62,7 @@ namespace ElementalHearts
             player.statLifeMax2 += AncientDirtLife * 1;
 
             player.statLifeMax2 += MegaLife * 2;
+            player.statLifeMax2 += BestLife * 1;
 
             //Boss Hearts
             player.statLifeMax2 += EasterLife * 1;
@@ -106,6 +108,7 @@ namespace ElementalHearts
 
             packet.Write(AncientDirtLife);
             packet.Write(MegaLife);
+            packet.Write(BestLife);
 
             //Boss Hearts
             packet.Write(EasterLife);
@@ -159,6 +162,7 @@ namespace ElementalHearts
 
                 {"AncientDirtLife", AncientDirtLife},
                 {"MegaLife", MegaLife},
+                {"BestLife", BestLife },
 
                 //Boss Hearts
                 {"EasterLife", EasterLife},
@@ -200,6 +204,7 @@ namespace ElementalHearts
 
             AncientDirtLife = tag.GetInt("AncientDirtLife");
             MegaLife = tag.GetInt("MegaLife");
+            BestLife = tag.GetInt("BestLife");
 
             //Boss Hearts
             EasterLife = tag.GetInt("EasterLife");
