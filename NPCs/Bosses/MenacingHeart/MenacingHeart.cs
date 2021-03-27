@@ -4,6 +4,7 @@ using System.IO;
 using ElementalHearts.Effects;
 using ElementalHearts.Items.Boss;
 using ElementalHearts.Items.Consumables;
+using ElementalHearts.Items.Consumables.AprilFools;
 using ElementalHearts.Items.Weapons;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;

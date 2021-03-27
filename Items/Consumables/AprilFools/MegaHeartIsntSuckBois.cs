@@ -1,8 +1,9 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using ElementalHearts.Items.Consumables;
 
-namespace ElementalHearts.Items.Consumables
+namespace ElementalHearts.Items.Consumables.AprilFools
 {
     internal class MegaHeartIsntSuckBois : ModItem
     {
@@ -35,6 +36,14 @@ namespace ElementalHearts.Items.Consumables
             }
             player.GetModPlayer<ElementalHeartsPlayer2>().MegaLife += 1;
             return true;
+        }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod.ItemType("DirtHeart"), 100); ;
+            recipe.AddTile(TileID.Solidifier);
+            recipe.SetResult(this, 1);
+            recipe.AddRecipe();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace ElementalHearts
         public bool shadowFox = false;
         public bool shadowFoxB = false;
         public bool setBonusFox = false;
+
         //Debuffs/Buffs
         public bool curseCATsCurse;
 
