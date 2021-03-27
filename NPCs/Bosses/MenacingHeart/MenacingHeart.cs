@@ -1214,7 +1214,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void BossLoot(ref string name, ref int potionType)
         {
+<<<<<<< Updated upstream
             //if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>(Main.player[npc.target]);
+=======
+            if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>(Main.player[npc.target]);
+>>>>>>> Stashed changes
             potionType = ItemID.GreaterHealingPotion;
             int choice = Main.rand.Next(10);
             Item.NewItem(npc.getRect(), ItemType<BestHeartEver>());

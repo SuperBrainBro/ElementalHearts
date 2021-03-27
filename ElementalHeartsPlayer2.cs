@@ -21,10 +21,13 @@ namespace ElementalHearts
         public int RadioactiveSandLife;
         public int RadioactiveSandstoneLife;
 
+<<<<<<< Updated upstream
         //April Fools
         public int MegaLife;
         public int BestLife;
 
+=======
+>>>>>>> Stashed changes
         //Boss Hearts
         public int EasterLife;
         public int LifeoPlenty;
@@ -67,7 +70,10 @@ namespace ElementalHearts
             player.statLifeMax2 += MegaLife * 2;
             player.statLifeMax2 += BestLife * 1;
 
+            player.statLifeMax2 += AncientDirtLife * 1;
+
             //Boss Hearts
+<<<<<<< Updated upstream
             player.statLifeMax2 += EasterLife * 1;
             player.statLifeMax2 += LifeoPlenty * 1;
             player.statLifeMax2 += CursedLife * 1;
@@ -89,6 +95,29 @@ namespace ElementalHearts
             player.statLifeMax2 += MoltenLife * 1;
             player.statLifeMax2 += AnDioLife * 1;
             player.statLifeMax2 += EtheriaLife * 1;
+=======
+            player.statLifeMax2 += EasterLife * 5;
+            player.statLifeMax2 += LifeoPlenty * 5;
+            player.statLifeMax2 += CursedLife * 10;
+            player.statLifeMax2 += VenomLife * 5;
+            player.statLifeMax2 += InfernoLife * 5;
+            player.statLifeMax2 += ScourgeLife * 10;
+            player.statLifeMax2 += LifeofHope * 10;
+            player.statLifeMax2 += LifeoftheFrost * 10;
+            player.statLifeMax2 += SacredLife * 10;
+            player.statLifeMax2 += AqueousLife * 10;
+            player.statLifeMax2 += DrakonianLife * 15;
+            player.statLifeMax2 += FieryLife * 15;
+            player.statLifeMax2 += CharredLife2 * 15;
+            player.statLifeMax2 += LifeofDespair * 15;
+            player.statLifeMax2 += LifeoftheInfection * 15;
+            player.statLifeMax2 += CrystallineLife * 15;
+            player.statLifeMax2 += Pyralife * 5;
+            player.statLifeMax2 += Lifethema * 5;
+            player.statLifeMax2 += MoltenLife * 5;
+            player.statLifeMax2 += AnDioLife * 5;
+            player.statLifeMax2 += EtheriaLife * 10;
+>>>>>>> Stashed changes
         }
 
         public override void clientClone(ModPlayer clientClone)
@@ -110,8 +139,11 @@ namespace ElementalHearts
             packet.Write(SoulofWroughtLife);
 
             packet.Write(AncientDirtLife);
+<<<<<<< Updated upstream
             packet.Write(MegaLife);
             packet.Write(BestLife);
+=======
+>>>>>>> Stashed changes
 
             //Boss Hearts
             packet.Write(EasterLife);
@@ -165,10 +197,13 @@ namespace ElementalHearts
 
                 {"AncientDirtLife", AncientDirtLife},
 
+<<<<<<< Updated upstream
                 //April Fools
                 {"MegaLife", MegaLife},
                 {"BestLife", BestLife },
 
+=======
+>>>>>>> Stashed changes
                 //Boss Hearts
                 {"EasterLife", EasterLife},
                 {"LifeoPlenty", LifeoPlenty},
@@ -208,8 +243,11 @@ namespace ElementalHearts
             SoulofWroughtLife = tag.GetInt("SoulofWroughtLife");
 
             AncientDirtLife = tag.GetInt("AncientDirtLife");
+<<<<<<< Updated upstream
             MegaLife = tag.GetInt("MegaLife");
             BestLife = tag.GetInt("BestLife");
+=======
+>>>>>>> Stashed changes
 
             //Boss Hearts
             EasterLife = tag.GetInt("EasterLife");
