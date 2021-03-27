@@ -42,7 +42,7 @@ namespace ElementalHearts.Items.Consumables.CalamityMod
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<AstralFossil>(), 100);
+            recipe.AddIngredient(ItemType<AstralFossil>(), 1000000);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

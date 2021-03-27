@@ -40,8 +40,8 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Amethyst, 25);
-            recipe.AddIngredient(ItemID.StoneBlock, 75);
+            recipe.AddIngredient(ItemID.Amethyst, 250000);
+            recipe.AddIngredient(ItemID.StoneBlock, 750000);
             recipe.AddTile(TileID.Extractinator);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

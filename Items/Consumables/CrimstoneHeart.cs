@@ -39,7 +39,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CrimstoneBlock, 100);
+            recipe.AddIngredient(ItemID.CrimstoneBlock, 1000000);
             recipe.AddTile(TileID.Furnaces);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

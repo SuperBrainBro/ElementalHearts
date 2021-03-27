@@ -10,7 +10,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public float cloneTimeLeft;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Menacing Heart");
+            DisplayName.SetDefault("Menacing Heart 2.0");
         }
         public override void SetDefaults()
         {
@@ -27,6 +27,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.knockBackResist = 0f;
             npc.noGravity = true;
             npc.noTileCollide = true;
+            npc.dontTakeDamage = true;
 
             cloneTimeLeft = 420;
             base.SetDefaults();

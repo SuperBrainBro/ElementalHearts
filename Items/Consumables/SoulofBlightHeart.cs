@@ -46,7 +46,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod2.ItemType("SoulofBlight"), 100);
+            recipe.AddIngredient(mod2.ItemType("SoulofBlight"), 1000000);
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
