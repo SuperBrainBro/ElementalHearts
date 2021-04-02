@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ElementalHearts.Items.Consumables.AprilFools
+namespace ElementalHearts.Items.Consumables
 {
     internal class BestHeartEver : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Permanently increases maximum life by 2");
+            Tooltip.SetDefault("Permanently increases maximum life by 1");
             DisplayName.SetDefault("Rainbow Menacing Lunar Ancient Fleshy Celestial Royal Wormy Volatile Fishark with Googly Eyes and Brains of the Hives and Plants Idol Iron Heart with Solar Power MK2 +");
         }
 

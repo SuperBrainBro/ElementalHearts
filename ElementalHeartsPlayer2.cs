@@ -20,8 +20,6 @@ namespace ElementalHearts
         public int RadioactiveIceLife;
         public int RadioactiveSandLife;
         public int RadioactiveSandstoneLife;
-
-        //April Fools
         public int MegaLife;
         public int BestLife;
 
@@ -63,7 +61,6 @@ namespace ElementalHearts
 
             player.statLifeMax2 += AncientDirtLife * 1;
 
-            //April Fools
             player.statLifeMax2 += MegaLife * 2;
             player.statLifeMax2 += BestLife * 1;
 
@@ -164,8 +161,6 @@ namespace ElementalHearts
                 {"SoulofWroughtLife", SoulofWroughtLife },
 
                 {"AncientDirtLife", AncientDirtLife},
-
-                //April Fools
                 {"MegaLife", MegaLife},
                 {"BestLife", BestLife },
 
