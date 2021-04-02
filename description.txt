@@ -24,9 +24,6 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
-0.6.9
-	Early non-April Fools update.
-
 0.2.20.2
 	 Added the Cursed Flame Heart, a heart made from Cursed Flame. It permanately increases life by 5.
 	 Added the Ichor Heart, a heart made from Ichor. It permanately increases life by 5.
