@@ -382,17 +382,11 @@ namespace ElementalHearts
                     }
                     else if (npc.type == mod.NPCType("Etheria"))
                     {
-                        //if (Laugicality.LaugicalityWorld.downedTrueEtheria)
-                        //{
+                        if (Laugicality.LaugicalityWorld.downedTrueEtheria)
+                        {
                             Item.NewItem(npc.getRect(), ItemType<EtheriaHeart>());
-                        //}
+                        }
                     }
-                }
-                #endregion
-                #region Mod of Redemption
-                if (ModLoader.GetMod("Redemption") != null)
-                {
-                    Mod mod = ModLoader.GetMod("Redemption");
                 }
                 #endregion
                 #region Thorium Mod
@@ -470,19 +464,19 @@ namespace ElementalHearts
             if (type == NPCID.PartyGirl)
             {
                 shop.item[nextSlot].SetDefaults(ItemType<BubbleHeart>());
-                shop.item[nextSlot].shopCustomPrice = 200000000;
+                shop.item[nextSlot].shopCustomPrice = 20000;
                 nextSlot++;
             }
             if (type == NPCID.Merchant)
             {
                 shop.item[nextSlot].SetDefaults(ItemType<EmptyHeart>());
-                shop.item[nextSlot].shopCustomPrice = 100000000;
+                shop.item[nextSlot].shopCustomPrice = 10000;
                 nextSlot++;
             }
             if (type == NPCID.Steampunker)
             {
                 shop.item[nextSlot].SetDefaults(ItemType<CogHeart>());
-                shop.item[nextSlot].shopCustomPrice = 700000000;
+                shop.item[nextSlot].shopCustomPrice = 70000;
                 nextSlot++;
             }
         }

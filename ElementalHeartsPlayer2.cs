@@ -4,7 +4,7 @@ using Terraria.ModLoader.IO;
 
 namespace ElementalHearts
 {
-    public partial class ElementalHeartsPlayer2 : ElementalHeartsPlayer
+    public class ElementalHeartsPlayer2 : ModPlayer
     {
         public int CursedFlameLife;
         public int IchorLife;
@@ -13,15 +13,6 @@ namespace ElementalHearts
         public int SoulofFraughtLife;
         public int SoulofThoughtLife;
         public int SoulofWroughtLife;
-
-        public int AncientDirtLife;
-        public int AncientStoneLife;
-        public int HardenedRadioactiveSandLife;
-        public int RadioactiveIceLife;
-        public int RadioactiveSandLife;
-        public int RadioactiveSandstoneLife;
-        public int MegaLife;
-        public int BestLife;
 
         //Boss Hearts
         public int EasterLife;
@@ -36,7 +27,7 @@ namespace ElementalHearts
         public int AqueousLife;
         public int DrakonianLife;
         public int FieryLife;
-        public int CharredLife2;
+        public int CharredLife;
         public int LifeofDespair;
         public int LifeoftheInfection;
         public int CrystallineLife;
@@ -47,45 +38,40 @@ namespace ElementalHearts
         public int EtheriaLife;
 
         //Multiplayer Thing
-        //public bool nonStopParty;
+        public bool nonStopParty;
 
         public override void ResetEffects()
         {
-            player.statLifeMax2 += CursedFlameLife * 1;
-            player.statLifeMax2 += IchorLife * 1;
+            player.statLifeMax2 += CursedFlameLife * 5;
+            player.statLifeMax2 += IchorLife * 5;
             player.statLifeMax2 += VoiditeLife * 1;
 
-            player.statLifeMax2 += SoulofFraughtLife * 1;
-            player.statLifeMax2 += SoulofThoughtLife * 1;
-            player.statLifeMax2 += SoulofWroughtLife * 1;
-
-            player.statLifeMax2 += AncientDirtLife * 1;
-
-            player.statLifeMax2 += MegaLife * 2;
-            player.statLifeMax2 += BestLife * 1;
+            player.statLifeMax2 += SoulofFraughtLife * 5;
+            player.statLifeMax2 += SoulofThoughtLife * 5;
+            player.statLifeMax2 += SoulofWroughtLife * 5;
 
             //Boss Hearts
-            player.statLifeMax2 += EasterLife * 1;
-            player.statLifeMax2 += LifeoPlenty * 1;
-            player.statLifeMax2 += CursedLife * 1;
-            player.statLifeMax2 += VenomLife * 1;
-            player.statLifeMax2 += InfernoLife * 1;
-            player.statLifeMax2 += ScourgeLife * 1;
-            player.statLifeMax2 += LifeofHope * 1;
-            player.statLifeMax2 += LifeoftheFrost * 1;
-            player.statLifeMax2 += SacredLife * 1;
-            player.statLifeMax2 += AqueousLife * 1;
-            player.statLifeMax2 += DrakonianLife * 1;
-            player.statLifeMax2 += FieryLife * 1;
-            player.statLifeMax2 += CharredLife2 * 1;
-            player.statLifeMax2 += LifeofDespair * 1;
-            player.statLifeMax2 += LifeoftheInfection * 1;
-            player.statLifeMax2 += CrystallineLife * 1;
-            player.statLifeMax2 += Pyralife * 1;
-            player.statLifeMax2 += Lifethema * 1;
-            player.statLifeMax2 += MoltenLife * 1;
-            player.statLifeMax2 += AnDioLife * 1;
-            player.statLifeMax2 += EtheriaLife * 1;
+            player.statLifeMax2 += EasterLife * 5;
+            player.statLifeMax2 += LifeoPlenty * 5;
+            player.statLifeMax2 += CursedLife * 10;
+            player.statLifeMax2 += VenomLife * 5;
+            player.statLifeMax2 += InfernoLife * 5;
+            player.statLifeMax2 += ScourgeLife * 10;
+            player.statLifeMax2 += LifeofHope * 10;
+            player.statLifeMax2 += LifeoftheFrost * 10;
+            player.statLifeMax2 += SacredLife * 10;
+            player.statLifeMax2 += AqueousLife * 10;
+            player.statLifeMax2 += DrakonianLife * 15;
+            player.statLifeMax2 += FieryLife * 15;
+            player.statLifeMax2 += CharredLife * 15;
+            player.statLifeMax2 += LifeofDespair * 15;
+            player.statLifeMax2 += LifeoftheInfection * 15;
+            player.statLifeMax2 += CrystallineLife * 15;
+            player.statLifeMax2 += Pyralife * 5;
+            player.statLifeMax2 += Lifethema * 5;
+            player.statLifeMax2 += MoltenLife * 5;
+            player.statLifeMax2 += AnDioLife * 5;
+            player.statLifeMax2 += EtheriaLife * 10;
         }
 
         public override void clientClone(ModPlayer clientClone)
@@ -106,10 +92,6 @@ namespace ElementalHearts
             packet.Write(SoulofThoughtLife);
             packet.Write(SoulofWroughtLife);
 
-            packet.Write(AncientDirtLife);
-            packet.Write(MegaLife);
-            packet.Write(BestLife);
-
             //Boss Hearts
             packet.Write(EasterLife);
             packet.Write(LifeoPlenty);
@@ -123,7 +105,7 @@ namespace ElementalHearts
             packet.Write(AqueousLife);
             packet.Write(DrakonianLife);
             packet.Write(FieryLife);
-            packet.Write(CharredLife2);
+            packet.Write(CharredLife);
             packet.Write(LifeofDespair);
             packet.Write(LifeoftheInfection);
             packet.Write(CrystallineLife);
@@ -160,10 +142,6 @@ namespace ElementalHearts
                 {"SoulofThoughtLife", SoulofThoughtLife },
                 {"SoulofWroughtLife", SoulofWroughtLife },
 
-                {"AncientDirtLife", AncientDirtLife},
-                {"MegaLife", MegaLife},
-                {"BestLife", BestLife },
-
                 //Boss Hearts
                 {"EasterLife", EasterLife},
                 {"LifeoPlenty", LifeoPlenty},
@@ -177,7 +155,7 @@ namespace ElementalHearts
                 {"AqueousLife", AqueousLife },
                 {"DrakonianLife", DrakonianLife },
                 {"FieryLife", FieryLife },
-                {"CharredLife2", CharredLife2 },
+                {"CharredLife", CharredLife },
                 {"LifeofDespair", LifeofDespair },
                 {"LifeoftheInfection", LifeoftheInfection },
                 {"CrystallineLife", CrystallineLife },
@@ -202,10 +180,6 @@ namespace ElementalHearts
             SoulofThoughtLife = tag.GetInt("SoulofThoughtLife");
             SoulofWroughtLife = tag.GetInt("SoulofWroughtLife");
 
-            AncientDirtLife = tag.GetInt("AncientDirtLife");
-            MegaLife = tag.GetInt("MegaLife");
-            BestLife = tag.GetInt("BestLife");
-
             //Boss Hearts
             EasterLife = tag.GetInt("EasterLife");
             LifeoPlenty = tag.GetInt("LifeoPlenty");
@@ -219,7 +193,7 @@ namespace ElementalHearts
             AqueousLife = tag.GetInt("AqueousLife");
             DrakonianLife = tag.GetInt("DrakonianLife");
             FieryLife = tag.GetInt("FieryLife");
-            CharredLife2 = tag.GetInt("CharredLife2");
+            CharredLife = tag.GetInt("CharredLife");
             LifeofDespair = tag.GetInt("LifeofDespair");
             LifeoftheInfection = tag.GetInt("LifeoftheInfection");
             CrystallineLife = tag.GetInt("CrystallineLife");

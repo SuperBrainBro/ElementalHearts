@@ -1,9 +1,8 @@
 using System;
 using System.IO;
-//using ElementalHearts.Achievements;
+using ElementalHearts.Achievements;
 using ElementalHearts.Effects;
 using ElementalHearts.Items.Boss;
-using ElementalHearts.Items.Consumables;
 using ElementalHearts.Items.Weapons;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
@@ -13,7 +12,7 @@ using Terraria.Audio;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
-//using WebmilioCommons.Achievements;
+using WebmilioCommons.Achievements;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
@@ -51,7 +50,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public float tpPosRand4;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Menacing Heart 2.0");
+            DisplayName.SetDefault("Menacing Heart");
             Main.npcFrameCount[npc.type] = 14; // make sure to set this for your modnpcs.
         }
         public override void SetDefaults()
@@ -75,7 +74,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.boss = true;
             npc.netAlways = true;
             npc.timeLeft = 0;
-            npc.dontTakeDamage = true;
 
             bossPhaseHealth = npc.lifeMax / 4;
 
@@ -1213,10 +1211,10 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void BossLoot(ref string name, ref int potionType)
         {
-            //if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>(Main.player[npc.target]);
+            if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>
+                    (Main.player[npc.target]);
             potionType = ItemID.GreaterHealingPotion;
             int choice = Main.rand.Next(10);
-            Item.NewItem(npc.getRect(), ItemType<BestHeartEver>());
             if (choice == 0)
             {
                 Item.NewItem(npc.getRect(), ItemType<MenacingHeartTrophyItem>());

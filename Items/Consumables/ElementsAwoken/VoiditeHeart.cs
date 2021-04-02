@@ -44,7 +44,7 @@ namespace ElementalHearts.Items.Consumables.ElementsAwoken
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<VoiditeOre>(), 1000000); ;
+            recipe.AddIngredient(ItemType<VoiditeOre>(), 100); ;
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

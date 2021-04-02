@@ -40,13 +40,13 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CandyCaneBlock, 1000000); ;
+            recipe.AddIngredient(ItemID.CandyCaneBlock, 100); ;
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
 
             recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.GreenCandyCaneBlock, 1000000); ;
+            recipe.AddIngredient(ItemID.GreenCandyCaneBlock, 100); ;
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

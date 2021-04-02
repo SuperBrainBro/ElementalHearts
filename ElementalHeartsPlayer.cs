@@ -267,7 +267,7 @@ namespace ElementalHearts
             player.statLifeMax2 += GraniteLife * 1;
             player.statLifeMax2 += MarbleLife * 1;
             player.statLifeMax2 += IceLife * 1;
-            player.statLifeMax2 += ObsidianLife * 1;
+            player.statLifeMax2 += ObsidianLife * 3;
 
             player.statLifeMax2 += SandLife * 1;
             player.statLifeMax2 += EbonsandLife * 1;
@@ -275,13 +275,13 @@ namespace ElementalHearts
             player.statLifeMax2 += GlassLife * 1;
 
             //Other
-            player.statLifeMax2 += HoneyLife * 1;
-            player.statLifeMax2 += SlimeLife * 1;
-            player.statLifeMax2 += FossilLife * 1;
-            player.statLifeMax2 += BubbleLife * 1;
-            player.statLifeMax2 += CoralstoneLife * 1;
-            player.statLifeMax2 += CandyCaneLife * 1;
-            player.statLifeMax2 += MushroomLife * 1;
+            player.statLifeMax2 += HoneyLife * 2;
+            player.statLifeMax2 += SlimeLife * 2;
+            player.statLifeMax2 += FossilLife * 2;
+            player.statLifeMax2 += BubbleLife * 2;
+            player.statLifeMax2 += CoralstoneLife * 2;
+            player.statLifeMax2 += CandyCaneLife * 2;
+            player.statLifeMax2 += MushroomLife * 2;
 
             //Grown
             player.statLifeMax2 += HayLife * 1;
@@ -298,76 +298,76 @@ namespace ElementalHearts
             player.statLifeMax2 += DynastyLife * 1;
 
             //Gems
-            player.statLifeMax2 += AmberLife * 1;
-            player.statLifeMax2 += AmethystLife * 1;
-            player.statLifeMax2 += TopazLife * 1;
-            player.statLifeMax2 += SapphireLife * 1;
-            player.statLifeMax2 += EmeraldLife * 1;
-            player.statLifeMax2 += RubyLife * 1;
-            player.statLifeMax2 += DiamondLife * 1;
+            player.statLifeMax2 += AmberLife * 5;
+            player.statLifeMax2 += AmethystLife * 2;
+            player.statLifeMax2 += TopazLife * 3;
+            player.statLifeMax2 += SapphireLife * 3;
+            player.statLifeMax2 += EmeraldLife * 4;
+            player.statLifeMax2 += RubyLife * 4;
+            player.statLifeMax2 += DiamondLife * 5;
 
             //Basic Ores
-            player.statLifeMax2 += CopperLife * 1;
-            player.statLifeMax2 += TinLife * 1;
-            player.statLifeMax2 += IronLife * 1;
-            player.statLifeMax2 += LeadLife * 1;
-            player.statLifeMax2 += SilverLife * 1;
-            player.statLifeMax2 += TungstenLife * 1;
-            player.statLifeMax2 += GoldLife * 1;
-            player.statLifeMax2 += PlatinumLife * 1;
+            player.statLifeMax2 += CopperLife * 2;
+            player.statLifeMax2 += TinLife * 2;
+            player.statLifeMax2 += IronLife * 2;
+            player.statLifeMax2 += LeadLife * 2;
+            player.statLifeMax2 += SilverLife * 3;
+            player.statLifeMax2 += TungstenLife * 3;
+            player.statLifeMax2 += GoldLife * 3;
+            player.statLifeMax2 += PlatinumLife * 3;
 
             //Other Ores
-            player.statLifeMax2 += MeteoriteLife * 1;
-            player.statLifeMax2 += DemoniteLife * 1;
-            player.statLifeMax2 += CrimtaneLife * 1;
-            player.statLifeMax2 += HellstoneLife * 1;
+            player.statLifeMax2 += MeteoriteLife * 4;
+            player.statLifeMax2 += DemoniteLife * 4;
+            player.statLifeMax2 += CrimtaneLife * 4;
+            player.statLifeMax2 += HellstoneLife * 5;
 
             //Hardmode//
 
             //Basic
-            player.statLifeMax2 += PearlstoneLife * 1;
-            player.statLifeMax2 += PearlsandLife * 1;
+            player.statLifeMax2 += PearlstoneLife * 5;
+            player.statLifeMax2 += PearlsandLife * 5;
 
             //Wood
-            player.statLifeMax2 += PearlwoodLife * 1;
-            player.statLifeMax2 += SpookyLife * 1;
+            player.statLifeMax2 += PearlwoodLife * 5;
+            player.statLifeMax2 += SpookyLife * 7;
 
             //Souls
-            player.statLifeMax2 += SoulofLightLife * 1;
-            player.statLifeMax2 += SoulofNightLife * 1;
-            player.statLifeMax2 += SoulofFlightLife * 1;
-            player.statLifeMax2 += SoulofFrightLife * 1;
-            player.statLifeMax2 += SoulofMightLife * 1;
-            player.statLifeMax2 += SoulofSightLife * 1;
-            player.statLifeMax2 += SoulofBlightLife * 1;
+            player.statLifeMax2 += SoulofLightLife * 4;
+            player.statLifeMax2 += SoulofNightLife * 4;
+            player.statLifeMax2 += SoulofFlightLife * 4;
+            player.statLifeMax2 += SoulofFrightLife * 5;
+            player.statLifeMax2 += SoulofMightLife * 5;
+            player.statLifeMax2 += SoulofSightLife * 5;
+            player.statLifeMax2 += SoulofBlightLife * 5;
 
             //Other
-            player.statLifeMax2 += RainbowLife * 1;
-            player.statLifeMax2 += CogLife * 1;
-            player.statLifeMax2 += FleshLife * 1;
-            player.statLifeMax2 += LesionLife * 1;
-            player.statLifeMax2 += CrystalLife * 1;
-            player.statLifeMax2 += EctoplasmLife * 1;
+            player.statLifeMax2 += RainbowLife * 5;
+            player.statLifeMax2 += CogLife * 5;
+            player.statLifeMax2 += FleshLife * 5;
+            player.statLifeMax2 += LesionLife * 5;
+            player.statLifeMax2 += CrystalLife * 7;
+            player.statLifeMax2 += EctoplasmLife * 8;
 
             //Basic Ores
-            player.statLifeMax2 += CobaltLife * 1;
-            player.statLifeMax2 += PalladiumLife * 1;
-            player.statLifeMax2 += MythrilLife * 1;
-            player.statLifeMax2 += OrichalcumLife * 1;
-            player.statLifeMax2 += AdamantiteLife * 1;
-            player.statLifeMax2 += TitaniumLife * 1;
-            player.statLifeMax2 += ChlorophyteLife * 1;
-            player.statLifeMax2 += LuminiteLife * 1;
+            player.statLifeMax2 += CobaltLife * 5;
+            player.statLifeMax2 += PalladiumLife * 5;
+            player.statLifeMax2 += MythrilLife * 6;
+            player.statLifeMax2 += OrichalcumLife * 6;
+            player.statLifeMax2 += AdamantiteLife * 7;
+            player.statLifeMax2 += TitaniumLife * 7;
+            player.statLifeMax2 += ChlorophyteLife * 8;
+            player.statLifeMax2 += LuminiteLife * 9;
 
             //Expert Hearts
-            player.statLifeMax2 += BrainLife * 1;
-            player.statLifeMax2 += WormLife * 1;
-            player.statLifeMax2 += DemonHeartMK2Life * 1;
-            player.statLifeMax2 += MechanicalLife * 1;
+            player.statLifeMax2 += BrainLife * 5;
+            player.statLifeMax2 += WormLife * 5;
+            player.statLifeMax2 += DemonHeartMK2Life * 10;
+            player.statLifeMax2 += MechanicalLife * 10;
 
             //Dev Hearts
-            player.statLifeMax2 += HeartOfCAT * 1;
-            player.statLifeMax2 += CrystalLite * 1;
+            player.statLifeMax2 += HeartOfCAT * 5;
+            player.statLifeMax2 += CrystalLite * 5;
 
             //Thorium Mod
             player.statLifeMax2 += AquaiteLife * 1;
@@ -422,61 +422,61 @@ namespace ElementalHearts
             player.statLifeMax2 += VoidstoneLife * 1;
 
             //Boss Hearts
-            player.statLifeMax2 += MenacingLife * 1;
-            player.statLifeMax2 += RoyalSlimeLife * 1;
-            player.statLifeMax2 += EyeLife * 1;
-            player.statLifeMax2 += HiveLife * 1;
-            player.statLifeMax2 += BoneLife * 1;
-            player.statLifeMax2 += VolatileLife * 1;
-            player.statLifeMax2 += PlantLife * 1;
-            player.statLifeMax2 += LihzhardianLife * 1;
-            player.statLifeMax2 += SoaringLife * 1;
-            player.statLifeMax2 += FisharkLife * 1;
-            player.statLifeMax2 += AncientLife * 1;
-            player.statLifeMax2 += CelestialLife * 1;
-            player.statLifeMax2 += ZephyrsLife * 1;
-            player.statLifeMax2 += SeaBreezeLife * 1;
-            player.statLifeMax2 += VampiresLife * 1;
-            player.statLifeMax2 += LifeOfTheStorm * 1;
-            player.statLifeMax2 += ChampionsLife * 1;
-            player.statLifeMax2 += OmegaLife * 1;
-            player.statLifeMax2 += IceBoundStriderLife * 1;
-            player.statLifeMax2 += FallenLife * 1;
-            player.statLifeMax2 += LichsLife * 1;
-            player.statLifeMax2 += AbyssalLife * 1;
-            player.statLifeMax2 += DormantLife * 1;
-            player.statLifeMax2 += DD2DarkLifeT1 * 1;
-            player.statLifeMax2 += DD2DarkLifeT3 * 1;
-            player.statLifeMax2 += DD2SnotLifeT2 * 1;
-            player.statLifeMax2 += DD2SnotLifeT3 * 1;
-            player.statLifeMax2 += OceanLife * 1;
-            player.statLifeMax2 += FungalLife * 1;
-            player.statLifeMax2 += RottenLife * 1;
-            player.statLifeMax2 += BloodyWormLife * 1;
-            player.statLifeMax2 += PolarizedLife * 1;
-            player.statLifeMax2 += LifeOfCryogen * 1;
-            player.statLifeMax2 += GehennaLife * 1;
-            player.statLifeMax2 += AquaticLife * 1;
-            player.statLifeMax2 += VoidOfLife * 1;
-            player.statLifeMax2 += LifeAmbergris * 1;
-            player.statLifeMax2 += GravistarLife * 1;
-            player.statLifeMax2 += CrystallizedToxicLife * 1;
-            player.statLifeMax2 += CorpusLife * 1;
-            player.statLifeMax2 += AstralBossLife * 1;
-            player.statLifeMax2 += ProfanedLife * 1;
-            player.statLifeMax2 += DynamoStemLife * 1;
-            player.statLifeMax2 += BlazingLife * 1;
-            player.statLifeMax2 += ArmoredLife * 1;
-            player.statLifeMax2 += DarkPlasmicLife * 1;
-            player.statLifeMax2 += TwistingLife * 1;
-            player.statLifeMax2 += AfflictedLife * 1;
-            player.statLifeMax2 += MutatedLife * 1;
-            player.statLifeMax2 += NebulousLife * 1;
-            player.statLifeMax2 += DraconicLife * 1;
-            player.statLifeMax2 += CalamitousLife * 1;
-            player.statLifeMax2 += DeviLife * 1;
-            player.statLifeMax2 += AbomLife * 1;
-            player.statLifeMax2 += MutantLife * 1;
+            player.statLifeMax2 += MenacingLife * 5;
+            player.statLifeMax2 += RoyalSlimeLife * 5;
+            player.statLifeMax2 += EyeLife * 5;
+            player.statLifeMax2 += HiveLife * 5;
+            player.statLifeMax2 += BoneLife * 5;
+            player.statLifeMax2 += VolatileLife * 10;
+            player.statLifeMax2 += PlantLife * 10;
+            player.statLifeMax2 += LihzhardianLife * 10;
+            player.statLifeMax2 += SoaringLife * 10;
+            player.statLifeMax2 += FisharkLife * 10;
+            player.statLifeMax2 += AncientLife * 10;
+            player.statLifeMax2 += CelestialLife * 10;
+            player.statLifeMax2 += ZephyrsLife * 5;
+            player.statLifeMax2 += SeaBreezeLife * 5;
+            player.statLifeMax2 += VampiresLife * 5;
+            player.statLifeMax2 += LifeOfTheStorm * 5;
+            player.statLifeMax2 += ChampionsLife * 5;
+            player.statLifeMax2 += OmegaLife * 5;
+            player.statLifeMax2 += IceBoundStriderLife * 10;
+            player.statLifeMax2 += FallenLife * 10;
+            player.statLifeMax2 += LichsLife * 10;
+            player.statLifeMax2 += AbyssalLife * 10;
+            player.statLifeMax2 += DormantLife * 10;
+            player.statLifeMax2 += DD2DarkLifeT1 * 5;
+            player.statLifeMax2 += DD2DarkLifeT3 * 10;
+            player.statLifeMax2 += DD2SnotLifeT2 * 5;
+            player.statLifeMax2 += DD2SnotLifeT3 * 10;
+            player.statLifeMax2 += OceanLife * 5;
+            player.statLifeMax2 += FungalLife * 5;
+            player.statLifeMax2 += RottenLife * 5;
+            player.statLifeMax2 += BloodyWormLife * 5;
+            player.statLifeMax2 += PolarizedLife * 5;
+            player.statLifeMax2 += LifeOfCryogen * 10;
+            player.statLifeMax2 += GehennaLife * 10;
+            player.statLifeMax2 += AquaticLife * 10;
+            player.statLifeMax2 += VoidOfLife * 10;
+            player.statLifeMax2 += LifeAmbergris * 10;
+            player.statLifeMax2 += GravistarLife * 10;
+            player.statLifeMax2 += CrystallizedToxicLife * 10;
+            player.statLifeMax2 += CorpusLife * 10;
+            player.statLifeMax2 += AstralBossLife * 10;
+            player.statLifeMax2 += ProfanedLife * 15;
+            player.statLifeMax2 += DynamoStemLife * 15;
+            player.statLifeMax2 += BlazingLife * 15;
+            player.statLifeMax2 += ArmoredLife * 15;
+            player.statLifeMax2 += DarkPlasmicLife * 15;
+            player.statLifeMax2 += TwistingLife * 15;
+            player.statLifeMax2 += AfflictedLife * 15;
+            player.statLifeMax2 += MutatedLife * 15;
+            player.statLifeMax2 += NebulousLife * 15;
+            player.statLifeMax2 += DraconicLife * 15;
+            player.statLifeMax2 += CalamitousLife * 15;
+            player.statLifeMax2 += DeviLife * 5;
+            player.statLifeMax2 += AbomLife * 15;
+            player.statLifeMax2 += MutantLife * 15;
         }
         public override void UpdateDead()
         {

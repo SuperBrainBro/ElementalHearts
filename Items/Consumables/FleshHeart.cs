@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.FleshBlock, 1000000); ;
+            recipe.AddIngredient(ItemID.FleshBlock, 100); ;
             recipe.AddTile(TileID.FleshCloningVat);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

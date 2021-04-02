@@ -42,7 +42,7 @@ namespace ElementalHearts.Items.Consumables.CalamityMod
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<AerialiteOre>(), 1000000); ;
+            recipe.AddIngredient(ItemType<AerialiteOre>(), 100); ;
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

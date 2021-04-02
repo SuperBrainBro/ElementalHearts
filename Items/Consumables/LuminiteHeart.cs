@@ -39,11 +39,11 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.LunarOre, 1000000);
-            recipe.AddIngredient(ItemID.FragmentVortex, 100000);
-            recipe.AddIngredient(ItemID.FragmentNebula, 100000);
-            recipe.AddIngredient(ItemID.FragmentSolar, 100000);
-            recipe.AddIngredient(ItemID.FragmentStardust, 100000);
+            recipe.AddIngredient(ItemID.LunarOre, 100);
+            recipe.AddIngredient(ItemID.FragmentVortex, 10);
+            recipe.AddIngredient(ItemID.FragmentNebula, 10);
+            recipe.AddIngredient(ItemID.FragmentSolar, 10);
+            recipe.AddIngredient(ItemID.FragmentStardust, 10);
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

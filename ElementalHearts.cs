@@ -28,7 +28,7 @@ namespace ElementalHearts
             Mod bossChecklist = ModLoader.GetMod("BossChecklist");
             if (bossChecklist != null)
             {
-                bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<MenacingHeart>(), this, "Menacing Heart 2.0", (Func<bool>)(() =>
+                bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() =>
                 ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<MenacingLookingStatueItem>(), new List<int>() {
                     ModContent.ItemType<MenacingHeartTrophyItem>(), ModContent.ItemType<MHMb>() }, new List<int>() { ModContent.
                     ItemType<MenacingHeartItem>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.

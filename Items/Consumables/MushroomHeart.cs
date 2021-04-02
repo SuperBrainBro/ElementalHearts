@@ -40,8 +40,8 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Mushroom, 500000);
-            recipe.AddIngredient(ItemID.GlowingMushroom, 500000);
+            recipe.AddIngredient(ItemID.Mushroom, 50);
+            recipe.AddIngredient(ItemID.GlowingMushroom, 50);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

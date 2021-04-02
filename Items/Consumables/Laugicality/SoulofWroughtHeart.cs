@@ -42,7 +42,7 @@ namespace ElementalHearts.Items.Consumables.Laugicality
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<SoulOfWrought>(), 1000000); ;
+            recipe.AddIngredient(ItemType<SoulOfWrought>(), 100); ;
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

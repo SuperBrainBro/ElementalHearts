@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.AdamantiteOre, 1000000); ;
+            recipe.AddIngredient(ItemID.AdamantiteOre, 100); ;
             recipe.AddTile(TileID.AdamantiteForge);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
