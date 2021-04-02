@@ -24,6 +24,22 @@ I also need some people to help make a wiki, that would be awesome!
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.2.20.3
+  Removed Rainbow Menacing Lunar Ancient Fleshy Celestial Royal Wormy Volatile Fishark with Googly Eyes and Brains of the Hives and Plants Idol Iron Heart with Solar Power MK2 +
+  Changed recipe from 100k of materials to 100
+  Added Menacing Heart, removed Menacing heart 2.0 which is immortal
+  All hearts add more hp to make it more balaanced
+  Combine all hearts to get 1 nothing!
+  The mega heart does not exist anymore. 
+  In order to balance this, we have removed eternal menacing suffering debuf which damages that player for all of eternity, or until he reinstalls terraria or drinks milk.
+0.6.9
+  Added Rainbow Menacing Lunar Ancient Fleshy Celestial Royal Wormy Volatile Fishark with Googly Eyes and Brains of the Hives and Plants Idol Iron Heart with Solar Power MK2 +
+  Changed recipe from 100 of materials to 100k
+  Removed Menacing Heart, replaced with Menacing heart 2.0 which is immortal
+  All hearts add +1 hp to make it more balaanced
+  Combine all hearts to get 1 NEW Item... MEGA HEART!
+  The mega heart gives you + 2 hp. 
+  In order to balance this, we have added eternal menacing suffering debuf which damages that player for all of eternity, or until he reinstalls terraria or drinks milk
 0.2.20.2
 	 Added the Cursed Flame Heart, a heart made from Cursed Flame. It permanately increases life by 5.
 	 Added the Ichor Heart, a heart made from Ichor. It permanately increases life by 5.
