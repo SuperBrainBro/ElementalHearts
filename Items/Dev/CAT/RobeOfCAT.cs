@@ -10,7 +10,7 @@ namespace ElementalHearts.Items.Dev.CAT
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Robeof");
+            DisplayName.SetDefault("Robe Of Luxure");
             Tooltip.SetDefault("'Great for impersonating devs!'");
         }
 
@@ -20,22 +20,6 @@ namespace ElementalHearts.Items.Dev.CAT
             item.height = 18;
             item.rare = ItemRarityID.Cyan;
             item.vanity = true;
-        }
-
-        public override void UpdateEquip(Player player)
-        {
-            if (player.name == "CAT")
-            {
-                player.buffImmune[BuffID.OnFire] = true;
-                player.statLifeMax2 += 20;
-                player.maxMinions++;
-            }
-            if (player.name == "AstralCat")
-            {
-                player.buffImmune[BuffID.OnFire] = true;
-                player.statLifeMax2 += 20;
-                player.maxMinions++;
-            }
         }
     }
 }

@@ -13,12 +13,6 @@ namespace ElementalHearts
     {
         public override bool InstancePerEntity => true;
 
-        public bool curseCATsCurse;
-
-        public override void ResetEffects(NPC npc)
-        {
-            curseCATsCurse = false;
-        }
         public override void NPCLoot(NPC npc)
         {
             #region Vanilla Bosses
@@ -382,10 +376,7 @@ namespace ElementalHearts
                     }
                     else if (npc.type == mod.NPCType("Etheria"))
                     {
-                        if (Laugicality.LaugicalityWorld.downedTrueEtheria)
-                        {
-                            Item.NewItem(npc.getRect(), ItemType<EtheriaHeart>());
-                        }
+                        Item.NewItem(npc.getRect(), ItemType<EtheriaHeart>());
                     }
                 }
                 #endregion
@@ -441,22 +432,6 @@ namespace ElementalHearts
                 #endregion
             }
             #endregion
-        }
-
-        public override void UpdateLifeRegen(NPC npc, ref int damage)
-        {
-            if (curseCATsCurse)
-            {
-                if (npc.lifeRegen > 0)
-                {
-                    npc.lifeRegen = 0;
-                }
-                npc.lifeRegen -= 128;
-                if (damage < 24)
-                {
-                    damage = 24;
-                }
-            }
         }
 
         public override void SetupShop(int type, Chest shop, ref int nextSlot)

@@ -21,7 +21,7 @@ namespace ElementalHearts.Items.Consumables
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().CursedFlameLife <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().CursedFlameLife <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -33,7 +33,7 @@ namespace ElementalHearts.Items.Consumables
             {
                 player.HealEffect(5, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer2>().CursedFlameLife += 1;
+            player.GetModPlayer<ElementalHeartsPlayer>().CursedFlameLife += 1;
             return true;
         }
 

@@ -10,6 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.World.Generation;
+using ElementalHearts.Items.Tiles;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Tiles
@@ -98,6 +99,7 @@ namespace ElementalHearts.Tiles
             recipe.AddIngredient(ItemID.StoneBlock, 100);
             recipe.AddIngredient(ItemID.VilePowder, 25);
             recipe.AddIngredient(ItemID.Wire, 50);
+            recipe.AddIngredient(ItemType<LifeOre>(), 25);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
@@ -107,39 +109,11 @@ namespace ElementalHearts.Tiles
             recipe.AddIngredient(ItemID.StoneBlock, 100);
             recipe.AddIngredient(ItemID.ViciousPowder, 25);
             recipe.AddIngredient(ItemID.Wire, 50);
+            recipe.AddIngredient(ItemType<LifeOre>(), 25);
             recipe.AddTile(TileID.DemonAltar);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
             base.AddRecipes();
-        }
-    }
-
-    public class MenacingStatueModWorld : ModWorld
-    {
-        public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
-        {
-            int ResetIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Reset"));
-            if (ResetIndex != -1)
-            {
-                tasks.Insert(ResetIndex + 1, new PassLegacy("Menacing Looking Statue Setup", delegate (GenerationProgress progress)
-                {
-                    progress.Message = "Adding ElementalHearts Statue";
-
-                    // Not necessary, just a precaution.
-                    if (WorldGen.statueList.Any(point => point.X == TileType<MenacingLookingStatue>()))
-                    {
-                        return;
-                    }
-                    // Make space in the statueList array, and then add a Point16 of (TileID, PlaceStyle)
-                    Array.Resize(ref WorldGen.statueList, WorldGen.statueList.Length + 1);
-                    for (int i = WorldGen.statueList.Length - 1; i < WorldGen.statueList.Length; i++)
-                    {
-                        WorldGen.statueList[i] = new Point16(TileType<MenacingLookingStatue>(), 0);
-                        // Do this if you want the statue to spawn with wire and pressure plate
-                        // WorldGen.StatuesWithTraps.Add(i);
-                    }
-                }));
-            }
         }
     }
 }

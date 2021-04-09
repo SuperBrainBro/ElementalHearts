@@ -5,14 +5,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace ElementalHearts.Items.AncientLifeThings
+namespace ElementalHearts.Items.LifeEquipment
 {
     public class LifeArmor
     {
         [AutoloadEquip(equipTypes: EquipType.Head)]
         public class LifeMask : ModItem
         {
-            public override string Texture => "ElementalHearts/Items/AncientLifeThings/LifeMask";
+            public override string Texture => "ElementalHearts/Items/LifeEquipment/LifeMask";
 
             public override void SetStaticDefaults()
             {
@@ -36,42 +36,8 @@ namespace ElementalHearts.Items.AncientLifeThings
 
             public override void UpdateArmorSet(Player player)
             {
-                int plusHPregenPerKilledEnemyMadeForFoxPleaseSaveMe = 1;
-                string setBonus = @"Increases life regen
-Life regen is stronger when not moving"
-/*You take more damage on hit"*/;
-                if (player.name == "Lite")
-                {
-                    setBonus += "\nYou take more damage on hit";
-                }
-                if (Main.hardMode && player.name != "Fox")
-                {
-                    setBonus += "\nSlightly decreased life regen in hardmode but you takes less damage on hit.";
-                }
-                if (NPC.downedMoonlord && player.name == "Fox")
-                {
-                    setBonus += "\nYou get " + plusHPregenPerKilledEnemyMadeForFoxPleaseSaveMe + " additional hp per killed enemy.\nNOT WORKING HELP MEEEE";
-                }
-                player.setBonus = setBonus;
-                player.GetModPlayer<ElementalHeartsPlayer>().lifeArmour = true;
-                if (Math.Abs(player.velocity.X) + Math.Abs(player.velocity.Y) < 1.0f && !player.rocketFrame)
-                {
-                    player.lifeRegen += 7;
-                    player.lifeRegenCount += 7;
-                    player.lifeRegenTime += 7;
-                    if (Main.hardMode && player.name != "Fox")
-                    {
-                        player.lifeRegen -= 2;
-                        player.lifeRegenCount -= 2;
-                        player.lifeRegenTime -= 2;
-                    }
-                    if (Main.hardMode && player.name == "Fox")
-                    {
-                        player.lifeRegen += 3;
-                        player.lifeRegenCount += 3;
-                        player.lifeRegenTime += 3;
-                    }
-                }
+                player.setBonus = "Increases life regen.";
+                player.lifeRegen += 3;
                 base.UpdateArmorSet(player);
             }
 
@@ -99,7 +65,7 @@ Life regen is stronger when not moving"
         [AutoloadEquip(equipTypes: EquipType.Body)]
         public class LifeChainmail : ModItem
         {
-            public override string Texture => "ElementalHearts/Items/AncientLifeThings/LifeChainmail";
+            public override string Texture => "ElementalHearts/Items/LifeEquipment/LifeChainmail";
 
             public override void SetStaticDefaults()
             {
@@ -142,7 +108,7 @@ Life regen is stronger when not moving"
         [AutoloadEquip(equipTypes: EquipType.Legs)]
         public class LifeGreaves : ModItem
         {
-            public override string Texture => "ElementalHearts/Items/AncientLifeThings/LifeGreaves";
+            public override string Texture => "ElementalHearts/Items/LifeEquipment/LifeGreaves";
 
             public override void SetStaticDefaults()
             {

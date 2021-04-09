@@ -22,20 +22,5 @@ namespace ElementalHearts.Items.Dev.Lite
             item.vanity = true;
         }
 
-        public override void UpdateEquip(Player player)
-        {
-            if (player.name == "CAT")
-            {
-                player.buffImmune[BuffID.OnFire] = true;
-                player.statLifeMax2 += 20;
-                player.maxMinions++;
-            }
-            if (player.name == "AstralCat")
-            {
-                player.buffImmune[BuffID.OnFire] = true;
-                player.statLifeMax2 += 20;
-                player.maxMinions++;
-            }
-        }
     }
 }

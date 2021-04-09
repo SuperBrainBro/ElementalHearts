@@ -10,15 +10,6 @@ namespace ElementalHearts
 {
     public class ElementalHeartsPlayer : ModPlayer
     {
-        public bool lifeArmour;
-        public bool ZoneLifeCrystalCave;
-        public float dmgReduct = 0;
-        public bool shadowFox = false;
-        public bool shadowFoxB = false;
-        public bool setBonusFox = false;
-        //Debuffs/Buffs
-        public bool curseCATsCurse;
-
         ////Life Crystals////
 
         //Pre-Hardmode//
@@ -128,10 +119,6 @@ namespace ElementalHearts
         public int WormLife;
         public int DemonHeartMK2Life;
         public int MechanicalLife;
-
-        //Dev Hearts
-        public int HeartOfCAT;
-        public int CrystalLite;
 
         //Multiplayer Thing
         public bool nonStopParty;
@@ -245,18 +232,40 @@ namespace ElementalHearts
         public int AbomLife;
         public int MutantLife;
 
+        //Stuff from the ElementalHeartsPlayer2//
+
+        public int CursedFlameLife;
+        public int IchorLife;
+        public int VoiditeLife;
+
+        public int SoulofFraughtLife;
+        public int SoulofThoughtLife;
+        public int SoulofWroughtLife;
+
+        //Boss Hearts
+        public int EasterLife;
+        public int LifeoPlenty;
+        public int CursedLife;
+        public int VenomLife;
+        public int InfernoLife;
+        public int ScourgeLife;
+        public int LifeofHope;
+        public int LifeoftheFrost;
+        public int SacredLife;
+        public int AqueousLife;
+        public int DrakonianLife;
+        public int FieryLife;
+        public int LifeofDespair;
+        public int LifeoftheInfection;
+        public int CrystallineLife;
+        public int Pyralife;
+        public int Lifethema;
+        public int MoltenLife;
+        public int AnDioLife;
+        public int EtheriaLife;
+
         public override void ResetEffects()
         {
-            //ElementalHeartsConfig config = new ElementalHeartsConfig();
-            lifeArmour = false;
-            dmgReduct = 0;
-            shadowFox = false;
-            shadowFoxB = false;
-            setBonusFox = false;
-
-            //Debuffs/Buffs
-            curseCATsCurse = false;
-
             //Pre-Hardmode//
 
             //Basic
@@ -364,10 +373,6 @@ namespace ElementalHearts
             player.statLifeMax2 += WormLife * 5;
             player.statLifeMax2 += DemonHeartMK2Life * 10;
             player.statLifeMax2 += MechanicalLife * 10;
-
-            //Dev Hearts
-            player.statLifeMax2 += HeartOfCAT * 5;
-            player.statLifeMax2 += CrystalLite * 5;
 
             //Thorium Mod
             player.statLifeMax2 += AquaiteLife * 1;
@@ -477,33 +482,39 @@ namespace ElementalHearts
             player.statLifeMax2 += DeviLife * 5;
             player.statLifeMax2 += AbomLife * 15;
             player.statLifeMax2 += MutantLife * 15;
-        }
-        public override void UpdateDead()
-        {
-            curseCATsCurse = false;
-        }
 
-        public override void UpdateBadLifeRegen()
-        {
-            if (curseCATsCurse)
-            {
-                // These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
-                if (player.lifeRegen > 0)
-                {
-                    player.lifeRegen = 0;
-                }
-                player.lifeRegenTime = 0;
-                player.lifeRegen -= 128;
-            }
-        }
+            //Stuff from the ElementalHeartsPlayer2//
 
-        public override void OnHitByNPC(NPC npc, int damage, bool crit)
-        {
-            if (dmgReduct == 1 || dmgReduct > 1)
-            {
-                damage -= (int)(damage / 100 * dmgReduct);
-            }
-            base.OnHitByNPC(npc, damage, crit);
+            player.statLifeMax2 += CursedFlameLife * 5;
+            player.statLifeMax2 += IchorLife * 5;
+            player.statLifeMax2 += VoiditeLife * 1;
+
+            player.statLifeMax2 += SoulofFraughtLife * 5;
+            player.statLifeMax2 += SoulofThoughtLife * 5;
+            player.statLifeMax2 += SoulofWroughtLife * 5;
+
+            //Boss Hearts
+            player.statLifeMax2 += EasterLife * 5;
+            player.statLifeMax2 += LifeoPlenty * 5;
+            player.statLifeMax2 += CursedLife * 10;
+            player.statLifeMax2 += VenomLife * 5;
+            player.statLifeMax2 += InfernoLife * 5;
+            player.statLifeMax2 += ScourgeLife * 10;
+            player.statLifeMax2 += LifeofHope * 10;
+            player.statLifeMax2 += LifeoftheFrost * 10;
+            player.statLifeMax2 += SacredLife * 10;
+            player.statLifeMax2 += AqueousLife * 10;
+            player.statLifeMax2 += DrakonianLife * 15;
+            player.statLifeMax2 += FieryLife * 15;
+            player.statLifeMax2 += CharredLife * 15;
+            player.statLifeMax2 += LifeofDespair * 15;
+            player.statLifeMax2 += LifeoftheInfection * 15;
+            player.statLifeMax2 += CrystallineLife * 15;
+            player.statLifeMax2 += Pyralife * 5;
+            player.statLifeMax2 += Lifethema * 5;
+            player.statLifeMax2 += MoltenLife * 5;
+            player.statLifeMax2 += AnDioLife * 5;
+            player.statLifeMax2 += EtheriaLife * 10;
         }
 
         public override void clientClone(ModPlayer clientClone)
@@ -511,6 +522,7 @@ namespace ElementalHearts
             ElementalHeartsPlayer clone = clientClone as ElementalHeartsPlayer;
             clone.nonStopParty = nonStopParty;
         }
+
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
         {
             ModPacket packet = mod.GetPacket();
@@ -623,11 +635,7 @@ namespace ElementalHearts
             packet.Write(WormLife);
             packet.Write(DemonHeartMK2Life);
             packet.Write(MechanicalLife);
-
-            //Dev Hearts
-            packet.Write(HeartOfCAT);
-            packet.Write(CrystalLite);
-
+            
             //Thorium Mod
             packet.Write(AquaiteLife);
             packet.Write(BrackishClumpLife);
@@ -735,6 +743,39 @@ namespace ElementalHearts
             packet.Write(DeviLife);
             packet.Write(AbomLife);
             packet.Write(MutantLife);
+
+            //Stuff from the ElementalHeartsPlayer2//
+
+            packet.Write(CursedFlameLife);
+            packet.Write(IchorLife);
+            packet.Write(VoiditeLife);
+
+            packet.Write(SoulofFraughtLife);
+            packet.Write(SoulofThoughtLife);
+            packet.Write(SoulofWroughtLife);
+
+            //Boss Hearts
+            packet.Write(EasterLife);
+            packet.Write(LifeoPlenty);
+            packet.Write(CursedLife);
+            packet.Write(VenomLife);
+            packet.Write(InfernoLife);
+            packet.Write(ScourgeLife);
+            packet.Write(LifeofHope);
+            packet.Write(LifeoftheFrost);
+            packet.Write(SacredLife);
+            packet.Write(AqueousLife);
+            packet.Write(DrakonianLife);
+            packet.Write(FieryLife);
+            packet.Write(CharredLife);
+            packet.Write(LifeofDespair);
+            packet.Write(LifeoftheInfection);
+            packet.Write(CrystallineLife);
+            packet.Write(Pyralife);
+            packet.Write(Lifethema);
+            packet.Write(MoltenLife);
+            packet.Write(AnDioLife);
+            packet.Write(EtheriaLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -862,10 +903,6 @@ namespace ElementalHearts
                 { "DemonHeartMK2Life", DemonHeartMK2Life},
                 { "MechanicalLife", MechanicalLife},
 
-                //Dev Hearts
-                { "HeartOfCAT", HeartOfCAT},
-                { "CrystalLite", CrystalLite},
-
                 //Thorium Mod
                 { "AquaiteLife", AquaiteLife},
                 { "BrackishClumpLife", BrackishClumpLife},
@@ -974,6 +1011,39 @@ namespace ElementalHearts
                 { "DeviLife", DeviLife },
                 { "AbomLife", AbomLife },
                 { "MutantLife", MutantLife },
+                
+                //Stuff from the ElementalHeartsPlayer2//
+
+                {"CursedFlameLife", CursedFlameLife },
+                {"IchorLife", IchorLife },
+                {"VoiditeLife", VoiditeLife },
+
+                {"SoulofFraughtLife", SoulofFraughtLife },
+                {"SoulofThoughtLife", SoulofThoughtLife },
+                {"SoulofWroughtLife", SoulofWroughtLife },
+
+                //Boss Hearts
+                {"EasterLife", EasterLife},
+                {"LifeoPlenty", LifeoPlenty},
+                {"CursedLife", CursedLife},
+                {"VenomLife", VenomLife },
+                {"InfernoLife", InfernoLife },
+                {"ScourgeLife", ScourgeLife },
+                {"LifeofHope", LifeofHope },
+                {"LifeoftheFrost", LifeoftheFrost },
+                {"SacredLife", SacredLife },
+                {"AqueousLife", AqueousLife },
+                {"DrakonianLife", DrakonianLife },
+                {"FieryLife", FieryLife },
+                {"CharredLife", CharredLife },
+                {"LifeofDespair", LifeofDespair },
+                {"LifeoftheInfection", LifeoftheInfection },
+                {"CrystallineLife", CrystallineLife },
+                {"Pyralife", Pyralife },
+                {"Lifethema", Lifethema },
+                {"MoltenLife", MoltenLife },
+                {"AnDioLife", AnDioLife },
+                {"EtheriaLife", EtheriaLife },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -1092,10 +1162,6 @@ namespace ElementalHearts
             DemonHeartMK2Life = tag.GetInt("DemonHeartMK2Life");
             MechanicalLife = tag.GetInt("MechanicalLife");
 
-            //Dev Hearts
-            HeartOfCAT = tag.GetInt("HeartOfCAT");
-            CrystalLite = tag.GetInt("CrystalLite");
-
             //Thorium Mod
             AquaiteLife = tag.GetInt("AquaiteLife");
             BrackishClumpLife = tag.GetInt("BrackishClumpLife");
@@ -1205,91 +1271,45 @@ namespace ElementalHearts
             AbomLife = tag.GetInt("AbomLife");
             MutantLife = tag.GetInt("MutantLife");
 
+            //Stuff from the ElementalHeartsPlayer2//
+
+            CursedFlameLife = tag.GetInt("CursedFlameLife");
+            IchorLife = tag.GetInt("IchorLife");
+            VoiditeLife = tag.GetInt("VoiditeLife");
+
+            SoulofFraughtLife = tag.GetInt("SoulofFraughtLife");
+            SoulofThoughtLife = tag.GetInt("SoulofThoughtLife");
+            SoulofWroughtLife = tag.GetInt("SoulofWroughtLife");
+
+            //Boss Hearts
+            EasterLife = tag.GetInt("EasterLife");
+            LifeoPlenty = tag.GetInt("LifeoPlenty");
+            CursedLife = tag.GetInt("CursedLife");
+            VenomLife = tag.GetInt("VenomLife");
+            InfernoLife = tag.GetInt("InfernoLife");
+            ScourgeLife = tag.GetInt("ScourgeLife");
+            LifeofHope = tag.GetInt("LifeofHope");
+            LifeoftheFrost = tag.GetInt("LifeoftheFrost");
+            SacredLife = tag.GetInt("SacredLife");
+            AqueousLife = tag.GetInt("AqueousLife");
+            DrakonianLife = tag.GetInt("DrakonianLife");
+            FieryLife = tag.GetInt("FieryLife");
+            CharredLife = tag.GetInt("CharredLife");
+            LifeofDespair = tag.GetInt("LifeofDespair");
+            LifeoftheInfection = tag.GetInt("LifeoftheInfection");
+            CrystallineLife = tag.GetInt("CrystallineLife");
+            Pyralife = tag.GetInt("Pyralife");
+            Lifethema = tag.GetInt("Lifethema");
+            MoltenLife = tag.GetInt("MoltenLife");
+            AnDioLife = tag.GetInt("AnDioLife");
+            EtheriaLife = tag.GetInt("EtheriaLife");
+
             nonStopParty = tag.GetBool("nonStopParty");
         }
 
         public override void LoadLegacy(BinaryReader reader)
         {
             reader.ReadInt32();
-        }
-
-        public override void ProcessTriggers(TriggersSet triggersSet)
-        {
-            if (ElementalHearts.OpenHeartUI.JustPressed)
-            {
-                if (GetInstance<ElementalHearts>().HeartUIOpen)
-                {
-                    Main.NewText("Closed Heart UI", Color.Red);
-                    GetInstance<ElementalHearts>().HideMyUI();
-                }
-                else
-                {
-                    Main.NewText("Opened Heart UI", Color.Red);
-                    GetInstance<ElementalHearts>().ShowMyUI();
-                }
-            }
-            base.ProcessTriggers(triggersSet);
-        }
-
-        public override void UpdateBiomes()
-        {
-            ZoneLifeCrystalCave = ElementalHeartsWorld.lifeCrystalTiles > 50;
-        }
-
-        public override bool CustomBiomesMatch(Player other)
-        {
-            ElementalHeartsPlayer modOther = other.GetModPlayer<ElementalHeartsPlayer>();
-            return ZoneLifeCrystalCave == modOther.ZoneLifeCrystalCave;
-            // If you have several Zones, you might find the &= operator or other logic operators useful:
-            // bool allMatch = true;
-            // allMatch &= ZoneExample == modOther.ZoneExample;
-            // allMatch &= ZoneModel == modOther.ZoneModel;
-            // return allMatch;
-            // Here is an example just using && chained together in one statemeny 
-            // return ZoneExample == modOther.ZoneExample && ZoneModel == modOther.ZoneModel;
-        }
-
-        public override void CopyCustomBiomesTo(Player other)
-        {
-            ElementalHeartsPlayer modOther = other.GetModPlayer<ElementalHeartsPlayer>();
-            modOther.ZoneLifeCrystalCave = ZoneLifeCrystalCave;
-        }
-
-        public override void SendCustomBiomes(BinaryWriter writer)
-        {
-            BitsByte flags = new BitsByte();
-            flags[0] = ZoneLifeCrystalCave;
-            writer.Write(flags);
-        }
-
-        public override void ReceiveCustomBiomes(BinaryReader reader)
-        {
-            BitsByte flags = reader.ReadByte();
-            ZoneLifeCrystalCave = flags[0];
-        }
-
-        //We need map background for our mini-biome? i dont sure so ehhhhh
-        /*public override Texture2D GetMapBackgroundImage()
-        {
-            if (ZoneExample)
-            {
-                return mod.GetTexture("ExampleBiomeMapBackground");
-            }
-            return null;
-        }*/
-
-        public override void ModifyHitByNPC(NPC npc, ref int damage, ref bool crit)
-        {
-            //Player target = player;
-            if (lifeArmour && player.name == "Lite")
-            {
-                if (Main.hardMode)
-                {
-                    damage = (int)(damage * 1.25f);
-                }
-                else { damage = (int)(damage * 1.5f); }
-            }
-            base.ModifyHitByNPC(npc, ref damage, ref crit);
         }
     }
 }

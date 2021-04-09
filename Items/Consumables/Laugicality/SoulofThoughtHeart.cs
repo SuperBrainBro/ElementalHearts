@@ -23,7 +23,7 @@ namespace ElementalHearts.Items.Consumables.Laugicality
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().SoulofThoughtLife <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().SoulofThoughtLife <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -35,7 +35,7 @@ namespace ElementalHearts.Items.Consumables.Laugicality
             {
                 player.HealEffect(5, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer2>().SoulofThoughtLife += 1;
+            player.GetModPlayer<ElementalHeartsPlayer>().SoulofThoughtLife += 1;
             return true;
         }
 

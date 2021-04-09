@@ -42,20 +42,6 @@ namespace ElementalHearts
             downedMenacingHeart = downed.Contains("menacingHeart");
         }
 
-        public override void LoadLegacy(BinaryReader reader)
-        {
-            int loadVersion = reader.ReadInt32();
-            if (loadVersion == 0)
-            {
-                BitsByte flags = reader.ReadByte();
-                downedMenacingHeart = flags[0];
-            }
-            else
-            {
-                mod.Logger.WarnFormat("ElementalHearts: Unknown loadVersion: {0}", loadVersion);
-            }
-        }
-
         public override void NetSend(BinaryWriter writer)
         {
             var flags = new BitsByte();

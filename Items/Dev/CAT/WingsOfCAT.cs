@@ -9,7 +9,7 @@ namespace ElementalHearts.Items.Dev.CAT
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wingsof");
+            DisplayName.SetDefault("Wings Of Cat");
             Tooltip.SetDefault("'Great for impersonating devs!'");
         }
 
@@ -19,8 +19,9 @@ namespace ElementalHearts.Items.Dev.CAT
             item.height = 20;
             item.rare = ItemRarityID.Cyan;
             item.accessory = true;
+            item.vanity = true;
         }
-        //these wings use the same values as the solar wings
+
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.wingTimeMax = 150;
