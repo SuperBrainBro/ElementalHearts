@@ -407,7 +407,7 @@ namespace ElementalHearts
             player.statLifeMax2 += AuricLife * 1;
             player.statLifeMax2 += BrimstoneSlagLife * 1;
             player.statLifeMax2 += CelestialRemainsLife * 1;
-            player.statLifeMax2 += CharredLife * 1;
+            player.statLifeMax2 += CharredLife * 15;
             player.statLifeMax2 += CinderplateLife * 1;
             player.statLifeMax2 += CryonicLife * 1;
             player.statLifeMax2 += EutrophicSandLife * 1;
@@ -506,7 +506,6 @@ namespace ElementalHearts
             player.statLifeMax2 += AqueousLife * 10;
             player.statLifeMax2 += DrakonianLife * 15;
             player.statLifeMax2 += FieryLife * 15;
-            player.statLifeMax2 += CharredLife * 15;
             player.statLifeMax2 += LifeofDespair * 15;
             player.statLifeMax2 += LifeoftheInfection * 15;
             player.statLifeMax2 += CrystallineLife * 15;
@@ -767,7 +766,6 @@ namespace ElementalHearts
             packet.Write(AqueousLife);
             packet.Write(DrakonianLife);
             packet.Write(FieryLife);
-            packet.Write(CharredLife);
             packet.Write(LifeofDespair);
             packet.Write(LifeoftheInfection);
             packet.Write(CrystallineLife);
@@ -1035,7 +1033,6 @@ namespace ElementalHearts
                 {"AqueousLife", AqueousLife },
                 {"DrakonianLife", DrakonianLife },
                 {"FieryLife", FieryLife },
-                {"CharredLife", CharredLife },
                 {"LifeofDespair", LifeofDespair },
                 {"LifeoftheInfection", LifeoftheInfection },
                 {"CrystallineLife", CrystallineLife },
@@ -1294,7 +1291,6 @@ namespace ElementalHearts
             AqueousLife = tag.GetInt("AqueousLife");
             DrakonianLife = tag.GetInt("DrakonianLife");
             FieryLife = tag.GetInt("FieryLife");
-            CharredLife = tag.GetInt("CharredLife");
             LifeofDespair = tag.GetInt("LifeofDespair");
             LifeoftheInfection = tag.GetInt("LifeoftheInfection");
             CrystallineLife = tag.GetInt("CrystallineLife");
@@ -1305,11 +1301,6 @@ namespace ElementalHearts
             EtheriaLife = tag.GetInt("EtheriaLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
-        }
-
-        public override void LoadLegacy(BinaryReader reader)
-        {
-            reader.ReadInt32();
         }
     }
 }
