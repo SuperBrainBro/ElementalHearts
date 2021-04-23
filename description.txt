@@ -6,11 +6,9 @@ This mod spreads with progression, so that you can never become too powerful.
 We have mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, and Consolaria. 
 We also have a list to see which hearts you have made / not! Change the key in the config!
 
-This mod (currently) adds:
-	 100+ consumable items.
-	 1 (Bullet Hell :)) boss.
-	 Multiple translations for many different languages such as Russian, German, Italian, French, Spanish, Simplified Chinese, Brazilian Portuguese and Polish.
+A wiki is in development.
 
+You can now buy digital collectables from this mod in the form of NFTs! Join the discord for more info (Mod Homepage).
 Github Repo: https://github.com/SuperBrainBro/ElementalHearts
 
 Mod By:
@@ -18,10 +16,13 @@ Vincent Jenei (Lite#4211)
 FOX (Starbreaker The Interstellar Fox#5356)
 
 We also have a discord server, so I will make the invite as the "homepage". Hop on in, chat, and even contibute to the mod.
-I also need some people to help make a wiki, that would be awesome!
+
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.7.30.3
+	Adjusted some recipes.
+	Adjusted the description.
 0.7.30.2
 	Fixed the bug where you wouldnt be able to create a character.
 0.7.30 (Spring Cleaning (Not the full rewrite, but as much cleaning as I can get in))
