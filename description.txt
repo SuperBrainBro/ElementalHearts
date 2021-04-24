@@ -12,8 +12,9 @@ You can now buy digital collectables from this mod in the form of NFTs! Join the
 Github Repo: https://github.com/SuperBrainBro/ElementalHearts
 
 Mod By:
-Vincent Jenei (Lite#4211)
-FOX (Starbreaker The Interstellar Fox#5356)
+Vincent Jenei (Lite#4249)
+Fox
+AppleInTheSky
 
 We also have a discord server, so I will make the invite as the "homepage". Hop on in, chat, and even contibute to the mod.
 
