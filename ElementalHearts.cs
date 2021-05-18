@@ -1,20 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ElementalHearts.Items.Accessories;
 using ElementalHearts.Items.Consumables;
 using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Consumables.Bosses.CrossMod;
+using ElementalHearts.Items.Weapons;
+using ElementalHearts.NPCs.Bosses.CrystalGuardian;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.GameContent.UI.Elements;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.UI;
 
 namespace ElementalHearts
 {
@@ -28,11 +28,16 @@ namespace ElementalHearts
                 bossChecklist.Call("AddBoss", 5.5f, ModContent.NPCType<MenacingHeart>(), this, "Menacing Heart", (Func<bool>)(() =>
                 ElementalHeartsWorld.downedMenacingHeart), ModContent.ItemType<MenacingLookingStatueItem>(), new List<int>() {
                     ModContent.ItemType<MenacingHeartTrophyItem>(), ModContent.ItemType<MHMb>() }, new List<int>() { ModContent.
-                    ItemType<MenacingHeartItem>(), ModContent.ItemType<Items.Accessories.MenacingLookingPendant>(), ModContent.
-                    ItemType<Items.Weapons.MenacingLifeStaff>(), ModContent.ItemType<Items.Weapons.MenacingHeartKeeper>(),
-                        ModContent.ItemType<Items.Weapons.MenacingLifeStaff>() },
+                    ItemType<MenacingHeartItem>(), ModContent.ItemType<MenacingLookingPendant>(), ModContent.
+                    ItemType<MenacingLifeStaff>(), ModContent.ItemType<MenacingHeartKeeper>(),
+                        ModContent.ItemType<MenacingLifeStaff>() },
                 "Find and activate a [i:" + ModContent.ItemType<MenacingLookingStatueItem>() + "]", "", "ElementalHearts/NPCs/" +
                 "Bosses/MenacingHeart/MenacingHeartClone");
+
+                bossChecklist.Call("AddBoss", 7f, ModContent.NPCType<CrystalGuardian>(), this, "The Crystal Guardian", (Func<bool>)
+                    (() => ElementalHeartsWorld.downedMenacingHeart), 0, new List<int>() { } /* Collections */,
+                    new List<int> { } /* Loot */, "Summon", "",
+                    "ElementalHearts/NPCs/Bosses/CrystalGuardian/CrystalGuardian_BossChecklist");
             }
             AddHeartsToBossChecklist();
         }
