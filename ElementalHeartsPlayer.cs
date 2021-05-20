@@ -107,6 +107,7 @@ namespace ElementalHearts
         public int CrystalLife;
         public int EctoplasmLife;
         public int ZenithLife;
+        public int TooLongForRealNameID;
 
         //Basic Ores
         public int CobaltLife;
@@ -373,6 +374,7 @@ namespace ElementalHearts
             player.statLifeMax2 += CrystalLife * 7;
             player.statLifeMax2 += EctoplasmLife * 8;
             player.statLifeMax2 += ZenithLife * 10;
+            player.statLifeMax2 += TooLongForRealNameID * 69;
 
             //Basic Ores
             player.statLifeMax2 += CobaltLife * 5;
@@ -646,6 +648,7 @@ namespace ElementalHearts
             packet.Write(CrystalLife);
             packet.Write(EctoplasmLife);
             packet.Write(ZenithLife);
+            packet.Write(TooLongForRealNameID);
 
             //Basic Ores
             packet.Write(CobaltLife);
@@ -924,6 +927,7 @@ namespace ElementalHearts
                 {"CrystalLife", CrystalLife},
                 { "EctoplasmLife", EctoplasmLife },
                 { "ZenithLife", ZenithLife },
+                { "TooLongForRealNameID", TooLongForRealNameID },
 
                 //Basic Ores
                 {"CobaltLife", CobaltLife},
@@ -1194,6 +1198,7 @@ namespace ElementalHearts
             CrystalLife = tag.GetInt("CrystalLife");
             EctoplasmLife = tag.GetInt("EctoplasmLife");
             ZenithLife = tag.GetInt("ZenithLife");
+            TooLongForRealNameID = tag.GetInt("TooLongForRealNameID");
 
             //Basic Ores
             CobaltLife = tag.GetInt("CobaltLife");

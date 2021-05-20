@@ -8,7 +8,6 @@ We also have a list to see which hearts you have made / not! Change the key in t
 
 A wiki is in development.
 
-You can now buy digital collectables from this mod in the form of NFTs! Join the discord for more info (Mod Homepage).
 Github Repo: https://github.com/SuperBrainBro/ElementalHearts
 
 Mod By:
@@ -21,6 +20,11 @@ We also have a discord server, so I will make the invite as the "homepage". Hop 
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.7.30.4
+	Added Zenith Heart.
+	Added all event boss hearts (vanilla only at the moment).
+	Added Enchanted Heart that obtainable from shrines.
+	Added Cloud and Sunplate Hearts craftable from Clouds either Sunplates.
 0.7.30.3
 	Adjusted some recipes.
 	Adjusted the description.
