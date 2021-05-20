@@ -32,7 +32,7 @@ namespace ElementalHearts.NPCs.Bosses.CrystalGuardian
             npc.boss = true;
             npc.netAlways = true;
             npc.timeLeft = 0;
-            npc.alpha = 255;
+            //npc.alpha = 255;
         }
 
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
@@ -70,6 +70,7 @@ namespace ElementalHearts.NPCs.Bosses.CrystalGuardian
         public static int blueColoredCorners = 0;
         public static int greenColoredCorners = 0;
         public static int yellowColoredCorners = 0;
+        public static int orangeColoredCorners = 0;
         public int changeCorners = -1;
         public static int changeCornersMax = 60 * 10;
         public override void AI()
@@ -77,8 +78,11 @@ namespace ElementalHearts.NPCs.Bosses.CrystalGuardian
             DoChangeColor();
 
             ShootBullets();
-            if (redColoredCorners > 0 && Main.rand.NextBool(16 / redColoredCorners))
+            if (orangeColoredCorners > 0 && Main.rand.NextBool(16 / orangeColoredCorners))
                 Projectile.NewProjectile(npc.position, npc.velocity, ModContent.ProjectileType<CrystalFire>(), npc.damage / 4, 0f);
+            if (blueColoredCorners > 0 && Main.rand.NextBool(6 / blueColoredCorners))
+                Projectile.NewProjectile(npc.position + new Vector2(Main.rand.Next(-800, 800), -720), npc.velocity,
+                    ModContent.ProjectileType<CrystalMana>(), npc.damage / 8, 0f);
             #region Corner Attacks
             if (colorLT == Color.Red)
             {
@@ -145,92 +149,122 @@ namespace ElementalHearts.NPCs.Bosses.CrystalGuardian
                 blueColoredCorners = 0;
                 greenColoredCorners = 0;
                 yellowColoredCorners = 0;
+                orangeColoredCorners = 0;
                 ChangeColors();
                 changeCorners = 0;
             }
         }
         private void ChangeColors()
         {
-            if (Main.rand.NextBool(4))
+            int doChangeColors = 5;
+            #region Left Top
+            if (Main.rand.NextBool(doChangeColors))
             {
                 colorLT = Color.Red;
                 redColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorLT = Color.Blue;
                 blueColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorLT = Color.Green;
                 greenColoredCorners += 1;
+            }
+            else if (Main.rand.NextBool(doChangeColors))
+            {
+                colorLT = Color.Orange;
+                orangeColoredCorners += 1;
             }
             else
             {
                 colorLT = Color.Yellow;
                 yellowColoredCorners += 1;
             }
-            if (Main.rand.NextBool(4))
+            #endregion
+            #region Left Bottom
+            if (Main.rand.NextBool(doChangeColors))
             {
                 colorLB = Color.Red;
                 redColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorLB = Color.Blue;
                 blueColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorLB = Color.Green;
                 greenColoredCorners += 1;
+            }
+            else if (Main.rand.NextBool(doChangeColors))
+            {
+                colorLB = Color.Orange;
+                orangeColoredCorners += 1;
             }
             else
             {
                 colorLB = Color.Yellow;
                 yellowColoredCorners += 1;
             }
-            if (Main.rand.NextBool(4))
+            #endregion
+            #region Right Top
+            if (Main.rand.NextBool(doChangeColors))
             {
                 colorRT = Color.Red;
                 redColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorRT = Color.Blue;
                 blueColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorRT = Color.Green;
                 greenColoredCorners += 1;
+            }
+            else if (Main.rand.NextBool(doChangeColors))
+            {
+                colorRT = Color.Orange;
+                orangeColoredCorners += 1;
             }
             else
             {
                 colorRT = Color.Yellow;
                 yellowColoredCorners += 1;
             }
-            if (Main.rand.NextBool(4))
+            #endregion
+            #region Right Bottom
+            if (Main.rand.NextBool(doChangeColors))
             {
                 colorRB = Color.Red;
                 redColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorRB = Color.Blue;
                 blueColoredCorners += 1;
             }
-            else if (Main.rand.NextBool(4))
+            else if (Main.rand.NextBool(doChangeColors))
             {
                 colorRB = Color.Green;
                 greenColoredCorners += 1;
+            }
+            else if (Main.rand.NextBool(doChangeColors))
+            {
+                colorRB = Color.Orange;
+                orangeColoredCorners += 1;
             }
             else
             {
                 colorRB = Color.Yellow;
                 yellowColoredCorners += 1;
             }
+            #endregion
         }
         private void ShootBullets()
         {
@@ -243,7 +277,8 @@ namespace ElementalHearts.NPCs.Bosses.CrystalGuardian
             Vector2 vector2_3 = Vector2.Multiply(vector2_2, 2.5f);
             for (int index = 0; index < yellowColoredCorners; ++index)
                 if (Main.rand.NextBool(32))
-                    Projectile.NewProjectile(center.X + Main.rand.NextFloat(-32f, 32f), center.Y + Main.rand.NextFloat(-32f, 32f),
+                    Projectile.NewProjectile(center.X + Main.rand.NextFloat(-25f * yellowColoredCorners, 25f * yellowColoredCorners),
+                        center.Y + Main.rand.NextFloat(-25f * yellowColoredCorners, 25f * yellowColoredCorners),
                         vector2_3.X, vector2_3.Y, ProjectileID.DeathLaser, npc.damage / 8, 0f, byte.MaxValue, 0.0f, 0.0f);
         }
 
@@ -256,7 +291,7 @@ namespace ElementalHearts.NPCs.Bosses.CrystalGuardian
             Vector2 vector2_1 = Vector2.Subtract(npc.Center, Main.screenPosition);
 
             spriteBatch.Draw(mod.GetTexture("NPCs/Bosses/CrystalGuardian/CrystalGuardian"),
-                            vector2_1 + new Vector2(-13, -13), new Rectangle?(npc.frame),
+                            vector2_1 + new Vector2(-13, -9), new Rectangle?(npc.frame),
                             drawColor, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);
             spriteBatch.Draw(textureCornerLT, vector2_1 + new Vector2(-45, -45), new Rectangle?(),
                             colorLT, 0, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);

@@ -118,6 +118,15 @@ namespace ElementalHearts
             AddLoot("Terraria", "DukeFishron", ModContent.ItemType<TruffleHeart>());
             AddLoot("Terraria", "CultistBoss", ModContent.ItemType<AncientHeart>());
             AddLoot("Terraria", "MoonLord", ModContent.ItemType<CelestialHeart>());
+
+            AddLoot("Terraria", "DD2Betsy", ModContent.ItemType<BetsysHeart>());
+            AddLoot("Terraria", "PirateShip", ModContent.ItemType<DutchmanHeart>());
+            AddLoot("Terraria", "Pumpking", ModContent.ItemType<HorsemansHeart>());
+            AddLoot("Terraria", "MourningWood", ModContent.ItemType<MorningHeart>());
+            AddLoot("Terraria", "Everscream", ModContent.ItemType<RazorpineHeart>());
+            AddLoot("Terraria", "SantaNK1", ModContent.ItemType<ElfHeart>());
+            AddLoot("Terraria", "IceQueen", ModContent.ItemType<BlizzardHeart>());
+            AddLoot("Terraria", "MartianSaucer", ModContent.ItemType<XenoHeart>());
             #endregion
 
             #region Calamity Mod

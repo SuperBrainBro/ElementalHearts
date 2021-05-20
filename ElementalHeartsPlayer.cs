@@ -23,6 +23,8 @@ namespace ElementalHearts
         public int MarbleLife;
         public int IceLife;
         public int ObsidianLife;
+        public int CloudLife;
+        public int SunplateLife;
 
         public int SandLife;
         public int EbonsandLife;
@@ -37,6 +39,7 @@ namespace ElementalHearts
         public int CoralstoneLife;
         public int CandyCaneLife;
         public int MushroomLife;
+        public int EnchantedLife;
 
         //Grown
         public int HayLife;
@@ -103,6 +106,7 @@ namespace ElementalHearts
         public int LesionLife;
         public int CrystalLife;
         public int EctoplasmLife;
+        public int ZenithLife;
 
         //Basic Ores
         public int CobaltLife;
@@ -263,6 +267,14 @@ namespace ElementalHearts
         public int MoltenLife;
         public int AnDioLife;
         public int EtheriaLife;
+        public int BetsysLife;
+        public int BlizzardLife;
+        public int DutchmanLife;
+        public int ElfLife;
+        public int HorsemansLife;
+        public int MourningLife;
+        public int RazorpineLife;
+        public int XenoLife;
 
         public override void ResetEffects()
         {
@@ -277,6 +289,8 @@ namespace ElementalHearts
             player.statLifeMax2 += MarbleLife * 1;
             player.statLifeMax2 += IceLife * 1;
             player.statLifeMax2 += ObsidianLife * 3;
+            player.statLifeMax2 += CloudLife * 1;
+            player.statLifeMax2 += SunplateLife * 1;
 
             player.statLifeMax2 += SandLife * 1;
             player.statLifeMax2 += EbonsandLife * 1;
@@ -291,6 +305,7 @@ namespace ElementalHearts
             player.statLifeMax2 += CoralstoneLife * 2;
             player.statLifeMax2 += CandyCaneLife * 2;
             player.statLifeMax2 += MushroomLife * 2;
+            player.statLifeMax2 += EnchantedLife * 3;
 
             //Grown
             player.statLifeMax2 += HayLife * 1;
@@ -357,6 +372,7 @@ namespace ElementalHearts
             player.statLifeMax2 += LesionLife * 5;
             player.statLifeMax2 += CrystalLife * 7;
             player.statLifeMax2 += EctoplasmLife * 8;
+            player.statLifeMax2 += ZenithLife * 10;
 
             //Basic Ores
             player.statLifeMax2 += CobaltLife * 5;
@@ -514,6 +530,14 @@ namespace ElementalHearts
             player.statLifeMax2 += MoltenLife * 5;
             player.statLifeMax2 += AnDioLife * 5;
             player.statLifeMax2 += EtheriaLife * 10;
+            player.statLifeMax2 += BetsysLife * 10;
+            player.statLifeMax2 += BlizzardLife * 10;
+            player.statLifeMax2 += DutchmanLife * 10;
+            player.statLifeMax2 += ElfLife * 10;
+            player.statLifeMax2 += HorsemansLife * 10;
+            player.statLifeMax2 += MourningLife * 10;
+            player.statLifeMax2 += RazorpineLife * 10;
+            player.statLifeMax2 += XenoLife * 10;
         }
 
         public override void clientClone(ModPlayer clientClone)
@@ -538,6 +562,8 @@ namespace ElementalHearts
             packet.Write(MarbleLife);
             packet.Write(IceLife);
             packet.Write(ObsidianLife);
+            packet.Write(CloudLife);
+            packet.Write(SunplateLife);
 
             packet.Write(SandLife);
             packet.Write(EbonsandLife);
@@ -552,6 +578,7 @@ namespace ElementalHearts
             packet.Write(CoralstoneLife);
             packet.Write(CandyCaneLife);
             packet.Write(MushroomLife);
+            packet.Write(EnchantedLife);
 
             //Grown
             packet.Write(HayLife);
@@ -618,6 +645,7 @@ namespace ElementalHearts
             packet.Write(LesionLife);
             packet.Write(CrystalLife);
             packet.Write(EctoplasmLife);
+            packet.Write(ZenithLife);
 
             //Basic Ores
             packet.Write(CobaltLife);
@@ -774,6 +802,14 @@ namespace ElementalHearts
             packet.Write(MoltenLife);
             packet.Write(AnDioLife);
             packet.Write(EtheriaLife);
+            packet.Write(BetsysLife);
+            packet.Write(BlizzardLife);
+            packet.Write(DutchmanLife);
+            packet.Write(ElfLife);
+            packet.Write(HorsemansLife);
+            packet.Write(MourningLife);
+            packet.Write(RazorpineLife);
+            packet.Write(XenoLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -805,6 +841,8 @@ namespace ElementalHearts
                 {"MarbleLife", MarbleLife},
                 {"IceLife", IceLife},
                 {"ObsidianLife", ObsidianLife},
+                {"CloudLife", CloudLife},
+                {"SunplateLife", SunplateLife},
                 {"SandLife", SandLife},
                 {"EbonsandLife", EbonsandLife},
                 {"CrimsandLife", CrimsandLife},
@@ -818,6 +856,7 @@ namespace ElementalHearts
                 {"CoralstoneLife", CoralstoneLife},
                 {"CandyCaneLife", CandyCaneLife},
                 {"MushroomLife", MushroomLife},
+                {"EnchantedLife", EnchantedLife },
 
                 //Grown
                 {"HayLife", HayLife},
@@ -884,6 +923,7 @@ namespace ElementalHearts
                 {"LesionLife", LesionLife},
                 {"CrystalLife", CrystalLife},
                 { "EctoplasmLife", EctoplasmLife },
+                { "ZenithLife", ZenithLife },
 
                 //Basic Ores
                 {"CobaltLife", CobaltLife},
@@ -1041,6 +1081,14 @@ namespace ElementalHearts
                 {"MoltenLife", MoltenLife },
                 {"AnDioLife", AnDioLife },
                 {"EtheriaLife", EtheriaLife },
+                {"BetsysLife", BetsysLife },
+                {"BlizzardLife", BlizzardLife },
+                {"DutchmanLife", DutchmanLife },
+                {"ElfLife", ElfLife },
+                {"HorsemansLife", HorsemansLife },
+                {"MourningLife", MourningLife },
+                {"RazorpineLife", RazorpineLife },
+                {"XenoLife", XenoLife },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -1062,6 +1110,8 @@ namespace ElementalHearts
             MarbleLife = tag.GetInt("MarbleLife");
             IceLife = tag.GetInt("IceLife");
             ObsidianLife = tag.GetInt("ObsidianLife");
+            CloudLife = tag.GetInt("CloudLife");
+            SunplateLife = tag.GetInt("SunplateLife");
 
             SandLife = tag.GetInt("SandLife");
             EbonsandLife = tag.GetInt("EbonsandLife");
@@ -1076,6 +1126,7 @@ namespace ElementalHearts
             CoralstoneLife = tag.GetInt("CoralstoneLife");
             CandyCaneLife = tag.GetInt("CandyCaneLife");
             MushroomLife = tag.GetInt("MushroomLife");
+            EnchantedLife = tag.GetInt("EnchantedLife");
 
             //Grown
             HayLife = tag.GetInt("HayLife");
@@ -1142,6 +1193,7 @@ namespace ElementalHearts
             LesionLife = tag.GetInt("LesionLife");
             CrystalLife = tag.GetInt("CrystalLife");
             EctoplasmLife = tag.GetInt("EctoplasmLife");
+            ZenithLife = tag.GetInt("ZenithLife");
 
             //Basic Ores
             CobaltLife = tag.GetInt("CobaltLife");
@@ -1299,6 +1351,14 @@ namespace ElementalHearts
             MoltenLife = tag.GetInt("MoltenLife");
             AnDioLife = tag.GetInt("AnDioLife");
             EtheriaLife = tag.GetInt("EtheriaLife");
+            BetsysLife = tag.GetInt("BetsysLife");
+            BlizzardLife = tag.GetInt("BlizzardLife");
+            DutchmanLife = tag.GetInt("DutchmanLife");
+            ElfLife = tag.GetInt("ElfLife");
+            HorsemansLife = tag.GetInt("HorsemansLife");
+            MourningLife = tag.GetInt("MourningLife");
+            RazorpineLife = tag.GetInt("RazorpineLife");
+            XenoLife = tag.GetInt("XenoLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }
