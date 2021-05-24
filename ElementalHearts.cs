@@ -33,11 +33,6 @@ namespace ElementalHearts
                         ModContent.ItemType<MenacingLifeStaff>() },
                 "Find and activate a [i:" + ModContent.ItemType<MenacingLookingStatueItem>() + "]", "", "ElementalHearts/NPCs/" +
                 "Bosses/MenacingHeart/MenacingHeartClone");
-
-                bossChecklist.Call("AddBoss", 7f, ModContent.NPCType<CrystalGuardian>(), this, "The Crystal Guardian", (Func<bool>)
-                    (() => ElementalHeartsWorld.downedMenacingHeart), 0, new List<int>() { } /* Collections */,
-                    new List<int> { } /* Loot */, "Summon", "",
-                    "ElementalHearts/NPCs/Bosses/CrystalGuardian/CrystalGuardian_BossChecklist");
             }
             AddHeartsToBossChecklist();
         }
