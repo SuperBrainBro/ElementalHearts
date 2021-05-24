@@ -36,7 +36,7 @@ namespace ElementalHearts.Items.LifeEquipment
 
             public override void UpdateArmorSet(Player player)
             {
-                player.setBonus = "Increases life regen.";
+                player.setBonus = "Increases life regen";
                 player.lifeRegen += 3;
                 base.UpdateArmorSet(player);
             }
@@ -112,7 +112,7 @@ namespace ElementalHearts.Items.LifeEquipment
 
             public override void SetStaticDefaults()
             {
-                DisplayName.SetDefault("Ancient Life Chainmail");
+                DisplayName.SetDefault("Ancient Life Greaves");
                 //Main.armorLegTexture[item.type] = GetTexture(Texture + "_Legs");
                 base.SetStaticDefaults();
             }

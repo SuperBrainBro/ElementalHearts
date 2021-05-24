@@ -15,6 +15,36 @@ namespace ElementalHearts
 
         public override void NPCLoot(NPC npc)
         {
+            #region Event Bosses
+            switch (npc.type) //Expert Drop of...
+            {
+                case NPCID.DD2Betsy: //Betsy
+                    Item.NewItem(npc.getRect(), ItemType<BetsysHeart>());
+                    break;
+                case NPCID.PirateShip: //Flying Dutchman
+                    Item.NewItem(npc.getRect(), ItemType<DutchmanHeart>());
+                    break;
+                case NPCID.MourningWood: //Mourning Wood
+                    Item.NewItem(npc.getRect(), ItemType<MorningHeart>());
+                    break;
+                case NPCID.Pumpking: //Pumpking
+                    Item.NewItem(npc.getRect(), ItemType<HorsemansHeart>());
+                    break;
+                case NPCID.Everscream: //Everscream
+                    Item.NewItem(npc.getRect(), ItemType<RazorpineHeart>());
+                    break;
+                case NPCID.SantaNK1: //Santa-NK1
+                    Item.NewItem(npc.getRect(), ItemType<ElfHeart>());
+                    break;
+                case NPCID.IceQueen: //Ice Queen
+                    Item.NewItem(npc.getRect(), ItemType<BlizzardHeart>());
+                    break;
+                case NPCID.MartianSaucer: //Martian Saucer
+                    Item.NewItem(npc.getRect(), ItemType<XenoHeart>());
+                    break;
+            }
+            #endregion
+
             #region Vanilla Bosses
             switch (npc.type) //Expert Drop of...
             {
@@ -31,7 +61,7 @@ namespace ElementalHearts
                 case NPCID.DD2DarkMageT3 when Main.expertMode:
                     if (npc.type == NPCID.DD2DarkMageT1)
                     {
-                        Item.NewItem(npc.getRect(), ItemType<Items.Consumables.Bosses.DarkHeart>());
+                        Item.NewItem(npc.getRect(), ItemType<DarkHeart>());
                     }
                     else { Item.NewItem(npc.getRect(), ItemType<DarkHeart2>()); }
                     break;
