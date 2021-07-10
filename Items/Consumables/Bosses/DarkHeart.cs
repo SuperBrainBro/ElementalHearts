@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses
 {
-    internal class DarkHeart : ModItem
+    internal class DarkHeart : ConsumableHeartItem
     {
         public override string Texture => "ElementalHearts/Items/Consumables/Bosses/DarkHeart";
 

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class ChlorophyteHeart : ModItem
+    internal class ChlorophyteHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

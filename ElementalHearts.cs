@@ -6,7 +6,6 @@ using ElementalHearts.Items.Consumables;
 using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Consumables.Bosses.CrossMod;
 using ElementalHearts.Items.Weapons;
-using ElementalHearts.NPCs.Bosses.CrystalGuardian;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
 using Microsoft.Xna.Framework.Graphics;
@@ -88,6 +87,7 @@ namespace ElementalHearts
         {
             Mod bossChecklist = ModLoader.GetMod("BossChecklist");
 
+            Mod aaMod = ModLoader.GetMod("AAMod");
             Mod calamity = ModLoader.GetMod("CalamityMod");
             Mod consolaria = ModLoader.GetMod("Consolaria");
             Mod elementsAwoken = ModLoader.GetMod("ElementsAwoken");
@@ -124,6 +124,32 @@ namespace ElementalHearts
             AddLoot("Terraria", "MartianSaucer", ModContent.ItemType<XenoHeart>());
             #endregion
 
+            /*#region Ancients Awakened
+            if (aaMod != null)
+            {
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("MushroomMonarch"), ModContent.ItemType<HeartyTrufflyHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("FeudalFungus"), ModContent.ItemType<GlowingTrufflyHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("GripsofChaos"), ModContent.ItemType<HeartofChaos>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("TruffleToad"), ModContent.ItemType<TruffleHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("Broodmother"), ModContent.ItemType<DragontamersHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("Hydra"), ModContent.ItemType<HydraHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("SubzeroSerpent"), ModContent.ItemType<ArcticHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("DesertDjinn"), ModContent.ItemType<SandstormHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("Sagittarius"), ModContent.ItemType<SagittariusHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("RajahRabbit"), ModContent.ItemType<RajahRabbitsHeartOfVengeance>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("ForsakenAnubis"), ModContent.ItemType<HeartOfGuilt>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("AthenaA"), ModContent.ItemType<GoddessHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("GreedA"), ModContent.ItemType<HeartofDespair>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("NightcrawlerDaybringer"), ModContent.ItemType<RadiantHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("NightcrawlerDaybringer"), ModContent.ItemType<DarkHeart3>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("SistersofDiscord"), ModContent.ItemType<HeartofSorrowAndPassion>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("Akuma"), ModContent.ItemType<SunHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("Yamata"), ModContent.ItemType<DarknessHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("ZeroP"), ModContent.ItemType<BrokenHeart>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("RajahRabbitRevenge"), ModContent.ItemType<RajahRabbitsHeartOfSupremecy>());
+                AddLoot(aaMod.Name, AAMod.Lang.BossCheck("ShenDoragon"), ModContent.ItemType<ChaosHeart>());
+            }
+            #endregion*/
             #region Calamity Mod
             if (calamity != null)
             {

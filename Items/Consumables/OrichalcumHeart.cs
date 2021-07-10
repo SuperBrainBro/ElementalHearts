@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class OrichalcumHeart : ModItem
+    internal class OrichalcumHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

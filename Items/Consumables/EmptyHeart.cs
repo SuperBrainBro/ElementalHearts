@@ -22,6 +22,7 @@ namespace ElementalHearts.Items.Consumables
         private void ClearHearts(Player player)
         {
             //Pre-Hardmode
+            player.GetModPlayer<ElementalHeartsPlayer>().Life = 0;
             //Basic
             player.GetModPlayer<ElementalHeartsPlayer>().DirtLife = 0;
             player.GetModPlayer<ElementalHeartsPlayer>().StoneLife = 0;

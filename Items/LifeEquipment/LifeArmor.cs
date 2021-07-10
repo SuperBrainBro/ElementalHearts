@@ -1,4 +1,3 @@
-using System;
 using ElementalHearts.Items.Tiles;
 using Terraria;
 using Terraria.ID;

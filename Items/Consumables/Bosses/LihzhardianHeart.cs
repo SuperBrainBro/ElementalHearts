@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses
 {
-    internal class LihzhardianHeart : ModItem
+    internal class LihzhardianHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

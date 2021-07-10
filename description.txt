@@ -3,7 +3,7 @@ Elemental Hearts is a mod which adds a ton of new consumable items which increas
 As with all of my mods, I prefer quality of quantity. This mod is a great addition to any modded playthrough, which adds a use for all of your leftover/extra blocks and ores.
 This mod spreads with progression, so that you can never become too powerful.
 
-We have mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, and Consolaria. 
+We have mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, Ancients Awakened, Confection Rebaked, and Consolaria. 
 We also have a list to see which hearts you have made / not! Change the key in the config!
 
 A wiki is in development.
@@ -21,10 +21,13 @@ Bottom line is, I need feedback. Please join the discord to help out with this m
 
 Change-Log:
 0.7.31
+	 Added several missing vanilla hearts.
+	 Added Confection Rebirth hearts support.
+	 Added Ancients Awakened hearts support.
 	 Upgraded the Menacing Heart AI
 	  + He now spawns minions that rotate around the player and eat up bullets.
 	  + Menacing Heart now slightly moves instead of standing still after teleporting.
-	 New summon weapon/accesory dropped by the Menacing Heart.
+	 New summon weapon dropped by the Menacing Heart.
 	  + Slowely spawns friendly versions of the Menacing Heart's minions. 
 	  + Their purpose is to protect the accesory, since it is a piece of life crystal broken off of the Menacing Heart.
 0.7.30.4

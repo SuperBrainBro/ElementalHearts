@@ -1,16 +1,12 @@
-using System.IO;
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.GameInput;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts
 {
     public class ElementalHeartsPlayer : ModPlayer
     {
         ////Life Crystals////
+        public int Life;
 
         //Pre-Hardmode//
 
@@ -108,6 +104,7 @@ namespace ElementalHearts
         public int EctoplasmLife;
         public int ZenithLife;
         public int TooLongForRealNameID;
+        public int LifeofDiscord;
 
         //Basic Ores
         public int CobaltLife;
@@ -242,10 +239,50 @@ namespace ElementalHearts
         public int CursedFlameLife;
         public int IchorLife;
         public int VoiditeLife;
-
         public int SoulofFraughtLife;
         public int SoulofThoughtLife;
         public int SoulofWroughtLife;
+        public int AbyssiumLife;
+        public int BogwoodLife;
+        public int ChargedDoomstoneLife;
+        public int DarkmatterLife;
+        public int DaybreakIncinerriteLife;
+        public int DepthsandLife;
+        public int DepthsandstoneLife;
+        public int DepthstoneLife;
+        public int DoomstoneLife;
+        public int EventideAbyssiumLife;
+        public int HallowedLife;
+        public int HardenedDepthsandLife;
+        public int HardenedTorchsandLife;
+        public int IncineriteLife;
+        public int IndigoIceLife;
+        public int OrangeIceLife;
+        public int OroborosWoodLife;
+        public int RadiumLife;
+        public int RazewoodLife;
+        public int TorchsandLife;
+        public int TorchsandstoneLife;
+        public int TorchstoneLife;
+        public int BlueFairyFlossLife;
+        public int BlueIceLife;
+        public int CookieLife;
+        public int CreamLife;
+        public int CreamsandLife;
+        public int CreamsandstoneLife;
+        public int CreamstoneLife;
+        public int CreamwoodLife;
+        public int HallowedLife2;
+        public int HardenedCreamsandLife;
+        public int NeapoliniteLife;
+        public int PinkFairyFlossLife;
+        public int PurpleFairyFlossLife;
+        public int SherbetLife;
+        public int RainCloudLife;
+        public int SnowCloudLife;
+        public int PinkIceLife;
+        public int PurpleIceLife;
+        public int RedIceLife;
 
         //Boss Hearts
         public int EasterLife;
@@ -276,9 +313,31 @@ namespace ElementalHearts
         public int MourningLife;
         public int RazorpineLife;
         public int XenoLife;
+        public int ArcticLife;
+        public int BrokenLife;
+        public int ChaosLife;
+        public int DarkLife;
+        public int DarknessLife;
+        public int DragontamersLife;
+        public int GlowingTrufflyLife;
+        public int GoddessLife;
+        public int LifeofChaos;
+        public int LifeOfDesire;
+        public int LifeOfGuilt;
+        public int LifeofSorrowAndPassion;
+        public int HeartyTrufflyLife;
+        public int HydraLife;
+        public int RadiantLife;
+        public int RajahRabbitsLifeOfSupremecy;
+        public int RajahRabbitsLifeOfVengeance;
+        public int SagittariusLife;
+        public int SandstormLife;
+        public int SunLife;
+        public int TruffleLife;
 
         public override void ResetEffects()
         {
+            player.statLifeMax2 += Life * 1;
             //Pre-Hardmode//
 
             //Basic
@@ -375,6 +434,7 @@ namespace ElementalHearts
             player.statLifeMax2 += EctoplasmLife * 8;
             player.statLifeMax2 += ZenithLife * 10;
             player.statLifeMax2 += TooLongForRealNameID * 69;
+            player.statLifeMax2 += LifeofDiscord * 6;
 
             //Basic Ores
             player.statLifeMax2 += CobaltLife * 5;
@@ -506,10 +566,50 @@ namespace ElementalHearts
             player.statLifeMax2 += CursedFlameLife * 5;
             player.statLifeMax2 += IchorLife * 5;
             player.statLifeMax2 += VoiditeLife * 1;
-
             player.statLifeMax2 += SoulofFraughtLife * 5;
             player.statLifeMax2 += SoulofThoughtLife * 5;
             player.statLifeMax2 += SoulofWroughtLife * 5;
+            player.statLifeMax2 += AbyssiumLife * 1;
+            player.statLifeMax2 += BogwoodLife * 1;
+            player.statLifeMax2 += ChargedDoomstoneLife * 1;
+            player.statLifeMax2 += DarkmatterLife * 1;
+            player.statLifeMax2 += DaybreakIncinerriteLife * 1;
+            player.statLifeMax2 += DepthsandLife * 1;
+            player.statLifeMax2 += DepthsandstoneLife * 1;
+            player.statLifeMax2 += DepthstoneLife * 1;
+            player.statLifeMax2 += DoomstoneLife * 1;
+            player.statLifeMax2 += EventideAbyssiumLife * 1;
+            player.statLifeMax2 += HallowedLife * 1;
+            player.statLifeMax2 += HardenedDepthsandLife * 1;
+            player.statLifeMax2 += HardenedTorchsandLife * 1;
+            player.statLifeMax2 += IncineriteLife * 1;
+            player.statLifeMax2 += IndigoIceLife * 1;
+            player.statLifeMax2 += OrangeIceLife * 1;
+            player.statLifeMax2 += OroborosWoodLife * 1;
+            player.statLifeMax2 += RadiumLife * 1;
+            player.statLifeMax2 += RazewoodLife * 1;
+            player.statLifeMax2 += TorchsandLife * 1;
+            player.statLifeMax2 += TorchsandstoneLife * 1;
+            player.statLifeMax2 += TorchstoneLife * 1;
+            player.statLifeMax2 += BlueFairyFlossLife * 5;
+            player.statLifeMax2 += BlueIceLife * 5;
+            player.statLifeMax2 += CookieLife * 5;
+            player.statLifeMax2 += CreamLife * 5;
+            player.statLifeMax2 += CreamsandLife * 5;
+            player.statLifeMax2 += CreamsandstoneLife * 5;
+            player.statLifeMax2 += CreamstoneLife * 5;
+            player.statLifeMax2 += CreamwoodLife * 5;
+            player.statLifeMax2 += HallowedLife2 * 5;
+            player.statLifeMax2 += HardenedCreamsandLife * 5;
+            player.statLifeMax2 += NeapoliniteLife * 5;
+            player.statLifeMax2 += PinkFairyFlossLife * 5;
+            player.statLifeMax2 += PurpleFairyFlossLife * 5;
+            player.statLifeMax2 += SherbetLife * 5;
+            player.statLifeMax2 += SnowCloudLife * 1;
+            player.statLifeMax2 += RainCloudLife * 1;
+            player.statLifeMax2 += PurpleIceLife * 1;
+            player.statLifeMax2 += PinkIceLife * 5;
+            player.statLifeMax2 += RedIceLife * 1;
 
             //Boss Hearts
             player.statLifeMax2 += EasterLife * 5;
@@ -540,6 +640,27 @@ namespace ElementalHearts
             player.statLifeMax2 += MourningLife * 10;
             player.statLifeMax2 += RazorpineLife * 10;
             player.statLifeMax2 += XenoLife * 10;
+            player.statLifeMax2 += ArcticLife * 5;
+            player.statLifeMax2 += BrokenLife * 15;
+            player.statLifeMax2 += ChaosLife * 20;
+            player.statLifeMax2 += DarkLife * 15;
+            player.statLifeMax2 += DarknessLife * 15;
+            player.statLifeMax2 += DragontamersLife * 5;
+            player.statLifeMax2 += GlowingTrufflyLife * 5;
+            player.statLifeMax2 += GoddessLife * 10;
+            player.statLifeMax2 += LifeofChaos * 5;
+            player.statLifeMax2 += LifeOfDesire * 10;
+            player.statLifeMax2 += LifeOfGuilt * 10;
+            player.statLifeMax2 += LifeofSorrowAndPassion * 15;
+            player.statLifeMax2 += HeartyTrufflyLife * 5;
+            player.statLifeMax2 += HydraLife * 5;
+            player.statLifeMax2 += RadiantLife * 15;
+            player.statLifeMax2 += RajahRabbitsLifeOfSupremecy * 15;
+            player.statLifeMax2 += RajahRabbitsLifeOfVengeance * 10;
+            player.statLifeMax2 += SagittariusLife * 5;
+            player.statLifeMax2 += SandstormLife * 5;
+            player.statLifeMax2 += SunLife * 15;
+            player.statLifeMax2 += TruffleLife * 5;
         }
 
         public override void clientClone(ModPlayer clientClone)
@@ -553,6 +674,7 @@ namespace ElementalHearts
             ModPacket packet = mod.GetPacket();
             packet.Write((byte)player.whoAmI);
 
+            packet.Write(Life);
             //Pre-Hardmode//
 
             //Basic
@@ -649,6 +771,7 @@ namespace ElementalHearts
             packet.Write(EctoplasmLife);
             packet.Write(ZenithLife);
             packet.Write(TooLongForRealNameID);
+            packet.Write(LifeofDiscord);
 
             //Basic Ores
             packet.Write(CobaltLife);
@@ -665,7 +788,7 @@ namespace ElementalHearts
             packet.Write(WormLife);
             packet.Write(DemonHeartMK2Life);
             packet.Write(MechanicalLife);
-            
+
             //Thorium Mod
             packet.Write(AquaiteLife);
             packet.Write(BrackishClumpLife);
@@ -779,10 +902,49 @@ namespace ElementalHearts
             packet.Write(CursedFlameLife);
             packet.Write(IchorLife);
             packet.Write(VoiditeLife);
-
             packet.Write(SoulofFraughtLife);
             packet.Write(SoulofThoughtLife);
             packet.Write(SoulofWroughtLife);
+            packet.Write(AbyssiumLife);
+            packet.Write(BogwoodLife);
+            packet.Write(ChargedDoomstoneLife);
+            packet.Write(DarkmatterLife);
+            packet.Write(DaybreakIncinerriteLife);
+            packet.Write(DepthsandLife);
+            packet.Write(DepthsandstoneLife);
+            packet.Write(DepthstoneLife);
+            packet.Write(EventideAbyssiumLife);
+            packet.Write(HallowedLife);
+            packet.Write(HardenedDepthsandLife);
+            packet.Write(HardenedTorchsandLife);
+            packet.Write(IncineriteLife);
+            packet.Write(IndigoIceLife);
+            packet.Write(OrangeIceLife);
+            packet.Write(OroborosWoodLife);
+            packet.Write(RadiumLife);
+            packet.Write(RazewoodLife);
+            packet.Write(TorchsandLife);
+            packet.Write(TorchsandstoneLife);
+            packet.Write(TorchstoneLife);
+            packet.Write(BlueFairyFlossLife);
+            packet.Write(BlueIceLife);
+            packet.Write(CookieLife);
+            packet.Write(CreamLife);
+            packet.Write(CreamsandLife);
+            packet.Write(CreamsandstoneLife);
+            packet.Write(CreamstoneLife);
+            packet.Write(CreamwoodLife);
+            packet.Write(HallowedLife2);
+            packet.Write(HardenedCreamsandLife);
+            packet.Write(NeapoliniteLife);
+            packet.Write(PinkFairyFlossLife);
+            packet.Write(PurpleFairyFlossLife);
+            packet.Write(SherbetLife);
+            packet.Write(SnowCloudLife);
+            packet.Write(RainCloudLife);
+            packet.Write(PinkIceLife);
+            packet.Write(PurpleIceLife);
+            packet.Write(RedIceLife);
 
             //Boss Hearts
             packet.Write(EasterLife);
@@ -813,6 +975,27 @@ namespace ElementalHearts
             packet.Write(MourningLife);
             packet.Write(RazorpineLife);
             packet.Write(XenoLife);
+            packet.Write(ArcticLife);
+            packet.Write(BrokenLife);
+            packet.Write(ChaosLife);
+            packet.Write(DarkLife);
+            packet.Write(DarknessLife);
+            packet.Write(DragontamersLife);
+            packet.Write(GlowingTrufflyLife);
+            packet.Write(GoddessLife);
+            packet.Write(LifeofChaos);
+            packet.Write(LifeOfDesire);
+            packet.Write(LifeOfGuilt);
+            packet.Write(LifeofSorrowAndPassion);
+            packet.Write(HeartyTrufflyLife);
+            packet.Write(HydraLife);
+            packet.Write(RadiantLife);
+            packet.Write(RajahRabbitsLifeOfSupremecy);
+            packet.Write(RajahRabbitsLifeOfVengeance);
+            packet.Write(SagittariusLife);
+            packet.Write(SandstormLife);
+            packet.Write(SunLife);
+            packet.Write(TruffleLife);
 
             packet.Write(nonStopParty);
             packet.Send(toWho, fromWho);
@@ -833,6 +1016,7 @@ namespace ElementalHearts
         {
             return new TagCompound {
 
+                {"Life", Life },
                 //Pre-Hardmode//
 
                 //Basic
@@ -928,6 +1112,7 @@ namespace ElementalHearts
                 { "EctoplasmLife", EctoplasmLife },
                 { "ZenithLife", ZenithLife },
                 { "TooLongForRealNameID", TooLongForRealNameID },
+                {"LifeofDiscord", LifeofDiscord },
 
                 //Basic Ores
                 {"CobaltLife", CobaltLife},
@@ -1059,10 +1244,48 @@ namespace ElementalHearts
                 {"CursedFlameLife", CursedFlameLife },
                 {"IchorLife", IchorLife },
                 {"VoiditeLife", VoiditeLife },
-
                 {"SoulofFraughtLife", SoulofFraughtLife },
                 {"SoulofThoughtLife", SoulofThoughtLife },
                 {"SoulofWroughtLife", SoulofWroughtLife },
+                {"AbyssiumLife", AbyssiumLife },
+                {"BogwoodLife", BogwoodLife },
+                {"ChargedDoomstoneLife", ChargedDoomstoneLife },
+                {"DarkmatterLife", DarkmatterLife },
+                {"DaybreakIncineriteLife", DaybreakIncinerriteLife },
+                {"DepthsandLife", DepthsandLife },
+                {"DepthsandstoneLife", DepthsandstoneLife },
+                {"DepthstoneLife", DepthstoneLife },
+                {"DoomstoneLife", DoomstoneLife },
+                {"EventideAbyssiumLife", EventideAbyssiumLife },
+                {"HallowedLife", HallowedLife },
+                {"HardenedDepthsandLife", HardenedDepthsandLife },
+                {"HardenedTorchsandLife", HardenedTorchsandLife },
+                {"IncineriteLife", IncineriteLife },
+                {"IndigoIceLife", IndigoIceLife },
+                {"OrangeIceLife", OrangeIceLife },
+                {"OroborosWoodLife", OroborosWoodLife },
+                {"RadiumLife", RadiumLife },
+                {"RazewoodLife", RazewoodLife },
+                {"TorchsandLife", TorchsandLife },
+                {"TorchsandstoneLife", TorchsandstoneLife },
+                {"TorchstoneLife", TorchstoneLife },
+                {"BlueFairyFlossLife", BlueFairyFlossLife },
+                {"BlueIceLife", BlueIceLife },
+                {"CookieLife", CookieLife },
+                {"CreamLife", CreamLife },
+                {"CreamsandLife", CreamsandLife },
+                {"CreamsandstoneLife", CreamsandstoneLife },
+                {"CreamstoneLife", CreamstoneLife },
+                {"HallowedLife2", HallowedLife2 },
+                {"HardenedCreamsandLife", HardenedCreamsandLife },
+                {"NeapoliniteLife", NeapoliniteLife },
+                {"PurpleFairyFlossLife", PurpleFairyFlossLife },
+                {"SherbetLife", SherbetLife },
+                {"SnowCloudLife", SnowCloudLife },
+                {"RainCloudLife", RainCloudLife },
+                {"RedIceLife", RedIceLife },
+                {"PurpleIceLife", PurpleIceLife },
+                {"PinkIceLife", PinkIceLife },
 
                 //Boss Hearts
                 {"EasterLife", EasterLife},
@@ -1093,6 +1316,27 @@ namespace ElementalHearts
                 {"MourningLife", MourningLife },
                 {"RazorpineLife", RazorpineLife },
                 {"XenoLife", XenoLife },
+                {"ArcticLife", ArcticLife },
+                {"BrokenLife", BrokenLife },
+                {"ChaosLife", ChaosLife },
+                {"DarkLife", DarkLife },
+                {"DarknessLife", DarknessLife },
+                {"DragontamersLife", DragontamersLife },
+                {"GlowingTrufflyLife", GlowingTrufflyLife },
+                {"GoddessLife", GoddessLife },
+                {"LifeofChaos", LifeofChaos },
+                {"LifeOfDesire", LifeOfDesire },
+                {"LifeOfGuilt", LifeOfGuilt },
+                {"LifeofSorrowAndPassion", LifeofSorrowAndPassion },
+                {"HeartyTrufflyLife", HeartyTrufflyLife },
+                {"HydraLife", HydraLife },
+                {"RadiantLife", RadiantLife },
+                {"RajahRabbitsLifeOfSupremecy", RajahRabbitsLifeOfSupremecy },
+                {"RajahRabbitsLifeOfVengeance", RajahRabbitsLifeOfVengeance },
+                {"SagittariusLife", SagittariusLife },
+                {"SandstormLife", SandstormLife },
+                {"SunLife", SunLife },
+                {"TruffleLife", TruffleLife },
 
                 //Other
                 { "nonStopParty", nonStopParty},
@@ -1102,6 +1346,7 @@ namespace ElementalHearts
         public override void Load(TagCompound tag)
         {
             ////Life Crystals////
+            Life = tag.GetInt("Life");
 
             //Pre-Hardmode//
 
@@ -1199,6 +1444,7 @@ namespace ElementalHearts
             EctoplasmLife = tag.GetInt("EctoplasmLife");
             ZenithLife = tag.GetInt("ZenithLife");
             TooLongForRealNameID = tag.GetInt("TooLongForRealNameID");
+            LifeofDiscord = tag.GetInt("LifeofDiscord");
 
             //Basic Ores
             CobaltLife = tag.GetInt("CobaltLife");
@@ -1330,10 +1576,50 @@ namespace ElementalHearts
             CursedFlameLife = tag.GetInt("CursedFlameLife");
             IchorLife = tag.GetInt("IchorLife");
             VoiditeLife = tag.GetInt("VoiditeLife");
-
             SoulofFraughtLife = tag.GetInt("SoulofFraughtLife");
             SoulofThoughtLife = tag.GetInt("SoulofThoughtLife");
             SoulofWroughtLife = tag.GetInt("SoulofWroughtLife");
+            AbyssiumLife = tag.GetInt("AbyssiumLife");
+            BogwoodLife = tag.GetInt("BogwoodLife");
+            ChargedDoomstoneLife = tag.GetInt("ChargedDoomstoneLife");
+            DarkmatterLife = tag.GetInt("DarkmatterLife");
+            DaybreakIncinerriteLife = tag.GetInt("DaybreakIncineriteLife");
+            DepthsandLife = tag.GetInt("DepthsandLife");
+            DepthsandstoneLife = tag.GetInt("DepthsandstoneLife");
+            DepthstoneLife = tag.GetInt("DepthstoneLife");
+            DoomstoneLife = tag.GetInt("DoomstoneLife");
+            EventideAbyssiumLife = tag.GetInt("EventideAbyssiumLife");
+            HallowedLife = tag.GetInt("HallowedLife");
+            HardenedDepthsandLife = tag.GetInt("HardenedDepthsandLife");
+            HardenedTorchsandLife = tag.GetInt("HardenedTorchsandLife");
+            IncineriteLife = tag.GetInt("IncineriteLife");
+            IndigoIceLife = tag.GetInt("IndigoIceLife");
+            OrangeIceLife = tag.GetInt("OrangeIceLife");
+            OroborosWoodLife = tag.GetInt("OroborosWoodLife");
+            RadiumLife = tag.GetInt("RadiumLife");
+            RazewoodLife = tag.GetInt("RazewoodLife");
+            TorchsandLife = tag.GetInt("TorchsandLife");
+            TorchsandstoneLife = tag.GetInt("TorchsandstoneLife");
+            TorchstoneLife = tag.GetInt("TorchstoneLife");
+            BlueFairyFlossLife = tag.GetInt("BlueFairyFlossLife");
+            BlueIceLife = tag.GetInt("BlueIceLife");
+            CookieLife = tag.GetInt("CookieLife");
+            CreamLife = tag.GetInt("CreamLife");
+            CreamsandLife = tag.GetInt("CreamsandLife");
+            CreamsandstoneLife = tag.GetInt("CreamsandstoneLife");
+            CreamstoneLife = tag.GetInt("CreamstoneLife");
+            CreamwoodLife = tag.GetInt("CreamwoodLife");
+            HallowedLife2 = tag.GetInt("HallowedLife2");
+            HardenedCreamsandLife = tag.GetInt("HardenedCreamsandLife");
+            NeapoliniteLife = tag.GetInt("NeapoliniteLife");
+            PinkFairyFlossLife = tag.GetInt("PinkFairyFlossLife");
+            PurpleFairyFlossLife = tag.GetInt("PurpleFairyFlossLife");
+            SherbetLife = tag.GetInt("SherbetLife");
+            SnowCloudLife = tag.GetInt("SnowCloudLife");
+            RainCloudLife = tag.GetInt("RainCloudLife");
+            PinkIceLife = tag.GetInt("PinkIceLife");
+            PurpleIceLife = tag.GetInt("PurpleIceLife");
+            RedIceLife = tag.GetInt("RedIceLife");
 
             //Boss Hearts
             EasterLife = tag.GetInt("EasterLife");
@@ -1364,6 +1650,27 @@ namespace ElementalHearts
             MourningLife = tag.GetInt("MourningLife");
             RazorpineLife = tag.GetInt("RazorpineLife");
             XenoLife = tag.GetInt("XenoLife");
+            ArcticLife = tag.GetInt("ArcticLife");
+            BrokenLife = tag.GetInt("BrokenLife");
+            ChaosLife = tag.GetInt("ChaosLife");
+            DarkLife = tag.GetInt("DarkLife");
+            DarknessLife = tag.GetInt("DarknessLife");
+            DragontamersLife = tag.GetInt("DragontamersLife");
+            GlowingTrufflyLife = tag.GetInt("GlowingTrufflyLife");
+            GoddessLife = tag.GetInt("GoddessLife");
+            LifeofChaos = tag.GetInt("LifeofChaos");
+            LifeOfDesire = tag.GetInt("LifeOfDesire");
+            LifeOfGuilt = tag.GetInt("LifeOfGuilt");
+            LifeofSorrowAndPassion = tag.GetInt("LifeofSorrowAndPassion");
+            HeartyTrufflyLife = tag.GetInt("HeartyTrufflyLife");
+            HydraLife = tag.GetInt("HydraLife");
+            RadiantLife = tag.GetInt("RadiantLife");
+            RajahRabbitsLifeOfSupremecy = tag.GetInt("RajahRabbitsLifeOfSupremecy");
+            RajahRabbitsLifeOfVengeance = tag.GetInt("RajahRabbitsLifeOfVengeance");
+            SagittariusLife = tag.GetInt("SagittariusLife");
+            SandstormLife = tag.GetInt("SandstormLife");
+            SunLife = tag.GetInt("SunLife");
+            TruffleLife = tag.GetInt("TruffleLife");
 
             nonStopParty = tag.GetBool("nonStopParty");
         }

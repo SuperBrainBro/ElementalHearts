@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class RichMahoganyHeart : ModItem
+    internal class RichMahoganyHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

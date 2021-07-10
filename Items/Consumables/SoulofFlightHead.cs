@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class SoulofFlightHeart : ModItem
+    internal class SoulofFlightHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using ElementalHearts.Items.Tiles;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.GameContent.Generation;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.World.Generation;
-using ElementalHearts.Items.Tiles;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Tiles

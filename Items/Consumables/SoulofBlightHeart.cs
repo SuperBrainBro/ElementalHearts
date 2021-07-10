@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class SoulofBlightHeart : ModItem
+    internal class SoulofBlightHeart : ConsolariaCrossModItem
     {
         private Mod mod2 = ModLoader.GetMod("Consolaria");
         public override void SetStaticDefaults()

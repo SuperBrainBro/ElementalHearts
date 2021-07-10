@@ -1,6 +1,4 @@
-﻿using System;
-using ElementalHearts.Items.Tiles;
-using Terraria;
+﻿using ElementalHearts.Items.Tiles;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;

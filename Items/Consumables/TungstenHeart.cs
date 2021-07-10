@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class TungstenHeart : ModItem
+    internal class TungstenHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

@@ -5,7 +5,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class MechanicalHeart : ModItem
+    internal class MechanicalHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

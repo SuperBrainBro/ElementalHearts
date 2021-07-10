@@ -46,7 +46,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public float tpPosRand2;
         public float tpPosRand3;
         public float tpPosRand4;
-        
+
         public Vector2 moveDirectionVelocity;
 
         //Shockwaves
@@ -77,11 +77,12 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.boss = true;
             npc.netAlways = true;
             npc.timeLeft = 0;
-            
+
             if (Main.expertMode)
             {
                 bossPhaseHealth = (npc.lifeMax * 2) / 4;
-            } else if (!Main.expertMode)
+            }
+            else if (!Main.expertMode)
             {
                 bossPhaseHealth = npc.lifeMax / 4;
             }
@@ -199,14 +200,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             moveDirectionVelocity += new Vector2(Main.rand.NextFloat(-.25f, -.5f), Main.rand.NextFloat(-.25f, -.5f));
             moveDirectionVelocity *= Main.rand.NextFloat(2f, 4f);
 
-            if(Math.Abs((int)moveDirectionVelocity.LengthSquared()) <= 6)
+            if (Math.Abs((int)moveDirectionVelocity.LengthSquared()) <= 6)
             {
                 if (Main.rand.Next(4) > 0)
                 {
                     SpawnMinions();
                 }
                 else
-                { 
+                {
                     moveDirectionVelocity *= Main.rand.NextFloat(2f, 4f);
                 }
             }
