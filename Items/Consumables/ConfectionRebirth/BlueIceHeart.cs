@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ElementalHearts.Items.Consumables
+namespace ElementalHearts.Items.Consumables.ConfectionRebirth
 {
     internal class BlueIceHeart : ConfectionCrossModItem
     {
