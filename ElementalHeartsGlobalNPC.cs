@@ -3,7 +3,6 @@ using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Consumables.Bosses.CrossMod;
 using ElementalHearts.Items.Consumables.Special;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
-using ElementalHearts.NPCs.Bosses.RewardSpirit;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -32,8 +31,7 @@ namespace ElementalHearts
                 player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount += 1;
                 if (player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount == 1000)
                 {
-                    player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount = 999;
-                    //NPC.NewNPC((int)npc.position.X, (int)npc.position.Y, NPCType<RSpiritPre>());
+                    Item.NewItem(npc.getRect(), ItemType<HeartofSlaughter>());
                 }
             }
 
