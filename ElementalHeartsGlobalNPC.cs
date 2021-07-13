@@ -29,10 +29,11 @@ namespace ElementalHearts
             }
             if (npc.boss)
             {
-                player.GetModPlayer<ElementalHeartsPlayerSpecial>().ChangeBossDownedAmount(1, 1);
-                if (player.GetModPlayer<ElementalHeartsPlayerSpecial>().GetBossDownedAmount() == 1000)
+                player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount += 1;
+                if (player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount == 1000)
                 {
-                    NPC.NewNPC((int)npc.position.X, (int)npc.position.Y, NPCType<RSpiritPre>());
+                    player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount = 999;
+                    //NPC.NewNPC((int)npc.position.X, (int)npc.position.Y, NPCType<RSpiritPre>());
                 }
             }
 

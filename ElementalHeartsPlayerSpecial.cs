@@ -8,22 +8,6 @@ namespace ElementalHearts
         public int LifeofSlaughter;
         public int bossesDownedAmount = 0;
         public bool heartCatched = false;
-        public int GetBossDownedAmount()
-        {
-            return bossesDownedAmount;
-        }
-        public int ChangeBossDownedAmount(int func1, int func2)
-        {
-            if (func1 == 1)
-            {
-                bossesDownedAmount += func2;
-            }
-            else
-            {
-                bossesDownedAmount -= func2;
-            }
-            return bossesDownedAmount;
-        }
 
         public bool nonStopParty;
 

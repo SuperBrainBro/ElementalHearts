@@ -283,6 +283,8 @@ namespace ElementalHearts
         public int PinkIceLife;
         public int PurpleIceLife;
         public int RedIceLife;
+        public int SacchariteLife;
+        public int SoulofDelightLife;
 
         //Boss Hearts
         public int EasterLife;
@@ -610,6 +612,8 @@ namespace ElementalHearts
             player.statLifeMax2 += PurpleIceLife * 1;
             player.statLifeMax2 += PinkIceLife * 5;
             player.statLifeMax2 += RedIceLife * 1;
+            player.statLifeMax2 += SacchariteLife * 7;
+            player.statLifeMax2 += SoulofDelightLife * 4;
 
             //Boss Hearts
             player.statLifeMax2 += EasterLife * 5;
@@ -945,6 +949,8 @@ namespace ElementalHearts
             packet.Write(PinkIceLife);
             packet.Write(PurpleIceLife);
             packet.Write(RedIceLife);
+            packet.Write(SacchariteLife);
+            packet.Write(SoulofDelightLife);
 
             //Boss Hearts
             packet.Write(EasterLife);
@@ -1286,6 +1292,8 @@ namespace ElementalHearts
                 {"RedIceLife", RedIceLife },
                 {"PurpleIceLife", PurpleIceLife },
                 {"PinkIceLife", PinkIceLife },
+                {"SacchariteLife", SacchariteLife },
+                {"SoulofDelightLife", SoulofDelightLife },
 
                 //Boss Hearts
                 {"EasterLife", EasterLife},
@@ -1620,6 +1628,8 @@ namespace ElementalHearts
             PinkIceLife = tag.GetInt("PinkIceLife");
             PurpleIceLife = tag.GetInt("PurpleIceLife");
             RedIceLife = tag.GetInt("RedIceLife");
+            SacchariteLife = tag.GetInt("SacchariteLife");
+            SoulofDelightLife = tag.GetInt("SoulofDelightLife");
 
             //Boss Hearts
             EasterLife = tag.GetInt("EasterLife");

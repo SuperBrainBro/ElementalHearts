@@ -29,10 +29,10 @@ Change-Log:
 	  + Slowely spawns friendly versions of the Menacing Heart's minions. 
 	  + Their purpose is to protect the accesory, since it is a piece of life crystal broken off of the Menacing Heart.
 0.7.30.4
-	Added Zenith Heart.
-	Added all event boss hearts (vanilla only at the moment).
-	Added Enchanted Heart that obtainable from shrines.
-	Added Cloud and Sunplate Hearts craftable from Clouds either Sunplates.
+	 Added Zenith Heart.
+	 Added all event boss hearts (vanilla only at the moment).
+	 Added Enchanted Heart that obtainable from shrines.
+	 Added Cloud and Sunplate Hearts craftable from Clouds either Sunplates.
 0.7.30.3
 	 Adjusted some recipes.
 	 Adjusted the description.
