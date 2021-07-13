@@ -1,5 +1,5 @@
-displayName = Elemental Hearts
-author = FoxXD_ (original author: Lite)
+displayName = Lite's Elemental Hearts
+author = Vincent Jenei (Lite#4249)
 version = 0.7.31
 homepage = https://discord.gg/TD8EMB8
 buildIgnore = *.csproj, *.sln, *.user, *.md, obj\*, Guides\*, bin\*, .vs\*, .git\*, .gitignore

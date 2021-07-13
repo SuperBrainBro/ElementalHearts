@@ -27,6 +27,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.knockBackResist = 0f;
             npc.noGravity = true;
             npc.noTileCollide = true;
+            npc.dontTakeDamage = true;
 
             cloneTimeLeft = 420;
             base.SetDefaults();

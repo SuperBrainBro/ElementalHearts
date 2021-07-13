@@ -215,7 +215,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public void SpawnMinions()
         {
-            Main.NewText("Spawn Minions");
+            //Main.NewText("Spawn Minions");
         }
         public override void AI()
         {
