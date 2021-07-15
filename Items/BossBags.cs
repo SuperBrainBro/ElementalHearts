@@ -27,9 +27,9 @@ namespace ElementalHearts.Items
                     break;
 
                 case "Fox":
-                    player.QuickSpawnItem(ItemType<MaskOfCAT>());
-                    player.QuickSpawnItem(ItemType<RobeOfCAT>());
-                    player.QuickSpawnItem(ItemType<WingsOfCAT>());
+                    //player.QuickSpawnItem(ItemType<MaskOfCAT>());
+                    //player.QuickSpawnItem(ItemType<RobeOfCAT>());
+                    //player.QuickSpawnItem(ItemType<WingsOfCAT>());
                     break;
 
                 case "Apple":
@@ -44,7 +44,7 @@ namespace ElementalHearts.Items
             {
                 if (Main.rand.NextBool(100))
                 {
-                    DevSetToDrop("Fox", player);
+                    //DevSetToDrop("Fox", player);
                 }
                 if (Main.rand.NextBool(100))
                 {
