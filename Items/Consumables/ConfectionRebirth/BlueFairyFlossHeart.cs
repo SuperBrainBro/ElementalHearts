@@ -41,7 +41,7 @@ namespace ElementalHearts.Items.Consumables.ConfectionRebirth
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModLoader.GetMod("TheConfectionRebirth").ItemType("BlueFairyFloss"), 100); ;
-            recipe.AddTile(TileID.Hellforge);
+            recipe.AddTile(TileID.SkyMill);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }

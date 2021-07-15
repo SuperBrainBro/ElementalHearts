@@ -36,14 +36,5 @@ namespace ElementalHearts.Items.Consumables
             player.GetModPlayer<ElementalHeartsPlayer>().LifeofDiscord += 1;
             return true;
         }
-
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.AdamantiteOre, 100); ;
-            recipe.AddTile(TileID.AdamantiteForge);
-            recipe.SetResult(this, 1);
-            recipe.AddRecipe();
-        }
     }
 }

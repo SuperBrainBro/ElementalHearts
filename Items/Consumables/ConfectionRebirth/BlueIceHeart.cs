@@ -41,7 +41,7 @@ namespace ElementalHearts.Items.Consumables.ConfectionRebirth
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModLoader.GetMod("TheConfectionRebirth").ItemType("BlueIce"), 100); ;
-            recipe.AddTile(TileID.Hellforge);
+            recipe.AddTile(TileID.IceMachine);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }
