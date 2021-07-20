@@ -1,10 +1,11 @@
-Elemental Hearts is a mod which adds a ton of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.). This mod is VERY BALANCED.
+Mod Discord Server was raiden on 7/20/2021 because I gave a random person mod in #general. New discord has been created and updated.
+
+Elemental Hearts is a mod which adds a ton of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.).
 
 As with all of my mods, I prefer quality of quantity. This mod is a great addition to any modded playthrough, which adds a use for all of your leftover/extra blocks and ores.
 This mod spreads with progression, so that you can never become too powerful.
 
-We have mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, Ancients Awakened, Confection Rebaked, and Consolaria. 
-We also have a list to see which hearts you have made / not! Change the key in the config!
++Mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, Ancients Awakened, Confection Rebaked, and Consolaria. 
 
 Github Repo: https://github.com/SuperBrainBro/ElementalHearts
 
@@ -13,13 +14,10 @@ Vincent Jenei (Lite#4249)
 Fox
 AppleInTheSky
 
-We also have a discord server, so I will make the invite as the "homepage". Hop on in, chat, and even contibute to the mod.
-
-Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
-
 Change-Log:
 0.7.40.1
-	 Made a new summer icon to catch your eyes.
+	 Made a new summer icon to catch your eyes. This also will represent a new leaf.
+	 I will no longer neglect this mod. It is a great project of mine and I will continue to work on it.
 0.7.40
 	 Added several missing vanilla hearts.
 	 Added Confection Rebirth hearts support.
