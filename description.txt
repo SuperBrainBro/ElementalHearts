@@ -18,6 +18,8 @@ We also have a discord server, so I will make the invite as the "homepage". Hop 
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
+0.7.40.1
+	 Made a new summer icon to catch your eyes.
 0.7.40
 	 Added several missing vanilla hearts.
 	 Added Confection Rebirth hearts support.
