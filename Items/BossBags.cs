@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using ElementalHearts.Items.Dev.AppleInTheSky;
-using ElementalHearts.Items.Dev.CAT;
 using ElementalHearts.Items.Dev.Lite;
 using Terraria;
 using Terraria.ID;
