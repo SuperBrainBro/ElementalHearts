@@ -18,10 +18,11 @@ We also have a discord server, so I will make the invite as the "homepage". Hop 
 Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
 
 Change-Log:
-0.7.31
+0.7.4
 	 Added several missing vanilla hearts.
 	 Added Confection Rebirth hearts support.
 	 Added Ancients Awakened hearts support.
+0.7.31
 	 Upgraded the Menacing Heart AI
 	  + He now spawns minions that rotate around the player and eat up bullets.
 	  + Menacing Heart now slightly moves instead of standing still after teleporting.
