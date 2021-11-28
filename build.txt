@@ -1,4 +1,4 @@
-displayName = Lite's Elemental Hearts
+displayName = Lite's Elemental Hearts [Deprecated]
 author = Vincent Jenei (Lite#4249)
 version = 0.8
 homepage = https://discord.gg/WHMg38mXs8

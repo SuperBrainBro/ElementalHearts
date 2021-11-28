@@ -1,4 +1,0 @@
-﻿[*.cs]
-
-# CS0675: Bitwise-or operator used on a sign-extended operand
-dotnet_diagnostic.CS0675.severity = none
