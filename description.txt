@@ -19,6 +19,7 @@ Change-Log:
 0.8
 	 Mod is labeled as deprecated. 
 	 New rewrite is finished!
+	 All data has been removed from this mod. It is now an empty mod so it doesn't cause any problems with the newer one.
 0.7.40.1
 	 Made a new summer icon to catch your eyes. This also will represent a new leaf.
 	 I will no longer neglect this mod. It is a great project of mine and I will continue to work on it.
