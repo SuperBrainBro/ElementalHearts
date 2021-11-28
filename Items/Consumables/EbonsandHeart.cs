@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class EbonsandHeart : ModItem
+    internal class EbonsandHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.EbonsandBlock, 1000000);
+            recipe.AddIngredient(ItemID.EbonsandBlock, 100);
             recipe.AddTile(TileID.Furnaces);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

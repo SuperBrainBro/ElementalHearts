@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class MythrilHeart : ModItem
+    internal class MythrilHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.MythrilOre, 1000000); ;
+            recipe.AddIngredient(ItemID.MythrilOre, 100); ;
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

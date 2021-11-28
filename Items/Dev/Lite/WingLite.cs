@@ -19,6 +19,7 @@ namespace ElementalHearts.Items.Dev.Lite
             item.height = 20;
             item.rare = ItemRarityID.Cyan;
             item.accessory = true;
+            item.vanity = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

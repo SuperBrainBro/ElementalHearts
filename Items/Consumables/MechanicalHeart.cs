@@ -5,7 +5,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class MechanicalHeart : ModItem
+    internal class MechanicalHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -42,9 +42,9 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<MechanicalCrystalPiece1>(), 1000000);
-            recipe.AddIngredient(ItemType<MechanicalCrystalPiece2>(), 1000000);
-            recipe.AddIngredient(ItemType<MechanicalCrystalPiece3>(), 1000000);
+            recipe.AddIngredient(ItemType<MechanicalCrystalPiece1>());
+            recipe.AddIngredient(ItemType<MechanicalCrystalPiece2>());
+            recipe.AddIngredient(ItemType<MechanicalCrystalPiece3>());
             recipe.AddTile(TileID.TinkerersWorkbench);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class RainbowHeart : ModItem
+    internal class RainbowHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -46,7 +46,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.RainbowBrick, 1000000); ;
+            recipe.AddIngredient(ItemID.RainbowBrick, 100); ;
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

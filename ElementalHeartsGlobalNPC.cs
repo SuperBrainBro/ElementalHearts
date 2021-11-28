@@ -1,6 +1,7 @@
 using ElementalHearts.Items.Consumables;
 using ElementalHearts.Items.Consumables.Bosses;
 using ElementalHearts.Items.Consumables.Bosses.CrossMod;
+using ElementalHearts.Items.Consumables.Special;
 using ElementalHearts.NPCs.Bosses.MenacingHeart;
 using Terraria;
 using Terraria.ID;
@@ -13,14 +14,57 @@ namespace ElementalHearts
     {
         public override bool InstancePerEntity => true;
 
-        public bool curseCATsCurse;
-
-        public override void ResetEffects(NPC npc)
-        {
-            curseCATsCurse = false;
-        }
         public override void NPCLoot(NPC npc)
         {
+            Player player = Main.player[npc.target];
+            if (npc.type == NPCID.ChaosElemental)
+            {
+                int chance = 600;
+                if (Main.expertMode) chance = 450;
+                if (Main.rand.NextBool(chance))
+                {
+                    Item.NewItem(npc.getRect(), ItemType<HeartofDiscord>());
+                }
+            }
+            if (npc.boss)
+            {
+                player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount += 1;
+                if (player.GetModPlayer<ElementalHeartsPlayerSpecial>().bossesDownedAmount == 1000)
+                {
+                    Item.NewItem(npc.getRect(), ItemType<HeartofSlaughter>());
+                }
+            }
+
+            #region Event Bosses
+            switch (npc.type) //Expert Drop of...
+            {
+                case NPCID.DD2Betsy: //Betsy
+                    Item.NewItem(npc.getRect(), ItemType<BetsysHeart>());
+                    break;
+                case NPCID.PirateShip: //Flying Dutchman
+                    Item.NewItem(npc.getRect(), ItemType<DutchmanHeart>());
+                    break;
+                case NPCID.MourningWood: //Mourning Wood
+                    Item.NewItem(npc.getRect(), ItemType<MorningHeart>());
+                    break;
+                case NPCID.Pumpking: //Pumpking
+                    Item.NewItem(npc.getRect(), ItemType<HorsemansHeart>());
+                    break;
+                case NPCID.Everscream: //Everscream
+                    Item.NewItem(npc.getRect(), ItemType<RazorpineHeart>());
+                    break;
+                case NPCID.SantaNK1: //Santa-NK1
+                    Item.NewItem(npc.getRect(), ItemType<ElfHeart>());
+                    break;
+                case NPCID.IceQueen: //Ice Queen
+                    Item.NewItem(npc.getRect(), ItemType<BlizzardHeart>());
+                    break;
+                case NPCID.MartianSaucer: //Martian Saucer
+                    Item.NewItem(npc.getRect(), ItemType<XenoHeart>());
+                    break;
+            }
+            #endregion
+
             #region Vanilla Bosses
             switch (npc.type) //Expert Drop of...
             {
@@ -37,7 +81,7 @@ namespace ElementalHearts
                 case NPCID.DD2DarkMageT3 when Main.expertMode:
                     if (npc.type == NPCID.DD2DarkMageT1)
                     {
-                        Item.NewItem(npc.getRect(), ItemType<Items.Consumables.Bosses.DarkHeart>());
+                        Item.NewItem(npc.getRect(), ItemType<DarkHeart>());
                     }
                     else { Item.NewItem(npc.getRect(), ItemType<DarkHeart2>()); }
                     break;
@@ -122,6 +166,119 @@ namespace ElementalHearts
             #region Modded Bosses
             if (Main.expertMode)
             {
+                #region Ancients Awakened
+                if (ModLoader.GetMod("AAMod") != null)
+                {
+                    Mod mod = ModLoader.GetMod("AAMod");
+                    if (npc.type == mod.NPCType("MushroomMonarch"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartyTrufflyHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("FeudalFungus"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<GlowingTrufflyHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("GripOfChaosBlue"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("GripOfChaosRed")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<HeartofChaos>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("GripOfChaosRed"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("GripOfChaosBlue")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<HeartofChaos>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("TruffleToad"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<TruffleLife>());
+                    }
+                    else if (npc.type == mod.NPCType("Broodmother"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DragontamersHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Hydra"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HydraHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("SerpentHead"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ArcticHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Djinn"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<SandstormHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Sag"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<SagittariusHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Rajah"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<RajahRabbitsHeartOfVengeance>());
+                    }
+                    else if (npc.type == mod.NPCType("ForsakenAnubis"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartOfGuilt>());
+                    }
+                    else if (npc.type == mod.NPCType("AthenaA"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<GoddessHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("GreedA"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<HeartofDesire>());
+                    }
+                    else if (npc.type == mod.NPCType("DaybringerHead") || npc.type == mod.NPCType("NightcrawlerHead"))
+                    {
+                        if (Main.dayTime)
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<RadiantHeart>());
+                        }
+                        else
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<DarkHeart3>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("Ashe"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("Haruka")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<HeartofSorrowAndPassion>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("Haruka"))
+                    {
+                        if (!NPC.AnyNPCs(mod.NPCType("Ashe")))
+                        {
+                            Item.NewItem(npc.getRect(), ItemType<HeartofSorrowAndPassion>());
+                        }
+                    }
+                    else if (npc.type == mod.NPCType("Yamata"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<DarknessHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("Akuma"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<SunHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("ZeroProtocol"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<BrokenHeart>());
+                    }
+                    else if (npc.type == mod.NPCType("SupremeRajah"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<RajahRabbitsHeartOfSupremecy>());
+                    }
+                    else if (npc.type == mod.NPCType("ShenA"))
+                    {
+                        Item.NewItem(npc.getRect(), ItemType<ChaosHeart>());
+                    }
+                }
+                #endregion
                 #region Calamity Mod
                 if (ModLoader.GetMod("CalamityMod") != null)
                 {
@@ -382,17 +539,8 @@ namespace ElementalHearts
                     }
                     else if (npc.type == mod.NPCType("Etheria"))
                     {
-                        //if (Laugicality.LaugicalityWorld.downedTrueEtheria)
-                        //{
-                            Item.NewItem(npc.getRect(), ItemType<EtheriaHeart>());
-                        //}
+                        Item.NewItem(npc.getRect(), ItemType<EtheriaHeart>());
                     }
-                }
-                #endregion
-                #region Mod of Redemption
-                if (ModLoader.GetMod("Redemption") != null)
-                {
-                    Mod mod = ModLoader.GetMod("Redemption");
                 }
                 #endregion
                 #region Thorium Mod
@@ -449,40 +597,24 @@ namespace ElementalHearts
             #endregion
         }
 
-        public override void UpdateLifeRegen(NPC npc, ref int damage)
-        {
-            if (curseCATsCurse)
-            {
-                if (npc.lifeRegen > 0)
-                {
-                    npc.lifeRegen = 0;
-                }
-                npc.lifeRegen -= 128;
-                if (damage < 24)
-                {
-                    damage = 24;
-                }
-            }
-        }
-
         public override void SetupShop(int type, Chest shop, ref int nextSlot)
         {
             if (type == NPCID.PartyGirl)
             {
                 shop.item[nextSlot].SetDefaults(ItemType<BubbleHeart>());
-                shop.item[nextSlot].shopCustomPrice = 200000000;
+                shop.item[nextSlot].shopCustomPrice = 20000;
                 nextSlot++;
             }
             if (type == NPCID.Merchant)
             {
                 shop.item[nextSlot].SetDefaults(ItemType<EmptyHeart>());
-                shop.item[nextSlot].shopCustomPrice = 100000000;
+                shop.item[nextSlot].shopCustomPrice = 10000;
                 nextSlot++;
             }
             if (type == NPCID.Steampunker)
             {
                 shop.item[nextSlot].SetDefaults(ItemType<CogHeart>());
-                shop.item[nextSlot].shopCustomPrice = 700000000;
+                shop.item[nextSlot].shopCustomPrice = 70000;
                 nextSlot++;
             }
         }

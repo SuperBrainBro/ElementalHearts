@@ -25,7 +25,7 @@ namespace ElementalHearts.Items.Consumables.ElementsAwoken
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().VoiditeLife <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().VoiditeLife <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -37,14 +37,14 @@ namespace ElementalHearts.Items.Consumables.ElementsAwoken
             {
                 player.HealEffect(1, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer2>().VoiditeLife += 1;
+            player.GetModPlayer<ElementalHeartsPlayer>().VoiditeLife += 1;
             return true;
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<VoiditeOre>(), 1000000); ;
+            recipe.AddIngredient(ItemType<VoiditeOre>(), 100); ;
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

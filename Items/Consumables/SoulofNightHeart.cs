@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class SoulofNightHeart : ModItem
+    internal class SoulofNightHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.SoulofNight, 1000000); ;
+            recipe.AddIngredient(ItemID.SoulofNight, 100); ;
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

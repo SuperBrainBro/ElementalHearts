@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses
 {
-    internal class SnotHeart : ModItem
+    internal class SnotHeart : ConsumableHeartItem
     {
         public override string Texture => "ElementalHearts/Items/Consumables/Bosses/SnotHeart";
 

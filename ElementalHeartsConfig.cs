@@ -9,9 +9,13 @@ namespace ElementalHearts
         public override ConfigScope Mode => ConfigScope.ClientSide;
 
         [Header("Elemental Hearts Setting")]
+        [DefaultValue(true)]
+        [ReloadRequired]
+        [Label("Vanilla Changes")]
+        public bool VanillaChangesConfig;
         [DefaultValue(1)]
         [ReloadRequired]
-        [Label("Max Heart Consumption")]
+        [Label("Max Heart Consumption (Recomended to keep at 1)")]
         public int MaxElementalHeartConfig;
     }
 }

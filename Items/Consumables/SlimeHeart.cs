@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class SlimeHeart : ModItem
+    internal class SlimeHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Gel, 1000000); ;
+            recipe.AddIngredient(ItemID.Gel, 100); ;
             recipe.AddTile(TileID.Solidifier);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

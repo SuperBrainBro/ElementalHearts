@@ -22,7 +22,7 @@ namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().LifeofHope <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().LifeofHope <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -34,7 +34,7 @@ namespace ElementalHearts.Items.Consumables.Bosses.CrossMod
             {
                 player.HealEffect(10, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer2>().LifeofHope += 1;
+            player.GetModPlayer<ElementalHeartsPlayer>().LifeofHope += 1;
             return true;
         }
     }

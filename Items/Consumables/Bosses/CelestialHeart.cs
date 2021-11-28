@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses
 {
-    internal class CelestialHeart : ModItem
+    internal class CelestialHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {

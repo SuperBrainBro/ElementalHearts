@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class GlassHeart : ModItem
+    internal class GlassHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Glass, 1000000); ;
+            recipe.AddIngredient(ItemID.Glass, 100); ;
             recipe.AddTile(TileID.GlassKiln);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

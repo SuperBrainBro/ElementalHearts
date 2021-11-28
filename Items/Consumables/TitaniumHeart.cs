@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class TitaniumHeart : ModItem
+    internal class TitaniumHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.TitaniumOre, 1000000); ;
+            recipe.AddIngredient(ItemID.TitaniumOre, 100); ;
             recipe.AddTile(TileID.AdamantiteForge);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

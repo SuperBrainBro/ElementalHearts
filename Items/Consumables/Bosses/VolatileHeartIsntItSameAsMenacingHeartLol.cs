@@ -4,16 +4,11 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables.Bosses
 {
-    internal class VolatileHeartIsntItSameAsMenacingHeartLol : ModItem
+    internal class VolatileHeartIsntItSameAsMenacingHeartLol : ConsumableHeartItem
     {
-        public override bool Autoload(ref string name)
-        {
-            return Main.LocalPlayer.name == "Fox" || Main.LocalPlayer.name == "Lite";
-        }
-
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Permanently increases maximum life by 10\nThat heart visible only for Devs, i guess");
+            Tooltip.SetDefault("Permanently increases maximum life by 10");
             DisplayName.SetDefault("Volatile Heart");
         }
 

@@ -42,8 +42,8 @@ namespace ElementalHearts.Items.Consumables.ThoriumMod
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemType<Opal>(), 250000);
-            recipe.AddIngredient(ItemID.StoneBlock, 750000);
+            recipe.AddIngredient(ItemType<Opal>(), 25);
+            recipe.AddIngredient(ItemID.StoneBlock, 75);
             recipe.AddTile(TileID.Extractinator);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

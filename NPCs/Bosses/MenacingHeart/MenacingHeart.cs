@@ -1,10 +1,7 @@
 using System;
 using System.IO;
-//using ElementalHearts.Achievements;
 using ElementalHearts.Effects;
 using ElementalHearts.Items.Boss;
-using ElementalHearts.Items.Consumables;
-using ElementalHearts.Items.Consumables.AprilFools;
 using ElementalHearts.Items.Weapons;
 using ElementalHearts.Projectiles.Bosses.MenacingHeart;
 using ElementalHearts.Tiles;
@@ -14,7 +11,6 @@ using Terraria.Audio;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
-//using WebmilioCommons.Achievements;
 using static Terraria.ModLoader.ModContent;
 
 namespace ElementalHearts.NPCs.Bosses.MenacingHeart
@@ -50,9 +46,14 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
         public float tpPosRand2;
         public float tpPosRand3;
         public float tpPosRand4;
+
+        public Vector2 moveDirectionVelocity;
+
+        //Shockwaves
+        public bool Spawn = false;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Menacing Heart 2.0");
+            DisplayName.SetDefault("Menacing Heart");
             Main.npcFrameCount[npc.type] = 14; // make sure to set this for your modnpcs.
         }
         public override void SetDefaults()
@@ -61,8 +62,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.width = 128;
             npc.height = 128;
             npc.damage = 69;
-            npc.defense = 7;
-            npc.lifeMax = 17000;
+            npc.defense = 13;
+            npc.lifeMax = 9000;
             npc.HitSound = SoundID.Item35;
             npc.DeathSound = SoundID.Item25;
             music = mod.GetSoundSlot(Terraria.ModLoader.SoundType.Music, "Sounds/Music/MenacingHeartBossMusic");
@@ -76,9 +77,15 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             npc.boss = true;
             npc.netAlways = true;
             npc.timeLeft = 0;
-            npc.dontTakeDamage = true;
 
-            bossPhaseHealth = npc.lifeMax / 4;
+            if (Main.expertMode)
+            {
+                bossPhaseHealth = (npc.lifeMax * 2) / 4;
+            }
+            else if (!Main.expertMode)
+            {
+                bossPhaseHealth = npc.lifeMax / 4;
+            }
 
             base.SetDefaults();
         }
@@ -139,14 +146,9 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             base.DrawEffects(ref drawColor);
         }
-        public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
-        {
-            npc.lifeMax = (int)(npc.lifeMax * 0.625f * bossLifeScale);
-            npc.damage = (int)(npc.damage * 0.6f);
-        }
         public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
         {
-            scale = 1.5f;
+            scale = 1.75f;
             return null;
         }
         public void spawnBoxTiles()
@@ -189,7 +191,32 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             Projectile.NewProjectile(npc.Center, new Vector2(0, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
             Projectile.NewProjectile(npc.Center, new Vector2(-3, 3), ProjectileType<MenacingProjectile>(), 30 * 2, 1f, Main.myPlayer);
         }
-        public bool Spawn = false;
+
+        public void RandomMoveBoss()
+        {
+            moveDirectionVelocity = new Vector2(Main.rand.NextFloat(-10f, 10f), Main.rand.NextFloat(-10f, 10f));
+            moveDirectionVelocity.Normalize();
+            moveDirectionVelocity += new Vector2(Main.rand.NextFloat(.25f, .5f), Main.rand.NextFloat(.25f, .5f));
+            moveDirectionVelocity += new Vector2(Main.rand.NextFloat(-.25f, -.5f), Main.rand.NextFloat(-.25f, -.5f));
+            moveDirectionVelocity *= Main.rand.NextFloat(2f, 4f);
+
+            if (Math.Abs((int)moveDirectionVelocity.LengthSquared()) <= 6)
+            {
+                if (Main.rand.Next(4) > 0)
+                {
+                    SpawnMinions();
+                }
+                else
+                {
+                    moveDirectionVelocity *= Main.rand.NextFloat(2f, 4f);
+                }
+            }
+        }
+
+        public void SpawnMinions()
+        {
+            //Main.NewText("Spawn Minions");
+        }
         public override void AI()
         {
             //LIGHT (BEFORE EVERYTHING ELSE)
@@ -198,7 +225,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             //Spawn Shockwave
             if (Spawn != true)
             {
-                //Shcokwave
+                //Shockwave
                 if (Main.netMode != NetmodeID.Server && !Filters.Scene["BasicShockwave"].IsActive())
                 {
                     Projectile.NewProjectile(npc.Center, new Vector2(0, 0), ProjectileType<ShockwaveBasic>(), 0, 0f, Main.myPlayer);
@@ -236,6 +263,11 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             {
+                npc.velocity = moveDirectionVelocity;
+
+                moveDirectionVelocity.X -= moveDirectionVelocity.X * (0.00314159265359f * Main.rand.NextFloat(5f, 10f));
+                moveDirectionVelocity.Y -= moveDirectionVelocity.Y * (0.00314159265359f * Main.rand.NextFloat(5f, 10f));
+
                 if (npc.life > bossPhaseHealth * 3)
                 {
                     //Set phase to 1.
@@ -446,6 +478,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P1 == 210)
                 {
+                    RandomMoveBoss();
+
                     npc.Center = futurePosition;
 
                     if (tpPosRand1 > 6)
@@ -586,7 +620,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P2 == 170)
                 {
-
+                    RandomMoveBoss();
 
                     npc.Center = futurePosition;
 
@@ -732,7 +766,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P3 == 130)
                 {
-
+                    RandomMoveBoss();
 
                     npc.Center = futurePosition;
 
@@ -832,7 +866,6 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
                 {
                     npc.TargetClosest(true);
 
-                    //This generates a random tp Center.
                     tpPosRand4 = Main.rand.NextFloat(8);
 
                     if (tpPosRand4 > 6)
@@ -879,7 +912,7 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
                 if (Main.netMode != NetmodeID.MultiplayerClient && P4 == 125)
                 {
-
+                    RandomMoveBoss();
 
                     npc.Center = futurePosition;
 
@@ -1214,14 +1247,8 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
 
         public override void BossLoot(ref string name, ref int potionType)
         {
-<<<<<<< Updated upstream
-            //if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>(Main.player[npc.target]);
-=======
-            if (ModLoader.GetMod("WebmilioCommons") != null) ModAchievement.CompleteFlag<HeartCrusherAchievement>(Main.player[npc.target]);
->>>>>>> Stashed changes
             potionType = ItemID.GreaterHealingPotion;
             int choice = Main.rand.Next(10);
-            Item.NewItem(npc.getRect(), ItemType<BestHeartEver>());
             if (choice == 0)
             {
                 Item.NewItem(npc.getRect(), ItemType<MenacingHeartTrophyItem>());
@@ -1232,16 +1259,16 @@ namespace ElementalHearts.NPCs.Bosses.MenacingHeart
             }
             else
             {
-                choice = Main.rand.Next(7);
+                choice = Main.rand.Next(10);
                 if (choice == 0)
                 {
                     //Item.NewItem(npc.getRect(), ItemType<Mask>());
                 }
-                if (Main.rand.NextBool(3))
+                if (Main.rand.NextBool(4))
                 {
                     Item.NewItem(npc.getRect(), ItemType<MenacingLifeStaff>());
                 }
-                else if (Main.rand.NextBool(3))
+                else if (Main.rand.NextBool(4))
                 {
                     Item.NewItem(npc.getRect(), ItemType<MenacingLifeBlade>());
                 }

@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class LesionHeart : ModItem
+    internal class LesionHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -41,7 +41,7 @@ namespace ElementalHearts.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.LesionBlock, 1000000); ;
+			recipe.AddIngredient(ItemID.LesionBlock, 100); ;
 			recipe.AddTile(TileID.LesionCloningVat);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

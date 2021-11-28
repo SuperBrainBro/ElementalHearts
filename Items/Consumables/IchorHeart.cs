@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class IchorHeart : ModItem
+    internal class IchorHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -21,7 +21,7 @@ namespace ElementalHearts.Items.Consumables
 
         public override bool CanUseItem(Player player)
         {
-            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer2>().IchorLife <
+            return player.statLifeMax >= 100 && player.GetModPlayer<ElementalHeartsPlayer>().IchorLife <
                    ModContent.GetInstance<ElementalHeartsConfig>().MaxElementalHeartConfig;
         }
 
@@ -33,14 +33,14 @@ namespace ElementalHearts.Items.Consumables
             {
                 player.HealEffect(5, true);
             }
-            player.GetModPlayer<ElementalHeartsPlayer2>().IchorLife += 1;
+            player.GetModPlayer<ElementalHeartsPlayer>().IchorLife += 1;
             return true;
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Ichor, 1000000); ;
+            recipe.AddIngredient(ItemID.Ichor, 100); ;
             recipe.AddTile(TileID.CrystalBall);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

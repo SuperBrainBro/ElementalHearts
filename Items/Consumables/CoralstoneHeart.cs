@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class CoralstoneHeart : ModItem
+    internal class CoralstoneHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,7 +40,7 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.CoralstoneBlock, 1000000);
+            recipe.AddIngredient(ItemID.CoralstoneBlock, 100);
             recipe.needWater = true;
             recipe.SetResult(this, 1);
             recipe.AddRecipe();

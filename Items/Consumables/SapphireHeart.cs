@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace ElementalHearts.Items.Consumables
 {
-    internal class SapphireHeart : ModItem
+    internal class SapphireHeart : ConsumableHeartItem
     {
         public override void SetStaticDefaults()
         {
@@ -40,8 +40,8 @@ namespace ElementalHearts.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Sapphire, 250000);
-            recipe.AddIngredient(ItemID.StoneBlock, 750000);
+            recipe.AddIngredient(ItemID.Sapphire, 25);
+            recipe.AddIngredient(ItemID.StoneBlock, 75);
             recipe.AddTile(TileID.Extractinator);
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
