@@ -1,4 +1,7 @@
-Mod Discord Server was raiden on 7/20/2021 because I gave a random person mod in #general. New discord has been created and updated.
+As of December 2021, this mod is now deprecated.
+A new and improved version of this mod has been in the works the past few months and is finally done. Its been released, and can be found on the mod browser.
+
+
 
 Elemental Hearts is a mod which adds a ton of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.).
 
@@ -7,14 +10,15 @@ This mod spreads with progression, so that you can never become too powerful.
 
 +Mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, Ancients Awakened, Confection Rebaked, and Consolaria. 
 
-Github Repo: https://github.com/SuperBrainBro/ElementalHearts
-
 Mod By:
 Vincent Jenei (Lite#4249)
 Fox
 AppleInTheSky
 
 Change-Log:
+0.8
+	 Mod is labeled as deprecated. 
+	 New rewrite is finished!
 0.7.40.1
 	 Made a new summer icon to catch your eyes. This also will represent a new leaf.
 	 I will no longer neglect this mod. It is a great project of mine and I will continue to work on it.
