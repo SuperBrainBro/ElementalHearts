@@ -1,7 +1,11 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
     ".NETFramework,Version=v4.8": {
+=======
+    "net6.0": {
+>>>>>>> parent of a2be3bc (things)
       "tModLoader.CodeAssist/0.1.3": {
         "type": "package"
       }
@@ -26,7 +30,11 @@
     }
   },
   "projectFileDependencyGroups": {
+<<<<<<< HEAD
     ".NETFramework,Version=v4.8": [
+=======
+    "net6.0": [
+>>>>>>> parent of a2be3bc (things)
       "tModLoader.CodeAssist >= 0.1.*"
     ]
   },
@@ -47,15 +55,24 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
+<<<<<<< HEAD
         "net48"
+=======
+        "net6.0"
+>>>>>>> parent of a2be3bc (things)
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
+<<<<<<< HEAD
         "net48": {
           "targetAlias": "net48",
+=======
+        "net6.0": {
+          "targetAlias": "net6.0",
+>>>>>>> parent of a2be3bc (things)
           "projectReferences": {}
         }
       },
@@ -66,14 +83,37 @@
       }
     },
     "frameworks": {
+<<<<<<< HEAD
       "net48": {
         "targetAlias": "net48",
+=======
+      "net6.0": {
+        "targetAlias": "net6.0",
+>>>>>>> parent of a2be3bc (things)
         "dependencies": {
           "tModLoader.CodeAssist": {
             "target": "Package",
             "version": "[0.1.*, )"
           }
         },
+<<<<<<< HEAD
+=======
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+>>>>>>> parent of a2be3bc (things)
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
