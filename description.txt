@@ -1,7 +1,7 @@
 As of December 2021, this mod is now deprecated.
 A new and improved version of this mod has been in the works the past few months and is finally done. Its been released, and can be found on the mod browser.
 
-
+LOOK FOR: 'Elemental Hearts Recrafted' IN THE MOD BROWSER!
 
 Elemental Hearts is a mod which adds a ton of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.).
 
@@ -16,6 +16,8 @@ Fox
 AppleInTheSky
 
 Change-Log:
+0.81
+	 Added some more info in this description about where to find the rewritten one.
 0.8
 	 Mod is labeled as deprecated. 
 	 New rewrite is finished!
