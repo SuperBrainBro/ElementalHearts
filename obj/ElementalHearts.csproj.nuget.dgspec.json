@@ -1,31 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj": {}
+    "C:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj": {
+    "C:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj",
+        "projectUniqueName": "C:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
         "projectName": "ElementalHearts",
-        "projectPath": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\ElementalHearts.csproj",
-        "packagesPath": "C:\\Users\\palma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\palma\\Documents\\GitHub\\ElementalHearts\\obj\\",
+        "projectPath": "C:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\ElementalHearts.csproj",
+        "packagesPath": "C:\\Users\\Vincent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vincent\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\ElementalHearts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\palma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vincent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net45"
+<<<<<<< HEAD
+          "net48"
+=======
+          "net6.0"
+>>>>>>> parent of a2be3bc (things)
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net45": {
+<<<<<<< HEAD
+          "net48": {
+            "targetAlias": "net48",
+=======
+          "net6.0": {
+            "targetAlias": "net6.0",
+>>>>>>> parent of a2be3bc (things)
             "projectReferences": {}
           }
         },
@@ -36,14 +46,38 @@
         }
       },
       "frameworks": {
-        "net45": {
+<<<<<<< HEAD
+        "net48": {
+          "targetAlias": "net48",
+=======
+        "net6.0": {
+          "targetAlias": "net6.0",
+>>>>>>> parent of a2be3bc (things)
           "dependencies": {
             "tModLoader.CodeAssist": {
               "target": "Package",
               "version": "[0.1.*, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+=======
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+>>>>>>> parent of a2be3bc (things)
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

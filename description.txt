@@ -1,34 +1,179 @@
-Elemental Hearts is a mod which adds a ton of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.). This mod is VERY BALANCED.
+As of December 2021, this mod is now deprecated.
+A new and improved version of this mod has been in the works the past few months and is finally done. Its been released, and can be found on the mod browser.
+
+LOOK FOR: 'Elemental Hearts Recrafted' IN THE MOD BROWSER!
+
+Elemental Hearts is a mod which adds a ton of new consumable items which increase your health (Like life crystals). They are based on all of the basic elements, (blocks, ores, etc.).
 
 As with all of my mods, I prefer quality of quantity. This mod is a great addition to any modded playthrough, which adds a use for all of your leftover/extra blocks and ores.
 This mod spreads with progression, so that you can never become too powerful.
 
-We currently have mod support with Thorium! If you are using the Thorium mod, you will have another bonus 20+ hearts based on those elements!
-The same applies with the Calamity mod! Over 20 different Calamity exclusive items based on those elements!
-
-We also have a list to see which hearts you have made / not! Change the key in the config!
-
-This mod (currently) adds:
-	 87 consumable items.
-	 1 (Bullet Hell :)) boss.
-	 Multiple translations for many different languages such as Russian, German, Italian, French, Spanish, Simplified Chinese, Brazilian Portuguese and Polish.
-
-Github Repo: https://github.com/SuperBrainBro/ElementalHearts
++Mod support with Calamity, Thorium, ElementsAwoken, Fargosouls, Laugicality, Ancients Awakened, Confection Rebaked, and Consolaria. 
 
 Mod By:
-Vincent Jenei (Lite#4211)
-CAT (TheLuxure#5356)
-
-We also have a discord server, so I will make the invite as the "homepage". Hop on in, chat, and even contibute to the mod.
-I also need some people to help make a wiki, that would be awesome!
-Bottom line is, I need feedback. Please join the discord to help out with this mod and make the mod grow, thanks!
+Vincent Jenei (Lite#4249)
+Fox
+AppleInTheSky
 
 Change-Log:
+0.81
+	 Added some more info in this description about where to find the rewritten one.
+0.8
+	 Mod is labeled as deprecated. 
+	 New rewrite is finished!
+	 All data has been removed from this mod. It is now an empty mod so it doesn't cause any problems with the newer one.
+0.7.40.1
+	 Made a new summer icon to catch your eyes. This also will represent a new leaf.
+	 I will no longer neglect this mod. It is a great project of mine and I will continue to work on it.
+0.7.40
+	 Added several missing vanilla hearts.
+	 Added Confection Rebirth hearts support.
+	 Added Ancients Awakened hearts support.
+0.7.31
+	 Upgraded the Menacing Heart AI
+	  + He now spawns minions that rotate around the player and eat up bullets.
+	  + Menacing Heart now slightly moves instead of standing still after teleporting.
+	 New summon weapon dropped by the Menacing Heart.
+	  + Slowely spawns friendly versions of the Menacing Heart's minions. 
+	  + Their purpose is to protect the accesory, since it is a piece of life crystal broken off of the Menacing Heart.
+0.7.30.4
+	 Added Zenith Heart.
+	 Added all event boss hearts (vanilla only at the moment).
+	 Added Enchanted Heart that obtainable from shrines.
+	 Added Cloud and Sunplate Hearts craftable from Clouds either Sunplates.
+0.7.30.3
+	 Adjusted some recipes.
+	 Adjusted the description.
+0.7.30.2
+	 Fixed the bug where you wouldnt be able to create a character.
+0.7.30 (Spring Cleaning (Not the full rewrite, but as much cleaning as I can get in))
+	 Removed Elemental Hearts UI. (Never worked, and you can use the recipe browser)
+	 Removed Menacing Dye.
+	 Fixed all Menacing Tools.
+	 Added recomendation to config.
+	 Removed dev weapons and hearts.
+	 Dev wings are only vanity now.
+	 Removed some stuff from the Life Crystal mini biomes.
+	 Removed Global Suppressions. (file for development purposes)
+	 Removed the duplicate Mod Player and added that stuff to the original mod player. (code optimizations)
+	 ^This fixes the error when using Calamity, "The type "ElementalHeartsPlayer" already contains definition for "CharredLife". (was a big problem in the discord)
+	 Removed some Legacy code. (This might cause problems for people using pre 0.9 version worlds, but it helps clean up code).
+	 Removed the reference needed for WebmilioComons, along with any functionality we added with it like achievements. This will fix a lot of problems.
+	 Removed some alt icons, and created a NEW icon (Looks pretty sick!).
+	 Removed crystal walls, they were unobtainable.
+	 Removed the old music I made 2 years ago for menacing heart, reducing file size.
+	 Menacing statue is no longer found in random world gen... BECAUSE IF YOU STEP ON A PRESSURE PLATE HE WOULD SPAWN! 
+	 Menacing statue now costs life ore to craft.
+	 Rewrote the boss bag code.
+	 ^ AppleInTheSky's dev wings are now obtainable from treasure bags. (Rip AppleInTheSky :( )
+	 Fixed a lot of boss hearts not registering on load
+	 Rewrote the empty heart.
+	 Deleted a few duplicate hearts.
+	 Fixed the directory of the ancient life equipment.
+	 Ancient Life Pick is now actually craftable.
+
+0.7.20 (Versions messed up because of April Fools, but would be equivelent to 0.3.2)
+	 Removed Rainbow Menacing Lunar Ancient Fleshy Celestial Royal Wormy Volatile Fishark with Googly Eyes and Brains of the Hives and Plants Idol Iron Heart with Solar Power MK2 +
+	 Changed recipe from 100k of materials to 100
+	 Added Menacing Heart, removed Menacing heart 2.0 which is immortal
+	 All hearts add more hp to make it more balaanced
+	 Combine all hearts to get 1 nothing!
+	 The mega heart does not exist anymore. 
+	 In order to balance this, we have removed eternal menacing suffering debuf which damages that player for all of eternity, or until he reinstalls terraria or drinks milk.
+0.6.9 (April Fools)
+	 Added Rainbow Menacing Lunar Ancient Fleshy Celestial Royal Wormy Volatile Fishark with Googly Eyes and Brains of the Hives and Plants Idol Iron Heart with Solar Power MK2 +
+	 Changed recipe from 100 of materials to 100k
+	 Removed Menacing Heart, replaced with Menacing heart 2.0 which is immortal
+	 All hearts add +1 hp to make it more balaanced
+	 Combine all hearts to get 1 NEW Item... MEGA HEART!
+	 The mega heart gives you + 2 hp. 
+	 In order to balance this, we have added eternal menacing suffering debuf which damages that player for all of eternity, or until he reinstalls terraria or drinks milk
+0.3.10
+	 Added the Cursed Flame Heart, a heart made from Cursed Flame. It permanately increases life by 5.
+	 Added the Ichor Heart, a heart made from Ichor. It permanately increases life by 5.
+	 New Boss Hearts:
+	  Consolaria:
+	   +Easter Heart
+	   +Heart o' Plenty
+	   +Cursed Heart
+	  Fargo's Mod:
+	   +Sparkling Heart
+	   +Abominable Heart
+	   +Phantasmal Heart
+	  Element's Awoken:
+	   +Venom Heart
+	   +Inferno Heart
+	   +Scourge Heart
+	   +Heart of Hope
+	   +Sacred Heart
+	   +Heart of the Frost
+	   +Aqueous' Heart
+	   +Drakonian Heart
+	   +Fiery Heart
+	   +Charred Heart
+	   +Heart of Despair
+	   +Heart of the Infection
+	   +Crystalline Locket
+0.3.00
+	 NEW BIOME:
+	  Ancient Life Biome.
+	   +Ancient Life ORE
+	   +Ancient Life Shards
+	   +Varied items / equipment based on the new biome.
+	 New Boss Hearts:
+	  Vanilla:
+	   +Dark Heart
+	   +Volatile Heart
+	   +Snot Heart
+	   +Plant Heart
+	   +Lihzhardian Heart
+	   +Truffle Heart
+	   +Soaring Heart
+	  Thorium Mod:
+	   +Zephyr's Heart
+	   +Sea Breeze Heart
+	   +Vampire's Heart
+	   +Heart of the Storm
+	   +Champion's Heart
+	   +Omega Heart
+	   +Ice Bound Strider Heart
+	   +Fallen Heart
+	   +Lich's Heart
+	   +Abyssal Heart
+	   +Dormant Heart
+	  Calamity Mod:
+	   +List too huge.
+	 UPDATED BOSS AI:
+	  Shockwave effect!
+	  Adjusted Menacing Heart's life regen.
+	 Menacing Dye
+	 Misc:
+	  Menacing Heart (boss heart) won't anymore drop from Menacing Heart in non-expert world.
+0.2.14
+	 Fixed Apple's wings and now his wings are like how he wanted them.
+	 
+0.2.13
+	 Slightly increased Menacing Heart's HP to: 17000 (from 16000)
+	 Slightly reduced Menacing Heart's defence to: 7 (from 9)
+	 Increased Menacing Heart's coin drops to: 1-2 platinum (from 50 gold).
 0.2.12
+	 Fixed bug with Catastrophic Edge.
+	 Fixed 'bug' wit Heart Emptier.
 	 Added 'Autoload' to cross-mod hearts.
 	 Added Menacing Heart trophy.
+	 Added the Soul of Flight, Light and Night Hearts, a hearts made from Soul of Flight, Light or Night. They permanately increases life by 4.
+	 Added the Soul of Fright, Might and Sight Hearts, a hearts made from Soul of Fright, Might or Sight. They permanately increases life by 5.
+	 Added the Soul of Blight Heart, a heart made from Soul of Blight. It permanately increases life by 5. (Cross-Mod)
+	 Added the Ectoplasm Heart, a heart made from Ectoplasm. It permanately increases life by 7.
+	 Added the Heart of the Hives, a consumable version of the Queen Bee. It permanately increases life by 10.
+	 Added the Plant Heart, a consumable version of the Plantera. It permanately increases life by 10.
+	 Added the Lihzhardian Heart, a consumable version of the Golem. It permanately increases life by 10.
 	 Added the Ancient Heart, a consumable version of the Lunatic Cultist. It permanately increases life by 10.
 	 Added the Celestial Heart, a consumable version of the Moon Lord It permanately increases life by 10.
+	 Added the EvenFlame Wings, a dev wings of AppleInTheSky.
+	 Fixed bug with Target Dummies and Menacing Life Staff/Blade.
+	 Renamed a lot CAT stuff into Starbreaker stuff.
+	 Added second variation of FOX mask.
 0.2.11
 	 Added the Royal Slime Heart, a consumable version of the King Slime. It permanately increases life by 5.
 	 Added the Eye Heart, a consumable version of the Eye of Cthulhu. It permanately increases life by 5.

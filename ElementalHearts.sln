@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementalHearts", "ElementalHearts.csproj", "{F7F02915-C300-46E6-8A68-7442224AA9DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElementalHearts", "ElementalHearts.csproj", "{CCE0D2E4-6B5A-4D29-B575-0831E166C42B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F7F02915-C300-46E6-8A68-7442224AA9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7F02915-C300-46E6-8A68-7442224AA9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7F02915-C300-46E6-8A68-7442224AA9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7F02915-C300-46E6-8A68-7442224AA9DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE0D2E4-6B5A-4D29-B575-0831E166C42B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE0D2E4-6B5A-4D29-B575-0831E166C42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE0D2E4-6B5A-4D29-B575-0831E166C42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE0D2E4-6B5A-4D29-B575-0831E166C42B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EE326C9F-0536-47A2-9A54-EB4C3AEE4EF4}
+		SolutionGuid = {EA8585DF-D5AF-4686-99AC-63ECAE03728E}
 	EndGlobalSection
 EndGlobal
